@@ -5,6 +5,8 @@
 
 <h1>home page</h1>
 
+<a href="{% url 'create_room' %}">create room</a>
+
 <div>
     {% for room in rooms %}
     <div>
@@ -16,4 +18,4 @@
     {% endfor %}
 </div>
 
-{% endblock %}
+{% endblock info %}

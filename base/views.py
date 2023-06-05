@@ -8,10 +8,14 @@ def profile(request):
 
 def home(request):
     rooms = Room.objects.all()
-    contex = {"rooms":rooms}
-    return render(request, "base/home.html", contex)
+    context = {"rooms":rooms}
+    return render(request, "base/home.html", context)
 
 def room(request,pk):
     rooms = Room.objects.get(id=pk)
-    contex = {"rooms": rooms}
-    return render(request, "base/room.html", contex)
+    context = {"rooms": rooms}
+    return render(request, "base/room.html", context)
+
+def create_room(request):
+    context = {}
+    return render(request, "base/room_form.html")
