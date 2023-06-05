@@ -3,12 +3,15 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Topic(models.Model):
     name = models.CharField(max_length=50)
     def __str__(self):
         return f"{self.name}"
 
 class Room(models.Model):
+    class Meta:
+        ordering = ["updated", "created"]
     # 刪除使用者時不刪除該房間, 將值設為 null
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     # 刪除話題時不刪除該房間, 將值設為 null
