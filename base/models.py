@@ -11,7 +11,8 @@ class Topic(models.Model):
 
 class Room(models.Model):
     class Meta:
-        ordering = ["updated", "created"]
+        # 資料庫的索引順序，會優先按照updated排，相同updated則按照created排序，-可以讓該資料變為倒序，也就是最近更新的會在第一個
+        ordering = ["-updated", "-created"]
     # 刪除使用者時不刪除該房間, 將值設為 null
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     # 刪除話題時不刪除該房間, 將值設為 null
@@ -26,9 +27,9 @@ class Room(models.Model):
         return f"{self.name}"
 
 class Message(models.Model):
-    # 當使用者被刪除後，刪除訊息
+    # 當使用者被刪除後，刪除他在所有討論室傳的所有訊息
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    # 當討論室被刪除後，刪除訊息
+    # 當討論室被刪除後，刪除討論室所有的訊息
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True)
