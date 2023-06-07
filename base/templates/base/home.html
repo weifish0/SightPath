@@ -4,12 +4,15 @@
 {% block info %}
 
 <h1>home page</h1>
+<div>
+    <a href="{% url 'create_room' %}">create room</a>
+</div>
 
-<a href="{% url 'create_room' %}">create room</a>
 
 <div>
     {% for room in rooms %}
     <div>
+        <a href="{% url 'update_room' room.id %}">edit</a>
         <span>@{{room.host.username}}</span>
         <h3>{{room.id}}. <a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
         <small>{{room.topic.name}}</small>
