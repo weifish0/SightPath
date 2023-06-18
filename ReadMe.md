@@ -18,7 +18,7 @@ pip install -r requirements.txt
 - django框架  
 https://docs.djangoproject.com/en/4.2/
 
-- Stackoverflow django社群很大，受益匪淺  
+- Stackoverflow django  
 https://stackoverflow.com/questions/tagged/django
 
 - 如何在database每次migrate時自動新建default資料  
