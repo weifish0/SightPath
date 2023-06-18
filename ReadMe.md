@@ -5,7 +5,6 @@
 * SQLite Viewer 
 
 # 環境
-請務必確認版本符合以下資料
 ```
 django == 4.2.1
 python == 3.9.12
