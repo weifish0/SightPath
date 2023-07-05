@@ -1,0 +1,51 @@
+{% extends "main.html" %}
+
+
+{% block contents %}
+
+<style>
+    .chatroom_home_container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+</style>
+
+
+<div class="chatroom_home_container">
+    <div>
+        <h3>類別</h3>
+        <a href="{% url 'chatroom_home' %}">All</a>
+        <br>
+        {% for topic in topics %}
+        <a href="{% url 'chatroom_home' %}?category={{topic.name}}">{{topic.name}}</a>
+        <br>
+        {% endfor %}
+        
+    </div>
+    <div>
+        <h5>找到 {{rooms_count}} 個相關討論串</h5>
+        <a href="{% url 'create_room' %}">建立討論串</a>
+        <hr>
+        <div>
+            {% for room in rooms %}
+            <div>
+                <a href="{% url 'update_room' room.id %}">編輯</a>
+                <a href="{% url 'delete_room' room.id %}">刪除</a>
+                <span>@{{room.host.username}}</span>
+                <h3>{{room.id}}. <a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
+                <small>建立時間: {{room.updated}}</small>
+                <br>
+                <small>最近更新: {{room.created}}</small>
+                <br>
+                <small>{{room.topic.name}}</small>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+    
+</div>
+
+{% endblock contents %}
+
+

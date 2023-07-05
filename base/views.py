@@ -1,16 +1,26 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Room
+from django.db.models import Q
+from .models import Room,Topic
 from .forms import RoomForm
 
 def profile(request):
     return render(request, "base/profile.html")
 
-def home(request):
-    # 獲取討論室資料庫的所有資料
-    rooms = Room.objects.all()
-    context = {"rooms":rooms}
-    return render(request, "base/home.html", context)
+def chatroom_home(request):
+    category = request.GET.get("category") if request.GET.get("category") != None else ""
+    q = request.GET.get("q") if request.GET.get("q") != None else ""
+    
+    if category != "":
+        rooms = Room.objects.filter(Q(topic__name__icontains=category))
+    else:
+        rooms = Room.objects.filter(Q(topic__name__icontains=q) | Q(name__icontains=q) | Q(host__username__icontains=q))
+    
+    rooms_count = rooms.count()
+    
+    topics = Topic.objects.all()
+    context = {"rooms":rooms, "rooms_count":rooms_count, "topics":topics}
+    return render(request, "base/chatroom_home.html", context)
 
 def room(request,pk):
     # 獲取特定id的討論室
@@ -28,7 +38,7 @@ def create_room(request):
         if form.is_valid():
             # 符合格式就保存到資料庫，並且回到主頁
             form.save()
-            return redirect("home")   
+            return redirect("chatroom_home")   
     return render(request, "base/room_form.html", context)
 
 def update_room(request, pk):
@@ -42,7 +52,7 @@ def update_room(request, pk):
         if form.is_valid():
             # 符合格式就保存到資料庫，並且回到主頁
             form.save()
-            return redirect("home")
+            return redirect("chatroom_home")
     return render(request, "base/room_form.html", context)
 
 def delete_room(request, pk):
@@ -50,5 +60,5 @@ def delete_room(request, pk):
     context = {"obj": room}
     if request.method == "POST":
         room.delete()
-        return redirect("home")
+        return redirect("chatroom_home")
     return render(request, "base/delete.html", context)
