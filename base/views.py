@@ -1,10 +1,47 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.db.models import Q
+from django.contrib.auth.models import User
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
 from .models import Room,Topic
 from .forms import RoomForm
 
+# ref: https://stackoverflow.com/questions/26989078/how-to-get-full-url-from-django-request
+def absolute(request):
+    urls = {
+        'FULL_URL_WITH_QUERY_STRING': request.build_absolute_uri(),
+        'FULL_URL': request.build_absolute_uri('?'),
+        'ABSOLUTE_ROOT': request.build_absolute_uri('/')[:-1].strip("/"),
+        'ABSOLUTE_ROOT_URL': request.build_absolute_uri('/').strip("/"),
+    }
+    return urls
+
+def login_page(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        try:
+            user = User.objects.get(username=email)
+        except:
+            messages.error(request, "帳號不存在")
+            return render(request, "base/login_register.html")
+        user = authenticate(request, username=email, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("chatroom_home")
+        else:
+            messages.error(request, "密碼錯誤")
+            return render(request, "base/login_register.html")
+    context = {}
+    return render(request, "base/login_register.html", context)
+
+def logout_user(request):
+    logout(request)
+    return redirect("chatroom_home")
+
 def profile(request):
+    q = request.GET.get("q")
     return render(request, "base/profile.html")
 
 def chatroom_home(request):
