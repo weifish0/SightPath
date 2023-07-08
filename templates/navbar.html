@@ -4,10 +4,10 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="{% url 'chatroom_home' %}">chatroom</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'profile' %}">Profile</a>
@@ -23,14 +23,16 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
       </ul>
-      <form class="d-flex" role="search" method="get" action="{% url 'chatroom_home' %}">
+      <form class="d-inline-flex align-items-center" role="search" method="get" action="{% url 'chatroom_home' %}">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success me-3" type="submit">搜索</button>  
       </form>
+      {% if request.user.is_authenticated %}
+      <a class="btn btn-primary" href="{% url 'logout_user' %}" role="button">登出</a>
+      {% else %}
+      <a class="btn btn-primary" href="{% url 'login_page' %}" role="button">登入</a>
+      {% endif %}
     </div>
   </div>
 </nav>
