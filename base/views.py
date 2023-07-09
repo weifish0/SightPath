@@ -1,23 +1,22 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse
 from .models import Room,Topic
 from .forms import RoomForm
 
-# ref: https://stackoverflow.com/questions/26989078/how-to-get-full-url-from-django-request
-def absolute(request):
-    urls = {
-        'FULL_URL_WITH_QUERY_STRING': request.build_absolute_uri(),
-        'FULL_URL': request.build_absolute_uri('?'),
-        'ABSOLUTE_ROOT': request.build_absolute_uri('/')[:-1].strip("/"),
-        'ABSOLUTE_ROOT_URL': request.build_absolute_uri('/').strip("/"),
-    }
-    return urls
 
 def login_page(request):
+    
+    # 假如用戶已經登入了，就把他送回主頁
+    if request.user.is_authenticated:
+        return redirect("chatroom_home")
+    
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
@@ -33,7 +32,24 @@ def login_page(request):
         else:
             messages.error(request, "密碼錯誤")
             return render(request, "base/login_register.html")
-    context = {}
+    context = {"page": "login"}
+    return render(request, "base/login_register.html", context)
+
+
+def register_page(request):
+    context = {"form": UserCreationForm()}
+    
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            print(form)
+            user = form.save()
+            print(user)
+            login(request, user)
+            return redirect("chatroom_home")
+        else:
+            messages.error(request, "格式錯誤")
+    
     return render(request, "base/login_register.html", context)
 
 def logout_user(request):
@@ -62,9 +78,10 @@ def chatroom_home(request):
 def room(request,pk):
     # 獲取特定id的討論室
     room = Room.objects.get(id=pk)
-    context = {"rooms": room}
+    context = {"room": room}
     return render(request, "base/room.html", context)
 
+@login_required(login_url="login_page")
 def create_room(request):
     form = RoomForm()
     context = {"form": form}
@@ -78,10 +95,17 @@ def create_room(request):
             return redirect("chatroom_home")   
     return render(request, "base/room_form.html", context)
 
+@login_required(login_url="login_page")
 def update_room(request, pk):
+    
     room = Room.objects.get(id=pk)
     # 讓討論室抓取該討論室上次在資料庫存的資料
     form = RoomForm(instance=room)
+    
+    if request.user != room.host:
+        return HttpResponse("你沒有權限")
+    
+    
     context = {"form": form}
     if request.method == "POST":
         # 更新資料庫的資料
@@ -92,8 +116,13 @@ def update_room(request, pk):
             return redirect("chatroom_home")
     return render(request, "base/room_form.html", context)
 
+@login_required(login_url="login_page")
 def delete_room(request, pk):
     room = Room.objects.get(id=pk)
+    
+    if request.user != room.host:
+        return HttpResponse("你沒有權限")
+    
     context = {"obj": room}
     if request.method == "POST":
         room.delete()

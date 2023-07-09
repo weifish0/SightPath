@@ -1,6 +1,8 @@
 {% extends "main.html" %}
 
 {% block contents %}
+
+{% if page == "login" %}
 <div class="d-flex justify-content-center mt-5">
     <form method="POST", action="">
       {% csrf_token %}
@@ -15,20 +17,45 @@
       {% endif %}
       <div class="form-floating mb-3">
           <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
-          <label for="floatingInput">Email address</label>
+          <label for="floatingInput">Email(電子郵件)</label>
       </div>
       <div class="form-floating">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
-        <label for="floatingPassword">Password</label>
+        <label for="floatingPassword">密碼</label>
         <input type="hidden" name="next" value="{{ next }}">
       </div>
 
       <div class="mt-3 mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1" name="remember_login">Check me out</label>
+        <label class="form-check-label" for="exampleCheck1" name="remember_login">記住帳號</label>
       </div>
-      <button type="submit" class="btn btn-primary" name="login">Submit</button>
+      <button type="submit" class="btn btn-primary" name="login">登入</button>
+
+      <p>沒有帳號?</p>
+      <a href="{% url 'register_page' %}">註冊</a>
     </form>
 </div>
+
+{% else %}
+<div class="d-flex justify-content-center mt-5">
+    <form method="POST", action="">
+      {% csrf_token %}
+      {% if messages %}
+      <ul class="messages">
+          {% for message in messages %}
+          <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+              {{ message }}
+          </li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary" name="login">註冊</button>
+
+      <p>已經有帳號了?</p>
+      <a href="{% url 'login_page' %}">登入</a>
+    </form>
+</div>
+{% endif %}
 
 {% endblock contents %}

@@ -10,6 +10,10 @@
     }
 </style>
 
+{% if request.user.is_authenticated %}
+<p>hello {{request.user}}~</p>
+{% endif %}
+
 
 <div class="chatroom_home_container">
     <div>
@@ -29,8 +33,10 @@
         <div>
             {% for room in rooms %}
             <div>
+                {% if request.user == room.host %}
                 <a href="{% url 'update_room' room.id %}">編輯</a>
                 <a href="{% url 'delete_room' room.id %}">刪除</a>
+                {% endif %}
                 <span>@{{room.host.username}}</span>
                 <h3>{{room.id}}. <a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
                 <small>建立時間: {{room.updated}}</small>
