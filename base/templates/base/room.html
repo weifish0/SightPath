@@ -2,19 +2,17 @@
 
 
 {% block contents %}
-<h3>{{room.name}}</h3>
-<p>{{room.description}}</p>
 
-<div class="card">
-    <div class="card-header">
-      Quote
-    </div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>A well-known quote, contained in a blockquote element.</p>
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-      </blockquote>
-    </div>
-  </div>
+<h2>{{room.name}}</h2>
+<hr>
+<p>關於此課程: <br>{{room.description}}</p>
+<hr>
+
+<div class="comment_wrapper">
+    <h4>評論: </h4>
+    {% for message in room_messages %}
+    <small>@{{message.user}}     {{message.created}}</small>
+    {% endfor %}
+</div>
 
 {% endblock contents %}
