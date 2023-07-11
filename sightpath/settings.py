@@ -110,6 +110,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# 配置static時可參考https://ithelp.ithome.com.tw/articles/10212469
 STATIC_URL = "static/"
 
 # Default primary key field type
