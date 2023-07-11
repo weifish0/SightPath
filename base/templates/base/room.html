@@ -15,12 +15,12 @@
     <div>
         <h2>{{room.name}}</h2>
         <hr>
-        <p>關於此課程: <br>{{room.description}}</p>
+        <p>關於此討論串: <br>{{room.description}}</p>
         <hr>
         <div class="comment_wrapper">
             <h4>評論: </h4>
             {% for message in room_messages %}
-            <small>@{{message.user}}</small>
+            <small>@{{message.user.username}}</small>
             <small>{{message.created|timesince}} ago</small>
             <p>{{message.body}}</p>
             {% endfor %}
@@ -37,8 +37,13 @@
     </div>
 
     <div class="participants_container">
-        <h3>participants</h3>
+        <h3>參與者</h3>
         <hr>
+        {% for user in participants %}
+        <div>
+            <p>{{user.username}}</p>
+        </div>
+        {% endfor %}
     </div>
 
 </div>
