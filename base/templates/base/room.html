@@ -3,16 +3,44 @@
 
 {% block contents %}
 
-<h2>{{room.name}}</h2>
-<hr>
-<p>關於此課程: <br>{{room.description}}</p>
-<hr>
+<style>
+    .room_container{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+</style>
 
-<div class="comment_wrapper">
-    <h4>評論: </h4>
-    {% for message in room_messages %}
-    <small>@{{message.user}}     {{message.created}}</small>
-    {% endfor %}
+
+<div class="room_container">
+    <div>
+        <h2>{{room.name}}</h2>
+        <hr>
+        <p>關於此課程: <br>{{room.description}}</p>
+        <hr>
+        <div class="comment_wrapper">
+            <h4>評論: </h4>
+            {% for message in room_messages %}
+            <small>@{{message.user}}</small>
+            <small>{{message.created|timesince}} ago</small>
+            <p>{{message.body}}</p>
+            {% endfor %}
+        </div>
+
+        {% if request.user.is_authenticated %}
+        <div class="comment_form">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <input type="text" name="body" placeholder="留言......">
+            </form>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="participants_container">
+        <h3>participants</h3>
+        <hr>
+    </div>
+
 </div>
 
 {% endblock contents %}
