@@ -22,9 +22,14 @@
             {% for message in room_messages %}
             <small>@{{message.user.username}}</small>
             <small>{{message.created|timesince}} ago</small>
+            {% if request.user == message.user %}
+            <a href="{% url 'delete_message' message.id %}">delete</a>
+            {% endif %}
             <p>{{message.body}}</p>
             {% endfor %}
         </div>
+
+        
 
         {% if request.user.is_authenticated %}
         <div class="comment_form">

@@ -159,3 +159,19 @@ def delete_room(request, pk):
         return redirect("chatroom_home")
     
     return render(request, "base/delete.html", context)
+
+
+@login_required(login_url="login_page")
+def delete_message(request, pk):
+    message = Message.objects.get(id=pk)
+    
+    if request.user != message.user:
+        return HttpResponse("你沒有權限")
+    
+    context = {"obj": message}
+    
+    if request.method == "POST":
+        message.delete()
+        return redirect("chatroom_home")
+    
+    return render(request, "base/delete.html", context)
