@@ -1,13 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
-
 
 class Topic(models.Model):
     name = models.CharField(max_length=50)
     def __str__(self):
         return f"{self.name}"
+
 
 class Room(models.Model):
     class Meta:
@@ -25,6 +24,7 @@ class Room(models.Model):
     
     def __str__(self):
         return f"{self.name}"
+
 
 class Message(models.Model):
     # 當使用者被刪除後，刪除他在所有討論室傳的所有訊息
