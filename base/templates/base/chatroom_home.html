@@ -6,7 +6,7 @@
 <style>
     .chatroom_home_container{
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr 1fr;
     }
 </style>
 
@@ -49,6 +49,25 @@
             {% endfor %}
         </div>
     </div>
+
+    {% if request.user.is_authenticated %}
+    <div class="news_feed_container">
+        <h3>通知</h3>
+        <hr>
+        {% for reply in myrooms_replies %}
+        <div>
+            <small>{{reply.created|timesince}} ago</small>
+            <small>{{reply.user.username}}回覆了你的貼文:
+                <a href="{% url 'room' reply.room.id %}">{{reply.room.name}}</a>
+            </small>
+            <br>
+            <small>{{reply}}</small>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
     
 </div>
 
