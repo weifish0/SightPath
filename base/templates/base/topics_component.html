@@ -1,0 +1,7 @@
+<h3>類別</h3>
+<a href="{% url 'chatroom_home' %}">All</a>
+<br>
+{% for topic in topics %}
+<a href="{% url 'chatroom_home' %}?category={{topic.name}}">{{topic.name}}</a>
+<br>
+{% endfor %}

@@ -62,8 +62,12 @@ def logout_user(request):
     return redirect("chatroom_home")
 
 
-def profile(request):
-    return render(request, "base/profile.html")
+def profile(request, pk):
+    user = User.objects.get(username=pk)
+    rooms = user.room_set.all()
+    topics = Topic.objects.all()
+    context = {"user": user, "rooms": rooms, "topics":topics}
+    return render(request, "base/profile.html", context)
 
 
 def chatroom_home(request):
@@ -96,10 +100,6 @@ def chatroom_home(request):
         
         context = {"rooms":rooms, "rooms_count":rooms_count, 
                     "topics":topics, "myrooms_replies": myrooms_replies}
-    
-    
-
-    
     return render(request, "base/chatroom_home.html", context)
 
 

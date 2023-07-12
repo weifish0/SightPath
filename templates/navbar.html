@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="{% url 'chatroom_home' %}">首頁</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'profile' %}">個人檔案</a>
+          <a class="nav-link" href="{% url 'profile' request.user.username %}">個人檔案</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'chatroom_home' %}">討論串</a>
