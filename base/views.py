@@ -9,7 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .models import Room,Topic, Message
 from .forms import RoomForm
-
+from itertools import chain
 
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
@@ -75,12 +75,30 @@ def chatroom_home(request):
     if category != "":
         rooms = Room.objects.filter(Q(topic__name__icontains=category))
     else:
-        rooms = Room.objects.filter(Q(topic__name__icontains=q) | Q(name__icontains=q) | Q(host__username__icontains=q))
+        rooms = Room.objects.filter(Q(topic__name__icontains=q)
+                                    | Q(name__icontains=q)
+                                    | Q(host__username__icontains=q))
     
     rooms_count = rooms.count()
     topics = Topic.objects.all()
     
-    context = {"rooms":rooms, "rooms_count":rooms_count, "topics":topics}
+    context = {"rooms":rooms, "rooms_count":rooms_count, 
+               "topics":topics}
+    
+    # 當用戶已登入，才會顯示房間通知
+    if request.user.is_authenticated:
+        user_now = request.user
+        
+        # 篩選出回覆該使用者貼文的最近15則通知
+        myrooms_replies = Message.objects.filter(Q(room__host__username__contains=user_now) 
+                                                 & ~Q(user__username=user_now)).order_by("-created")[:15]
+        
+        
+        context = {"rooms":rooms, "rooms_count":rooms_count, 
+                    "topics":topics, "myrooms_replies": myrooms_replies}
+    
+    
+
     
     return render(request, "base/chatroom_home.html", context)
 
