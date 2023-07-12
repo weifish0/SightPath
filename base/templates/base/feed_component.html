@@ -1,0 +1,16 @@
+{% for room in rooms %}
+<div>
+    {% if request.user == room.host %}
+    <a href="{% url 'update_room' room.id %}">編輯</a>
+    <a href="{% url 'delete_room' room.id %}">刪除</a>
+    {% endif %}
+    <a href="{% url 'profile' room.host.username %}">@{{room.host.username}}</a>
+    <h3>{{room.id}}. <a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
+    <small>建立時間: {{room.updated}}</small>
+    <br>
+    <small>最近更新: {{room.created}}</small>
+    <br>
+    <small>{{room.topic.name}}</small>
+</div>
+<hr>
+{% endfor %}

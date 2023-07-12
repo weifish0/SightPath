@@ -16,59 +16,26 @@
 
 
 <div class="chatroom_home_container">
+    
     <div>
-        <h3>類別</h3>
-        <a href="{% url 'chatroom_home' %}">All</a>
-        <br>
-        {% for topic in topics %}
-        <a href="{% url 'chatroom_home' %}?category={{topic.name}}">{{topic.name}}</a>
-        <br>
-        {% endfor %}
-        
+        {% include "base/topics_component.html" %}
     </div>
+
     <div>
         <h5>找到 {{rooms_count}} 個相關討論串</h5>
         <a href="{% url 'create_room' %}">建立討論串</a>
         <hr>
-        <div>
-            {% for room in rooms %}
-            <div>
-                {% if request.user == room.host %}
-                <a href="{% url 'update_room' room.id %}">編輯</a>
-                <a href="{% url 'delete_room' room.id %}">刪除</a>
-                {% endif %}
-                <span>@{{room.host.username}}</span>
-                <h3>{{room.id}}. <a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
-                <small>建立時間: {{room.updated}}</small>
-                <br>
-                <small>最近更新: {{room.created}}</small>
-                <br>
-                <small>{{room.topic.name}}</small>
-            </div>
-            <hr>
-            {% endfor %}
-        </div>
+        
+        {% include "base/feed_component.html" %}
+
     </div>
 
     {% if request.user.is_authenticated %}
-    <div class="news_feed_container">
-        <h3>通知</h3>
-        <hr>
-        {% for reply in myrooms_replies %}
-        <div>
-            <small>{{reply.created|timesince}} ago</small>
-            <small>{{reply.user.username}}回覆了你的貼文:
-                <a href="{% url 'room' reply.room.id %}">{{reply.room.name}}</a>
-            </small>
-            <br>
-            <small>{{reply}}</small>
-            <hr>
-        </div>
-        {% endfor %}
+    <div>
+        {% include "base/notifications_component.html" %}
     </div>
     {% endif %}
 
-    
 </div>
 
 {% endblock contents %}
