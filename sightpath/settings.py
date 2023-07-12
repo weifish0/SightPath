@@ -112,6 +112,9 @@ USE_TZ = True
 
 # 配置static時可參考https://ithelp.ithome.com.tw/articles/10212469
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
