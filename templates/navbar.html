@@ -10,31 +10,31 @@
           <a class="nav-link active" aria-current="page" href="{% url 'chatroom_home' %}">首頁</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'profile' request.user.username %}">個人檔案</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="{% url 'chatroom_home' %}">討論串</a>
         </li>
+        {% if request.user.is_authenticated %}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            設定
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="{% url 'profile' request.user.username %}">個人檔案</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+        {% endif %}
       </ul>
       <form class="d-inline-flex align-items-center" role="search" method="get" action="{% url 'chatroom_home' %}">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
         <button class="btn btn-outline-success me-3" type="submit">搜索</button>  
       </form>
+      
       {% if request.user.is_authenticated %}
       <a class="btn btn-primary" href="{% url 'logout_user' %}" role="button">登出</a>
       {% else %}
-      <a class="btn btn-primary" href="{% url 'login_page' %}" role="button">登入</a>
+      <a class="btn btn-primary" href="{% url 'login_page' %}" role="button">登入</a>     
       {% endif %}
     </div>
   </div>

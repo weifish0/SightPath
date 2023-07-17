@@ -5,7 +5,29 @@
 <div>
     <form method="POST" action="">
         {% csrf_token %}
-        {{form.as_p}}
+        <div class="form__group">
+            <label for="room_topic">討論串標籤</label>
+            <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
+            <datalist id="topic_list">
+                <select id="room_topic">
+                    {% for topic in topics %}
+                    <option value="{{topic.name}}">{{topic.name}}</option>
+                    {% endfor %}
+                </select>
+            </datalist>>
+        </div>
+
+        <div class="form__group">
+            <label for="room_name">討論串名稱</label>
+            {{form.name}}
+        </div>
+
+        <div class="form__group">
+            <label for="room_description">討論串描述</label>
+            <small>創建這個討論串的目的是什麼呢?</small>
+            {{form.description}}
+        </div>
+
         <input type="submit" value="提交">
 
     </form>
