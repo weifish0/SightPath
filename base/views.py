@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from .models import Room,Topic, Message
 from .forms import RoomForm, UserForm
 
+
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
     if request.user.is_authenticated:
@@ -77,7 +78,6 @@ def chatroom_home(request):
     topic_category = request.GET.get("topic_category")
     q = request.GET.get("q") if request.GET.get("q") != None else ""
     
-    
     # 有topic_category參數則優先使用topic_category進行搜索
     if topic_category != None:
         rooms = Room.objects.filter(Q(topic__name__exact=topic_category))
@@ -99,7 +99,6 @@ def chatroom_home(request):
         # 篩選出回覆該使用者貼文的最近15則通知
         myrooms_replies = Message.objects.filter(Q(room__host__username__contains=user_now) 
                                                  & ~Q(user__username=user_now)).order_by("-created")[:15]
-        
         
         context = {"rooms":rooms, "rooms_count":rooms_count, 
                     "topics":topics, "myrooms_replies": myrooms_replies, "topic_category": topic_category}
@@ -132,11 +131,11 @@ def room(request,pk):
 def create_room(request):
     form = RoomForm()
     topics = Topic.objects.all()
+    
     topic_category = request.GET.get("topic_category")
     if topic_category == "None":
         topic_category = ""
         
-    
     # 使用者送出表單
     if request.method == "POST":
         # 取得使用者輸入或選取的標籤
@@ -165,7 +164,6 @@ def update_room(request, pk):
     # 抓取該討論室上次在資料庫存的資料
     form = RoomForm(instance=room)
     topics = Topic.objects.all()
-    
     
     if request.method == "POST":
         # 取得使用者輸入或選取的標籤
@@ -215,13 +213,21 @@ def delete_message(request, pk):
     
     return render(request, "base/delete.html", context)
 
+
 @login_required(login_url="login_page")
 def edit_profile(request, pk):
+    # 根據網址的用戶名字取得該使用者資料
     user = User.objects.get(username=pk)
     
     if request.user.username != user.username:
         return HttpResponse("你沒有權限")
+ 
+    if request.method == "POST":
+        form = UserForm(request.POST, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect("profile", pk=user.username)
     
-    form = UserForm()
+    form = UserForm(instance=user)
     context = {"form": form}
     return render(request, "base/edit_profile.html", context)
