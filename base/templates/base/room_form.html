@@ -7,14 +7,29 @@
         {% csrf_token %}
         <div class="form__group">
             <label for="room_topic">討論串標籤</label>
-            <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
+
+            {# TODO: 超級帳號可以直接以此創建標籤 #}
+            <!-- <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
             <datalist id="topic_list">
                 <select id="room_topic">
                     {% for topic in topics %}
                     <option value="{{topic.name}}">{{topic.name}}</option>
                     {% endfor %}
                 </select>
-            </datalist>>
+            </datalist>> -->
+
+            <select id="room_topic" name="topic">
+                {% for topic in topics %}
+
+                {# 若使用者從某一特定標籤聊天室點選創建room，預選該特定標籤 #}
+                {% if topic.name == topic_category %}
+                    <option value="{{topic.name}}" selected>{{topic.name}}</option>
+                {% else %}
+                    <option value="{{topic.name}}">{{topic.name}}</option>
+                {% endif %}
+
+                {% endfor %}
+            </select>
         </div>
 
         <div class="form__group">
