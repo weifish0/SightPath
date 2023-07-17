@@ -138,9 +138,10 @@ def create_room(request):
         
     # 使用者送出表單
     if request.method == "POST":
-        # 取得使用者輸入或選取的標籤
         topic_name = request.POST.get("topic")
-        topic, created = Topic.objects.get_or_create(name=topic_name)
+        # TODO: 超級帳號可以直接以此創建topic
+        # topic, created = Topic.objects.get_or_create(name=topic_name)
+        topic = Topic.objects.get(name=topic_name)
         
         # 在資料庫中新增room
         Room.objects.create(host=request.user,
@@ -168,7 +169,7 @@ def update_room(request, pk):
     if request.method == "POST":
         # 取得使用者輸入或選取的標籤
         topic_name = request.POST.get("topic")
-        topic, created = Topic.objects.get_or_create(name=topic_name)
+        topic = Topic.objects.get(name=topic_name)
         
         # 更新資料庫的資料
         room.name = request.POST.get("name")
