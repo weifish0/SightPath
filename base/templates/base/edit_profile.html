@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block contents %}
+{% for field in form %}
+<div>
+    <label for="">{{field.label}}</label>
+    {{field}}
+</div>
+{% endfor %}
+{% endblock contents %}

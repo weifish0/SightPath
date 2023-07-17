@@ -8,8 +8,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .models import Room,Topic, Message
-from .forms import RoomForm
-from itertools import chain
+from .forms import RoomForm, UserForm
 
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
@@ -51,6 +50,7 @@ def register_page(request):
             user = form.save()
             login(request, user)
             return redirect("chatroom_home")
+        # TODO: 補充註冊錯誤的原因提示
         else:
             messages.error(request, "格式錯誤")
     
@@ -59,6 +59,8 @@ def register_page(request):
 
 def logout_user(request):
     logout(request)
+    
+    # TODO: 新增回到上一頁功能，而非主頁
     return redirect("chatroom_home")
 
 
@@ -71,13 +73,14 @@ def profile(request, pk):
 
 
 def chatroom_home(request):
-    # category為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
-    category = request.GET.get("category") if request.GET.get("category") != None else ""
+    # topic_category為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
+    topic_category = request.GET.get("topic_category")
     q = request.GET.get("q") if request.GET.get("q") != None else ""
     
-    # 有category參數則優先使用category進行搜索
-    if category != "":
-        rooms = Room.objects.filter(Q(topic__name__icontains=category))
+    
+    # 有topic_category參數則優先使用topic_category進行搜索
+    if topic_category != None:
+        rooms = Room.objects.filter(Q(topic__name__exact=topic_category))
     else:
         rooms = Room.objects.filter(Q(topic__name__icontains=q)
                                     | Q(name__icontains=q)
@@ -87,7 +90,7 @@ def chatroom_home(request):
     topics = Topic.objects.all()
     
     context = {"rooms":rooms, "rooms_count":rooms_count, 
-               "topics":topics}
+               "topics":topics, "topic_category": topic_category}
     
     # 當用戶已登入，才會顯示房間通知
     if request.user.is_authenticated:
@@ -99,7 +102,8 @@ def chatroom_home(request):
         
         
         context = {"rooms":rooms, "rooms_count":rooms_count, 
-                    "topics":topics, "myrooms_replies": myrooms_replies}
+                    "topics":topics, "myrooms_replies": myrooms_replies, "topic_category": topic_category}
+    
     return render(request, "base/chatroom_home.html", context)
 
 
@@ -127,17 +131,27 @@ def room(request,pk):
 @login_required(login_url="login_page")
 def create_room(request):
     form = RoomForm()
-    context = {"form": form}
+    topics = Topic.objects.all()
+    topic_category = request.GET.get("topic_category")
+    if topic_category == "None":
+        topic_category = ""
+        
     
     # 使用者送出表單
     if request.method == "POST":
-        # 在資料庫中新增資料
-        form = RoomForm(request.POST)
-        if form.is_valid():
-            # 符合格式就保存到資料庫，並且回到主頁
-            form.save()
-            return redirect("chatroom_home")   
+        # 取得使用者輸入或選取的標籤
+        topic_name = request.POST.get("topic")
+        topic, created = Topic.objects.get_or_create(name=topic_name)
         
+        # 在資料庫中新增room
+        Room.objects.create(host=request.user,
+                            topic=topic,
+                            name=request.POST.get("name"),
+                            description=request.POST.get("description"))
+        
+        return redirect("chatroom_home")   
+    
+    context = {"form": form, "topics": topics, "topic_category": topic_category}   
     return render(request, "base/room_form.html", context)
 
 
@@ -150,16 +164,23 @@ def update_room(request, pk):
     
     # 抓取該討論室上次在資料庫存的資料
     form = RoomForm(instance=room)
-    context = {"form": form}
+    topics = Topic.objects.all()
+    
     
     if request.method == "POST":
-        # 更新資料庫的資料
-        form = RoomForm(request.POST, instance=room)
-        if form.is_valid():
-            # 符合格式就保存到資料庫，並且回到主頁
-            form.save()            
-            return redirect("chatroom_home")
+        # 取得使用者輸入或選取的標籤
+        topic_name = request.POST.get("topic")
+        topic, created = Topic.objects.get_or_create(name=topic_name)
         
+        # 更新資料庫的資料
+        room.name = request.POST.get("name")
+        room.description = request.POST.get("description")
+        room.topic = topic
+        room.save()
+        
+        return redirect("chatroom_home")
+    
+    context = {"form": form, "topics": topics, "room": room}    
     return render(request, "base/room_form.html", context)
 
 
@@ -193,3 +214,14 @@ def delete_message(request, pk):
         return redirect("chatroom_home")
     
     return render(request, "base/delete.html", context)
+
+@login_required(login_url="login_page")
+def edit_profile(request, pk):
+    user = User.objects.get(username=pk)
+    
+    if request.user.username != user.username:
+        return HttpResponse("你沒有權限")
+    
+    form = UserForm()
+    context = {"form": form}
+    return render(request, "base/edit_profile.html", context)
