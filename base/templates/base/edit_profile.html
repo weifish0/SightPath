@@ -1,10 +1,18 @@
 {% extends "main.html" %}
 
 {% block contents %}
-{% for field in form %}
-<div>
-    <label for="">{{field.label}}</label>
-    {{field}}
-</div>
-{% endfor %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    {% for field in form %}
+    <div>
+        <label for="">{{field.label}}</label>
+        {{field}}
+    </div>
+    {% endfor %}
+
+    <button type="submit" class="btn btn-primary">確定</button>
+</form>
+
 {% endblock contents %}
