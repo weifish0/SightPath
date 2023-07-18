@@ -144,12 +144,12 @@ def create_room(request):
         topic = Topic.objects.get(name=topic_name)
         
         # 在資料庫中新增room
-        Room.objects.create(host=request.user,
-                            topic=topic,
-                            name=request.POST.get("name"),
-                            description=request.POST.get("description"))
+        room = Room.objects.create(host=request.user,
+                                   topic=topic,
+                                   name=request.POST.get("name"),
+                                   description=request.POST.get("description"))
         
-        return redirect("chatroom_home")   
+        return redirect("room", room.id)   
     
     context = {"form": form, "topics": topics, "topic_category": topic_category}   
     return render(request, "base/room_form.html", context)
@@ -177,9 +177,9 @@ def update_room(request, pk):
         room.topic = topic
         room.save()
         
-        return redirect("chatroom_home")
+        return redirect("room", room.id)
     
-    context = {"form": form, "topics": topics, "room": room}    
+    context = {"form": form, "topics": topics, "room": room, "page": "update_room"}    
     return render(request, "base/room_form.html", context)
 
 

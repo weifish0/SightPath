@@ -17,7 +17,7 @@
         <hr>
         <p>關於此討論串: <br>{{room.description}}</p>
         <hr>
-        <div class="comment_wrapper">
+        <div class="">
             <h4>評論: </h4>
             {% for message in room_messages %}
             <small>@{{message.user.username}}</small>
@@ -32,16 +32,19 @@
         
 
         {% if request.user.is_authenticated %}
-        <div class="comment_form">
+        <div class="">
             <form method="POST" action="">
                 {% csrf_token %}
                 <input type="text" name="body" placeholder="留言......">
             </form>
         </div>
+        {% else %}
+        {# #TODO: 登入完後導向原本的葉面，而非首頁 #}
+        <a href="{% url 'login_page' %}">登入才可以留言喔~</a>
         {% endif %}
     </div>
 
-    <div class="participants_container">
+    <div class="">
         <h3>參與者</h3>
         <hr>
         {% for user in participants %}
