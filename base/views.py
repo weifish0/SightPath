@@ -10,6 +10,10 @@ from django.http import HttpResponse
 from .models import Room,Topic, Message
 from .forms import RoomForm, UserForm
 
+"""
+未來目標(長期)
+1. class-based views
+"""
 
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
