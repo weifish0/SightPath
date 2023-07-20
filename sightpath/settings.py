@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,10 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-$i9t@i-xi690b0u6pda*%^f(*n$-#2w$_nnfm2xr&c5!=^xb-o"
+SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
+# SECRET_KEY = "django-insecure-$i9t@i-xi690b0u6pda*%^f(*n$-#2w$_nnfm2xr&c5!=^xb-o"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
+# DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -56,6 +59,9 @@ MIDDLEWARE = [
     
     "corsheaders.middleware.CorsMiddleware",
 ]
+
+# 建立自己的 user model
+AUTH_USER_MODEL = "base.User"
 
 # 暫時先不開放 API 查詢 以減輕伺服器負擔
 # CORS_ALLOW_ALL_ORIGINS = True

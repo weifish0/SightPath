@@ -9,16 +9,20 @@
             <label for="room_topic">討論串標籤</label>
 
             {% comment "#TODO: 超級帳號可以直接以此創建標籤" %}
-             <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
+            {% endcomment %}
+
+            {# 超級帳號可以直接以此創建房間標籤 #}
+            {% if request.user.is_superuesr %}
+            <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
             <datalist id="topic_list">
                 <select id="room_topic">
                     {% for topic in topics %}
                     <option value="{{topic.name}}">{{topic.name}}</option>
                     {% endfor %}
                 </select>
-            </datalist>> 
-            {% endcomment %}
+            </datalist>>
 
+            {% else %}
             <select name="topic">
                 {% for topic in topics %}
                 
@@ -38,6 +42,8 @@
 
                 {% endfor %}
             </select>
+            {% endif %}
+
         </div>
 
         <div class="">
