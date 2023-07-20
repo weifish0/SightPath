@@ -2,12 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
-from .models import Room,Topic, Message
+from .models import Room,Topic, Message, User
 from .forms import RoomForm, UserForm
 
 """
@@ -144,8 +143,10 @@ def create_room(request):
     if request.method == "POST":
         topic_name = request.POST.get("topic")
         # TODO: 超級帳號可以直接以此創建topic
-        # topic, created = Topic.objects.get_or_create(name=topic_name)
-        topic = Topic.objects.get(name=topic_name)
+        if request.user.is_superuser():
+            topic, created = Topic.objects.get_or_create(name=topic_name)
+        else:
+            topic = Topic.objects.get(name=topic_name)
         
         # 在資料庫中新增room
         room = Room.objects.create(host=request.user,
