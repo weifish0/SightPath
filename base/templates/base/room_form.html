@@ -12,7 +12,7 @@
             {% endcomment %}
 
             {# 超級帳號可以直接以此創建房間標籤 #}
-            {% if request.user.is_superuesr %}
+            {% if superuser_auth %}
             <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
             <datalist id="topic_list">
                 <select id="room_topic">
@@ -21,6 +21,7 @@
                     {% endfor %}
                 </select>
             </datalist>>
+            <h1>superuserpower</h1>
 
             {% else %}
             <select name="topic">
