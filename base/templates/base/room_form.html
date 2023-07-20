@@ -6,6 +6,10 @@
     <form method="POST" action="">
         {% csrf_token %}
         <div class="">
+            {% if superuser_auth %}
+            <h3>you have magical supersuer power</h3>
+            {% endif %}
+            
             <label for="room_topic">討論串標籤</label>
 
             {% comment "#TODO: 超級帳號可以直接以此創建標籤" %}
@@ -13,7 +17,6 @@
 
             {# 超級帳號可以直接以此創建房間標籤 #}
             {% if superuser_auth %}
-            <h3>you have magical superuserpower</h3>
             <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
             <datalist id="topic_list">
                 <select id="room_topic">
