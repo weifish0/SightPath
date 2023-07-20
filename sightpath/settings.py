@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     
     "base.apps.BaseConfig",
     
-    "rest_framework"
+    "rest_framework",
+    
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -51,7 +53,12 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    
+    "corsheaders.middleware.CorsMiddleware",
 ]
+
+# 暫時先不開放 API 查詢 以減輕伺服器負擔
+# CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "sightpath.urls"
 
