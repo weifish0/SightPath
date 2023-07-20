@@ -7,12 +7,12 @@
         {% csrf_token %}
         <div class="">
             {% if superuser_auth %}
-            <h3>you have magical supersuer power</h3>
+            <p>you have magical superuser power</p>
             {% endif %}
             
             <label for="room_topic">討論串標籤</label>
 
-            {% comment "#TODO: 超級帳號可以直接以此創建標籤" %}
+            {% comment "#[x]: 超級帳號可以直接以此創建標籤" %}
             {% endcomment %}
 
             {# 超級帳號可以直接以此創建房間標籤 #}

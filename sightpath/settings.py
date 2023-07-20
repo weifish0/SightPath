@@ -127,7 +127,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # 配置static時可參考https://ithelp.ithome.com.tw/articles/10212469
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+
+MEDIA_URL = "/images/user_profile_img/"
+
+MEDIA_ROOT = BASE_DIR / "static/images/user_profile_img/"
 
 STATICFILES_DIRS = [
     BASE_DIR / "static"
