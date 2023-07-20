@@ -23,15 +23,15 @@ def login_page(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         
-        # 嘗試在資料庫中搜索 username， 找不到則回傳帳號不存在，
+        # 嘗試在資料庫中搜索 email， 找不到則回傳帳號不存在，
         # 並且將使用者送回登入頁面
         try:
-            user = User.objects.get(username=email)
+            user = User.objects.get(email=email)
         except:
             messages.error(request, "帳號不存在")
             return render(request, "base/login_register.html")
         
-        user = authenticate(request, username=email, password=password)
+        user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
             return redirect("chatroom_home")
@@ -134,16 +134,21 @@ def room(request,pk):
 def create_room(request):
     form = RoomForm()
     topics = Topic.objects.all()
+    superuser_auth = False
     
     topic_category = request.GET.get("topic_category")
     if topic_category == "None":
         topic_category = ""
+    
+    if request.user.is_superuser:
+        superuser_auth = True
         
     # 使用者送出表單
     if request.method == "POST":
         topic_name = request.POST.get("topic")
+        
         # TODO: 超級帳號可以直接以此創建topic
-        if request.user.is_superuser():
+        if superuser_auth:
             topic, created = Topic.objects.get_or_create(name=topic_name)
         else:
             topic = Topic.objects.get(name=topic_name)
@@ -156,7 +161,7 @@ def create_room(request):
         
         return redirect("room", room.id)   
     
-    context = {"form": form, "topics": topics, "topic_category": topic_category}   
+    context = {"form": form, "topics": topics, "topic_category": topic_category, "superuser_auth": superuser_auth}   
     return render(request, "base/room_form.html", context)
 
 
@@ -237,3 +242,4 @@ def edit_profile(request, pk):
     form = UserForm(instance=user)
     context = {"form": form}
     return render(request, "base/edit_profile.html", context)
+    
