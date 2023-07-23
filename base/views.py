@@ -13,12 +13,15 @@ from .forms import RoomForm, UserForm, CustomUserCreationForm
 1. 爬蟲資料處理
 2. Line登入
 3. line bot
+返回上頁
 4. 測試程式
 5. class-based views
 """
 
 def home_page(request):
-    return render(request, "base/home_page.html")
+    
+    context = {"guide": "<figure class='image'><img src='https://files.bountyhunter.co/contest/public/202303/d6a5595e-3e9c-4d89-9f3a-9063c72f9f6c.jpg'></figure><p>&nbsp;</p>"}
+    return render(request, "base/home_page.html", context)
 
 
 def login_page(request):

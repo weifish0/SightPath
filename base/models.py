@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     bio = models.CharField(max_length=150, null=True)
     username = models.CharField(max_length=30, null=True)
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True, null=True)
     
     avatar = models.ImageField(null=True, default="avatar.png")
     
@@ -51,11 +51,38 @@ class Message(models.Model):
     def __str__(self):
         return f"{self.body[0:20]}"
     
+    
+class CompetitionTag(models.Model):
+    tag_name = models.CharField(max_length=50)
+        
+    def __str__(self):
+        return f"{self.name}"
+
 
 class Competition(models.Model):
-    name = models.CharField(max_length=100)
-    href = models.TextField()
-    # competition_img = models.ImageField()
+    name = models.TextField()
+    url = models.URLField(null=True)
+    
+    limit_highschool = models.BooleanField(null=True)
+    limit_none = models.BooleanField(null=True)
+    limit_other = models.BooleanField(null=True)
+    
+    agency_title = models.TextField(null=True)
+    
+    page_views = models.IntegerField(null=True)
+    
+    contact_email = models.TextField(null=True)
+    contact_name = models.TextField(null=True)
+    contact_phone = models.TextField(null=True)
+    
+    start_time = models.DateTimeField(null=True)
+    end_time = models.DateTimeField(null=True)
+    
+    cover_img_url = models.TextField(blank=True)
+    
+    tags = models.ManyToManyField(
+        CompetitionTag, blank=True
+    )
     
     def __str__(self):
         return f"{self.name}"

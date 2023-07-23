@@ -2,6 +2,7 @@
 bhunter_crawler.py
 bhunter_data.json
 aa.py
+bb.py
 
 # Django #
 *.log
