@@ -16,20 +16,19 @@
       </ul>
       {% endif %}
       <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
           <label for="floatingInput">Email(電子郵件)</label>
       </div>
       <div class="form-floating">
         <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
         <label for="floatingPassword">密碼</label>
-        <input type="hidden" name="next" value="{{ next }}">
       </div>
 
       <div class="mt-3 mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1" name="remember_login">記住帳號</label>
       </div>
-      <button type="submit" class="btn btn-primary" name="login">登入</button>
+      <button type="submit" class="btn btn-primary mb-5" name="login">登入</button>
 
       <p>沒有帳號?</p>
       <a href="{% url 'register_page' %}">註冊</a>
@@ -49,8 +48,24 @@
           {% endfor %}
       </ul>
       {% endif %}
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-primary" name="login">註冊</button>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
+        <label for="floatingInput">使用者名稱</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+        <label for="floatingInput">Email(電子郵件)</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password1">
+        <label for="floatingPassword">密碼</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password2">
+        <label for="floatingPassword">確認密碼</label>
+      </div>
+      
+      <button type="submit" class="btn btn-primary mb-5" name="login">註冊</button>
 
       <p>已經有帳號了?</p>
       <a href="{% url 'login_page' %}">登入</a>
