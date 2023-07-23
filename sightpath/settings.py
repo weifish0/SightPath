@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     "base.apps.BaseConfig",
+    "linebotapp.apps.LinebotappConfig",
     
     "rest_framework",
     
