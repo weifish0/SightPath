@@ -4,11 +4,11 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     bio = models.CharField(max_length=150, null=True)
-    name = models.CharField(max_length=30, null=True)
+    username = models.CharField(max_length=30, null=True)
     email = models.EmailField(unique=True)
     
-    # 我先預設使用者大頭貼為藤原千花，之後可以再改XD~ by Will Cheng
     avatar = models.ImageField(null=True, default="avatar.png")
+    
     
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
