@@ -9,9 +9,17 @@ from .models import Room,Topic, Message, User
 from .forms import RoomForm, UserForm, CustomUserCreationForm
 
 """
-未來目標(長期)
-1. class-based views
+目標
+1. 爬蟲資料處理
+2. Line登入
+3. line bot
+4. 測試程式
+5. class-based views
 """
+
+def home_page(request):
+    return render(request, "base/home_page.html")
+
 
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
@@ -38,7 +46,7 @@ def login_page(request):
             messages.error(request, "密碼錯誤")
             return render(request, "base/login_register.html")
     
-    # context中參數傳遞應該render註冊頁面還是登入頁面    
+    # context中參數告訴template要註冊頁面還是登入頁面    
     context = {"page": "login"}
     
     return render(request, "base/login_register.html", context)
