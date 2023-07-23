@@ -4,10 +4,9 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .models import Room,Topic, Message, User
-from .forms import RoomForm, UserForm
+from .forms import RoomForm, UserForm, CustomUserCreationForm
 
 """
 未來目標(長期)
@@ -46,10 +45,10 @@ def login_page(request):
 
 
 def register_page(request):
-    context = {"form": UserCreationForm()}
+    context = {"form": CustomUserCreationForm()}
     
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
@@ -147,7 +146,7 @@ def create_room(request):
     if request.method == "POST":
         topic_name = request.POST.get("topic")
         
-        # TODO: 超級帳號可以直接以此創建topic
+        # 超級帳號可以直接以此創建topic
         if superuser_auth:
             topic, created = Topic.objects.get_or_create(name=topic_name)
         else:
@@ -156,7 +155,7 @@ def create_room(request):
         # 在資料庫中新增room
         room = Room.objects.create(host=request.user,
                                    topic=topic,
-                                   name=request.POST.get("name"),
+                                   name=request.POST.get("username"),
                                    description=request.POST.get("description"))
         
         return redirect("room", room.id)   
@@ -182,7 +181,7 @@ def update_room(request, pk):
         topic = Topic.objects.get(name=topic_name)
         
         # 更新資料庫的資料
-        room.name = request.POST.get("name")
+        room.name = request.POST.get("username")
         room.description = request.POST.get("description")
         room.topic = topic
         room.save()
@@ -234,7 +233,7 @@ def edit_profile(request, pk):
         return HttpResponse("你沒有權限")
  
     if request.method == "POST":
-        form = UserForm(request.POST, instance=user)
+        form = UserForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
             form.save()
             return redirect("profile", pk=user.username)

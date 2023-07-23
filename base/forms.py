@@ -1,4 +1,5 @@
 from django.forms import ModelForm
+from django.contrib.auth.forms import UserCreationForm
 from .models import Room, User
 
 # 繼承django form的格式，詳細用法參考以下網址
@@ -13,4 +14,11 @@ class RoomForm(ModelForm):
 class UserForm(ModelForm):
     class Meta:
         model = User
-        fields = ["username", "email"]
+        # TODO: 更改在 edit_profile中顯示的英文字
+        fields = ["username", "email","bio", "avatar"]
+        
+        
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ["username", "email", "password1", "password2"]
