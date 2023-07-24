@@ -1,6 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+#  用此指令可取得當前資料
+# python .\manage.py dumpdata base > data_fixture.json
+
+# 加載tag資料 
+# python manage.py loaddata ./base/fixtures/tags_fixture.json
+
 
 class User(AbstractUser):
     bio = models.CharField(max_length=150, null=True)
@@ -56,7 +62,7 @@ class CompetitionTag(models.Model):
     tag_name = models.CharField(max_length=50)
         
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.tag_name}"
 
 
 class Competition(models.Model):

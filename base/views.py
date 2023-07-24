@@ -150,6 +150,7 @@ def create_room(request):
     if topic_category == "None":
         topic_category = ""
     
+    # 管理員具有權限可在此新增room tag
     if request.user.is_superuser:
         superuser_auth = True
         
@@ -166,7 +167,7 @@ def create_room(request):
         # 在資料庫中新增room
         room = Room.objects.create(host=request.user,
                                    topic=topic,
-                                   name=request.POST.get("username"),
+                                   name=request.POST.get("name"),
                                    description=request.POST.get("description"))
         
         return redirect("room", room.id)   
