@@ -65,8 +65,10 @@ def register_page(request):
             login(request, user)
             return redirect("chatroom_home")
         # TODO: 補充註冊錯誤的原因提示
+        
         else:
-            messages.error(request, "格式錯誤")
+            error_message = form.errors.as_text()
+            messages.error(request, f"{error_message}")
     
     return render(request, "base/login_register.html", context)
 
@@ -169,6 +171,8 @@ def create_room(request):
                                    topic=topic,
                                    name=request.POST.get("name"),
                                    description=request.POST.get("description"))
+        
+        room.participants.add(request.user)
         
         return redirect("room", room.id)   
     

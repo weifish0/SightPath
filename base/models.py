@@ -4,8 +4,9 @@ from django.contrib.auth.models import AbstractUser
 #  用此指令可取得當前資料
 # python .\manage.py dumpdata base > data_fixture.json
 
-# 加載tag資料 
+# 加載刷新competition_tag和competition資料 (每天早上四點執行一次指令)
 # python manage.py loaddata ./base/fixtures/tags_fixture.json
+# python manage.py loaddata ./base/fixtures/competitions_fixture.json
 
 
 class User(AbstractUser):
@@ -77,14 +78,16 @@ class Competition(models.Model):
     
     page_views = models.IntegerField(null=True)
     
-    contact_email = models.TextField(null=True)
+    contact_email = models.EmailField(null=True)
     contact_name = models.TextField(null=True)
     contact_phone = models.TextField(null=True)
     
     start_time = models.DateTimeField(null=True)
     end_time = models.DateTimeField(null=True)
     
-    cover_img_url = models.TextField(blank=True)
+    guide_line_html = models.TextField(null=True)
+    
+    cover_img_url = models.URLField(null=True)
     
     tags = models.ManyToManyField(
         CompetitionTag, blank=True
