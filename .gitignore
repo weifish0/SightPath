@@ -1,7 +1,5 @@
 # temporary
-bhunter_crawler.py
-bhunter_data.json
-aa.py
+json_transform.py
 bb.py
 
 # Django #
