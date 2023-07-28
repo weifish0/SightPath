@@ -5,7 +5,7 @@
     <a href="{% url 'delete_room' room.id %}">刪除</a>
     {% endif %}
     <a href="{% url 'profile' room.host.username %}">@{{room.host.username}}</a>
-    <h3>{{room.id}}. <a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
+    <h3><a href="{% url 'room' room.id %}">{{room.name}}</a></h3>
     <small>建立時間: {{room.created}}</small>
     <br>
     <small>最近更新: {{room.updated}}</small>

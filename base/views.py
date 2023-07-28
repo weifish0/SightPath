@@ -5,23 +5,17 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-from .models import Room,Topic, Message, User
+from .models import Room,Topic, Message, User, Competition, CompetitionTag
 from .forms import RoomForm, UserForm, CustomUserCreationForm
 
 """
 目標
-1. 爬蟲資料處理
+1. 爬蟲資料處理 ok
 2. Line登入
 3. line bot
-返回上頁
-4. 測試程式
-5. class-based views
+4. 返回上頁，自動導向
+5. class based views
 """
-
-def home_page(request):
-    
-    context = {"guide": "<figure class='image'><img src='https://files.bountyhunter.co/contest/public/202303/d6a5595e-3e9c-4d89-9f3a-9063c72f9f6c.jpg'></figure><p>&nbsp;</p>"}
-    return render(request, "base/home_page.html", context)
 
 
 def login_page(request):
@@ -91,11 +85,13 @@ def profile(request, pk):
 def chatroom_home(request):
     # topic_category為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
     topic_category = request.GET.get("topic_category")
+    # q值若找不到則設為空字串，原本會回傳None，但用django Q物件以None搜索會回報錯誤
     q = request.GET.get("q") if request.GET.get("q") != None else ""
     
     # 有topic_category參數則優先使用topic_category進行搜索
     if topic_category != None:
         rooms = Room.objects.filter(Q(topic__name__exact=topic_category))
+    # 使用搜索功能搜索
     else:
         rooms = Room.objects.filter(Q(topic__name__icontains=q)
                                     | Q(name__icontains=q)
@@ -107,6 +103,7 @@ def chatroom_home(request):
     context = {"rooms":rooms, "rooms_count":rooms_count, 
                "topics":topics, "topic_category": topic_category}
     
+    # TODO: 將其改成用彈出視窗顯示
     # 當用戶已登入，才會顯示房間通知
     if request.user.is_authenticated:
         user_now = request.user
@@ -258,3 +255,30 @@ def edit_profile(request, pk):
     context = {"form": form}
     return render(request, "base/edit_profile.html", context)
     
+
+def home_page(request):
+    competition_tags = CompetitionTag.objects.all()
+    
+    # competition_tag為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
+    competition_category = request.GET.get("competition_category")
+    q = request.GET.get("q") if request.GET.get("q") != None else ""
+
+    # 有competition_tag參數則優先使用topic_category進行搜索
+    if competition_category != None:
+        competitions = Competition.objects.filter(Q(tags__tag_name__exact=competition_category))
+    else:
+        #TODO: 以TAG關鍵字搜索
+        competitions = Competition.objects.filter(Q(name__icontains=q)
+                                    | Q(agency_title__icontains=q))
+        
+    competitions_count = competitions.count()
+    
+    context = {"competitions": competitions, "competition_tags": competition_tags, "competitions_count": competitions_count}
+    return render(request, "base/home_page.html", context)
+
+ 
+def competition_info(request, pk):
+    competition = Competition.objects.get(id=pk)
+    tags = competition.tags.all()
+    context = {"competition": competition, "tags": tags}
+    return render(request, "base/competition_info.html", context)

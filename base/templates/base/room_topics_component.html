@@ -1,5 +1,5 @@
 <h3>類別</h3>
-<a href="{% url 'chatroom_home' %}">All</a>
+<a href="{% url 'chatroom_home' %}">全部</a>
 <br>
 {% for topic in topics %}
 <a href="{% url 'chatroom_home' %}?topic_category={{topic.name}}">{{topic.name}}</a>
