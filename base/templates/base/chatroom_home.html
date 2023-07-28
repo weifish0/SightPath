@@ -17,7 +17,7 @@
 <div class="chatroom_home_container">
     
     <div>
-        {% include "base/topics_component.html" %}
+        {% include "base/room_topics_component.html" %}
     </div>
 
     <div>
@@ -25,7 +25,7 @@
         <a href="{% url 'create_room' %}?topic_category={{topic_category}}">建立討論串</a>
         <hr>
         
-        {% include "base/feed_component.html" %}
+        {% include "base/rooms_feed_component.html" %}
 
     </div>
 
