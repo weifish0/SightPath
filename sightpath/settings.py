@@ -64,7 +64,7 @@ MIDDLEWARE = [
 # 建立自己的 user model
 AUTH_USER_MODEL = "base.User"
 
-# 暫時先不開放 API 查詢 以減輕伺服器負擔
+# 暫時先不開放 API 查詢 以減輕伺服器負擔，開啟要先修改允許訪問的名單，用True太危險
 # CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "sightpath.urls"

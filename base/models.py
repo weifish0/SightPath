@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 #  用此指令可取得當前資料
 # python .\manage.py dumpdata base > data_fixture.json
 
-# 加載刷新competition_tag和competition資料 (每天早上四點執行一次指令)
+# 加載刷新competition_tag和competition資料 (之後部屬可以設置每天早上四點執行一次指令)
 # python manage.py loaddata ./base/fixtures/tags_fixture.json
 # python manage.py loaddata ./base/fixtures/competitions_fixture.json
 
@@ -90,7 +90,7 @@ class Competition(models.Model):
     cover_img_url = models.URLField(null=True)
     
     tags = models.ManyToManyField(
-        CompetitionTag, blank=True
+        CompetitionTag, blank=True, related_name="tags"
     )
     
     def __str__(self):

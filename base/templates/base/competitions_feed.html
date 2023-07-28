@@ -1,0 +1,12 @@
+<h5>找到 {{competitions_count}} 個比賽</h5>
+{% for competition in competitions %}
+<h3><a href="{% url 'competition_info' competition.id %}">{{competition.name}}</a></h3>
+
+<br>
+<small>開始報名日期: {{competition.start_time}}</small>
+<br>
+<small>截止日期: {{competition.end_time}}</small>
+<br>
+<!-- <small>標籤{{competition.tags}}</small> -->
+<hr>
+{% endfor %}
