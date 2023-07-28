@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block contents %}
+<h2>{{competition.name}}</h2>
+<hr>
+<small>開始報名日期: {{competition.start_time}}</small>
+<br>
+<small>截止日期: {{competition.end_time}}</small>
+
+<hr>
+<p>標籤:</p>
+{% for tag in tags %}
+<a href="{% url 'home_page' %}?competition_category={{tag}}">{{tag}}</a>
+{% endfor %}
+<hr>
+
+{{competition.guide_line_html|safe}}
+{% endblock contents %}
