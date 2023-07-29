@@ -10,7 +10,7 @@ from .forms import RoomForm, UserForm, CustomUserCreationForm
 
 """
 目標
-1. 爬蟲資料處理 ok
+1. 競賽資料爬蟲資料處理 ok
 2. Line登入
 3. line bot
 4. 返回上頁，自動導向
@@ -256,7 +256,7 @@ def edit_profile(request, pk):
     return render(request, "base/edit_profile.html", context)
     
 
-def home_page(request):
+def find_competitions(request):
     competition_tags = CompetitionTag.objects.all()
     
     # competition_tag為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
@@ -267,14 +267,15 @@ def home_page(request):
     if competition_category != None:
         competitions = Competition.objects.filter(Q(tags__tag_name__exact=competition_category))
     else:
-        #TODO: 以TAG關鍵字搜索
+        #TODO: 改進搜索功能
+        #TODO: 進階搜索功能
         competitions = Competition.objects.filter(Q(name__icontains=q)
-                                    | Q(agency_title__icontains=q))
+                                                | Q(organizer_title__icontains=q))
         
     competitions_count = competitions.count()
     
-    context = {"competitions": competitions, "competition_tags": competition_tags, "competitions_count": competitions_count}
-    return render(request, "base/home_page.html", context)
+    context = {"competitions": competitions, "competition_tags": competition_tags, "competitions_count": competitions_count, "competition_category": competition_category}
+    return render(request, "base/find_competitions_page.html", context)
 
  
 def competition_info(request, pk):
@@ -282,3 +283,7 @@ def competition_info(request, pk):
     tags = competition.tags.all()
     context = {"competition": competition, "tags": tags}
     return render(request, "base/competition_info.html", context)
+
+
+def home_page(request):
+    return render(request, "base/home_page.html")

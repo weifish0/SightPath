@@ -2,7 +2,7 @@
 
 {% block contents %}
 <style>
-    .home_page_container{
+    .find_competitions_page_container{
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
     }
@@ -12,16 +12,15 @@
 <p>hello {{request.user}}~</p>
 {% endif %}
 
-<h1>home_page</h1>
-<div class="home_page_container">
+<div class="find_competitions_page_container">
     
     <div>
-        
+        {% include "base/competition_tags.html" %}
         
     </div>
 
     <div>
-        
+        {% include "base/competitions_feed.html" %}
     </div>
 
 </div>
