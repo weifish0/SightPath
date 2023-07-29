@@ -5,6 +5,7 @@ from django.contrib.auth.models import AbstractUser
 # python .\manage.py dumpdata base > data_fixture.json
 
 # 加載刷新competition_tag和competition資料 (之後部屬可以設置每天早上四點執行一次指令)
+# python ./base/fixtures/competitions_fixture_generate.py
 # python manage.py loaddata ./base/fixtures/tags_fixture.json
 # python manage.py loaddata ./base/fixtures/competitions_fixture.json
 
@@ -74,7 +75,7 @@ class Competition(models.Model):
     limit_none = models.BooleanField(null=True)
     limit_other = models.BooleanField(null=True)
     
-    agency_title = models.TextField(null=True)
+    organizer_title = models.TextField(null=True)
     
     page_views = models.IntegerField(null=True)
     
@@ -90,7 +91,7 @@ class Competition(models.Model):
     cover_img_url = models.URLField(null=True)
     
     tags = models.ManyToManyField(
-        CompetitionTag, blank=True, related_name="tags"
+        CompetitionTag, blank=True
     )
     
     def __str__(self):
