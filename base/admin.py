@@ -6,7 +6,7 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ("id","username", "email")
     
 class CompetitionAdmin(admin.ModelAdmin):
-    list_display = ("id","name")
+    list_display = ("id","name","url")
 
 admin.site.register(Room)
 admin.site.register(Topic)
