@@ -61,7 +61,7 @@ def generate_fixture():
             end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S')  
             
             guide_line = data["guideline"]
-            agency_title = data["agencyTitle"]
+            organizer_title = data["organizerTitle"]
             page_views = data["analyticsFlag"]["pageViews"]
             contact_email = data["contactEmail"]
             contact_name = data["contactName"]
@@ -86,7 +86,7 @@ def generate_fixture():
                                    "start_time": start_time_str,
                                    "end_time": end_time_str,
                                    "guide_line_html": guide_line,
-                                   "agency_title": agency_title,
+                                   "organizer_title": organizer_title,
                                    "page_views": page_views,
                                    "contact_email": contact_email,
                                    "contact_name": contact_name,
@@ -103,7 +103,6 @@ def generate_fixture():
     print(f"共建立{len(created_competitions)}個competition物件")
     
     
-
     with open(tags_fixture_file_path, "w", encoding="utf-8") as fp:
         json.dump(output_tags_fixture, fp, indent=2, ensure_ascii=False)         
         # file.write(json.dumps(output_fixtures, indent=2, ensure_ascii=False))   

@@ -1,7 +1,21 @@
+{% if competition_category != None %}
+<h6>以"{{competition_category}}"標籤搜索的結果</h6>
+{% else %}
+<h6>全部比賽</h6>
+{% endif %}
+
 <h5>找到 {{competitions_count}} 個比賽</h5>
 {% for competition in competitions %}
 <h3><a href="{% url 'competition_info' competition.id %}">{{competition.name}}</a></h3>
 
+{% for tag in competition.tags.all %}
+<a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+{% endfor %}
+
+<br>
+<small>籌辦組織: {{competition.agency_title}}</small>
+<br>
+<small>瀏覽次數: {{competition.page_views}}</small>
 <br>
 <small>開始報名日期: {{competition.start_time}}</small>
 <br>
