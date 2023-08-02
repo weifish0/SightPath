@@ -3,7 +3,7 @@ djangorestframework==3.14.0
 django-cors-headers==4.2.0
 pillow==9.0.1
 django-allauth==0.54.0
-dj-database-url==2.9.6
+dj-database-url==2.0.0
 psycopg2-binary==2.9.6
-whitenoise[brotli]==6.5.0
+whitenoise==6.5.0
 gunicorn==21.2.0
