@@ -15,7 +15,6 @@ services:
           name: sightpath
           property: connectionString
       - key: SECRET_KEY
-        generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
       - key: PYTHON_VERSION
