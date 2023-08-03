@@ -24,8 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # TODO
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', default='None')
-# SECRET_KEY = "django-insecure-$i9t@i-xi690b0u6pda*%^f(*n$-#2w$_nnfm2xr&c5!=^xb-o"
+if 'RENDER' in os.environ:
+    print("連接 SECRET_KEY")
+    SECRET_KEY = os.environ.get('SECRET_KEY', default='None')
+else:
+    SECRET_KEY = "django-insecure-$i9t@i-xi690b0u6pda*%^f(*n$-#2w$_nnfm2xr&c5!=^xb-o"
 
 # TODO
 
@@ -37,9 +40,14 @@ if the RENDER environment variable is present in the application environment
 DEBUG = 'RENDER' not in os.environ
 # DEBUG = True
 
+
 # TODO
 if 'RENDER' in os.environ:
+    print("連接 ALLOWED_HOSTS")
     ALLOWED_HOSTS = ["sightpath.tw"]
+    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+    if RENDER_EXTERNAL_HOSTNAME:    
+        ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 else:
     ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1"]
 
@@ -107,6 +115,7 @@ WSGI_APPLICATION = "sightpath.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 if 'RENDER' in os.environ:
+    print("連接 DATABASES")
     DATABASES = {
         'default': dj_database_url.config(
             default='postgresql://postgres:postgres@localhost:8000/',
