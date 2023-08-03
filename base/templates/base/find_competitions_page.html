@@ -9,7 +9,7 @@
 </style>
 
 {% if request.user.is_authenticated %}
-<p>hello {{request.user}}~</p>
+<p>hello {{request.user.username}}~</p>
 {% endif %}
 
 <div class="find_competitions_page_container">

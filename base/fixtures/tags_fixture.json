@@ -3,357 +3,357 @@
     "model": "base.competitiontag",
     "pk": 1,
     "fields": {
-      "tag_name": "網路票選"
+      "tag_name": "SDGs17"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 2,
     "fields": {
-      "tag_name": "微電影"
+      "tag_name": "性別平等"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 3,
     "fields": {
-      "tag_name": "抽獎"
+      "tag_name": "政府主辦"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 4,
     "fields": {
-      "tag_name": "設計"
+      "tag_name": "攝影"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 5,
     "fields": {
-      "tag_name": "香港"
+      "tag_name": "全民參與"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 6,
     "fields": {
-      "tag_name": "行銷"
+      "tag_name": "拍照"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 7,
     "fields": {
-      "tag_name": "圖文"
+      "tag_name": "照片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 8,
     "fields": {
-      "tag_name": "平面設計"
+      "tag_name": "康寧"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 9,
     "fields": {
-      "tag_name": "影片比赛"
+      "tag_name": "競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 10,
     "fields": {
-      "tag_name": "三分鐘"
+      "tag_name": "企劃"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 11,
     "fields": {
-      "tag_name": "競賽"
+      "tag_name": "繪畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 12,
     "fields": {
-      "tag_name": "影片"
+      "tag_name": "插畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 13,
     "fields": {
-      "tag_name": "電影拍攝"
+      "tag_name": "寫一封信給自己"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 14,
     "fields": {
-      "tag_name": "電影"
+      "tag_name": "紙上躍躍然"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 15,
     "fields": {
-      "tag_name": "國際競賽"
+      "tag_name": "典美插畫大賞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 16,
     "fields": {
-      "tag_name": "政府"
+      "tag_name": "手繪"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 17,
     "fields": {
-      "tag_name": "嘉義國際三分鐘"
+      "tag_name": "文學獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 18,
     "fields": {
-      "tag_name": "三分鐘影片大賽"
+      "tag_name": "寫作比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 19,
     "fields": {
-      "tag_name": "短片"
+      "tag_name": "華文創作比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 20,
     "fields": {
-      "tag_name": "影像比賽"
+      "tag_name": "台積電文學賞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 21,
     "fields": {
-      "tag_name": "國中"
+      "tag_name": "網路票選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 22,
     "fields": {
-      "tag_name": "高中"
+      "tag_name": "微電影"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 23,
     "fields": {
-      "tag_name": "學生競賽"
+      "tag_name": "抽獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 24,
     "fields": {
-      "tag_name": "政府主辦"
+      "tag_name": "影片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 25,
     "fields": {
-      "tag_name": "繪畫"
+      "tag_name": "手機"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 26,
     "fields": {
-      "tag_name": "徵才"
+      "tag_name": "行動影片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 27,
     "fields": {
-      "tag_name": "文學獎"
+      "tag_name": "短影片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 28,
     "fields": {
-      "tag_name": "寫作比賽"
+      "tag_name": "學生保障名額"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 29,
     "fields": {
-      "tag_name": "華文創作比賽"
+      "tag_name": "文學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 30,
     "fields": {
-      "tag_name": "台積電文學賞"
+      "tag_name": "創意"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 31,
     "fields": {
-      "tag_name": "兒童"
+      "tag_name": "文字"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 32,
     "fields": {
-      "tag_name": "國小"
+      "tag_name": "寫作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 33,
     "fields": {
-      "tag_name": "嘉義"
+      "tag_name": "詩詞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 34,
     "fields": {
-      "tag_name": "工藝設計"
+      "tag_name": "小說"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 35,
     "fields": {
-      "tag_name": "插畫"
+      "tag_name": "作品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 36,
     "fields": {
-      "tag_name": "數位媒體"
+      "tag_name": "高中"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 37,
     "fields": {
-      "tag_name": "創新"
+      "tag_name": "學生競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 38,
     "fields": {
-      "tag_name": "文化資產"
+      "tag_name": "大專院校"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 39,
     "fields": {
-      "tag_name": "大學"
+      "tag_name": "國中"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 40,
     "fields": {
-      "tag_name": "瓶身設計"
+      "tag_name": "國小"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 41,
     "fields": {
-      "tag_name": "海報設計"
+      "tag_name": "高職"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 42,
     "fields": {
-      "tag_name": "可爾必思"
+      "tag_name": "技專院校"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 43,
     "fields": {
-      "tag_name": "大專院校"
+      "tag_name": "社會人士"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 44,
     "fields": {
-      "tag_name": "寫一封信給自己"
+      "tag_name": "環保"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 45,
     "fields": {
-      "tag_name": "紙上躍躍然"
+      "tag_name": "環保議題"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 46,
     "fields": {
-      "tag_name": "典美插畫大賞"
+      "tag_name": "永續發展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 47,
     "fields": {
-      "tag_name": "手繪"
+      "tag_name": "ESG"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 48,
     "fields": {
-      "tag_name": "玩具"
+      "tag_name": "保護環境"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 49,
     "fields": {
-      "tag_name": "孕嬰童用品"
+      "tag_name": "Environmental-protection"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 50,
     "fields": {
-      "tag_name": "樂齡玩具"
+      "tag_name": "可威"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 51,
     "fields": {
-      "tag_name": "詩詞"
+      "tag_name": "美麗地球由我畫起"
     }
   },
   {
@@ -367,6615 +367,6615 @@
     "model": "base.competitiontag",
     "pk": 53,
     "fields": {
-      "tag_name": "文學"
+      "tag_name": "詩"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 54,
     "fields": {
-      "tag_name": "詩"
+      "tag_name": "繪本創作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 55,
     "fields": {
-      "tag_name": "國際"
+      "tag_name": "斗六市立繪本圖書館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 56,
     "fields": {
-      "tag_name": "全球"
+      "tag_name": "世界共好"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 57,
     "fields": {
-      "tag_name": "專業"
+      "tag_name": "SDGs"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 58,
     "fields": {
-      "tag_name": "業餘"
+      "tag_name": "繪圖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 59,
     "fields": {
-      "tag_name": "拍攝"
+      "tag_name": "社會競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 60,
     "fields": {
-      "tag_name": "照相"
+      "tag_name": "玩具"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 61,
     "fields": {
-      "tag_name": "拍照"
+      "tag_name": "孕嬰童用品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 62,
     "fields": {
-      "tag_name": "攝影"
+      "tag_name": "設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 63,
     "fields": {
-      "tag_name": "獎"
+      "tag_name": "樂齡玩具"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 64,
     "fields": {
-      "tag_name": "自然"
+      "tag_name": "徵才"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 65,
     "fields": {
-      "tag_name": "美術"
+      "tag_name": "居住空間"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 66,
     "fields": {
-      "tag_name": "風景"
+      "tag_name": "綠能競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 67,
     "fields": {
-      "tag_name": "動物"
+      "tag_name": "淨零碳排"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 68,
     "fields": {
-      "tag_name": "建築"
+      "tag_name": "智慧低碳生活"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 69,
     "fields": {
-      "tag_name": "黑白"
+      "tag_name": "商品設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 70,
     "fields": {
-      "tag_name": "居住空間"
+      "tag_name": "家電"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 71,
     "fields": {
-      "tag_name": "綠能競賽"
+      "tag_name": "家電競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 72,
     "fields": {
-      "tag_name": "淨零碳排"
+      "tag_name": "加值美學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 73,
     "fields": {
-      "tag_name": "智慧低碳生活"
+      "tag_name": "獎金"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 74,
     "fields": {
-      "tag_name": "商品設計"
+      "tag_name": "比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 75,
     "fields": {
-      "tag_name": "永續發展"
+      "tag_name": "智慧功能"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 76,
     "fields": {
-      "tag_name": "手機"
+      "tag_name": "白色家電"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 77,
     "fields": {
-      "tag_name": "行動影片"
+      "tag_name": "樂活永續"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 78,
     "fields": {
-      "tag_name": "短影片"
+      "tag_name": "住空間"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 79,
     "fields": {
-      "tag_name": "學生保障名額"
+      "tag_name": "整合設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 80,
     "fields": {
-      "tag_name": "高額獎金"
+      "tag_name": "LOHAS"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 81,
     "fields": {
-      "tag_name": "財團法人"
+      "tag_name": "產品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 82,
     "fields": {
-      "tag_name": "油畫"
+      "tag_name": "產業升級"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 83,
     "fields": {
-      "tag_name": "中山"
+      "tag_name": "美學設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 84,
     "fields": {
-      "tag_name": "青年"
+      "tag_name": "獎金獵人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 85,
     "fields": {
-      "tag_name": "藝術獎"
+      "tag_name": "Youtube"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 86,
     "fields": {
-      "tag_name": "短影音"
+      "tag_name": "影響力"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 87,
     "fields": {
-      "tag_name": "Reels"
+      "tag_name": "第三屆"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 88,
     "fields": {
-      "tag_name": "IG濾鏡"
+      "tag_name": "高中職"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 89,
     "fields": {
-      "tag_name": "表演藝術"
+      "tag_name": "參賽者"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 90,
     "fields": {
-      "tag_name": "工藝"
+      "tag_name": "全國高中職"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 91,
     "fields": {
-      "tag_name": "書法"
+      "tag_name": "微電影徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 92,
     "fields": {
-      "tag_name": "水墨"
+      "tag_name": "不限國籍"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 93,
     "fields": {
-      "tag_name": "西畫"
+      "tag_name": "30秒"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 94,
     "fields": {
-      "tag_name": "novel"
+      "tag_name": "原創作品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 95,
     "fields": {
-      "tag_name": "創意寫作"
+      "tag_name": "頒獎典禮"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 96,
     "fields": {
-      "tag_name": "徵文比賽"
+      "tag_name": "徵選活動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 97,
     "fields": {
-      "tag_name": "台灣角川"
+      "tag_name": "社會組"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 98,
     "fields": {
-      "tag_name": "小說"
+      "tag_name": "非營利"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 99,
     "fields": {
-      "tag_name": "KadoKado"
+      "tag_name": "style"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 100,
     "fields": {
-      "tag_name": "林榮三"
+      "tag_name": "正能量"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 101,
     "fields": {
-      "tag_name": "臺中文學獎"
+      "tag_name": "志願服務"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 102,
     "fields": {
-      "tag_name": "臺中市政府"
+      "tag_name": "Creative"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 103,
     "fields": {
-      "tag_name": "臺中市政府文化局"
+      "tag_name": "人氣獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 104,
     "fields": {
-      "tag_name": "遠景出版事業有限公司"
+      "tag_name": "創用CC"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 105,
     "fields": {
-      "tag_name": "徵件"
+      "tag_name": "微電影組"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 106,
     "fields": {
-      "tag_name": "影展"
+      "tag_name": "校園組"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 107,
     "fields": {
-      "tag_name": "散文"
+      "tag_name": "智慧財產權"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 108,
     "fields": {
-      "tag_name": "獎金獵人"
+      "tag_name": "得獎作品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 109,
     "fields": {
-      "tag_name": "Youtube"
+      "tag_name": "線上報名"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 110,
     "fields": {
-      "tag_name": "影響力"
+      "tag_name": "障礙者"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 111,
     "fields": {
-      "tag_name": "社會人士"
+      "tag_name": "大和獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 112,
     "fields": {
-      "tag_name": "第三屆"
+      "tag_name": "智慧財產"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 113,
     "fields": {
-      "tag_name": "高中職"
+      "tag_name": "回饋社會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 114,
     "fields": {
-      "tag_name": "參賽者"
+      "tag_name": "台灣大"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 115,
     "fields": {
-      "tag_name": "全國高中職"
+      "tag_name": "中華民國"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 116,
     "fields": {
-      "tag_name": "微電影徵選"
+      "tag_name": "著作權"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 117,
     "fields": {
-      "tag_name": "不限國籍"
+      "tag_name": "微電影拍攝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 118,
     "fields": {
-      "tag_name": "30秒"
+      "tag_name": "2023"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 119,
     "fields": {
-      "tag_name": "原創作品"
+      "tag_name": "不限資格"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 120,
     "fields": {
-      "tag_name": "頒獎典禮"
+      "tag_name": "eco"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 121,
     "fields": {
-      "tag_name": "徵選活動"
+      "tag_name": "電影拍攝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 122,
     "fields": {
-      "tag_name": "社會組"
+      "tag_name": "行動力"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 123,
     "fields": {
-      "tag_name": "非營利"
+      "tag_name": "國高中"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 124,
     "fields": {
-      "tag_name": "style"
+      "tag_name": "國際"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 125,
     "fields": {
-      "tag_name": "正能量"
+      "tag_name": "全球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 126,
     "fields": {
-      "tag_name": "志願服務"
+      "tag_name": "專業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 127,
     "fields": {
-      "tag_name": "Creative"
+      "tag_name": "業餘"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 128,
     "fields": {
-      "tag_name": "人氣獎"
+      "tag_name": "拍攝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 129,
     "fields": {
-      "tag_name": "創用CC"
+      "tag_name": "照相"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 130,
     "fields": {
-      "tag_name": "微電影組"
+      "tag_name": "獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 131,
     "fields": {
-      "tag_name": "校園組"
+      "tag_name": "自然"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 132,
     "fields": {
-      "tag_name": "智慧財產權"
+      "tag_name": "美術"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 133,
     "fields": {
-      "tag_name": "得獎作品"
+      "tag_name": "風景"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 134,
     "fields": {
-      "tag_name": "線上報名"
+      "tag_name": "動物"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 135,
     "fields": {
-      "tag_name": "障礙者"
+      "tag_name": "建築"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 136,
     "fields": {
-      "tag_name": "大和獎"
+      "tag_name": "黑白"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 137,
     "fields": {
-      "tag_name": "智慧財產"
+      "tag_name": "漫畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 138,
     "fields": {
-      "tag_name": "回饋社會"
+      "tag_name": "大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 139,
     "fields": {
-      "tag_name": "台灣大"
+      "tag_name": "短影音"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 140,
     "fields": {
-      "tag_name": "中華民國"
+      "tag_name": "Reels"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 141,
     "fields": {
-      "tag_name": "著作權"
+      "tag_name": "IG濾鏡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 142,
     "fields": {
-      "tag_name": "微電影拍攝"
+      "tag_name": "高額獎金"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 143,
     "fields": {
-      "tag_name": "2023"
+      "tag_name": "散文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 144,
     "fields": {
-      "tag_name": "不限資格"
+      "tag_name": "通用設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 145,
     "fields": {
-      "tag_name": "eco"
+      "tag_name": "台北101"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 146,
     "fields": {
-      "tag_name": "行動力"
+      "tag_name": "圖文創作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 147,
     "fields": {
-      "tag_name": "國高中"
+      "tag_name": "藝術"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 148,
     "fields": {
-      "tag_name": "企劃"
+      "tag_name": "關西"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 149,
     "fields": {
-      "tag_name": "環境"
+      "tag_name": "日本"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 150,
     "fields": {
-      "tag_name": "能源"
+      "tag_name": "香港"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 151,
     "fields": {
-      "tag_name": "保護"
+      "tag_name": "行銷"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 152,
     "fields": {
-      "tag_name": "保育"
+      "tag_name": "圖文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 153,
     "fields": {
-      "tag_name": "節能"
+      "tag_name": "平面設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 154,
     "fields": {
-      "tag_name": "公益"
+      "tag_name": "環境"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 155,
     "fields": {
-      "tag_name": "語文"
+      "tag_name": "能源"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 156,
     "fields": {
-      "tag_name": "朗讀"
+      "tag_name": "保護"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 157,
     "fields": {
-      "tag_name": "演講"
+      "tag_name": "保育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 158,
     "fields": {
-      "tag_name": "語言"
+      "tag_name": "節能"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 159,
     "fields": {
-      "tag_name": "寫字"
+      "tag_name": "創新"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 160,
     "fields": {
-      "tag_name": "字詞"
+      "tag_name": "公益"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 161,
     "fields": {
-      "tag_name": "閱讀"
+      "tag_name": "兒童"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 162,
     "fields": {
-      "tag_name": "講者"
+      "tag_name": "雲端"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 163,
     "fields": {
-      "tag_name": "口語"
+      "tag_name": "雲端運算"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 164,
     "fields": {
-      "tag_name": "寫作"
+      "tag_name": "遙測"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 165,
     "fields": {
-      "tag_name": "作文"
+      "tag_name": "大數據"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 166,
     "fields": {
-      "tag_name": "比賽"
+      "tag_name": "程式競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 167,
     "fields": {
-      "tag_name": "投稿"
+      "tag_name": "AI"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 168,
     "fields": {
-      "tag_name": "吉祥物"
+      "tag_name": "AWS"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 169,
     "fields": {
-      "tag_name": "職安"
+      "tag_name": "智慧"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 170,
     "fields": {
-      "tag_name": "勞工"
+      "tag_name": "智慧城市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 171,
     "fields": {
-      "tag_name": "安全"
+      "tag_name": "後山文學獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 172,
     "fields": {
-      "tag_name": "衛生"
+      "tag_name": "國立臺東生活美學館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 173,
     "fields": {
-      "tag_name": "程式"
+      "tag_name": "文化部"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 174,
     "fields": {
-      "tag_name": "新創"
+      "tag_name": "文學創作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 175,
     "fields": {
-      "tag_name": "賽事"
+      "tag_name": "書法"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 176,
     "fields": {
-      "tag_name": "歌唱比賽"
+      "tag_name": "藝文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 177,
     "fields": {
-      "tag_name": "唱歌比賽"
+      "tag_name": "表演藝術"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 178,
     "fields": {
-      "tag_name": "錄音"
+      "tag_name": "工藝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 179,
     "fields": {
-      "tag_name": "表演"
+      "tag_name": "水墨"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 180,
     "fields": {
-      "tag_name": "歌手"
+      "tag_name": "西畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 181,
     "fields": {
-      "tag_name": "翻唱"
+      "tag_name": "語文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 182,
     "fields": {
-      "tag_name": "藝人"
+      "tag_name": "朗讀"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 183,
     "fields": {
-      "tag_name": "舞台"
+      "tag_name": "演講"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 184,
     "fields": {
-      "tag_name": "圖文創作"
+      "tag_name": "語言"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 185,
     "fields": {
-      "tag_name": "兒童文學"
+      "tag_name": "寫字"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 186,
     "fields": {
-      "tag_name": "雜誌徵稿"
+      "tag_name": "字詞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 187,
     "fields": {
-      "tag_name": "雲端"
+      "tag_name": "閱讀"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 188,
     "fields": {
-      "tag_name": "雲端運算"
+      "tag_name": "講者"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 189,
     "fields": {
-      "tag_name": "遙測"
+      "tag_name": "口語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 190,
     "fields": {
-      "tag_name": "大數據"
+      "tag_name": "父親節"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 191,
     "fields": {
-      "tag_name": "程式競賽"
+      "tag_name": "爸爸"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 192,
     "fields": {
-      "tag_name": "AI"
+      "tag_name": "徵文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 193,
     "fields": {
-      "tag_name": "AWS"
+      "tag_name": "投稿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 194,
     "fields": {
-      "tag_name": "智慧"
+      "tag_name": "感謝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 195,
     "fields": {
-      "tag_name": "智慧城市"
+      "tag_name": "青年"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 196,
     "fields": {
-      "tag_name": "藝文"
+      "tag_name": "阿里山"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 197,
     "fields": {
-      "tag_name": "麥味登"
+      "tag_name": "故事"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 198,
     "fields": {
-      "tag_name": "揚秦國際"
+      "tag_name": "教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 199,
     "fields": {
-      "tag_name": "影像"
+      "tag_name": "文薈獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 200,
     "fields": {
-      "tag_name": "音樂"
+      "tag_name": "全國身心障礙者文藝獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 201,
     "fields": {
-      "tag_name": "通用設計"
+      "tag_name": "國立彰化生活美學館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 202,
     "fields": {
-      "tag_name": "繪本創作"
+      "tag_name": "繪畫比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 203,
     "fields": {
-      "tag_name": "斗六市立繪本圖書館"
+      "tag_name": "文學比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 204,
     "fields": {
-      "tag_name": "世界共好"
+      "tag_name": "身心障礙"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 205,
     "fields": {
-      "tag_name": "SDGs"
+      "tag_name": "國道"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 206,
     "fields": {
-      "tag_name": "繪圖"
+      "tag_name": "高速公路"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 207,
     "fields": {
-      "tag_name": "社會競賽"
+      "tag_name": "交控管理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 208,
     "fields": {
-      "tag_name": "展覽"
+      "tag_name": "交通管理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 209,
     "fields": {
-      "tag_name": "藝術"
+      "tag_name": "國道智慧"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 210,
     "fields": {
-      "tag_name": "教育"
+      "tag_name": "創意競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 211,
     "fields": {
-      "tag_name": "人權"
+      "tag_name": "高速公路局"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 212,
     "fields": {
-      "tag_name": "教案"
+      "tag_name": "攝影競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 213,
     "fields": {
-      "tag_name": "老師"
+      "tag_name": "經濟部能源局"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 214,
     "fields": {
-      "tag_name": "後山文學獎"
+      "tag_name": "綠攝大地"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 215,
     "fields": {
-      "tag_name": "國立臺東生活美學館"
+      "tag_name": "綠野現蹤"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 216,
     "fields": {
-      "tag_name": "文化部"
+      "tag_name": "2023綠能攝影徵件競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 217,
     "fields": {
-      "tag_name": "文學創作"
+      "tag_name": "環境永續"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 218,
     "fields": {
-      "tag_name": "報導文學"
+      "tag_name": "USR"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 219,
     "fields": {
-      "tag_name": "歷史"
+      "tag_name": "臺師大"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 220,
     "fields": {
-      "tag_name": "生命教育"
+      "tag_name": "減塑行動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 221,
     "fields": {
-      "tag_name": "教育部"
+      "tag_name": "永續消費"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 222,
     "fields": {
-      "tag_name": "南華大學"
+      "tag_name": "自殺防治"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 223,
     "fields": {
-      "tag_name": "影片競賽"
+      "tag_name": "世界自殺防治日"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 224,
     "fields": {
-      "tag_name": "關西"
+      "tag_name": "凝聚力量"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 225,
     "fields": {
-      "tag_name": "日本"
+      "tag_name": "守護生命"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 226,
     "fields": {
-      "tag_name": "LINE"
+      "tag_name": "音樂"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 227,
     "fields": {
-      "tag_name": "貼圖設計"
+      "tag_name": "短文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 228,
     "fields": {
-      "tag_name": "貼圖大賽"
+      "tag_name": "徵件"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 229,
     "fields": {
-      "tag_name": "創意"
+      "tag_name": "樂齡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 230,
     "fields": {
-      "tag_name": "合計"
+      "tag_name": "短視頻"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 231,
     "fields": {
-      "tag_name": "想法"
+      "tag_name": "自媒體"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 232,
     "fields": {
-      "tag_name": "議題"
+      "tag_name": "網紅"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 233,
     "fields": {
-      "tag_name": "社會設計"
+      "tag_name": "抖音"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 234,
     "fields": {
-      "tag_name": "漫畫"
+      "tag_name": "TikTok"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 235,
     "fields": {
-      "tag_name": "防騙"
+      "tag_name": "shorts"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 236,
     "fields": {
-      "tag_name": "海報"
+      "tag_name": "KOL"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 237,
     "fields": {
-      "tag_name": "台北101"
+      "tag_name": "唱歌"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 238,
     "fields": {
-      "tag_name": "高職"
+      "tag_name": "歌唱比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 239,
     "fields": {
-      "tag_name": "運動"
+      "tag_name": "原創"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 240,
     "fields": {
-      "tag_name": "休閒"
+      "tag_name": "金牌"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 241,
     "fields": {
-      "tag_name": "環保"
+      "tag_name": "網路投票"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 242,
     "fields": {
-      "tag_name": "崑山科技大學"
+      "tag_name": "音樂徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 243,
     "fields": {
-      "tag_name": "科學"
+      "tag_name": "詞曲創作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 244,
     "fields": {
-      "tag_name": "科普"
+      "tag_name": "徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 245,
     "fields": {
-      "tag_name": "Youtuber"
+      "tag_name": "歌唱大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 246,
     "fields": {
-      "tag_name": "數學"
+      "tag_name": "陽明山不插電音樂季"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 247,
     "fields": {
-      "tag_name": "物理"
+      "tag_name": "sining"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 248,
     "fields": {
-      "tag_name": "青少年"
+      "tag_name": "國內"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 249,
     "fields": {
-      "tag_name": "LINEChatbot"
+      "tag_name": "學生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 250,
     "fields": {
-      "tag_name": "API"
+      "tag_name": "財團法人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 251,
     "fields": {
-      "tag_name": "產品設計"
+      "tag_name": "油畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 252,
     "fields": {
-      "tag_name": "企劃競賽"
+      "tag_name": "國家人權委員會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 253,
     "fields": {
-      "tag_name": "LIFF"
+      "tag_name": "世界人權宣言75周年"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 254,
     "fields": {
-      "tag_name": "設計競賽"
+      "tag_name": "世界人權宣言"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 255,
     "fields": {
-      "tag_name": "對話機器人設計大賽"
+      "tag_name": "UDHR75"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 256,
     "fields": {
-      "tag_name": "chatbot"
+      "tag_name": "NHRC"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 257,
     "fields": {
-      "tag_name": "北商"
+      "tag_name": "人權75"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 258,
     "fields": {
-      "tag_name": "北商大"
+      "tag_name": "POSTERCOMPETITION"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 259,
     "fields": {
-      "tag_name": "台北商業大學"
+      "tag_name": "POSTER"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 260,
     "fields": {
-      "tag_name": "PROTOSTAR"
+      "tag_name": "design"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 261,
     "fields": {
-      "tag_name": "LINEPROTOSTAR"
+      "tag_name": "graphicdesign"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 262,
     "fields": {
-      "tag_name": "對話機器人"
+      "tag_name": "LINE"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 263,
     "fields": {
-      "tag_name": "生成式AI"
+      "tag_name": "貼圖設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 264,
     "fields": {
-      "tag_name": "貼圖"
+      "tag_name": "貼圖大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 265,
     "fields": {
-      "tag_name": "社會大學"
+      "tag_name": "寫生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 266,
     "fields": {
-      "tag_name": "自殺防治"
+      "tag_name": "短片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 267,
     "fields": {
-      "tag_name": "1995"
+      "tag_name": "金片子"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 268,
     "fields": {
-      "tag_name": "照片"
+      "tag_name": "黃子佼"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 269,
     "fields": {
-      "tag_name": "短文"
+      "tag_name": "電影"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 270,
     "fields": {
-      "tag_name": "樂齡"
+      "tag_name": "百萬"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 271,
     "fields": {
-      "tag_name": "創意狂想"
+      "tag_name": "台北市電影委員會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 272,
     "fields": {
-      "tag_name": "巢向未來"
+      "tag_name": "美亞娛樂"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 273,
     "fields": {
-      "tag_name": "故事"
+      "tag_name": "富川影展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 274,
     "fields": {
-      "tag_name": "企業"
+      "tag_name": "麥味登"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 275,
     "fields": {
-      "tag_name": "永續"
+      "tag_name": "揚秦國際"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 276,
     "fields": {
-      "tag_name": "發展"
+      "tag_name": "影像"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 277,
     "fields": {
-      "tag_name": "營運"
+      "tag_name": "短篇小說"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 278,
     "fields": {
-      "tag_name": "管理"
+      "tag_name": "類型小說"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 279,
     "fields": {
-      "tag_name": "商業"
+      "tag_name": "民俗信仰"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 280,
     "fields": {
-      "tag_name": "動漫"
+      "tag_name": "媽祖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 281,
     "fields": {
-      "tag_name": "作詞"
+      "tag_name": "神明"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 282,
     "fields": {
-      "tag_name": "作曲"
+      "tag_name": "習俗"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 283,
     "fields": {
-      "tag_name": "寫詞"
+      "tag_name": "靈異"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 284,
     "fields": {
-      "tag_name": "製作人"
+      "tag_name": "職人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 285,
     "fields": {
-      "tag_name": "桃園"
+      "tag_name": "鬼故事"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 286,
     "fields": {
-      "tag_name": "原住民"
+      "tag_name": "宮廟"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 287,
     "fields": {
-      "tag_name": "攝影比賽"
+      "tag_name": "戒菸"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 288,
     "fields": {
-      "tag_name": "影片比賽"
+      "tag_name": "戒菸專線"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 289,
     "fields": {
-      "tag_name": "影片拍攝"
+      "tag_name": "書法比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 290,
     "fields": {
-      "tag_name": "獎金"
+      "tag_name": "全國"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 291,
     "fields": {
-      "tag_name": "勞動權益"
+      "tag_name": "防騙"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 292,
     "fields": {
-      "tag_name": "勞動人權"
+      "tag_name": "海報"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 293,
     "fields": {
-      "tag_name": "短片徵選"
+      "tag_name": "兒童文學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 294,
     "fields": {
-      "tag_name": "攝影競賽"
+      "tag_name": "雜誌徵稿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 295,
     "fields": {
-      "tag_name": "經濟部能源局"
+      "tag_name": "產品開發"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 296,
     "fields": {
-      "tag_name": "綠攝大地"
+      "tag_name": "版畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 297,
     "fields": {
-      "tag_name": "綠野現蹤"
+      "tag_name": "水墨畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 298,
     "fields": {
-      "tag_name": "2023綠能攝影徵件競賽"
+      "tag_name": "貼圖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 299,
     "fields": {
-      "tag_name": "家電"
+      "tag_name": "社會大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 300,
     "fields": {
-      "tag_name": "家電競賽"
+      "tag_name": "1995"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 301,
     "fields": {
-      "tag_name": "加值美學"
+      "tag_name": "圍棋"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 302,
     "fields": {
-      "tag_name": "智慧功能"
+      "tag_name": "圍棋比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 303,
     "fields": {
-      "tag_name": "白色家電"
+      "tag_name": "成名之路"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 304,
     "fields": {
-      "tag_name": "樂活永續"
+      "tag_name": "職安"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 305,
     "fields": {
-      "tag_name": "住空間"
+      "tag_name": "勞工"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 306,
     "fields": {
-      "tag_name": "整合設計"
+      "tag_name": "安全"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 307,
     "fields": {
-      "tag_name": "LOHAS"
+      "tag_name": "衛生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 308,
     "fields": {
-      "tag_name": "產品"
+      "tag_name": "萬海"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 309,
     "fields": {
-      "tag_name": "產業升級"
+      "tag_name": "航運"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 310,
     "fields": {
-      "tag_name": "美學設計"
+      "tag_name": "木育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 311,
     "fields": {
-      "tag_name": "音樂大賽"
+      "tag_name": "作詞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 312,
     "fields": {
-      "tag_name": "詞曲創作"
+      "tag_name": "作曲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 313,
     "fields": {
-      "tag_name": "音樂競賽"
+      "tag_name": "寫詞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 314,
     "fields": {
-      "tag_name": "臺南音樂創作"
+      "tag_name": "製作人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 315,
     "fields": {
-      "tag_name": "作詞作曲"
+      "tag_name": "建造"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 316,
     "fields": {
-      "tag_name": "技專院校"
+      "tag_name": "紀念碑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 317,
     "fields": {
-      "tag_name": "環保議題"
+      "tag_name": "個人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 318,
     "fields": {
-      "tag_name": "ESG"
+      "tag_name": "團體"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 319,
     "fields": {
-      "tag_name": "保護環境"
+      "tag_name": "結構"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 320,
     "fields": {
-      "tag_name": "Environmental-protection"
+      "tag_name": "音樂大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 321,
     "fields": {
-      "tag_name": "可威"
+      "tag_name": "音樂競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 322,
     "fields": {
-      "tag_name": "美麗地球由我畫起"
+      "tag_name": "臺南音樂創作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 323,
     "fields": {
-      "tag_name": "圖書館"
+      "tag_name": "作詞作曲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 324,
     "fields": {
-      "tag_name": "中崙分館"
+      "tag_name": "塗鴉"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 325,
     "fields": {
-      "tag_name": "花王"
+      "tag_name": "影片比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 326,
     "fields": {
-      "tag_name": "陶瓷"
+      "tag_name": "動畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 327,
     "fields": {
-      "tag_name": "雕塑"
+      "tag_name": "紀錄片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 328,
     "fields": {
-      "tag_name": "平面"
+      "tag_name": "劇情片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 329,
     "fields": {
-      "tag_name": "立體"
+      "tag_name": "體育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 330,
     "fields": {
-      "tag_name": "金車"
+      "tag_name": "羽球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 331,
     "fields": {
-      "tag_name": "金車文藝中心"
+      "tag_name": "運動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 332,
     "fields": {
-      "tag_name": "高雄"
+      "tag_name": "2023年"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 333,
     "fields": {
-      "tag_name": "國內"
+      "tag_name": "海報設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 334,
     "fields": {
-      "tag_name": "學生"
+      "tag_name": "票選活動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 335,
     "fields": {
-      "tag_name": "圍棋"
+      "tag_name": "新台文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 336,
     "fields": {
-      "tag_name": "圍棋比賽"
+      "tag_name": "台語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 337,
     "fields": {
-      "tag_name": "印刷"
+      "tag_name": "文化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 338,
     "fields": {
-      "tag_name": "紙器"
+      "tag_name": "教師"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 339,
     "fields": {
-      "tag_name": "包裝"
+      "tag_name": "報導文學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 340,
     "fields": {
-      "tag_name": "出版"
+      "tag_name": "歷史"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 341,
     "fields": {
-      "tag_name": "產學合作"
+      "tag_name": "桌上遊戲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 342,
     "fields": {
-      "tag_name": "動畫"
+      "tag_name": "桌遊"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 343,
     "fields": {
-      "tag_name": "紀錄片"
+      "tag_name": "桌遊設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 344,
     "fields": {
-      "tag_name": "劇情片"
+      "tag_name": "海洋"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 345,
     "fields": {
-      "tag_name": "創新教案"
+      "tag_name": "大學生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 346,
     "fields": {
-      "tag_name": "凱比機器人"
+      "tag_name": "原住民"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 347,
     "fields": {
-      "tag_name": "書法比賽"
+      "tag_name": "繪畫競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 348,
     "fields": {
-      "tag_name": "全國"
+      "tag_name": "花王"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 349,
     "fields": {
-      "tag_name": "徵選"
+      "tag_name": "澎湖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 350,
     "fields": {
-      "tag_name": "健走"
+      "tag_name": "玉里"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 351,
     "fields": {
-      "tag_name": "唱歌"
+      "tag_name": "攝影比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 352,
     "fields": {
-      "tag_name": "原創"
+      "tag_name": "花蓮"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 353,
     "fields": {
-      "tag_name": "金牌"
+      "tag_name": "忠訓"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 354,
     "fields": {
-      "tag_name": "網路投票"
+      "tag_name": "花蓮縣玉里鎮"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 355,
     "fields": {
-      "tag_name": "音樂徵選"
+      "tag_name": "路跑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 356,
     "fields": {
-      "tag_name": "維他露"
+      "tag_name": "偏鄉"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 357,
     "fields": {
-      "tag_name": "葉紅女性詩獎"
+      "tag_name": "觀光"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 358,
     "fields": {
-      "tag_name": "新詩"
+      "tag_name": "休閒"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 359,
     "fields": {
-      "tag_name": "神人"
+      "tag_name": "崑山科技大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 360,
     "fields": {
-      "tag_name": "徵文"
+      "tag_name": "花蓮縣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 361,
     "fields": {
-      "tag_name": "世界自殺防治日"
+      "tag_name": "建物"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 362,
     "fields": {
-      "tag_name": "凝聚力量"
+      "tag_name": "營運"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 363,
     "fields": {
-      "tag_name": "守護生命"
+      "tag_name": "農特產"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 364,
     "fields": {
-      "tag_name": "行動研究"
+      "tag_name": "永續"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 365,
     "fields": {
-      "tag_name": "永續實踐"
+      "tag_name": "SDGS"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 366,
     "fields": {
-      "tag_name": "環境實驗"
+      "tag_name": "環境保護"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 367,
     "fields": {
-      "tag_name": "實驗教育"
+      "tag_name": "新竹縣竹東頭前溪生態公園"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 368,
     "fields": {
-      "tag_name": "環保減塑"
+      "tag_name": "優質好禮"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 369,
     "fields": {
-      "tag_name": "永續消費"
+      "tag_name": "美展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 370,
     "fields": {
-      "tag_name": "USR"
+      "tag_name": "減塑環保"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 371,
     "fields": {
-      "tag_name": "環境教育"
+      "tag_name": "徵圖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 372,
     "fields": {
-      "tag_name": "生活落實"
+      "tag_name": "閱讀心得"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 373,
     "fields": {
-      "tag_name": "萬海"
+      "tag_name": "科技"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 374,
     "fields": {
-      "tag_name": "航運"
+      "tag_name": "電腦繪圖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 375,
     "fields": {
-      "tag_name": "舞蹈"
+      "tag_name": "才藝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 376,
     "fields": {
-      "tag_name": "歌唱"
+      "tag_name": "學習歷程"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 377,
     "fields": {
-      "tag_name": "大賽"
+      "tag_name": "文藝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 378,
     "fields": {
-      "tag_name": "短視頻"
+      "tag_name": "優質教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 379,
     "fields": {
-      "tag_name": "自媒體"
+      "tag_name": "氣候行動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 380,
     "fields": {
-      "tag_name": "網紅"
+      "tag_name": "壘球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 381,
     "fields": {
-      "tag_name": "抖音"
+      "tag_name": "總統盃"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 382,
     "fields": {
-      "tag_name": "TikTok"
+      "tag_name": "科學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 383,
     "fields": {
-      "tag_name": "shorts"
+      "tag_name": "科普"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 384,
     "fields": {
-      "tag_name": "KOL"
+      "tag_name": "Youtuber"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 385,
     "fields": {
-      "tag_name": "壘球"
+      "tag_name": "數學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 386,
     "fields": {
-      "tag_name": "總統盃"
+      "tag_name": "物理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 387,
     "fields": {
-      "tag_name": "繪本比賽"
+      "tag_name": "青少年"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 388,
     "fields": {
-      "tag_name": "空間特工"
+      "tag_name": "生命教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 389,
     "fields": {
-      "tag_name": "設計比賽"
+      "tag_name": "教育部"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 390,
     "fields": {
-      "tag_name": "家具設計"
+      "tag_name": "南華大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 391,
     "fields": {
-      "tag_name": "特工盃"
+      "tag_name": "影片競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 392,
     "fields": {
-      "tag_name": "阿里山"
+      "tag_name": "戶外"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 393,
     "fields": {
-      "tag_name": "桃園市"
+      "tag_name": "IG"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 394,
     "fields": {
-      "tag_name": "文字"
+      "tag_name": "冒險"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 395,
     "fields": {
-      "tag_name": "童詩"
+      "tag_name": "探險"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 396,
     "fields": {
-      "tag_name": "童謠"
+      "tag_name": "景觀"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 397,
     "fields": {
-      "tag_name": "教師"
+      "tag_name": "露營"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 398,
     "fields": {
-      "tag_name": "國道"
+      "tag_name": "山"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 399,
     "fields": {
-      "tag_name": "高速公路"
+      "tag_name": "海"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 400,
     "fields": {
-      "tag_name": "交控管理"
+      "tag_name": "高雄"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 401,
     "fields": {
-      "tag_name": "交通管理"
+      "tag_name": "維他露"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 402,
     "fields": {
-      "tag_name": "國道智慧"
+      "tag_name": "程式"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 403,
     "fields": {
-      "tag_name": "創意競賽"
+      "tag_name": "新創"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 404,
     "fields": {
-      "tag_name": "高速公路局"
+      "tag_name": "賽事"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 405,
     "fields": {
-      "tag_name": "環境永續"
+      "tag_name": "影片徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 406,
     "fields": {
-      "tag_name": "臺師大"
+      "tag_name": "影片徵件"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 407,
     "fields": {
-      "tag_name": "減塑行動"
+      "tag_name": "創作競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 408,
     "fields": {
-      "tag_name": "VR"
+      "tag_name": "城市行銷"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 409,
     "fields": {
-      "tag_name": "科技"
+      "tag_name": "公用頻道"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 410,
     "fields": {
-      "tag_name": "資訊"
+      "tag_name": "台北光景"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 411,
     "fields": {
-      "tag_name": "軟體"
+      "tag_name": "臺北市政府"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 412,
     "fields": {
-      "tag_name": "創客"
+      "tag_name": "創業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 413,
     "fields": {
-      "tag_name": "駭客"
+      "tag_name": "地方創生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 414,
     "fields": {
-      "tag_name": "影音"
+      "tag_name": "嘉鄉的100種美好生活"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 415,
     "fields": {
-      "tag_name": "頭痛"
+      "tag_name": "創造未來"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 416,
     "fields": {
-      "tag_name": "偏頭痛"
+      "tag_name": "創新點子"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 417,
     "fields": {
-      "tag_name": "頭痛學會"
+      "tag_name": "流行"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 418,
     "fields": {
-      "tag_name": "台灣"
+      "tag_name": "大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 419,
     "fields": {
-      "tag_name": "影片徵稿"
+      "tag_name": "公民科學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 420,
     "fields": {
-      "tag_name": "十萬"
+      "tag_name": "提案"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 421,
     "fields": {
-      "tag_name": "產品開發"
+      "tag_name": "大專校院"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 422,
     "fields": {
-      "tag_name": "金片子"
+      "tag_name": "民間團體"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 423,
     "fields": {
-      "tag_name": "黃子佼"
+      "tag_name": "短片競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 424,
     "fields": {
-      "tag_name": "百萬"
+      "tag_name": "全民紀錄片競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 425,
     "fields": {
-      "tag_name": "台北市電影委員會"
+      "tag_name": "影音"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 426,
     "fields": {
-      "tag_name": "美亞娛樂"
+      "tag_name": "頭痛"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 427,
     "fields": {
-      "tag_name": "富川影展"
+      "tag_name": "偏頭痛"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 428,
     "fields": {
-      "tag_name": "臺灣農田水利建設"
+      "tag_name": "頭痛學會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 429,
     "fields": {
-      "tag_name": "農田水利之美"
+      "tag_name": "台灣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 430,
     "fields": {
-      "tag_name": "拍照拿獎金"
+      "tag_name": "影片徵稿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 431,
     "fields": {
-      "tag_name": "全國攝影競賽"
+      "tag_name": "十萬"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 432,
     "fields": {
-      "tag_name": "總獎項金額達10萬元"
+      "tag_name": "行動研究"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 433,
     "fields": {
-      "tag_name": "桌上遊戲"
+      "tag_name": "永續實踐"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 434,
     "fields": {
-      "tag_name": "桌遊"
+      "tag_name": "環境實驗"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 435,
     "fields": {
-      "tag_name": "桌遊設計"
+      "tag_name": "實驗教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 436,
     "fields": {
-      "tag_name": "海洋"
+      "tag_name": "環保減塑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 437,
     "fields": {
-      "tag_name": "導演"
+      "tag_name": "環境教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 438,
     "fields": {
-      "tag_name": "影視"
+      "tag_name": "生活落實"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 439,
     "fields": {
-      "tag_name": "劇本"
+      "tag_name": "影片拍攝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 440,
     "fields": {
-      "tag_name": "劇組"
+      "tag_name": "勞動權益"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 441,
     "fields": {
-      "tag_name": "學生製作"
+      "tag_name": "勞動人權"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 442,
     "fields": {
-      "tag_name": "百萬獎金"
+      "tag_name": "短片徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 443,
     "fields": {
-      "tag_name": "短片創作"
+      "tag_name": "身心障礙者"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 444,
     "fields": {
-      "tag_name": "環境保護"
+      "tag_name": "創客"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 445,
     "fields": {
-      "tag_name": "新竹縣竹東頭前溪生態公園"
+      "tag_name": "智能"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 446,
     "fields": {
-      "tag_name": "優質好禮"
+      "tag_name": "臺灣農田水利建設"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 447,
     "fields": {
-      "tag_name": "徵圖"
+      "tag_name": "農田水利之美"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 448,
     "fields": {
-      "tag_name": "閱讀心得"
+      "tag_name": "拍照拿獎金"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 449,
     "fields": {
-      "tag_name": "電腦繪圖"
+      "tag_name": "全國攝影競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 450,
     "fields": {
-      "tag_name": "才藝"
+      "tag_name": "總獎項金額達10萬元"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 451,
     "fields": {
-      "tag_name": "學習歷程"
+      "tag_name": "企業競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 452,
     "fields": {
-      "tag_name": "文藝"
+      "tag_name": "鄉土人文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 453,
     "fields": {
-      "tag_name": "優質教育"
+      "tag_name": "田野調查"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 454,
     "fields": {
-      "tag_name": "氣候行動"
+      "tag_name": "神人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 455,
     "fields": {
-      "tag_name": "版畫"
+      "tag_name": "五專"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 456,
     "fields": {
-      "tag_name": "水墨畫"
+      "tag_name": "梗圖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 457,
     "fields": {
-      "tag_name": "成名之路"
+      "tag_name": "迷因"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 458,
     "fields": {
-      "tag_name": "2023年"
+      "tag_name": "暑假"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 459,
     "fields": {
-      "tag_name": "票選活動"
+      "tag_name": "導演"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 460,
     "fields": {
-      "tag_name": "塗鴉"
+      "tag_name": "影視"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 461,
     "fields": {
-      "tag_name": "繪本"
+      "tag_name": "劇本"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 462,
     "fields": {
-      "tag_name": "木育"
+      "tag_name": "劇組"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 463,
     "fields": {
-      "tag_name": "創作比賽"
+      "tag_name": "學生製作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 464,
     "fields": {
-      "tag_name": "藝術創作"
+      "tag_name": "百萬獎金"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 465,
     "fields": {
-      "tag_name": "企業媒合"
+      "tag_name": "短片創作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 466,
     "fields": {
-      "tag_name": "文薈獎"
+      "tag_name": "癲癇"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 467,
     "fields": {
-      "tag_name": "全國身心障礙者文藝獎"
+      "tag_name": "親子"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 468,
     "fields": {
-      "tag_name": "國立彰化生活美學館"
+      "tag_name": "護病比"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 469,
     "fields": {
-      "tag_name": "繪畫比賽"
+      "tag_name": "醫療工會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 470,
     "fields": {
-      "tag_name": "文學比賽"
+      "tag_name": "桃園市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 471,
     "fields": {
-      "tag_name": "身心障礙"
+      "tag_name": "童詩"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 472,
     "fields": {
-      "tag_name": "文化"
+      "tag_name": "童謠"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 473,
     "fields": {
-      "tag_name": "成人"
+      "tag_name": "圖書館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 474,
     "fields": {
-      "tag_name": "銀髮"
+      "tag_name": "中崙分館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 475,
     "fields": {
-      "tag_name": "推廣"
+      "tag_name": "繪本"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 476,
     "fields": {
-      "tag_name": "書道"
+      "tag_name": "資格限制"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 477,
     "fields": {
-      "tag_name": "美展"
+      "tag_name": "兒童繪畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 478,
     "fields": {
-      "tag_name": "澎湖"
+      "tag_name": "幼稚園"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 479,
     "fields": {
-      "tag_name": "寫生"
+      "tag_name": "生命"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 480,
     "fields": {
-      "tag_name": "建造"
+      "tag_name": "心靈"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 481,
     "fields": {
-      "tag_name": "紀念碑"
+      "tag_name": "人生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 482,
     "fields": {
-      "tag_name": "個人"
+      "tag_name": "生活"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 483,
     "fields": {
-      "tag_name": "團體"
+      "tag_name": "宗教"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 484,
     "fields": {
-      "tag_name": "結構"
+      "tag_name": "科技農業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 485,
     "fields": {
-      "tag_name": "知識"
+      "tag_name": "智慧農業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 486,
     "fields": {
-      "tag_name": "學習"
+      "tag_name": "CSR"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 487,
     "fields": {
-      "tag_name": "衛生教育"
+      "tag_name": "企業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 488,
     "fields": {
-      "tag_name": "衛教"
+      "tag_name": "顧問"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 489,
     "fields": {
-      "tag_name": "護理"
+      "tag_name": "議題"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 490,
     "fields": {
-      "tag_name": "景色"
+      "tag_name": "國際標準舞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 491,
     "fields": {
-      "tag_name": "鄉村"
+      "tag_name": "摩登"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 492,
     "fields": {
-      "tag_name": "創業"
+      "tag_name": "拉丁"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 493,
     "fields": {
-      "tag_name": "地方創生"
+      "tag_name": "新竹市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 494,
     "fields": {
-      "tag_name": "嘉鄉的100種美好生活"
+      "tag_name": "出版公司"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 495,
     "fields": {
-      "tag_name": "創造未來"
+      "tag_name": "SDG4"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 496,
     "fields": {
-      "tag_name": "創新點子"
+      "tag_name": "教案"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 497,
     "fields": {
-      "tag_name": "台北"
+      "tag_name": "教學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 498,
     "fields": {
-      "tag_name": "城市"
+      "tag_name": "學習"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 499,
     "fields": {
-      "tag_name": "設計選拔"
+      "tag_name": "知識"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 500,
     "fields": {
-      "tag_name": "資格限制"
+      "tag_name": "衛生教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 501,
     "fields": {
-      "tag_name": "兒童繪畫"
+      "tag_name": "衛教"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 502,
     "fields": {
-      "tag_name": "幼稚園"
+      "tag_name": "護理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 503,
     "fields": {
-      "tag_name": "歌唱大賽"
+      "tag_name": "美術比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 504,
     "fields": {
-      "tag_name": "陽明山不插電音樂季"
+      "tag_name": "無人機"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 505,
     "fields": {
-      "tag_name": "sining"
+      "tag_name": "綜合設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 506,
     "fields": {
-      "tag_name": "減塑消費"
+      "tag_name": "嘎檔盃"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 507,
     "fields": {
-      "tag_name": "永續環保"
+      "tag_name": "防災"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 508,
     "fields": {
-      "tag_name": "團體競賽"
+      "tag_name": "愛情"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 509,
     "fields": {
-      "tag_name": "環保署"
+      "tag_name": "歌唱"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 510,
     "fields": {
-      "tag_name": "親子"
+      "tag_name": "唱歌比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 511,
     "fields": {
-      "tag_name": "火車"
+      "tag_name": "畫畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 512,
     "fields": {
-      "tag_name": "TCCF"
+      "tag_name": "畫展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 513,
     "fields": {
-      "tag_name": "戲劇"
+      "tag_name": "專題"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 514,
     "fields": {
-      "tag_name": "劇本d"
+      "tag_name": "研究"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 515,
     "fields": {
-      "tag_name": "演員"
+      "tag_name": "資訊"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 516,
     "fields": {
-      "tag_name": "演戲"
+      "tag_name": "機器"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 517,
     "fields": {
-      "tag_name": "短篇小說"
+      "tag_name": "大專"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 518,
     "fields": {
-      "tag_name": "類型小說"
+      "tag_name": "銅管"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 519,
     "fields": {
-      "tag_name": "民俗信仰"
+      "tag_name": "木管"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 520,
     "fields": {
-      "tag_name": "媽祖"
+      "tag_name": "打擊樂"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 521,
     "fields": {
-      "tag_name": "神明"
+      "tag_name": "論文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 522,
     "fields": {
-      "tag_name": "習俗"
+      "tag_name": "自造"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 523,
     "fields": {
-      "tag_name": "靈異"
+      "tag_name": "限學生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 524,
     "fields": {
-      "tag_name": "職人"
+      "tag_name": "書寫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 525,
     "fields": {
-      "tag_name": "鬼故事"
+      "tag_name": "作文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 526,
     "fields": {
-      "tag_name": "宮廟"
+      "tag_name": "影展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 527,
     "fields": {
-      "tag_name": "觀光"
+      "tag_name": "人工智慧"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 528,
     "fields": {
-      "tag_name": "導覽"
+      "tag_name": "機器人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 529,
     "fields": {
-      "tag_name": "旅遊"
+      "tag_name": "簡報"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 530,
     "fields": {
-      "tag_name": "日文"
+      "tag_name": "工程"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 531,
     "fields": {
-      "tag_name": "素養"
+      "tag_name": "中山"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 532,
     "fields": {
-      "tag_name": "校園"
+      "tag_name": "藝術獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 533,
     "fields": {
-      "tag_name": "拼圖"
+      "tag_name": "基隆"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 534,
     "fields": {
-      "tag_name": "不限身份"
+      "tag_name": "基隆市文化局"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 535,
     "fields": {
-      "tag_name": "身心障礙者"
+      "tag_name": "補助出版"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 536,
     "fields": {
-      "tag_name": "癲癇"
+      "tag_name": "拼圖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 537,
     "fields": {
-      "tag_name": "創作祭"
+      "tag_name": "不限身份"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 538,
     "fields": {
-      "tag_name": "店長創作祭"
+      "tag_name": "環保署"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 539,
     "fields": {
-      "tag_name": "BOOKWALKER"
+      "tag_name": "Pitch"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 540,
     "fields": {
-      "tag_name": "二次元創作"
+      "tag_name": "商管"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 541,
     "fields": {
-      "tag_name": "獸耳系"
+      "tag_name": "法律"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 542,
     "fields": {
-      "tag_name": "擬人化"
+      "tag_name": "海洋法"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 543,
     "fields": {
-      "tag_name": "履歷"
+      "tag_name": "臺灣海洋大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 544,
     "fields": {
-      "tag_name": "求職"
+      "tag_name": "台北"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 545,
     "fields": {
-      "tag_name": "書面"
+      "tag_name": "城市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 546,
     "fields": {
-      "tag_name": "製作"
+      "tag_name": "設計選拔"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 547,
     "fields": {
-      "tag_name": "編輯"
+      "tag_name": "哲學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 548,
     "fields": {
-      "tag_name": "馬拉松"
+      "tag_name": "論說文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 549,
     "fields": {
-      "tag_name": "跑步"
+      "tag_name": "人文教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 550,
     "fields": {
-      "tag_name": "慢跑"
+      "tag_name": "履歷"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 551,
     "fields": {
-      "tag_name": "論文"
+      "tag_name": "求職"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 552,
     "fields": {
-      "tag_name": "工程"
+      "tag_name": "書面"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 553,
     "fields": {
-      "tag_name": "無人機"
+      "tag_name": "製作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 554,
     "fields": {
-      "tag_name": "機器"
+      "tag_name": "編輯"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 555,
     "fields": {
-      "tag_name": "嘎檔盃"
+      "tag_name": "高齡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 556,
     "fields": {
-      "tag_name": "廣告"
+      "tag_name": "活躍老化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 557,
     "fields": {
-      "tag_name": "教學"
+      "tag_name": "青銀共創"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 558,
     "fields": {
-      "tag_name": "高齡"
+      "tag_name": "飲食"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 559,
     "fields": {
-      "tag_name": "活躍老化"
+      "tag_name": "食安"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 560,
     "fields": {
-      "tag_name": "青銀共創"
+      "tag_name": "健康"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 561,
     "fields": {
-      "tag_name": "藍眼淚"
+      "tag_name": "主持"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 562,
     "fields": {
-      "tag_name": "僑生"
+      "tag_name": "主播"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 563,
     "fields": {
-      "tag_name": "研究"
+      "tag_name": "話劇"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 564,
     "fields": {
-      "tag_name": "生物"
+      "tag_name": "相聲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 565,
     "fields": {
-      "tag_name": "醫學"
+      "tag_name": "2D動畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 566,
     "fields": {
-      "tag_name": "運動科技"
+      "tag_name": "CartoonAnimator"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 567,
     "fields": {
-      "tag_name": "運動數據"
+      "tag_name": "動畫競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 568,
     "fields": {
-      "tag_name": "數位科技"
+      "tag_name": "甲尚科技"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 569,
     "fields": {
-      "tag_name": "數據分析"
+      "tag_name": "亞洲大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 570,
     "fields": {
-      "tag_name": "運動科學"
+      "tag_name": "失智症"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 571,
     "fields": {
-      "tag_name": "運動數據可視化"
+      "tag_name": "社會關懷"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 572,
     "fields": {
-      "tag_name": "國家"
+      "tag_name": "農業局"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 573,
     "fields": {
-      "tag_name": "公園"
+      "tag_name": "微風市集"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 574,
     "fields": {
-      "tag_name": "學術"
+      "tag_name": "農民市集"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 575,
     "fields": {
-      "tag_name": "氣候變強"
+      "tag_name": "假日市集"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 576,
     "fields": {
-      "tag_name": "SDG"
+      "tag_name": "有機"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 577,
     "fields": {
-      "tag_name": "語文競賽"
+      "tag_name": "友善生態"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 578,
     "fields": {
-      "tag_name": "國語"
+      "tag_name": "食農教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 579,
     "fields": {
-      "tag_name": "閩南語"
+      "tag_name": "食品安全"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 580,
     "fields": {
-      "tag_name": "客語語"
+      "tag_name": "屏東市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 581,
     "fields": {
-      "tag_name": "原住民族語"
+      "tag_name": "鑄鐵設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 582,
     "fields": {
-      "tag_name": "英語"
+      "tag_name": "產品設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 583,
     "fields": {
-      "tag_name": "專題"
+      "tag_name": "大古盃"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 584,
     "fields": {
-      "tag_name": "人工智慧"
+      "tag_name": "廣告"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 585,
     "fields": {
-      "tag_name": "機器人"
+      "tag_name": "novel"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 586,
     "fields": {
-      "tag_name": "簡報"
+      "tag_name": "創意寫作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 587,
     "fields": {
-      "tag_name": "鏡看五結之美"
+      "tag_name": "徵文比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 588,
     "fields": {
-      "tag_name": "本土"
+      "tag_name": "台灣角川"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 589,
     "fields": {
-      "tag_name": "生命"
+      "tag_name": "KadoKado"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 590,
     "fields": {
-      "tag_name": "心靈"
+      "tag_name": "人權"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 591,
     "fields": {
-      "tag_name": "人生"
+      "tag_name": "教材"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 592,
     "fields": {
-      "tag_name": "生活"
+      "tag_name": "心得"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 593,
     "fields": {
-      "tag_name": "宗教"
+      "tag_name": "讀書"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 594,
     "fields": {
-      "tag_name": "熱舞"
+      "tag_name": "英文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 595,
     "fields": {
-      "tag_name": "大專"
+      "tag_name": "AloT"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 596,
     "fields": {
-      "tag_name": "CSR"
+      "tag_name": "英文科普"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 597,
     "fields": {
-      "tag_name": "顧問"
+      "tag_name": "隨手拍"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 598,
     "fields": {
-      "tag_name": "隨手拍"
+      "tag_name": "科博館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 599,
     "fields": {
-      "tag_name": "短片競賽"
+      "tag_name": "大肚教會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 600,
     "fields": {
-      "tag_name": "全民紀錄片競賽"
+      "tag_name": "120週年"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 601,
     "fields": {
-      "tag_name": "金融科技"
+      "tag_name": "研究所"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 602,
     "fields": {
-      "tag_name": "fintech"
+      "tag_name": "建築寫生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 603,
     "fields": {
-      "tag_name": "校園競賽"
+      "tag_name": "空間特工"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 604,
     "fields": {
-      "tag_name": "金融"
+      "tag_name": "設計比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 605,
     "fields": {
-      "tag_name": "屏東市"
+      "tag_name": "家具設計"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 606,
     "fields": {
-      "tag_name": "街舞"
+      "tag_name": "特工盃"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 607,
     "fields": {
-      "tag_name": "寫真"
+      "tag_name": "排球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 608,
     "fields": {
-      "tag_name": "田中鎮"
+      "tag_name": "烘培"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 609,
     "fields": {
-      "tag_name": "彰化縣"
+      "tag_name": "僑生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 610,
     "fields": {
-      "tag_name": "風土民情"
+      "tag_name": "馬拉松"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 611,
     "fields": {
-      "tag_name": "人文歷史"
+      "tag_name": "跑步"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 612,
     "fields": {
-      "tag_name": "減塑環保"
+      "tag_name": "慢跑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 613,
     "fields": {
-      "tag_name": "潮州"
+      "tag_name": "自行車"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 614,
     "fields": {
-      "tag_name": "人文"
+      "tag_name": "標語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 615,
     "fields": {
-      "tag_name": "慶典"
+      "tag_name": "潮州"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 616,
     "fields": {
-      "tag_name": "戶外"
+      "tag_name": "人文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 617,
     "fields": {
-      "tag_name": "IG"
+      "tag_name": "藺草"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 618,
     "fields": {
-      "tag_name": "冒險"
+      "tag_name": "本土"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 619,
     "fields": {
-      "tag_name": "探險"
+      "tag_name": "鏡看五結之美"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 620,
     "fields": {
-      "tag_name": "景觀"
+      "tag_name": "影片比赛"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 621,
     "fields": {
-      "tag_name": "露營"
+      "tag_name": "三分鐘"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 622,
     "fields": {
-      "tag_name": "山"
+      "tag_name": "國際競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 623,
     "fields": {
-      "tag_name": "海"
+      "tag_name": "政府"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 624,
     "fields": {
-      "tag_name": "護病比"
+      "tag_name": "嘉義國際三分鐘"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 625,
     "fields": {
-      "tag_name": "醫療工會"
+      "tag_name": "三分鐘影片大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 626,
     "fields": {
-      "tag_name": "作品"
+      "tag_name": "影像比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 627,
     "fields": {
-      "tag_name": "福利"
+      "tag_name": "日語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 628,
     "fields": {
-      "tag_name": "權益"
+      "tag_name": "台南"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 629,
     "fields": {
-      "tag_name": "兒少"
+      "tag_name": "素養"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 630,
     "fields": {
-      "tag_name": "新光三越文教基金會"
+      "tag_name": "校園"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 631,
     "fields": {
-      "tag_name": "新光三越國際攝影大賽"
+      "tag_name": "埔里"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 632,
     "fields": {
-      "tag_name": "免費報名"
+      "tag_name": "付費報名"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 633,
     "fields": {
-      "tag_name": "藝文活動"
+      "tag_name": "免費贈品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 634,
     "fields": {
-      "tag_name": "繪畫競賽"
+      "tag_name": "國道馬拉松"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 635,
     "fields": {
-      "tag_name": "銅管"
+      "tag_name": "地理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 636,
     "fields": {
-      "tag_name": "木管"
+      "tag_name": "環境觀察"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 637,
     "fields": {
-      "tag_name": "打擊樂"
+      "tag_name": "師範大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 638,
     "fields": {
-      "tag_name": "公民科學"
+      "tag_name": "臺北市立大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 639,
     "fields": {
-      "tag_name": "提案"
+      "tag_name": "慶典"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 640,
     "fields": {
-      "tag_name": "大專校院"
+      "tag_name": "舞蹈"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 641,
     "fields": {
-      "tag_name": "民間團體"
+      "tag_name": "碑林"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 642,
     "fields": {
-      "tag_name": "智能"
+      "tag_name": "旅遊"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 643,
     "fields": {
-      "tag_name": "大肚教會"
+      "tag_name": "巡展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 644,
     "fields": {
-      "tag_name": "120週年"
+      "tag_name": "福利"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 645,
     "fields": {
-      "tag_name": "研究所"
+      "tag_name": "權益"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 646,
     "fields": {
-      "tag_name": "建築寫生"
+      "tag_name": "兒少"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 647,
     "fields": {
-      "tag_name": "地理"
+      "tag_name": "展覽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 648,
     "fields": {
-      "tag_name": "環境觀察"
+      "tag_name": "VR360"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 649,
     "fields": {
-      "tag_name": "師範大學"
+      "tag_name": "國立政治大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 650,
     "fields": {
-      "tag_name": "臺北市立大學"
+      "tag_name": "社會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 651,
     "fields": {
-      "tag_name": "日月潭"
+      "tag_name": "節慶地景"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 652,
     "fields": {
-      "tag_name": "顯微鏡"
+      "tag_name": "含大專以上中華民國國籍社會人士"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 653,
     "fields": {
-      "tag_name": "電競"
+      "tag_name": "總獎金18萬"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 654,
     "fields": {
-      "tag_name": "新台文"
+      "tag_name": "寫真"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 655,
     "fields": {
-      "tag_name": "台語"
+      "tag_name": "田中鎮"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 656,
     "fields": {
-      "tag_name": "父親節"
+      "tag_name": "彰化縣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 657,
     "fields": {
-      "tag_name": "爸爸"
+      "tag_name": "風土民情"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 658,
     "fields": {
-      "tag_name": "感謝"
+      "tag_name": "人文歷史"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 659,
     "fields": {
-      "tag_name": "畫展"
+      "tag_name": "陶藝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 660,
     "fields": {
-      "tag_name": "推理"
+      "tag_name": "雙年展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 661,
     "fields": {
-      "tag_name": "懸疑"
+      "tag_name": "銀行"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 662,
     "fields": {
-      "tag_name": "新人"
+      "tag_name": "金融"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 663,
     "fields": {
-      "tag_name": "心得"
+      "tag_name": "經濟"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 664,
     "fields": {
-      "tag_name": "讀書"
+      "tag_name": "博士"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 665,
     "fields": {
-      "tag_name": "英文"
+      "tag_name": "碩士"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 666,
     "fields": {
-      "tag_name": "嘉有喜柿"
+      "tag_name": "臺灣銀行"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 667,
     "fields": {
-      "tag_name": "路跑"
+      "tag_name": "學術"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 668,
     "fields": {
-      "tag_name": "AloT"
+      "tag_name": "財經"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 669,
     "fields": {
-      "tag_name": "證交所"
+      "tag_name": "實務"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 670,
     "fields": {
-      "tag_name": "ETF"
+      "tag_name": "國民基本教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 671,
     "fields": {
-      "tag_name": "交易"
+      "tag_name": "教育人員"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 672,
     "fields": {
-      "tag_name": "證券"
+      "tag_name": "代理教師"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 673,
     "fields": {
-      "tag_name": "花蓮縣"
+      "tag_name": "代課教師"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 674,
     "fields": {
-      "tag_name": "建物"
+      "tag_name": "實習教師"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 675,
     "fields": {
-      "tag_name": "農特產"
+      "tag_name": "國教署"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 676,
     "fields": {
-      "tag_name": "SDGS"
+      "tag_name": "長照"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 677,
     "fields": {
-      "tag_name": "天下雜誌"
+      "tag_name": "台中"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 678,
     "fields": {
-      "tag_name": "國際化"
+      "tag_name": "光仁社福"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 679,
     "fields": {
-      "tag_name": "志工"
+      "tag_name": "身障"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 680,
     "fields": {
-      "tag_name": "志工徵選"
+      "tag_name": "活動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 681,
     "fields": {
-      "tag_name": "藺草"
+      "tag_name": "VR"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 682,
     "fields": {
-      "tag_name": "媒體"
+      "tag_name": "軟體"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 683,
     "fields": {
-      "tag_name": "報導"
+      "tag_name": "駭客"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 684,
     "fields": {
-      "tag_name": "新聞"
+      "tag_name": "付費競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 685,
     "fields": {
-      "tag_name": "華文"
+      "tag_name": "玉山"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 686,
     "fields": {
-      "tag_name": "環境倫理"
+      "tag_name": "登山"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 687,
     "fields": {
-      "tag_name": "氣候變遷"
+      "tag_name": "台灣環島極限挑戰協會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 688,
     "fields": {
-      "tag_name": "災害防救"
+      "tag_name": "登山競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 689,
     "fields": {
-      "tag_name": "能源資源永續利用"
+      "tag_name": "生物"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 690,
     "fields": {
-      "tag_name": "淨零綠生活"
+      "tag_name": "醫學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 691,
     "fields": {
-      "tag_name": "探究與實作"
+      "tag_name": "柿染"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 692,
     "fields": {
-      "tag_name": "環境行動"
+      "tag_name": "臺北市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 693,
     "fields": {
-      "tag_name": "臺北市"
+      "tag_name": "表演"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 694,
     "fields": {
-      "tag_name": "排球"
+      "tag_name": "顯微鏡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 695,
     "fields": {
-      "tag_name": "體育"
+      "tag_name": "大富翁"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 696,
     "fields": {
-      "tag_name": "哲學"
+      "tag_name": "著色"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 697,
     "fields": {
-      "tag_name": "論說文"
+      "tag_name": "出版"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 698,
     "fields": {
-      "tag_name": "人文教育"
+      "tag_name": "出書"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 699,
     "fields": {
-      "tag_name": "五專"
+      "tag_name": "獎助"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 700,
     "fields": {
-      "tag_name": "梗圖"
+      "tag_name": "游泳"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 701,
     "fields": {
-      "tag_name": "迷因"
+      "tag_name": "知識王"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 702,
     "fields": {
-      "tag_name": "暑假"
+      "tag_name": "勞資"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 703,
     "fields": {
-      "tag_name": "流行"
+      "tag_name": "遊戲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 704,
     "fields": {
-      "tag_name": "玉里"
+      "tag_name": "朴子"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 705,
     "fields": {
-      "tag_name": "花蓮"
+      "tag_name": "嘉義朴子"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 706,
     "fields": {
-      "tag_name": "忠訓"
+      "tag_name": "旅遊攝影"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 707,
     "fields": {
-      "tag_name": "花蓮縣玉里鎮"
+      "tag_name": "嘉義縣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 708,
     "fields": {
-      "tag_name": "偏鄉"
+      "tag_name": "朴子市"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 709,
     "fields": {
-      "tag_name": "電視節目"
+      "tag_name": "菱角"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 710,
     "fields": {
-      "tag_name": "影像工作者"
+      "tag_name": "植物"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 711,
     "fields": {
-      "tag_name": "不限年齡"
+      "tag_name": "料理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 712,
     "fields": {
-      "tag_name": "短片比賽"
+      "tag_name": "生態"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 713,
     "fields": {
-      "tag_name": "防災"
+      "tag_name": "傳統"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 714,
     "fields": {
-      "tag_name": "工業"
+      "tag_name": "檔案研究"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 715,
     "fields": {
-      "tag_name": "工科"
+      "tag_name": "文創"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 716,
     "fields": {
-      "tag_name": "圍棋公開賽"
+      "tag_name": "舒跑杯"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 717,
     "fields": {
-      "tag_name": "文章"
+      "tag_name": "田徑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 718,
     "fields": {
-      "tag_name": "徵稿"
+      "tag_name": "自駕車"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 719,
     "fields": {
-      "tag_name": "活動"
+      "tag_name": "新竹"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 720,
     "fields": {
-      "tag_name": "大富翁"
+      "tag_name": "健走"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 721,
     "fields": {
-      "tag_name": "教練"
+      "tag_name": "徵案"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 722,
     "fields": {
-      "tag_name": "教材"
+      "tag_name": "曾文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 723,
     "fields": {
-      "tag_name": "戲劇競賽"
+      "tag_name": "PeoPo"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 724,
     "fields": {
-      "tag_name": "畫畫"
+      "tag_name": "公民新聞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 725,
     "fields": {
-      "tag_name": "作答"
+      "tag_name": "戲劇"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 726,
     "fields": {
-      "tag_name": "線上"
+      "tag_name": "劇本d"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 727,
     "fields": {
-      "tag_name": "Pitch"
+      "tag_name": "演員"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 728,
     "fields": {
-      "tag_name": "商管"
+      "tag_name": "舞台"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 729,
     "fields": {
-      "tag_name": "卡拉OK"
+      "tag_name": "演戲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 730,
     "fields": {
-      "tag_name": "自駕車"
+      "tag_name": "語文競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 731,
     "fields": {
-      "tag_name": "光仁社福"
+      "tag_name": "國語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 732,
     "fields": {
-      "tag_name": "身障"
+      "tag_name": "閩南語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 733,
     "fields": {
-      "tag_name": "口腔"
+      "tag_name": "客語語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 734,
     "fields": {
-      "tag_name": "保健"
+      "tag_name": "原住民族語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 735,
     "fields": {
-      "tag_name": "牙醫"
+      "tag_name": "英語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 736,
     "fields": {
-      "tag_name": "補助金"
+      "tag_name": "證交所"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 737,
     "fields": {
-      "tag_name": "英文科普"
+      "tag_name": "ETF"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 738,
     "fields": {
-      "tag_name": "影片徵選"
+      "tag_name": "交易"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 739,
     "fields": {
-      "tag_name": "影片徵件"
+      "tag_name": "證券"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 740,
     "fields": {
-      "tag_name": "創作競賽"
+      "tag_name": "志工"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 741,
     "fields": {
-      "tag_name": "城市行銷"
+      "tag_name": "志工徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 742,
     "fields": {
-      "tag_name": "公用頻道"
+      "tag_name": "新光三越文教基金會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 743,
     "fields": {
-      "tag_name": "台北光景"
+      "tag_name": "新光三越國際攝影大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 744,
     "fields": {
-      "tag_name": "臺北市政府"
+      "tag_name": "免費報名"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 745,
     "fields": {
-      "tag_name": "田徑賽"
+      "tag_name": "藝文活動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 746,
     "fields": {
-      "tag_name": "國小三年級"
+      "tag_name": "天下雜誌"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 747,
     "fields": {
-      "tag_name": "國小四年級"
+      "tag_name": "國際化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 748,
     "fields": {
-      "tag_name": "國小五年級"
+      "tag_name": "國小三年級"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 749,
     "fields": {
-      "tag_name": "國小六年級"
+      "tag_name": "國小四年級"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 750,
     "fields": {
-      "tag_name": "動物保護"
+      "tag_name": "國小五年級"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 751,
     "fields": {
-      "tag_name": "新竹市"
+      "tag_name": "國小六年級"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 752,
     "fields": {
-      "tag_name": "出版公司"
+      "tag_name": "動物保護"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 753,
     "fields": {
-      "tag_name": "SDG4"
+      "tag_name": "寵物"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 754,
     "fields": {
-      "tag_name": "2023非米不可全國創意米食競賽"
+      "tag_name": "生活趣事"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 755,
     "fields": {
-      "tag_name": "年度盛事"
+      "tag_name": "推理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 756,
     "fields": {
-      "tag_name": "首獎十萬元"
+      "tag_name": "懸疑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 757,
     "fields": {
-      "tag_name": "食米教育"
+      "tag_name": "新人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 758,
     "fields": {
-      "tag_name": "國產稻米"
+      "tag_name": "宜蘭縣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 759,
     "fields": {
-      "tag_name": "國產米穀粉"
+      "tag_name": "2024"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 760,
     "fields": {
-      "tag_name": "臺灣在地食材"
+      "tag_name": "文山區"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 761,
     "fields": {
-      "tag_name": "行政院農業委員會農糧署"
+      "tag_name": "燈籠繪畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 762,
     "fields": {
-      "tag_name": "糧食產業組"
+      "tag_name": "環境倫理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 763,
     "fields": {
-      "tag_name": "社團法人臺灣穀物產業發展協會"
+      "tag_name": "氣候變遷"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 764,
     "fields": {
-      "tag_name": "非米不可"
+      "tag_name": "災害防救"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 765,
     "fields": {
-      "tag_name": "鋼琴"
+      "tag_name": "能源資源永續利用"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 766,
     "fields": {
-      "tag_name": "伴奏"
+      "tag_name": "淨零綠生活"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 767,
     "fields": {
-      "tag_name": "合唱團"
+      "tag_name": "探究與實作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 768,
     "fields": {
-      "tag_name": "學業優秀獎助"
+      "tag_name": "環境行動"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 769,
     "fields": {
-      "tag_name": "弱勢家庭學子"
+      "tag_name": "遠東"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 770,
     "fields": {
-      "tag_name": "清寒獎助學金"
+      "tag_name": "SOGO"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 771,
     "fields": {
-      "tag_name": "財團法人翔谷慈善基金會"
+      "tag_name": "百貨公司"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 772,
     "fields": {
-      "tag_name": "才藝競賽表現優秀獎助"
+      "tag_name": "童年"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 773,
     "fields": {
-      "tag_name": "新竹"
+      "tag_name": "鬥片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 774,
     "fields": {
-      "tag_name": "藝術家"
+      "tag_name": "媒體"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 775,
     "fields": {
-      "tag_name": "學術論文"
+      "tag_name": "報導"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 776,
     "fields": {
-      "tag_name": "期貨"
+      "tag_name": "新聞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 777,
     "fields": {
-      "tag_name": "選擇權"
+      "tag_name": "華文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 778,
     "fields": {
-      "tag_name": "衍生商品"
+      "tag_name": "閩南文化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 779,
     "fields": {
-      "tag_name": "工商時報"
+      "tag_name": "園林"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 780,
     "fields": {
-      "tag_name": "期交所"
+      "tag_name": "學業優秀獎助"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 781,
     "fields": {
-      "tag_name": "論文徵集"
+      "tag_name": "弱勢家庭學子"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 782,
     "fields": {
-      "tag_name": "論文投稿"
+      "tag_name": "清寒獎助學金"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 783,
     "fields": {
-      "tag_name": "論文金質獎"
+      "tag_name": "財團法人翔谷慈善基金會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 784,
     "fields": {
-      "tag_name": "數位金融"
+      "tag_name": "才藝競賽表現優秀獎助"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 785,
     "fields": {
-      "tag_name": "基隆"
+      "tag_name": "繪本比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 786,
     "fields": {
-      "tag_name": "基隆市文化局"
+      "tag_name": "作品徵選"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 787,
     "fields": {
-      "tag_name": "補助出版"
+      "tag_name": "微光馬祖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 788,
     "fields": {
-      "tag_name": "書寫"
+      "tag_name": "馬祖之美"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 789,
     "fields": {
-      "tag_name": "趣味"
+      "tag_name": "高中部"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 790,
     "fields": {
-      "tag_name": "籃球"
+      "tag_name": "南山中學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 791,
     "fields": {
-      "tag_name": "閩南文化"
+      "tag_name": "數學&地科"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 792,
     "fields": {
-      "tag_name": "園林"
+      "tag_name": "年刊ㄓ"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 793,
     "fields": {
-      "tag_name": "跳舞"
+      "tag_name": "徵稿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 794,
     "fields": {
-      "tag_name": "青銀共舞"
+      "tag_name": "舞蹈挑戰"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 795,
     "fields": {
-      "tag_name": "長輩"
+      "tag_name": "reels"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 796,
     "fields": {
-      "tag_name": "跨世代"
+      "tag_name": "機票"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 797,
     "fields": {
-      "tag_name": "排舞"
+      "tag_name": "星宇航空"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 798,
     "fields": {
-      "tag_name": "農業局"
+      "tag_name": "德州鮮切牛排"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 799,
     "fields": {
-      "tag_name": "微風市集"
+      "tag_name": "熱舞社"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 800,
     "fields": {
-      "tag_name": "農民市集"
+      "tag_name": "洛杉磯"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 801,
     "fields": {
-      "tag_name": "假日市集"
+      "tag_name": "dance"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 802,
     "fields": {
-      "tag_name": "有機"
+      "tag_name": "challenge"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 803,
     "fields": {
-      "tag_name": "友善生態"
+      "tag_name": "Instagram"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 804,
     "fields": {
-      "tag_name": "食農教育"
+      "tag_name": "linedance"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 805,
     "fields": {
-      "tag_name": "食品安全"
+      "tag_name": "排舞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 806,
     "fields": {
-      "tag_name": "童話"
+      "tag_name": "美式餐廳"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 807,
     "fields": {
-      "tag_name": "改編"
+      "tag_name": "TexasRoadhouse"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 808,
     "fields": {
-      "tag_name": "士林國小"
+      "tag_name": "運動科技"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 809,
     "fields": {
-      "tag_name": "武術"
+      "tag_name": "運動數據"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 810,
     "fields": {
-      "tag_name": "科技農業"
+      "tag_name": "數位科技"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 811,
     "fields": {
-      "tag_name": "智慧農業"
+      "tag_name": "數據分析"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 812,
     "fields": {
-      "tag_name": "健康"
+      "tag_name": "運動科學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 813,
     "fields": {
-      "tag_name": "全穀"
+      "tag_name": "運動數據可視化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 814,
     "fields": {
-      "tag_name": "雜糧"
+      "tag_name": "街舞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 815,
     "fields": {
-      "tag_name": "飲食"
+      "tag_name": "卡拉OK"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 816,
     "fields": {
-      "tag_name": "消費"
+      "tag_name": "段位"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 817,
     "fields": {
-      "tag_name": "博士生"
+      "tag_name": "棋藝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 818,
     "fields": {
-      "tag_name": "碩士生"
+      "tag_name": "益智"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 819,
     "fields": {
-      "tag_name": "史論"
+      "tag_name": "抗癌鬥士"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 820,
     "fields": {
-      "tag_name": "行政"
+      "tag_name": "潮州古城"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 821,
     "fields": {
-      "tag_name": "美學"
+      "tag_name": "豎孤棚"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 822,
     "fields": {
-      "tag_name": "美術系"
+      "tag_name": "研討會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 823,
     "fields": {
-      "tag_name": "2D動畫"
+      "tag_name": "劇本殺"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 824,
     "fields": {
-      "tag_name": "CartoonAnimator"
+      "tag_name": "柯南"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 825,
     "fields": {
-      "tag_name": "動畫競賽"
+      "tag_name": "嘉有喜柿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 826,
     "fields": {
-      "tag_name": "甲尚科技"
+      "tag_name": "工作坊"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 827,
     "fields": {
-      "tag_name": "出書"
+      "tag_name": "科學節"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 828,
     "fields": {
-      "tag_name": "獎助"
+      "tag_name": "演示"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 829,
     "fields": {
-      "tag_name": "VR360"
+      "tag_name": "排球競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 830,
     "fields": {
-      "tag_name": "國立政治大學"
+      "tag_name": "商品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 831,
     "fields": {
-      "tag_name": "社會"
+      "tag_name": "在地"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 832,
     "fields": {
-      "tag_name": "節慶地景"
+      "tag_name": "農業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 833,
     "fields": {
-      "tag_name": "含大專以上中華民國國籍社會人士"
+      "tag_name": "古典詩"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 834,
     "fields": {
-      "tag_name": "總獎金18萬"
+      "tag_name": "現代詩"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 835,
     "fields": {
-      "tag_name": "SDGs17"
+      "tag_name": "嘉義"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 836,
     "fields": {
-      "tag_name": "性別平等"
+      "tag_name": "尋鷗吟社"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 837,
     "fields": {
-      "tag_name": "全民參與"
+      "tag_name": "社區營造"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 838,
     "fields": {
-      "tag_name": "舞蹈挑戰"
+      "tag_name": "南投縣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 839,
     "fields": {
-      "tag_name": "reels"
+      "tag_name": "導讀文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 840,
     "fields": {
-      "tag_name": "機票"
+      "tag_name": "日月潭"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 841,
     "fields": {
-      "tag_name": "星宇航空"
+      "tag_name": "定向越野"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 842,
     "fields": {
-      "tag_name": "德州鮮切牛排"
+      "tag_name": "論文獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 843,
     "fields": {
-      "tag_name": "熱舞社"
+      "tag_name": "辯論比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 844,
     "fields": {
-      "tag_name": "洛杉磯"
+      "tag_name": "撞球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 845,
     "fields": {
-      "tag_name": "dance"
+      "tag_name": "減塑消費"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 846,
     "fields": {
-      "tag_name": "challenge"
+      "tag_name": "永續環保"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 847,
     "fields": {
-      "tag_name": "Instagram"
+      "tag_name": "團體競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 848,
     "fields": {
-      "tag_name": "linedance"
+      "tag_name": "北橫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 849,
     "fields": {
-      "tag_name": "美式餐廳"
+      "tag_name": "專利檢索"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 850,
     "fields": {
-      "tag_name": "TexasRoadhouse"
+      "tag_name": "專利"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 851,
     "fields": {
-      "tag_name": "法律"
+      "tag_name": "全國大專院校專利檢索競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 852,
     "fields": {
-      "tag_name": "海洋法"
+      "tag_name": "電競"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 853,
     "fields": {
-      "tag_name": "臺灣海洋大學"
+      "tag_name": "藝術家"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 854,
     "fields": {
-      "tag_name": "趣味競賽"
+      "tag_name": "穀物界的奧斯卡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 855,
     "fields": {
-      "tag_name": "康寧"
+      "tag_name": "第九屆穀得獎競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 856,
     "fields": {
-      "tag_name": "論文獎"
+      "tag_name": "熱烈報名中"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 857,
     "fields": {
-      "tag_name": "鄉土人文"
+      "tag_name": "消費產品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 858,
     "fields": {
-      "tag_name": "田野調查"
+      "tag_name": "全穀產品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 859,
     "fields": {
-      "tag_name": "沙灘"
+      "tag_name": "年度主題大豆"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 860,
     "fields": {
-      "tag_name": "手球"
+      "tag_name": "十大嚴選穀得獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 861,
     "fields": {
-      "tag_name": "作品徵選"
+      "tag_name": "嚴選穀得佳作獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 862,
     "fields": {
-      "tag_name": "微光馬祖"
+      "tag_name": "行政院農業委員會農糧署"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 863,
     "fields": {
-      "tag_name": "馬祖之美"
+      "tag_name": "作物生產組"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 864,
     "fields": {
-      "tag_name": "知識王"
+      "tag_name": "社團法人臺灣穀物產業發展協會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 865,
     "fields": {
-      "tag_name": "勞資"
+      "tag_name": "財團法人台灣雜糧發展基金會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 866,
     "fields": {
-      "tag_name": "遊戲"
+      "tag_name": "TGIA"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 867,
     "fields": {
-      "tag_name": "台中"
+      "tag_name": "財團法人中華穀類食品工業技術研究所"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 868,
     "fields": {
-      "tag_name": "鑄鐵設計"
+      "tag_name": "棒球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 869,
     "fields": {
-      "tag_name": "大古盃"
+      "tag_name": "籃球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 870,
     "fields": {
-      "tag_name": "八掌溪"
+      "tag_name": "東吳大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 871,
     "fields": {
-      "tag_name": "國際啤酒"
+      "tag_name": "日文系"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 872,
     "fields": {
-      "tag_name": "國際標準舞"
+      "tag_name": "拓殖大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 873,
     "fields": {
-      "tag_name": "摩登"
+      "tag_name": "遊學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 874,
     "fields": {
-      "tag_name": "拉丁"
+      "tag_name": "跳舞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 875,
     "fields": {
-      "tag_name": "導讀文"
+      "tag_name": "青銀共舞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 876,
     "fields": {
-      "tag_name": "劇本殺"
+      "tag_name": "長輩"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 877,
     "fields": {
-      "tag_name": "柯南"
+      "tag_name": "跨世代"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 878,
     "fields": {
-      "tag_name": "cosplay"
+      "tag_name": "樂團"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 879,
     "fields": {
-      "tag_name": "足球"
+      "tag_name": "cosplay"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 880,
     "fields": {
-      "tag_name": "Apple"
+      "tag_name": "圍棋公開賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 881,
     "fields": {
-      "tag_name": "AUGM"
+      "tag_name": "童話"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 882,
     "fields": {
-      "tag_name": "講師"
+      "tag_name": "改編"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 883,
     "fields": {
-      "tag_name": "羽球"
+      "tag_name": "士林國小"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 884,
     "fields": {
-      "tag_name": "科博館"
+      "tag_name": "教練"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 885,
     "fields": {
-      "tag_name": "碑林"
+      "tag_name": "成人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 886,
     "fields": {
-      "tag_name": "巡展"
+      "tag_name": "銀髮"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 887,
     "fields": {
-      "tag_name": "日語"
+      "tag_name": "推廣"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 888,
     "fields": {
-      "tag_name": "台南"
+      "tag_name": "書道"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 889,
     "fields": {
-      "tag_name": "工作坊"
+      "tag_name": "博士生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 890,
     "fields": {
-      "tag_name": "宜蘭縣"
+      "tag_name": "碩士生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 891,
     "fields": {
-      "tag_name": "付費競賽"
+      "tag_name": "史論"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 892,
     "fields": {
-      "tag_name": "玉山"
+      "tag_name": "行政"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 893,
     "fields": {
-      "tag_name": "登山"
+      "tag_name": "管理"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 894,
     "fields": {
-      "tag_name": "台灣環島極限挑戰協會"
+      "tag_name": "美學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 895,
     "fields": {
-      "tag_name": "登山競賽"
+      "tag_name": "美術系"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 896,
     "fields": {
-      "tag_name": "數學&地科"
+      "tag_name": "期刊"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 897,
     "fields": {
-      "tag_name": "企業競賽"
+      "tag_name": "田園"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 898,
     "fields": {
-      "tag_name": "棋藝"
+      "tag_name": "多元文化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 899,
     "fields": {
-      "tag_name": "段位"
+      "tag_name": "全穀"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 900,
     "fields": {
-      "tag_name": "益智"
+      "tag_name": "雜糧"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 901,
     "fields": {
-      "tag_name": "亞洲大學"
+      "tag_name": "消費"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 902,
     "fields": {
-      "tag_name": "失智症"
+      "tag_name": "技職"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 903,
     "fields": {
-      "tag_name": "社會關懷"
+      "tag_name": "創[新"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 904,
     "fields": {
-      "tag_name": "嫦娥奔月"
+      "tag_name": "性別"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 905,
     "fields": {
-      "tag_name": "捷安特"
+      "tag_name": "小論文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 906,
     "fields": {
-      "tag_name": "小鐵人"
+      "tag_name": "學術論文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 907,
     "fields": {
-      "tag_name": "體育賽事"
+      "tag_name": "期貨"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 908,
     "fields": {
-      "tag_name": "國民基本教育"
+      "tag_name": "選擇權"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 909,
     "fields": {
-      "tag_name": "教育人員"
+      "tag_name": "衍生商品"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 910,
     "fields": {
-      "tag_name": "代理教師"
+      "tag_name": "工商時報"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 911,
     "fields": {
-      "tag_name": "代課教師"
+      "tag_name": "期交所"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 912,
     "fields": {
-      "tag_name": "實習教師"
+      "tag_name": "論文徵集"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 913,
     "fields": {
-      "tag_name": "國教署"
+      "tag_name": "論文投稿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 914,
     "fields": {
-      "tag_name": "南投"
+      "tag_name": "論文金質獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 915,
     "fields": {
-      "tag_name": "創新教材競賽"
+      "tag_name": "數位金融"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 916,
     "fields": {
-      "tag_name": "西洋棋"
+      "tag_name": "幼兒"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 917,
     "fields": {
-      "tag_name": "積分賽"
+      "tag_name": "Amazon"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 918,
     "fields": {
-      "tag_name": "環境知識"
+      "tag_name": "參加即有獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 919,
     "fields": {
-      "tag_name": "皮影戲"
+      "tag_name": "外語"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 920,
     "fields": {
-      "tag_name": "NGO"
+      "tag_name": "台南400"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 921,
     "fields": {
-      "tag_name": "學術研究"
+      "tag_name": "影片邀請卡創作大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 922,
     "fields": {
-      "tag_name": "跨領域/不分領域"
+      "tag_name": "邀請卡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 923,
     "fields": {
-      "tag_name": "計畫書"
+      "tag_name": "趣味"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 924,
     "fields": {
-      "tag_name": "生命科學"
+      "tag_name": "平台"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 925,
     "fields": {
-      "tag_name": "寵物"
+      "tag_name": "Pagamo"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 926,
     "fields": {
-      "tag_name": "生活趣事"
+      "tag_name": "工業"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 927,
     "fields": {
-      "tag_name": "說書"
+      "tag_name": "音樂比賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 928,
     "fields": {
-      "tag_name": "穀物界的奧斯卡"
+      "tag_name": "水雉"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 929,
     "fields": {
-      "tag_name": "第九屆穀得獎競賽"
+      "tag_name": "鳥類"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 930,
     "fields": {
-      "tag_name": "熱烈報名中"
+      "tag_name": "模仿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 931,
     "fields": {
-      "tag_name": "消費產品"
+      "tag_name": "太陽能車"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 932,
     "fields": {
-      "tag_name": "全穀產品"
+      "tag_name": "青銀"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 933,
     "fields": {
-      "tag_name": "年度主題大豆"
+      "tag_name": "海洋保育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 934,
     "fields": {
-      "tag_name": "十大嚴選穀得獎"
+      "tag_name": "國家地理雜誌"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 935,
     "fields": {
-      "tag_name": "嚴選穀得佳作獎"
+      "tag_name": "導覽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 936,
     "fields": {
-      "tag_name": "作物生產組"
+      "tag_name": "日文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 937,
     "fields": {
-      "tag_name": "財團法人台灣雜糧發展基金會"
+      "tag_name": "接力"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 938,
     "fields": {
-      "tag_name": "TGIA"
+      "tag_name": "早餐"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 939,
     "fields": {
-      "tag_name": "財團法人中華穀類食品工業技術研究所"
+      "tag_name": "創新教案"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 940,
     "fields": {
-      "tag_name": "社區營造"
+      "tag_name": "凱比機器人"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 941,
     "fields": {
-      "tag_name": "檔案研究"
+      "tag_name": "馬拉松競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 942,
     "fields": {
-      "tag_name": "文創"
+      "tag_name": "跆拳道"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 943,
     "fields": {
-      "tag_name": "技職"
+      "tag_name": "2023非米不可全國創意米食競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 944,
     "fields": {
-      "tag_name": "創[新"
+      "tag_name": "年度盛事"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 945,
     "fields": {
-      "tag_name": "陶藝"
+      "tag_name": "首獎十萬元"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 946,
     "fields": {
-      "tag_name": "雙年展"
+      "tag_name": "食米教育"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 947,
     "fields": {
-      "tag_name": "射箭"
+      "tag_name": "國產稻米"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 948,
     "fields": {
-      "tag_name": "接力"
+      "tag_name": "國產米穀粉"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 949,
     "fields": {
-      "tag_name": "早餐"
+      "tag_name": "臺灣在地食材"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 950,
     "fields": {
-      "tag_name": "食安"
+      "tag_name": "糧食產業組"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 951,
     "fields": {
-      "tag_name": "主持"
+      "tag_name": "非米不可"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 952,
     "fields": {
-      "tag_name": "主播"
+      "tag_name": "藍眼淚"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 953,
     "fields": {
-      "tag_name": "話劇"
+      "tag_name": "拉密"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 954,
     "fields": {
-      "tag_name": "相聲"
+      "tag_name": "咖啡"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 955,
     "fields": {
-      "tag_name": "辯論比賽"
+      "tag_name": "咖啡爽節"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 956,
     "fields": {
-      "tag_name": "田徑"
+      "tag_name": "名額有限"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 957,
     "fields": {
-      "tag_name": "抗癌鬥士"
+      "tag_name": "未來少女"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 958,
     "fields": {
-      "tag_name": "北橫"
+      "tag_name": "水晶舞台"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 959,
     "fields": {
-      "tag_name": "東吳大學"
+      "tag_name": "beanfun"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 960,
     "fields": {
-      "tag_name": "日文系"
+      "tag_name": "高中生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 961,
     "fields": {
-      "tag_name": "拓殖大學"
+      "tag_name": "學科"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 962,
     "fields": {
-      "tag_name": "遊學"
+      "tag_name": "能力"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 963,
     "fields": {
-      "tag_name": "高中部"
+      "tag_name": "南投"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 964,
     "fields": {
-      "tag_name": "南山中學"
+      "tag_name": "斜坡上的藝術節"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 965,
     "fields": {
-      "tag_name": "愛情"
+      "tag_name": "藝術競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 966,
     "fields": {
-      "tag_name": "新屋"
+      "tag_name": "原住民競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 967,
     "fields": {
-      "tag_name": "魚米之鄉"
+      "tag_name": "足球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 968,
     "fields": {
-      "tag_name": "金婚"
+      "tag_name": "電視節目"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 969,
     "fields": {
-      "tag_name": "楷模"
+      "tag_name": "影像工作者"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 970,
     "fields": {
-      "tag_name": "孝悌"
+      "tag_name": "計畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 971,
     "fields": {
-      "tag_name": "邏輯"
+      "tag_name": "皮影戲"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 972,
     "fields": {
-      "tag_name": "自行車"
+      "tag_name": "技能競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 973,
     "fields": {
-      "tag_name": "國科會"
+      "tag_name": "醫護"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 974,
     "fields": {
-      "tag_name": "技術"
+      "tag_name": "射箭"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 975,
     "fields": {
-      "tag_name": "暖化"
+      "tag_name": "政治大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 976,
     "fields": {
-      "tag_name": "地球"
+      "tag_name": "圖書資訊"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 977,
     "fields": {
-      "tag_name": "政治大學"
+      "tag_name": "博士生論文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 978,
     "fields": {
-      "tag_name": "圖書資訊"
+      "tag_name": "實務論文"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 979,
     "fields": {
-      "tag_name": "博士生論文"
+      "tag_name": "CoLISP"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 980,
     "fields": {
-      "tag_name": "實務論文"
+      "tag_name": "資訊科技"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 981,
     "fields": {
-      "tag_name": "CoLISP"
+      "tag_name": "資訊科學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 982,
     "fields": {
-      "tag_name": "資訊科技"
+      "tag_name": "戲劇競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 983,
     "fields": {
-      "tag_name": "資訊科學"
+      "tag_name": "設計競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 984,
     "fields": {
-      "tag_name": "綜合設計"
+      "tag_name": "哈潮玩"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 985,
     "fields": {
-      "tag_name": "台南400"
+      "tag_name": "怪獸造型創作大賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 986,
     "fields": {
-      "tag_name": "影片邀請卡創作大賽"
+      "tag_name": "哈玩具"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 987,
     "fields": {
-      "tag_name": "邀請卡"
+      "tag_name": "三創生活園區"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 988,
     "fields": {
-      "tag_name": "長庚"
+      "tag_name": "HOBBYTOY"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 989,
     "fields": {
-      "tag_name": "醫院"
+      "tag_name": "鄉土歌謠"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 990,
     "fields": {
-      "tag_name": "醫療"
+      "tag_name": "全國師生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 991,
     "fields": {
-      "tag_name": "醫護"
+      "tag_name": "版印年畫"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 992,
     "fields": {
-      "tag_name": "醫事"
+      "tag_name": "高爾夫球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 993,
     "fields": {
-      "tag_name": "醫師"
+      "tag_name": "鋼琴"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 994,
     "fields": {
-      "tag_name": "戒菸"
+      "tag_name": "伴奏"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 995,
     "fields": {
-      "tag_name": "戒菸專線"
+      "tag_name": "合唱團"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 996,
     "fields": {
-      "tag_name": "計畫"
+      "tag_name": "相片"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 997,
     "fields": {
-      "tag_name": "屏東"
+      "tag_name": "武術"
     }
   },
   {
@@ -7052,539 +7052,448 @@
     "model": "base.competitiontag",
     "pk": 1008,
     "fields": {
-      "tag_name": "東南"
+      "tag_name": "金婚"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1009,
     "fields": {
-      "tag_name": "表藝"
+      "tag_name": "楷模"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1010,
     "fields": {
-      "tag_name": "探索營"
+      "tag_name": "孝悌"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1011,
     "fields": {
-      "tag_name": "銀行"
+      "tag_name": "法規"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1012,
     "fields": {
-      "tag_name": "經濟"
+      "tag_name": "法治"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1013,
     "fields": {
-      "tag_name": "博士"
+      "tag_name": "教官"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1014,
     "fields": {
-      "tag_name": "碩士"
+      "tag_name": "熱舞"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1015,
     "fields": {
-      "tag_name": "臺灣銀行"
+      "tag_name": "理工系所"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1016,
     "fields": {
-      "tag_name": "財經"
+      "tag_name": "被動元件"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1017,
     "fields": {
-      "tag_name": "實務"
+      "tag_name": "國科會"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1018,
     "fields": {
-      "tag_name": "徵案"
+      "tag_name": "技術"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1019,
     "fields": {
-      "tag_name": "曾文"
+      "tag_name": "暖化"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1020,
     "fields": {
-      "tag_name": "PeoPo"
+      "tag_name": "地球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1021,
     "fields": {
-      "tag_name": "公民新聞"
+      "tag_name": "飯店住宿"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1022,
     "fields": {
-      "tag_name": "性別"
+      "tag_name": "雀客旅館"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1023,
     "fields": {
-      "tag_name": "小論文"
+      "tag_name": "新藝獎"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1024,
     "fields": {
-      "tag_name": "水雉"
+      "tag_name": "青年藝術家"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1025,
     "fields": {
-      "tag_name": "鳥類"
+      "tag_name": "鴻海集團"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1026,
     "fields": {
-      "tag_name": "生態"
+      "tag_name": "獎勵金高達25萬"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1027,
     "fields": {
-      "tag_name": "模仿"
+      "tag_name": "培植科技人才"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1028,
     "fields": {
-      "tag_name": "撞球"
+      "tag_name": "臺中市中山堂"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1029,
     "fields": {
-      "tag_name": "多元文化"
+      "tag_name": "熱音"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1030,
     "fields": {
-      "tag_name": "飛盤"
+      "tag_name": "樂高"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1031,
     "fields": {
-      "tag_name": "年刊ㄓ"
+      "tag_name": "積木"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1032,
     "fields": {
-      "tag_name": "青銀"
+      "tag_name": "美食"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1033,
     "fields": {
-      "tag_name": "相片"
+      "tag_name": "餐廳"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1034,
     "fields": {
-      "tag_name": "報告"
+      "tag_name": "美食徵件"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1035,
     "fields": {
-      "tag_name": "技能競賽"
+      "tag_name": "廚藝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1036,
     "fields": {
-      "tag_name": "定向越野"
+      "tag_name": "反毒"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1037,
     "fields": {
-      "tag_name": "研討會"
+      "tag_name": "台糖"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1038,
     "fields": {
-      "tag_name": "商品"
+      "tag_name": "公益路跑"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1039,
     "fields": {
-      "tag_name": "在地"
+      "tag_name": "咖啡競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1040,
     "fields": {
-      "tag_name": "農業"
+      "tag_name": "生豆"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1041,
     "fields": {
-      "tag_name": "科學節"
+      "tag_name": "咖啡分類"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1042,
     "fields": {
-      "tag_name": "演示"
+      "tag_name": "聖經"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1043,
     "fields": {
-      "tag_name": "發明"
+      "tag_name": "包裝"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1044,
     "fields": {
-      "tag_name": "認證"
+      "tag_name": "聖誕節"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1045,
     "fields": {
-      "tag_name": "挑戰賽"
+      "tag_name": "大專院校＆大專以上(含研究所)"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1046,
     "fields": {
-      "tag_name": "期刊"
+      "tag_name": "社區發展"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1047,
     "fields": {
-      "tag_name": "菱角"
+      "tag_name": "社區創生"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1048,
     "fields": {
-      "tag_name": "植物"
+      "tag_name": "弱勢"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1049,
     "fields": {
-      "tag_name": "料理"
+      "tag_name": "綠色"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1050,
     "fields": {
-      "tag_name": "傳統"
+      "tag_name": "國泰"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1051,
     "fields": {
-      "tag_name": "遠東"
+      "tag_name": "補助"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1052,
     "fields": {
-      "tag_name": "SOGO"
+      "tag_name": "水球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1053,
     "fields": {
-      "tag_name": "百貨公司"
+      "tag_name": "船模"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1054,
     "fields": {
-      "tag_name": "童年"
+      "tag_name": "西洋棋"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1055,
     "fields": {
-      "tag_name": "鬥片"
+      "tag_name": "積分賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1056,
     "fields": {
-      "tag_name": "音樂比賽"
+      "tag_name": "環境知識"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1057,
     "fields": {
-      "tag_name": "大學生"
+      "tag_name": "學術研究"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1058,
     "fields": {
-      "tag_name": "跆拳道"
+      "tag_name": "跨領域/不分領域"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1059,
     "fields": {
-      "tag_name": "美術比賽"
+      "tag_name": "計畫書"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1060,
     "fields": {
-      "tag_name": "船模"
+      "tag_name": "生命科學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1061,
     "fields": {
-      "tag_name": "太陽能車"
+      "tag_name": "體育賽事"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1062,
     "fields": {
-      "tag_name": "福德財神"
+      "tag_name": "沙灘"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1063,
     "fields": {
-      "tag_name": "路跑賽"
+      "tag_name": "手球"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1064,
     "fields": {
-      "tag_name": "海洋保育"
+      "tag_name": "價值觀"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1065,
     "fields": {
-      "tag_name": "國家地理雜誌"
+      "tag_name": "玄奘大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1066,
     "fields": {
-      "tag_name": "平台"
+      "tag_name": "中華大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1067,
     "fields": {
-      "tag_name": "Pagamo"
+      "tag_name": "元培大學"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1068,
     "fields": {
-      "tag_name": "學校"
+      "tag_name": "工科"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1069,
     "fields": {
-      "tag_name": "團隊"
+      "tag_name": "產學合作"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1070,
     "fields": {
-      "tag_name": "價值觀"
+      "tag_name": "運動競賽"
     }
   },
   {
     "model": "base.competitiontag",
     "pk": 1071,
     "fields": {
-      "tag_name": "玄奘大學"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1072,
-    "fields": {
-      "tag_name": "中華大學"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1073,
-    "fields": {
-      "tag_name": "元培大學"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1074,
-    "fields": {
-      "tag_name": "法規"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1075,
-    "fields": {
-      "tag_name": "法治"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1076,
-    "fields": {
-      "tag_name": "教官"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1077,
-    "fields": {
-      "tag_name": "古典詩"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1078,
-    "fields": {
-      "tag_name": "現代詩"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1079,
-    "fields": {
-      "tag_name": "尋鷗吟社"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1080,
-    "fields": {
-      "tag_name": "理工系所"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1081,
-    "fields": {
-      "tag_name": "被動元件"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1082,
-    "fields": {
-      "tag_name": "運動競賽"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1083,
-    "fields": {
       "tag_name": "接力聯賽"
-    }
-  },
-  {
-    "model": "base.competitiontag",
-    "pk": 1084,
-    "fields": {
-      "tag_name": "棒球"
     }
   }
 ]
