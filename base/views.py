@@ -210,7 +210,7 @@ def update_room(request, pk):
         topic = Topic.objects.get(name=topic_name)
         
         # 更新資料庫的資料
-        room.name = request.POST.get("username")
+        room.name = request.POST.get("name")
         room.description = request.POST.get("description")
         room.topic = topic
         room.save()
