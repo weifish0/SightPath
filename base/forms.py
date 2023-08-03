@@ -15,8 +15,8 @@ class UserForm(ModelForm):
     class Meta:
         model = User
         # TODO: 更改在 edit_profile中顯示的英文字
-        fields = ["username", "email","bio", "avatar"]
-        labels = {"username": "使用者名稱", "avatar": "大頭貼", "email": "電子信箱", "bio": "個人簡介"}
+        fields = ["username", "email","bio"]
+        labels = {"username": "使用者名稱", "email": "電子信箱", "bio": "個人簡介"}
         
         
 class CustomUserCreationForm(UserCreationForm):
