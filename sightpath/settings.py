@@ -11,9 +11,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 import dj_database_url
 
+# load env
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,9 +31,9 @@ if 'RENDER' in os.environ:
     print("連接 SECRET_KEY")
     SECRET_KEY = os.environ.get('SECRET_KEY', default='None')
 else:
-    SECRET_KEY = "django-insecure-$i9t@i-xi690b0u6pda*%^f(*n$-#2w$_nnfm2xr&c5!=^xb-o"
+    Django_SECRET_KEY = os.getenv("Django_SECRET_KEY")
+    SECRET_KEY = Django_SECRET_KEY
 
-# TODO
 
 '''
 detect if you are running on Render by checking 
@@ -49,7 +52,12 @@ if 'RENDER' in os.environ:
     if RENDER_EXTERNAL_HOSTNAME:    
         ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 else:
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1"]
+    ngrok_forwarding = os.getenv("ngrok_forwarding")
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", ngrok_forwarding]
+
+
+LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
+LINE_CHANNEL_SECRET = os.getenv("line_secret")
 
 
 # Application definition
