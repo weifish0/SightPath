@@ -54,6 +54,8 @@ if 'RENDER' in os.environ:
 else:
     ngrok_forwarding = os.getenv("ngrok_forwarding")
     ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", ngrok_forwarding]
+    CSRF_TRUSTED_ORIGINS = [f'https://{ngrok_forwarding}']
+
 
 
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
