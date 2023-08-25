@@ -5,7 +5,7 @@
     "type": "carousel",
     "columns": [
       {
-        "thumbnailImageUrl": "https://scontent.ftpe3-1.fna.fbcdn.net/v/t39.30808-6/283112071_5043897199042352_938886276190797965_n.png?_nc_cat=110&ccb=1-7&_nc_sid=8631f5&_nc_ohc=YzXoT80q2JMAX9lWn8d&_nc_ht=scontent.ftpe3-1.fna&oh=00_AfCylF4NASAzBc8FGIrd3eY2CjVW1F4VPjIQm6kQjQr0xw&oe=64EA07B7",
+        "thumbnailImageUrl": "https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/sitcon.png",
         "imageBackgroundColor": "#FFFFFF",
         "title": "Sitcon 學生計算機年會",
         "text": "由學生自發組成、自主籌備，秉持著以學生為主軸的核心價值，並長期推廣自由及開放原始碼軟體精神。",

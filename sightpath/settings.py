@@ -53,8 +53,10 @@ if 'RENDER' in os.environ:
         ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 else:
     ngrok_forwarding = os.getenv("ngrok_forwarding")
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", ngrok_forwarding]
-    CSRF_TRUSTED_ORIGINS = [f'https://{ngrok_forwarding}']
+    ngrok_forwarding_nohttp = ngrok_forwarding[ngrok_forwarding.find("//")+2:]
+    
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", ngrok_forwarding_nohttp]
+    CSRF_TRUSTED_ORIGINS = [ngrok_forwarding]
 
 
 

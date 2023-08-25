@@ -55,8 +55,7 @@ def callback(request):
             events = parser.parse(body, signature)  # 傳入的事件
         except InvalidSignatureError:
             return HttpResponseForbidden()
-        from pprint import pprint
-        
+
         for event in events:
             if not isinstance(event, MessageEvent):
                 continue
@@ -67,22 +66,24 @@ def callback(request):
             type='message' source=UserSource(type='user', user_id='U3814bb2f841ea91686f752e33043483f') timestamp=1692764377416 mode=<EventMode.ACTIVE: 'active'> webhook_event_id='01H8G9X4SK3FP5WB4RD2CD04NB' delivery_context=DeliveryContext(is_redelivery=False) reply_token='5262a155e1794b2e918a096574240e93' message=TextMessageContent(type='text', id='469649763529392526', text='hi', emojis=None, mention=None)
             """
             print(event.message.text)
-            if event.message.text == "活動推薦":
+            if event.message.text in ["活動推薦", "1"]:
                 with ApiClient(configuration) as api_client:
-                    with open("text.json", "r", encoding="utf-8") as f:
+                    with open("./static/messages/recommend_activities.json", "r", encoding="utf-8") as f:
                         res_json = json.load(f)
+                        
                     activity_recommend_message = TemplateMessage.from_dict(res_json)
-                    
-                    line_bot_api=MessagingApi(api_client)
+
+                    line_bot_api = MessagingApi(api_client)
                     line_bot_api.reply_message(
                         ReplyMessageRequest(
                             reply_token=event.reply_token,
-                            messages=[activity_recommend_message, TextMessage(text="以上是根據你的個人資料及興趣所推薦的活動")]
+                            messages=[activity_recommend_message,
+                                      TextMessage(text="以上是根據你的個人資料及興趣所推薦的活動")]
                         )
                     )
-            if event.message.text == "Sitcon活動地點":
+            elif event.message.text == "Sitcon活動地點":
                 with ApiClient(configuration) as api_client:
-                    line_bot_api=MessagingApi(api_client)
+                    line_bot_api = MessagingApi(api_client)
                     line_bot_api.reply_message(
                         ReplyMessageRequest(
                             reply_token=event.reply_token,
