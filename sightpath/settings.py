@@ -59,7 +59,6 @@ else:
     CSRF_TRUSTED_ORIGINS = [ngrok_forwarding]
 
 
-
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
 LINE_CHANNEL_SECRET = os.getenv("line_secret")
 
@@ -82,6 +81,7 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
+# TODO
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
