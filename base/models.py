@@ -69,7 +69,7 @@ class CompetitionTag(models.Model):
 
 class Competition(models.Model):
     name = models.TextField()
-    url = models.URLField(null=True)
+    url = models.TextField(null=True)
     
     limit_highschool = models.BooleanField(null=True)
     limit_none = models.BooleanField(null=True)
