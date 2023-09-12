@@ -7,8 +7,13 @@
       {
         "thumbnailImageUrl": "https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/sitcon.png",
         "imageBackgroundColor": "#FFFFFF",
+<<<<<<< HEAD
         "title": "Sitcon 學生計算機年會",
         "text": "由學生自發組成、自主籌備，秉持著以學生為主軸的核心價值，並長期推廣自由及開放原始碼軟體精神。",
+=======
+        "title": "Sitcon 學生社群大亂鬥",
+        "text": "學生計算機年會與GDSC合作，讓學生們來到開源年度盛會分享與交流知識！\n活動日期:07/29~07/30",
+>>>>>>> master
         "defaultAction": {
           "type": "uri",
           "label": "View detail",
@@ -18,11 +23,19 @@
           {
             "type": "message",
             "label": "活動地點",
+<<<<<<< HEAD
             "text": "Sitcon活動地點"
           },
           {
             "type": "uri",
             "label": "詳細資料",
+=======
+            "text": "Sitcon 學生社群大亂鬥-活動地點"
+          },
+          {
+            "type": "uri",
+            "label": "詳細活動資訊",
+>>>>>>> master
             "uri": "http://example.com/page/111"
           }
         ]
@@ -31,7 +44,11 @@
         "thumbnailImageUrl": "https://aiacademy.tw/wp-content/uploads/2023/05/Camp-meta.png",
         "imageBackgroundColor": "#000000",
         "title": "AIGC 實戰夏令營",
+<<<<<<< HEAD
         "text": "高中生的第一個生成式 AI 營隊",
+=======
+        "text": "讓高中職生用ChatGPT、Midjourney來生成文字與圖像，並用在日常生活中。\n活動日期:07/26~07/28",
+>>>>>>> master
         "defaultAction": {
           "type": "uri",
           "label": "View detail",
@@ -45,7 +62,11 @@
           },
           {
             "type": "uri",
+<<<<<<< HEAD
             "label": "詳細資料",
+=======
+            "label": "詳細活動資訊",
+>>>>>>> master
             "uri": "https://aiacademy.tw/admission-summer2023-tp/"
           }
         ]
