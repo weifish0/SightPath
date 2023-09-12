@@ -52,16 +52,7 @@ if 'RENDER' in os.environ:
     if RENDER_EXTERNAL_HOSTNAME:    
         ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 else:
-    ngrok_forwarding = os.getenv("ngrok_forwarding")
-    ngrok_forwarding_nohttp = ngrok_forwarding[ngrok_forwarding.find("//")+2:]
-    
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", ngrok_forwarding_nohttp]
-    CSRF_TRUSTED_ORIGINS = [ngrok_forwarding]
-
-
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
-LINE_CHANNEL_SECRET = os.getenv("line_secret")
-
+    ALLOWED_HOSTS = ["127.0.0.1"]
 
 # Application definition
 
@@ -74,7 +65,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     "base.apps.BaseConfig",
-    "linebotapp.apps.LinebotappConfig",
     
     "rest_framework",
     
