@@ -17,7 +17,8 @@ from linebot.v3.messaging import (
     ReplyMessageRequest,
     TextMessage,
     TemplateMessage,
-    LocationMessage
+    LocationMessage,
+    ImagemapMessage
 )
 from linebot.v3.webhooks import (
     MessageEvent,
@@ -46,7 +47,6 @@ parser = WebhookParser(channel_secret)
 
 @csrf_exempt
 def callback(request):
-
     if request.method == 'POST':
         signature = request.META['HTTP_X_LINE_SIGNATURE']
         body = request.body.decode('utf-8')
@@ -81,18 +81,29 @@ def callback(request):
                                       TextMessage(text="以上是根據你的個人資料及興趣所推薦的活動")]
                         )
                     )
-            elif event.message.text == "Sitcon活動地點":
+            elif event.message.text == "Sitcon 學生社群大亂鬥-活動地點":
                 with ApiClient(configuration) as api_client:
                     line_bot_api = MessagingApi(api_client)
                     line_bot_api.reply_message(
                         ReplyMessageRequest(
                             reply_token=event.reply_token,
-                            messages=[LocationMessage(title="Sitcon 學生計算機年會",
-                                                      address="台北市南港區研究院路二段128號中央研究院人文社會科學館",
-                                                      latitude=25.04107477963494,
-                                                      longitude=121.61139465959879)]
+                            messages=[LocationMessage(title="Sitcon 學生社群大亂鬥",
+                                                      address="台北市大安區基隆路四段43號",
+                                                      latitude=25.013355480857506,
+                                                      longitude=121.54060381718553)]
                         )
                     )
+            elif event.message.text == "個人興趣分析":
+                    with ApiClient(configuration) as api_client:
+                        line_bot_api = MessagingApi(api_client)
+                        line_bot_api.reply_message(
+                            ReplyMessageRequest(
+                                reply_token=event.reply_token,
+                                messages=[ImagemapMessage(originalContentUrl="https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/persona_interests.png",
+                                                          previewImageUrl="https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/persona_interests.png"),
+                                          TextMessage(text="")]
+                            )
+                        )
                 # line_bot_api.reply_message_with_http_info(
                 #     ReplyMessageRequest(
                 #         reply_token=event.reply_token,
