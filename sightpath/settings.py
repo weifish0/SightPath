@@ -12,7 +12,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from dotenv import load_dotenv
+import os
+from dotenv import load_dotenv
 from pathlib import Path
+import dj_database_url
+
+# load env
+load_dotenv()
 import dj_database_url
 
 # load env
@@ -62,6 +68,19 @@ else:
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
 LINE_CHANNEL_SECRET = os.getenv("line_secret")
 
+DEBUG = 'RENDER' not in os.environ
+# DEBUG = True
+
+
+# TODO
+if 'RENDER' in os.environ:
+    print("連接 ALLOWED_HOSTS")
+    ALLOWED_HOSTS = ["sightpath.tw"]
+    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+    if RENDER_EXTERNAL_HOSTNAME:    
+        ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+else:
+    ALLOWED_HOSTS = ["127.0.0.1"]
 
 # Application definition
 
@@ -74,7 +93,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     "base.apps.BaseConfig",
-    "linebotapp.apps.LinebotappConfig",
     
     "rest_framework",
     
