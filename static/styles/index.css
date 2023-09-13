@@ -840,7 +840,7 @@
 
 .slide48-1 {
   position: relative;
-
+  background-color: white;
   left: 0px;
   width: 100%;
   height: 720px;
@@ -932,12 +932,12 @@
 
 .slide47-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
   overflow: hidden;
-  color: var(--color-black);
+  
 }
 
 .vector-icon15 {
@@ -1904,7 +1904,7 @@
   top: 21.81%;
   left: 42.43%;
   font-size: var(--font-size-34xl);
-  color: var(--color-gray-100);
+  color: white;
 }
 
 .sightpath9 {
@@ -1912,7 +1912,7 @@
   top: 32.22%;
   left: 40%;
   font-size: var(--font-size-24xl);
-  color: var(--color-gray-100);
+  color: white;
 }
 
 .b55 {
@@ -1920,18 +1920,18 @@
   top: 40.69%;
   left: 35.36%;
   font-size: var(--font-size-24xl);
-  color: var(--color-gray-100);
+  color: white;
 }
 
 .slide39-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
   overflow: hidden;
   font-size: var(--font-size-13xl);
-  color: var(--color-black);
+  
 }
 
 .group-icon3 {
@@ -1980,7 +1980,7 @@
   position: absolute;
   top: 12.08%;
   left: 86.2%;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .b57 {
@@ -2206,7 +2206,7 @@
   top: 12.08%;
   left: 86.2%;
   font-size: var(--font-size-13xl);
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .slide37-1 {
@@ -2269,7 +2269,7 @@
   top: 12.08%;
   left: 87.6%;
   font-size: var(--font-size-13xl);
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .slide36-1 {
@@ -3724,34 +3724,35 @@
   position: absolute;
   top: 75.56%;
   left: 13.94%;
-  color: var(--color-black);
+  color: white;
 }
 
 .sightpath11 {
   position: absolute;
   top: 75.56%;
   left: 34.56%;
-  color: var(--color-black);
+  color: white;
 }
 
 .b106 {
   position: absolute;
   top: 75.56%;
   left: 50.01%;
-  color: var(--color-black);
+  color: white;
 }
 
 .b107 {
   position: absolute;
   top: 83.61%;
   left: 13.94%;
-  color: var(--color-black);
+  color: white;
 }
 
 .part-4 {
   position: absolute;
   top: 21.81%;
   left: 42.43%;
+  color: white;
   font-size: var(--font-size-34xl);
 }
 
@@ -3759,20 +3760,7 @@
   position: absolute;
   top: 32.22%;
   left: 36.03%;
-  font-size: var(--font-size-24xl);
-}
-
-.b109 {
-  position: absolute;
-  top: 32.22%;
-  left: 47.91%;
-  font-size: var(--font-size-24xl);
-}
-
-.b110 {
-  position: absolute;
-  top: 32.22%;
-  left: 50.53%;
+  color: white;
   font-size: var(--font-size-24xl);
 }
 
@@ -3780,12 +3768,13 @@
   position: absolute;
   top: 40.69%;
   left: 37.34%;
+  color: white;
   font-size: var(--font-size-24xl);
 }
 
 .slide29-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
@@ -4592,12 +4581,13 @@
   position: absolute;
   top: 32.22%;
   left: 35.36%;
+  color: white;
   font-size: var(--font-size-24xl);
 }
 
 .slide19-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
@@ -4664,13 +4654,13 @@
 
 .slide18-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
   overflow: hidden;
   font-size: var(--font-size-18xl);
-  color: var(--color-black);
+  
 }
 
 .vector-icon111 {
@@ -4761,12 +4751,12 @@
 
 .slide17-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
   overflow: hidden;
-  color: var(--color-black);
+  
 }
 
 .vector-icon113 {
@@ -5589,7 +5579,6 @@
   top: 25.97%;
   left: 42.43%;
   font-size: var(--font-size-34xl);
-  color: var(--color-gray-100);
 }
 
 .b208 {
@@ -5597,18 +5586,17 @@
   top: 36.39%;
   left: 33.38%;
   font-size: var(--font-size-24xl);
-  color: var(--color-gray-100);
 }
 
 .slide11-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
   overflow: hidden;
   font-size: var(--font-size-13xl);
-  color: var(--color-black);
+  
 }
 
 .clip-path-group59 {
@@ -5659,12 +5647,12 @@
 
 .slide10-1 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
   overflow: hidden;
-  color: var(--color-black);
+  
 }
 
 .b214 {
@@ -6153,12 +6141,14 @@
   position: absolute;
   top: 32.22%;
   left: 37.34%;
+  color: white;
 }
 
 .b229 {
   position: absolute;
   top: 40.69%;
   left: 35.36%;
+  color: white;
 }
 
 .b230 {
@@ -6166,7 +6156,7 @@
   top: 75.56%;
   left: 15.19%;
   font-size: var(--font-size-13xl);
-  color: var(--color-black);
+  color: white;
 }
 
 .b231 {
@@ -6174,12 +6164,12 @@
   top: 83.61%;
   left: 15.19%;
   font-size: var(--font-size-13xl);
-  color: var(--color-black);
+  color: white;
 }
 
 .slide5 {
   position: relative;
-
+  
   left: 0px;
   width: 100%;
   height: 720px;
@@ -6543,7 +6533,7 @@
 
 .slide2 {
   position: relative;
-
+  background-color: white;
   left: 0px;
   width: 100%;
   height: 720px;
@@ -6641,4 +6631,7 @@
   font-size: var(--font-size-8xl);
   color: var(--color-white);
   font-family: var(--font-microsoft-jhenghei);
+  
+  max-width: 1280px;
+  margin: auto;
 }
