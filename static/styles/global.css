@@ -1,11 +1,10 @@
 body {
-  max-width: 1280px;
-  margin: auto;
   line-height: normal;
 }
 
-div {
-  margin-top: 2px;
+body>div>div{
+  margin-top: 5px;
+  background-color: #000000;
 }
 
 :root {
