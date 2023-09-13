@@ -31,7 +31,7 @@ if 'RENDER' in os.environ:
     print("連接 SECRET_KEY")
     SECRET_KEY = os.environ.get('SECRET_KEY', default='None')
 else:
-    Django_SECRET_KEY = os.getenv("Django_SECRET_KEY")
+    Django_SECRET_KEY = os.getenv("Django_SECRET_KEY", "austintestkey")
     SECRET_KEY = Django_SECRET_KEY
 
 

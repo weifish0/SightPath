@@ -1,0 +1,44 @@
+body {
+  max-width: 1280px;
+  margin: auto;
+  line-height: normal;
+}
+
+div {
+  margin-top: 2px;
+}
+
+:root {
+  /* fonts */
+  --font-arial: Arial;
+  --font-microsoft-jhenghei: "Microsoft JhengHei";
+  --font-calibri: Calibri;
+  --font-pmingliu: PMingLiU;
+
+  /* font sizes */
+  --font-size-8xl: 27px;
+  --font-size-18xl: 37px;
+  --font-size-13xl: 32px;
+  --font-size-24xl: 43px;
+  --font-size-34xl: 53px;
+  --font-size-40xl: 59px;
+  --font-size-29xl: 48px;
+  --font-size-lgi: 19px;
+  --font-size-5xl: 24px;
+  --font-size-10xl: 29px;
+  --font-size-2xl: 21px;
+  --font-size-6xl: 25px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gainsboro: #e7e6e6;
+  --color-black: #000;
+  --color-gray-100: #111;
+  --color-gray-200: rgba(255, 255, 255, 0.22);
+  --color-darkorange-100: #f69203;
+  --color-darkorange-200: #f69002;
+  --color-darkorange-300: #df7e09;
+  --color-orange-100: #f29724;
+  --color-chocolate: #ed7d31;
+  --color-royalblue: #0563c1;
+}
