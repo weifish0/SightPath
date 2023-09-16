@@ -1,298 +1,295 @@
 .vector-icon {
   position: absolute;
-  height: 100%;
   width: 100%;
-  top: 0%;
+  margin-top: 0%;
   right: 0%;
   bottom: 0%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
-  max-height: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .div {
-  position: absolute;
-  top: 31.39%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 31.39%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .b {
-  position: absolute;
-  top: 31.39%;
-  left: 10.44%;
+  position: relative;
+  margin-top: 31.39%;
+  margin-left: 10.44%;
 }
 
 .b1 {
-  position: absolute;
-  top: 31.39%;
-  left: 31.06%;
+  position: relative;
+  margin-top: 31.39%;
+  margin-left: 31.06%;
 }
 
 .max {
-  position: absolute;
-  top: 31.39%;
-  left: 33.88%;
+  position: relative;
+  margin-top: 31.39%;
+  margin-left: 33.88%;
 }
 
 .b2 {
-  position: absolute;
-  top: 31.39%;
-  left: 40.97%;
+  position: relative;
+  margin-top: 31.39%;
+  margin-left: 40.97%;
 }
 
 .div1 {
-  position: absolute;
-  top: 41.25%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .g0v {
-  position: absolute;
-  top: 41.25%;
-  left: 10.44%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 10.44%;
 }
 
 .b3 {
-  position: absolute;
-  top: 41.25%;
-  left: 31.06%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 31.06%;
 }
 
 .langmao {
-  position: absolute;
-  top: 41.25%;
-  left: 42.31%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 42.31%;
 }
 
 .b4 {
-  position: absolute;
-  top: 41.25%;
-  left: 55.79%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 55.79%;
 }
 
 .kon {
-  position: absolute;
-  top: 41.25%;
-  left: 58.6%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 58.6%;
 }
 
 .b5 {
-  position: absolute;
-  top: 41.25%;
-  left: 65.15%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 65.15%;
 }
 
 .anger {
-  position: absolute;
-  top: 41.25%;
-  left: 67.96%;
+  position: relative;
+  margin-top: 41.25%;
+  margin-left: 67.96%;
 }
 
 .div2 {
-  position: absolute;
-  top: 51.11%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 51.11%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .design {
-  position: absolute;
-  top: 51.11%;
-  left: 10.44%;
+  position: relative;
+  margin-top: 51.11%;
+  margin-left: 10.44%;
 }
 
 .b6 {
-  position: absolute;
-  top: 51.11%;
-  left: 31.06%;
+  position: relative;
+  margin-top: 51.11%;
+  margin-left: 31.06%;
 }
 
 .amy {
-  position: absolute;
-  top: 51.11%;
-  left: 33.88%;
+  position: relative;
+  margin-top: 51.11%;
+  margin-left: 33.88%;
 }
 
 .div3 {
-  position: absolute;
-  top: 60.97%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .b7 {
-  position: absolute;
-  top: 60.97%;
-  left: 10.44%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 10.44%;
 }
 
 .b8 {
-  position: absolute;
-  top: 60.97%;
-  left: 31.06%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 31.06%;
 }
 
 .tzu {
-  position: absolute;
-  top: 60.97%;
-  left: 33.88%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 33.88%;
 }
 
 .b9 {
-  position: absolute;
-  top: 60.97%;
-  left: 38.93%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 38.93%;
 }
 
 .yang-tsai {
-  position: absolute;
-  top: 60.97%;
-  left: 40.32%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 40.32%;
 }
 
 .div4 {
-  position: absolute;
-  top: 70.83%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 70.83%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .b10 {
-  position: absolute;
-  top: 70.83%;
-  left: 10.44%;
+  position: relative;
+  margin-top: 70.83%;
+  margin-left: 10.44%;
 }
 
 .b11 {
-  position: absolute;
-  top: 70.83%;
-  left: 31.06%;
+  position: relative;
+  margin-top: 70.83%;
+  margin-left: 31.06%;
 }
 
 .b12 {
-  position: absolute;
-  top: 11.39%;
-  left: 41.88%;
+  position: relative;
+  margin-top: 11.39%;
+  margin-left: 41.88%;
   font-size: var(--font-size-29xl);
 }
 
 .group {
-  position: absolute;
-  height: 100%;
   width: 100%;
-  top: 0%;
+  margin-top: 0%;
   right: 0%;
   bottom: 0%;
-  left: 0%;
+  margin-left: 0%;
 }
 
 .slide50-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
 }
 
 .b13 {
-  position: absolute;
-  top: 8.47%;
-  left: 41.88%;
+  position: relative;
+  margin-top: 8.47%;
+  margin-left: 41.88%;
   font-size: var(--font-size-29xl);
   font-family: var(--font-microsoft-jhenghei);
   color: var(--color-white);
 }
 
 .div5 {
-  position: absolute;
-  top: 20.97%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 20.97%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .recommendation-systemscollabo {
-  position: absolute;
-  top: 20.97%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 20.97%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div6 {
-  position: absolute;
-  top: 24.17%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpstowardsdatasciencecom {
-  position: absolute;
-  top: 24.17%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 9.5%;
 }
 
 .div7 {
-  position: absolute;
-  top: 24.17%;
-  left: 32.09%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 32.09%;
 }
 
 .on {
-  position: absolute;
-  top: 24.17%;
-  left: 32.54%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 32.54%;
 }
 
 .div8 {
-  position: absolute;
-  top: 24.17%;
-  left: 34.07%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 34.07%;
 }
 
 .recommender {
-  position: absolute;
-  top: 24.17%;
-  left: 34.52%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 34.52%;
 }
 
 .div9 {
-  position: absolute;
-  top: 24.17%;
-  left: 42.92%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 42.92%;
 }
 
 .systems {
-  position: absolute;
-  top: 24.17%;
-  left: 43.36%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 43.36%;
 }
 
 .div10 {
-  position: absolute;
-  top: 24.17%;
-  left: 48.06%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 48.06%;
 }
 
 .b86a1068a4dd {
-  position: absolute;
-  top: 24.17%;
-  left: 48.5%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 48.5%;
 }
 
 .vector-icon2 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 47.89%;
-  top: 27.35%;
+  margin-top: 27.35%;
   right: 42.61%;
   bottom: 72.51%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -300,41 +297,41 @@
 }
 
 .div11 {
-  position: absolute;
-  top: 30.42%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 30.42%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .python-django-framework {
-  position: absolute;
-  top: 30.42%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 30.42%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div12 {
-  position: absolute;
-  top: 33.47%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 33.47%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpsdocsdjangoprojectcom {
-  position: absolute;
-  top: 33.47%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 33.47%;
+  margin-left: 9.5%;
 }
 
 .vector-icon3 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 23.83%;
-  top: 36.65%;
+  margin-top: 36.65%;
   right: 66.67%;
   bottom: 63.21%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -342,41 +339,41 @@
 }
 
 .div13 {
-  position: absolute;
-  top: 39.72%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 39.72%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .python-requests-package {
-  position: absolute;
-  top: 39.72%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 39.72%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div14 {
-  position: absolute;
-  top: 42.78%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 42.78%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpsrequestsreadthedocsi {
-  position: absolute;
-  top: 42.78%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 42.78%;
+  margin-left: 9.5%;
 }
 
 .vector-icon4 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 25.39%;
-  top: 45.96%;
+  margin-top: 45.96%;
   right: 65.11%;
   bottom: 53.9%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -384,53 +381,53 @@
 }
 
 .div15 {
-  position: absolute;
-  top: 49.03%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 49.03%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .line-messaging-api {
-  position: absolute;
-  top: 49.03%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 49.03%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div16 {
-  position: absolute;
-  top: 52.08%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 52.08%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpsdeveloperslinebizen {
-  position: absolute;
-  top: 52.08%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 52.08%;
+  margin-left: 9.5%;
 }
 
 .div17 {
-  position: absolute;
-  top: 52.08%;
-  left: 37.28%;
+  position: relative;
+  margin-top: 52.08%;
+  margin-left: 37.28%;
 }
 
 .api {
-  position: absolute;
-  top: 52.08%;
-  left: 37.72%;
+  position: relative;
+  margin-top: 52.08%;
+  margin-left: 37.72%;
 }
 
 .vector-icon5 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 30.63%;
-  top: 55.27%;
+  margin-top: 55.27%;
   right: 59.88%;
   bottom: 44.6%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -438,77 +435,77 @@
 }
 
 .div18 {
-  position: absolute;
-  top: 58.33%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 58.33%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .line-bot-python {
-  position: absolute;
-  top: 58.33%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 58.33%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div19 {
-  position: absolute;
-  top: 61.53%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpsgithubcomlineline {
-  position: absolute;
-  top: 61.53%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 9.5%;
 }
 
 .div20 {
-  position: absolute;
-  top: 61.53%;
-  left: 26.23%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 26.23%;
 }
 
 .bot {
-  position: absolute;
-  top: 61.53%;
-  left: 26.67%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 26.67%;
 }
 
 .div21 {
-  position: absolute;
-  top: 61.53%;
-  left: 28.71%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 28.71%;
 }
 
 .sdk {
-  position: absolute;
-  top: 61.53%;
-  left: 29.15%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 29.15%;
 }
 
 .div22 {
-  position: absolute;
-  top: 61.53%;
-  left: 31.15%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 31.15%;
 }
 
 .pythonblobmasterlinebotv3 {
-  position: absolute;
-  top: 61.53%;
-  left: 31.6%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 31.6%;
 }
 
 .vector-icon6 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 62.19%;
-  top: 64.71%;
+  margin-top: 64.71%;
   right: 28.31%;
   bottom: 35.15%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -516,34 +513,34 @@
 }
 
 .div23 {
-  position: absolute;
-  top: 67.64%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 67.64%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .python-surprise-package {
-  position: absolute;
-  top: 67.64%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 67.64%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .httpsgithubcomnicolashug {
-  position: absolute;
-  top: 70.83%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 70.83%;
+  margin-left: 9.5%;
 }
 
 .vector-icon7 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 23.91%;
-  top: 74.02%;
+  margin-top: 74.02%;
   right: 66.59%;
   bottom: 25.85%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -551,125 +548,125 @@
 }
 
 .div25 {
-  position: absolute;
-  top: 77.08%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 77.08%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .django-database-settingspostg {
-  position: absolute;
-  top: 77.08%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 77.08%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div26 {
-  position: absolute;
-  top: 80.14%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpsstackoverflowcomques {
-  position: absolute;
-  top: 80.14%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 9.5%;
 }
 
 .div27 {
-  position: absolute;
-  top: 80.14%;
-  left: 51.28%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 51.28%;
 }
 
 .settings {
-  position: absolute;
-  top: 80.14%;
-  left: 51.72%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 51.72%;
 }
 
 .div28 {
-  position: absolute;
-  top: 80.14%;
-  left: 56.36%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 56.36%;
 }
 
 .databases {
-  position: absolute;
-  top: 80.14%;
-  left: 56.8%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 56.8%;
 }
 
 .div29 {
-  position: absolute;
-  top: 80.14%;
-  left: 62.78%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 62.78%;
 }
 
 .is {
-  position: absolute;
-  top: 80.14%;
-  left: 63.23%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 63.23%;
 }
 
 .div30 {
-  position: absolute;
-  top: 80.14%;
-  left: 64.14%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 64.14%;
 }
 
 .improperly {
-  position: absolute;
-  top: 80.14%;
-  left: 64.58%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 64.58%;
 }
 
 .div31 {
-  position: absolute;
-  top: 80.14%;
-  left: 71.11%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 71.11%;
 }
 
 .configured {
-  position: absolute;
-  top: 80.14%;
-  left: 71.55%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 71.55%;
 }
 
 .div32 {
-  position: absolute;
-  top: 80.14%;
-  left: 77.9%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 77.9%;
 }
 
 .please {
-  position: absolute;
-  top: 80.14%;
-  left: 78.34%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 78.34%;
 }
 
 .div33 {
-  position: absolute;
-  top: 80.14%;
-  left: 82.19%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 82.19%;
 }
 
 .supply {
-  position: absolute;
-  top: 80.14%;
-  left: 82.63%;
+  position: relative;
+  margin-top: 80.14%;
+  margin-left: 82.63%;
 }
 
 .vector-icon8 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 77.03%;
-  top: 83.32%;
+  margin-top: 83.32%;
   right: 13.47%;
   bottom: 16.54%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -677,89 +674,89 @@
 }
 
 .div34 {
-  position: absolute;
-  top: 86.39%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 86.39%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
   color: var(--color-white);
 }
 
 .render-django-deployment {
-  position: absolute;
-  top: 86.39%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 86.39%;
+  margin-left: 9.5%;
   color: var(--color-white);
 }
 
 .div35 {
-  position: absolute;
-  top: 89.44%;
-  left: 7.62%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 7.62%;
   font-family: var(--font-arial);
 }
 
 .httpsrendercomdocsdeploy {
-  position: absolute;
-  top: 89.44%;
-  left: 9.5%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 9.5%;
 }
 
 .div36 {
-  position: absolute;
-  top: 89.44%;
-  left: 28.67%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 28.67%;
 }
 
 .djangocreate {
-  position: absolute;
-  top: 89.44%;
-  left: 29.12%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 29.12%;
 }
 
 .div37 {
-  position: absolute;
-  top: 89.44%;
-  left: 37.61%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 37.61%;
 }
 
 .the {
-  position: absolute;
-  top: 89.44%;
-  left: 38.06%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 38.06%;
 }
 
 .div38 {
-  position: absolute;
-  top: 89.44%;
-  left: 40.05%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 40.05%;
 }
 
 .render {
-  position: absolute;
-  top: 89.44%;
-  left: 40.49%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 40.49%;
 }
 
 .div39 {
-  position: absolute;
-  top: 89.44%;
-  left: 44.48%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 44.48%;
 }
 
 .app {
-  position: absolute;
-  top: 89.44%;
-  left: 44.92%;
+  position: relative;
+  margin-top: 89.44%;
+  margin-left: 44.92%;
 }
 
 .vector-icon9 {
-  position: absolute;
+  position: relative;
   height: 0.14%;
   width: 37.66%;
-  top: 92.63%;
+  margin-top: 92.63%;
   right: 52.84%;
   bottom: 7.23%;
-  left: 9.5%;
+  margin-left: 9.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -769,9 +766,9 @@
 .slide49-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-lgi);
   color: var(--color-royalblue);
@@ -779,13 +776,13 @@
 }
 
 .vector-icon10 {
-  position: absolute;
+  position: relative;
   height: 98.36%;
   width: 100%;
-  top: 0%;
+  margin-top: 0%;
   right: 0%;
   bottom: 1.64%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -793,13 +790,13 @@
 }
 
 .vector-icon11 {
-  position: absolute;
+  position: relative;
   height: 98.36%;
   width: 100%;
-  top: 1.64%;
+  margin-top: 1.64%;
   right: 0%;
   bottom: 0%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -807,55 +804,55 @@
 }
 
 .div40 {
-  position: absolute;
-  top: 48.77%;
-  left: 49.06%;
+  position: relative;
+  margin-top: 48.77%;
+  margin-left: 49.06%;
   font-family: var(--font-pmingliu);
 }
 
 .sightpath {
-  position: absolute;
-  top: 43.99%;
-  left: 38.31%;
+  position: relative;
+  margin-top: 43.99%;
+  margin-left: 38.31%;
   font-size: var(--font-size-29xl);
   color: var(--color-black);
 }
 
 .b14 {
-  position: absolute;
-  top: 53.42%;
-  left: 35%;
+  position: relative;
+  margin-top: 53.42%;
+  margin-left: 35%;
   color: var(--color-chocolate);
 }
 
 .group2 {
-  position: absolute;
+  position: relative;
   height: 101.67%;
   width: 100%;
-  top: 0%;
+  margin-top: 0%;
   right: 0%;
   bottom: -1.67%;
-  left: 0%;
+  margin-left: 0%;
 }
 
 .slide48-1 {
   position: relative;
   background-color: white;
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
 }
 
 .vector-icon13 {
-  position: absolute;
+  position: relative;
   height: 71.16%;
   width: 79.95%;
-  top: 23.03%;
+  margin-top: 23.03%;
   right: 10.61%;
   bottom: 5.81%;
-  left: 9.44%;
+  margin-left: 9.44%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -863,91 +860,91 @@
 }
 
 .to-conclude {
-  position: absolute;
-  top: 10.42%;
-  left: 34.54%;
+  position: relative;
+  margin-top: 10.42%;
+  margin-left: 34.54%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
 
 .b15 {
-  position: absolute;
-  top: 26.53%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 26.53%;
+  margin-left: 15.17%;
 }
 
 .b16 {
-  position: absolute;
-  top: 33.19%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 33.19%;
+  margin-left: 15.17%;
 }
 
 .b17 {
-  position: absolute;
-  top: 39.86%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 39.86%;
+  margin-left: 15.17%;
 }
 
 .b18 {
-  position: absolute;
-  top: 46.53%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 46.53%;
+  margin-left: 15.17%;
 }
 
 .b19 {
-  position: absolute;
-  top: 53.19%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 53.19%;
+  margin-left: 15.17%;
 }
 
 .b20 {
-  position: absolute;
-  top: 66.53%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 66.53%;
+  margin-left: 15.17%;
 }
 
 .b21 {
-  position: absolute;
-  top: 73.19%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 73.19%;
+  margin-left: 15.17%;
 }
 
 .sightpath1 {
-  position: absolute;
-  top: 79.86%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 79.86%;
+  margin-left: 15.17%;
 }
 
 .b22 {
-  position: absolute;
-  top: 79.86%;
-  left: 28.58%;
+  position: relative;
+  margin-top: 79.86%;
+  margin-left: 28.58%;
 }
 
 .b23 {
-  position: absolute;
-  top: 86.53%;
-  left: 15.17%;
+  position: relative;
+  margin-top: 86.53%;
+  margin-left: 15.17%;
 }
 
 .slide47-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
-  
+
 }
 
 .vector-icon15 {
-  position: absolute;
+  position: relative;
   height: 54.86%;
   width: 80.86%;
-  top: 26.39%;
+  margin-top: 26.39%;
   right: 11.95%;
   bottom: 18.75%;
-  left: 7.19%;
+  margin-left: 7.19%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -955,87 +952,87 @@
 }
 
 .div41 {
-  position: absolute;
-  top: 34.58%;
-  left: 13.79%;
+  position: relative;
+  margin-top: 34.58%;
+  margin-left: 13.79%;
 }
 
 .div42 {
-  position: absolute;
-  top: 40.69%;
-  left: 13.79%;
+  position: relative;
+  margin-top: 40.69%;
+  margin-left: 13.79%;
 }
 
 .div43 {
-  position: absolute;
-  top: 52.64%;
-  left: 13.79%;
+  position: relative;
+  margin-top: 52.64%;
+  margin-left: 13.79%;
 }
 
 .sightpath2 {
-  position: absolute;
-  top: 58.61%;
-  left: 13.79%;
+  position: relative;
+  margin-top: 58.61%;
+  margin-left: 13.79%;
   color: var(--color-darkorange-200);
 }
 
 .div44 {
-  position: absolute;
-  top: 58.61%;
-  left: 25.86%;
+  position: relative;
+  margin-top: 58.61%;
+  margin-left: 25.86%;
   color: var(--color-darkorange-200);
 }
 
 .div45 {
-  position: absolute;
-  top: 58.61%;
-  left: 41.18%;
+  position: relative;
+  margin-top: 58.61%;
+  margin-left: 41.18%;
 }
 
 .div46 {
-  position: absolute;
-  top: 64.58%;
-  left: 13.79%;
+  position: relative;
+  margin-top: 64.58%;
+  margin-left: 13.79%;
 }
 
 .div47 {
-  position: absolute;
-  top: 64.58%;
-  left: 18.17%;
+  position: relative;
+  margin-top: 64.58%;
+  margin-left: 18.17%;
   color: var(--color-darkorange-200);
 }
 
 .div48 {
-  position: absolute;
-  top: 64.58%;
-  left: 53.17%;
+  position: relative;
+  margin-top: 64.58%;
+  margin-left: 53.17%;
 }
 
 .div49 {
-  position: absolute;
-  top: 70.69%;
-  left: 13.79%;
+  position: relative;
+  margin-top: 70.69%;
+  margin-left: 13.79%;
 }
 
 .slide46-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .vector-icon17 {
-  position: absolute;
+  position: relative;
   height: 89.91%;
   width: 92.76%;
-  top: 4.84%;
+  margin-top: 4.84%;
   right: 4.05%;
   bottom: 5.25%;
-  left: 3.19%;
+  margin-left: 3.19%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1043,13 +1040,13 @@
 }
 
 .group-icon {
-  position: absolute;
+  position: relative;
   height: 15.52%;
   width: 21.12%;
-  top: 37.38%;
+  margin-top: 37.38%;
   right: 66.16%;
   bottom: 47.1%;
-  left: 12.72%;
+  margin-left: 12.72%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1057,70 +1054,70 @@
 }
 
 .g0v1 {
-  position: absolute;
-  top: 31.25%;
-  left: 51.24%;
+  position: relative;
+  margin-top: 31.25%;
+  margin-left: 51.24%;
   font-family: var(--font-calibri);
 }
 
 .div50 {
-  position: absolute;
-  top: 31.25%;
-  left: 56.09%;
+  position: relative;
+  margin-top: 31.25%;
+  margin-left: 56.09%;
 }
 
 .div51 {
-  position: absolute;
-  top: 37.08%;
-  left: 45.54%;
+  position: relative;
+  margin-top: 37.08%;
+  margin-left: 45.54%;
 }
 
 .b24 {
-  position: absolute;
-  top: 42.78%;
-  left: 42.4%;
+  position: relative;
+  margin-top: 42.78%;
+  margin-left: 42.4%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .g0v2 {
-  position: absolute;
-  top: 42.78%;
-  left: 54.9%;
+  position: relative;
+  margin-top: 42.78%;
+  margin-left: 54.9%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .b25 {
-  position: absolute;
-  top: 42.78%;
-  left: 60.12%;
+  position: relative;
+  margin-top: 42.78%;
+  margin-left: 60.12%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .sightpath3 {
-  position: absolute;
-  top: 42.78%;
-  left: 77.62%;
+  position: relative;
+  margin-top: 42.78%;
+  margin-left: 77.62%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .div52 {
-  position: absolute;
-  top: 48.06%;
-  left: 52.31%;
+  position: relative;
+  margin-top: 48.06%;
+  margin-left: 52.31%;
 }
 
 .clip-path-group1 {
-  position: absolute;
+  position: relative;
   height: 8.33%;
   width: 35.08%;
-  top: 69.31%;
+  margin-top: 69.31%;
   right: 7.97%;
   bottom: 22.36%;
-  left: 56.95%;
+  margin-left: 56.95%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1128,48 +1125,48 @@
 }
 
 .div53 {
-  position: absolute;
-  top: 62.92%;
-  left: 5.5%;
+  position: relative;
+  margin-top: 62.92%;
+  margin-left: 5.5%;
 }
 
 .div54 {
-  position: absolute;
-  top: 68.75%;
-  left: 14.98%;
+  position: relative;
+  margin-top: 68.75%;
+  margin-left: 14.98%;
 }
 
 .div55 {
-  position: absolute;
-  top: 74.44%;
-  left: 6.85%;
+  position: relative;
+  margin-top: 74.44%;
+  margin-left: 6.85%;
 }
 
 .b26 {
-  position: absolute;
-  top: 74.44%;
-  left: 17.68%;
+  position: relative;
+  margin-top: 74.44%;
+  margin-left: 17.68%;
   color: var(--color-darkorange-200);
 }
 
 .div56 {
-  position: absolute;
-  top: 80.28%;
-  left: 9.56%;
+  position: relative;
+  margin-top: 80.28%;
+  margin-left: 9.56%;
 }
 
 .b27 {
-  position: absolute;
-  top: 12.5%;
-  left: 27.98%;
+  position: relative;
+  margin-top: 12.5%;
+  margin-left: 27.98%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
 
 .b28 {
-  position: absolute;
-  top: 12.5%;
-  left: 56.73%;
+  position: relative;
+  margin-top: 12.5%;
+  margin-left: 56.73%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
@@ -1177,21 +1174,21 @@
 .slide45-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   color: var(--color-gainsboro);
 }
 
 .clip-path-group2 {
-  position: absolute;
+  position: relative;
   height: 18.47%;
   width: 10.23%;
-  top: 72.22%;
+  margin-top: 72.22%;
   right: 36.33%;
   bottom: 9.31%;
-  left: 53.44%;
+  margin-left: 53.44%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1199,13 +1196,13 @@
 }
 
 .clip-path-group3 {
-  position: absolute;
+  position: relative;
   height: 18.47%;
   width: 10.23%;
-  top: 47.5%;
+  margin-top: 47.5%;
   right: 36.41%;
   bottom: 34.03%;
-  left: 53.36%;
+  margin-left: 53.36%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1213,13 +1210,13 @@
 }
 
 .vector-icon19 {
-  position: absolute;
+  position: relative;
   height: 14.21%;
   width: 22.99%;
-  top: 49.84%;
+  margin-top: 49.84%;
   right: 9.91%;
   bottom: 35.95%;
-  left: 67.1%;
+  margin-left: 67.1%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1227,13 +1224,13 @@
 }
 
 .clip-path-group4 {
-  position: absolute;
+  position: relative;
   height: 14.03%;
   width: 22.89%;
-  top: 49.58%;
+  margin-top: 49.58%;
   right: 10%;
   bottom: 36.39%;
-  left: 67.11%;
+  margin-left: 67.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1241,13 +1238,13 @@
 }
 
 .clip-path-group5 {
-  position: absolute;
+  position: relative;
   height: 18.33%;
   width: 10.31%;
-  top: 24.17%;
+  margin-top: 24.17%;
   right: 36.25%;
   bottom: 57.5%;
-  left: 53.44%;
+  margin-left: 53.44%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1255,13 +1252,13 @@
 }
 
 .vector-icon20 {
-  position: absolute;
+  position: relative;
   height: 10.83%;
   width: 22.89%;
-  top: 27.92%;
+  margin-top: 27.92%;
   right: 10%;
   bottom: 61.25%;
-  left: 67.11%;
+  margin-left: 67.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1269,13 +1266,13 @@
 }
 
 .group-icon1 {
-  position: absolute;
+  position: relative;
   height: 10.83%;
   width: 21.95%;
-  top: 27.92%;
+  margin-top: 27.92%;
   right: 10.47%;
   bottom: 61.25%;
-  left: 67.58%;
+  margin-left: 67.58%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1283,13 +1280,13 @@
 }
 
 .clip-path-group6 {
-  position: absolute;
+  position: relative;
   height: 14.86%;
   width: 22.89%;
-  top: 74.03%;
+  margin-top: 74.03%;
   right: 10%;
   bottom: 11.11%;
-  left: 67.11%;
+  margin-left: 67.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1297,180 +1294,180 @@
 }
 
 .sightpath4 {
-  position: absolute;
-  top: 35.97%;
-  left: 13.32%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 13.32%;
 }
 
 .div57 {
-  position: absolute;
-  top: 35.97%;
-  left: 26.36%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 26.36%;
 }
 
 .div58 {
-  position: absolute;
-  top: 42.64%;
-  left: 14.21%;
+  position: relative;
+  margin-top: 42.64%;
+  margin-left: 14.21%;
 }
 
 .ioh {
-  position: absolute;
-  top: 42.64%;
-  left: 17.44%;
+  position: relative;
+  margin-top: 42.64%;
+  margin-left: 17.44%;
 }
 
 .div59 {
-  position: absolute;
-  top: 42.64%;
-  left: 23.07%;
+  position: relative;
+  margin-top: 42.64%;
+  margin-left: 23.07%;
 }
 
 .div60 {
-  position: absolute;
-  top: 49.31%;
-  left: 16.33%;
+  position: relative;
+  margin-top: 49.31%;
+  margin-left: 16.33%;
 }
 
 .dream-more {
-  position: absolute;
-  top: 49.31%;
-  left: 19.56%;
+  position: relative;
+  margin-top: 49.31%;
+  margin-left: 19.56%;
 }
 
 .div61 {
-  position: absolute;
-  top: 49.31%;
-  left: 37.72%;
+  position: relative;
+  margin-top: 49.31%;
+  margin-left: 37.72%;
 }
 
 .div62 {
-  position: absolute;
-  top: 55.97%;
-  left: 10.51%;
+  position: relative;
+  margin-top: 55.97%;
+  margin-left: 10.51%;
 }
 
 .sightpath5 {
-  position: absolute;
-  top: 55.97%;
-  left: 16.13%;
+  position: relative;
+  margin-top: 55.97%;
+  margin-left: 16.13%;
 }
 
 .div63 {
-  position: absolute;
-  top: 55.97%;
-  left: 29.17%;
+  position: relative;
+  margin-top: 55.97%;
+  margin-left: 29.17%;
 }
 
 .div64 {
-  position: absolute;
-  top: 69.31%;
-  left: 11.45%;
+  position: relative;
+  margin-top: 69.31%;
+  margin-left: 11.45%;
 }
 
 .slide44-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .sightpath6 {
-  position: absolute;
-  top: 8.89%;
-  left: 19.84%;
+  position: relative;
+  margin-top: 8.89%;
+  margin-left: 19.84%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
 
 .b31 {
-  position: absolute;
-  top: 8.89%;
-  left: 46.61%;
+  position: relative;
+  margin-top: 8.89%;
+  margin-left: 46.61%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
 
 .b32 {
-  position: absolute;
-  top: 29.86%;
-  left: 9.52%;
+  position: relative;
+  margin-top: 29.86%;
+  margin-left: 9.52%;
 }
 
 .b33 {
-  position: absolute;
-  top: 29.86%;
-  left: 33.9%;
+  position: relative;
+  margin-top: 29.86%;
+  margin-left: 33.9%;
   color: var(--color-darkorange-200);
 }
 
 .b34 {
-  position: absolute;
-  top: 38.75%;
-  left: 9.52%;
+  position: relative;
+  margin-top: 38.75%;
+  margin-left: 9.52%;
 }
 
 .b35 {
-  position: absolute;
-  top: 47.64%;
-  left: 9.52%;
+  position: relative;
+  margin-top: 47.64%;
+  margin-left: 9.52%;
 }
 
 .b36 {
-  position: absolute;
-  top: 47.64%;
-  left: 31.19%;
+  position: relative;
+  margin-top: 47.64%;
+  margin-left: 31.19%;
   color: var(--color-darkorange-200);
 }
 
 .b37 {
-  position: absolute;
-  top: 56.53%;
-  left: 9.52%;
+  position: relative;
+  margin-top: 56.53%;
+  margin-left: 9.52%;
   color: var(--color-darkorange-200);
 }
 
 .b38 {
-  position: absolute;
-  top: 29.86%;
-  left: 55.47%;
+  position: relative;
+  margin-top: 29.86%;
+  margin-left: 55.47%;
 }
 
 .b39 {
-  position: absolute;
-  top: 38.75%;
-  left: 55.47%;
+  position: relative;
+  margin-top: 38.75%;
+  margin-left: 55.47%;
 }
 
 .b40 {
-  position: absolute;
-  top: 38.75%;
-  left: 66.31%;
+  position: relative;
+  margin-top: 38.75%;
+  margin-left: 66.31%;
   color: var(--color-darkorange-200);
 }
 
 .b41 {
-  position: absolute;
-  top: 38.75%;
-  left: 77.14%;
+  position: relative;
+  margin-top: 38.75%;
+  margin-left: 77.14%;
 }
 
 .b42 {
-  position: absolute;
-  top: 47.64%;
-  left: 55.47%;
+  position: relative;
+  margin-top: 47.64%;
+  margin-left: 55.47%;
 }
 
 .vector-icon24 {
-  position: absolute;
+  position: relative;
   height: 57%;
   width: 0.16%;
-  top: 29.17%;
+  margin-top: 29.17%;
   right: 50.39%;
   bottom: 13.83%;
-  left: 49.45%;
+  margin-left: 49.45%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1478,13 +1475,13 @@
 }
 
 .clip-path-group7 {
-  position: absolute;
+  position: relative;
   height: 20.28%;
   width: 11.41%;
-  top: 65.83%;
+  margin-top: 65.83%;
   right: 20.7%;
   bottom: 13.89%;
-  left: 67.89%;
+  margin-left: 67.89%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1492,13 +1489,13 @@
 }
 
 .group-icon2 {
-  position: absolute;
+  position: relative;
   height: 20.28%;
   width: 11.33%;
-  top: 65.83%;
+  margin-top: 65.83%;
   right: 68.83%;
   bottom: 13.89%;
-  left: 19.84%;
+  margin-left: 19.84%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1508,53 +1505,53 @@
 .slide43-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .div65 {
-  position: absolute;
-  top: 67.5%;
-  left: 9.92%;
+  position: relative;
+  margin-top: 67.5%;
+  margin-left: 9.92%;
 }
 
 .div66 {
-  position: absolute;
-  top: 73.33%;
-  left: 9.92%;
+  position: relative;
+  margin-top: 73.33%;
+  margin-left: 9.92%;
 }
 
 .div67 {
-  position: absolute;
-  top: 79.03%;
-  left: 9.92%;
+  position: relative;
+  margin-top: 79.03%;
+  margin-left: 9.92%;
 }
 
 .b43 {
-  position: absolute;
-  top: 84.86%;
-  left: 9.92%;
+  position: relative;
+  margin-top: 84.86%;
+  margin-left: 9.92%;
   color: var(--color-darkorange-200);
 }
 
 .b44 {
-  position: absolute;
-  top: 8.06%;
-  left: 23.65%;
+  position: relative;
+  margin-top: 8.06%;
+  margin-left: 23.65%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
 
 .clip-path-group8 {
-  position: absolute;
+  position: relative;
   height: 26.94%;
   width: 25.47%;
-  top: 33.33%;
+  margin-top: 33.33%;
   right: 62.03%;
   bottom: 39.72%;
-  left: 12.5%;
+  margin-left: 12.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1562,13 +1559,13 @@
 }
 
 .vector-icon26 {
-  position: absolute;
+  position: relative;
   height: 33.61%;
   width: 29.22%;
-  top: 30%;
+  margin-top: 30%;
   right: 60.16%;
   bottom: 36.39%;
-  left: 10.63%;
+  margin-left: 10.63%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1576,21 +1573,21 @@
 }
 
 .dream-more1 {
-  position: absolute;
-  top: 24.17%;
-  left: 14.89%;
+  position: relative;
+  margin-top: 24.17%;
+  margin-left: 14.89%;
   font-size: var(--font-size-13xl);
   color: var(--color-white);
 }
 
 .clip-path-group10 {
-  position: absolute;
+  position: relative;
   height: 26.94%;
   width: 25.47%;
-  top: 33.33%;
+  margin-top: 33.33%;
   right: 17.11%;
   bottom: 39.72%;
-  left: 57.42%;
+  margin-left: 57.42%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1598,13 +1595,13 @@
 }
 
 .vector-icon27 {
-  position: absolute;
+  position: relative;
   height: 33.61%;
   width: 29.22%;
-  top: 30%;
+  margin-top: 30%;
   right: 15.23%;
   bottom: 36.39%;
-  left: 55.55%;
+  margin-left: 55.55%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1612,53 +1609,53 @@
 }
 
 .b45 {
-  position: absolute;
-  top: 23.19%;
-  left: 63.16%;
+  position: relative;
+  margin-top: 23.19%;
+  margin-left: 63.16%;
   font-size: var(--font-size-13xl);
   color: var(--color-white);
 }
 
 .div68 {
-  position: absolute;
-  top: 67.78%;
-  left: 54.89%;
+  position: relative;
+  margin-top: 67.78%;
+  margin-left: 54.89%;
 }
 
 .div69 {
-  position: absolute;
-  top: 73.61%;
-  left: 54.89%;
+  position: relative;
+  margin-top: 73.61%;
+  margin-left: 54.89%;
 }
 
 .div70 {
-  position: absolute;
-  top: 79.31%;
-  left: 54.89%;
+  position: relative;
+  margin-top: 79.31%;
+  margin-left: 54.89%;
 }
 
 .b46 {
-  position: absolute;
-  top: 79.31%;
-  left: 57.6%;
+  position: relative;
+  margin-top: 79.31%;
+  margin-left: 57.6%;
   color: var(--color-darkorange-200);
 }
 
 .b47 {
-  position: absolute;
-  top: 85.14%;
-  left: 54.89%;
+  position: relative;
+  margin-top: 85.14%;
+  margin-left: 54.89%;
   color: var(--color-darkorange-200);
 }
 
 .vector-icon28 {
-  position: absolute;
+  position: relative;
   height: 90.32%;
   width: 92.76%;
-  top: 4.84%;
+  margin-top: 4.84%;
   right: 4.05%;
   bottom: 4.84%;
-  left: 3.19%;
+  margin-left: 3.19%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1668,61 +1665,61 @@
 .slide42-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   color: var(--color-gainsboro);
 }
 
 .sightpath7 {
-  position: absolute;
-  top: 38.19%;
-  left: 37.02%;
+  position: relative;
+  margin-top: 38.19%;
+  margin-left: 37.02%;
 }
 
 .div71 {
-  position: absolute;
-  top: 38.19%;
-  left: 53.19%;
+  position: relative;
+  margin-top: 38.19%;
+  margin-left: 53.19%;
 }
 
 .div72 {
-  position: absolute;
-  top: 47.08%;
-  left: 26.15%;
+  position: relative;
+  margin-top: 47.08%;
+  margin-left: 26.15%;
 }
 
 .b48 {
-  position: absolute;
-  top: 55.97%;
-  left: 19.38%;
+  position: relative;
+  margin-top: 55.97%;
+  margin-left: 19.38%;
   color: var(--color-darkorange-200);
 }
 
 .div73 {
-  position: absolute;
-  top: 55.97%;
-  left: 60%;
+  position: relative;
+  margin-top: 55.97%;
+  margin-left: 60%;
 }
 
 .b49 {
-  position: absolute;
-  top: 64.86%;
-  left: 27.5%;
+  position: relative;
+  margin-top: 64.86%;
+  margin-left: 27.5%;
   color: var(--color-darkorange-200);
 }
 
 .div74 {
-  position: absolute;
-  top: 73.75%;
-  left: 31.56%;
+  position: relative;
+  margin-top: 73.75%;
+  margin-left: 31.56%;
 }
 
 .b50 {
-  position: absolute;
-  top: 8.89%;
-  left: 14.06%;
+  position: relative;
+  margin-top: 8.89%;
+  margin-left: 14.06%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
@@ -1730,20 +1727,20 @@
 .slide41-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .vector-icon32 {
-  position: absolute;
+  position: relative;
   height: 44.44%;
   width: 80.86%;
-  top: 26.39%;
+  margin-top: 26.39%;
   right: 11.95%;
   bottom: 29.17%;
-  left: 7.19%;
+  margin-left: 7.19%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1751,82 +1748,82 @@
 }
 
 .div75 {
-  position: absolute;
-  top: 39.03%;
-  left: 14.71%;
+  position: relative;
+  margin-top: 39.03%;
+  margin-left: 14.71%;
 }
 
 .div76 {
-  position: absolute;
-  top: 44.31%;
-  left: 14.71%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 14.71%;
 }
 
 .g0v3 {
-  position: absolute;
-  top: 44.31%;
-  left: 17.68%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 17.68%;
 }
 
 .div77 {
-  position: absolute;
-  top: 44.31%;
-  left: 22.63%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 22.63%;
 }
 
 .div78 {
-  position: absolute;
-  top: 49.44%;
-  left: 14.71%;
+  position: relative;
+  margin-top: 49.44%;
+  margin-left: 14.71%;
 }
 
 .div79 {
-  position: absolute;
-  top: 54.58%;
-  left: 14.71%;
+  position: relative;
+  margin-top: 54.58%;
+  margin-left: 14.71%;
 }
 
 .div80 {
-  position: absolute;
-  top: 31.39%;
-  left: 11.8%;
+  position: relative;
+  margin-top: 31.39%;
+  margin-left: 11.8%;
   font-size: 64px;
   font-family: var(--font-calibri);
   color: var(--color-white);
 }
 
 .b51 {
-  position: absolute;
-  top: 61.25%;
-  left: 66.17%;
+  position: relative;
+  margin-top: 61.25%;
+  margin-left: 66.17%;
   font-size: var(--font-size-13xl);
 }
 
 .g0v-nobody {
-  position: absolute;
-  top: 62.36%;
-  left: 68.35%;
+  position: relative;
+  margin-top: 62.36%;
+  margin-left: 68.35%;
 }
 
 .slide40-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .vector-icon34 {
-  position: absolute;
+  position: relative;
   height: 21.3%;
   width: 78.54%;
-  top: 74.14%;
+  margin-top: 74.14%;
   right: 9.44%;
   bottom: 4.56%;
-  left: 12.02%;
+  margin-left: 12.02%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1834,13 +1831,13 @@
 }
 
 .vector-icon35 {
-  position: absolute;
+  position: relative;
   height: 21.11%;
   width: 78.44%;
-  top: 71.94%;
+  margin-top: 71.94%;
   right: 10.78%;
   bottom: 6.94%;
-  left: 10.78%;
+  margin-left: 10.78%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1848,37 +1845,37 @@
 }
 
 .b52 {
-  position: absolute;
-  top: 75.56%;
-  left: 13.94%;
+  position: relative;
+  margin-top: 75.56%;
+  margin-left: 13.94%;
 }
 
 .sightpath8 {
-  position: absolute;
-  top: 75.56%;
-  left: 57.06%;
+  position: relative;
+  margin-top: 75.56%;
+  margin-left: 57.06%;
 }
 
 .b53 {
-  position: absolute;
-  top: 75.56%;
-  left: 72.51%;
+  position: relative;
+  margin-top: 75.56%;
+  margin-left: 72.51%;
 }
 
 .b54 {
-  position: absolute;
-  top: 83.61%;
-  left: 13.94%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 13.94%;
 }
 
 .vector-icon36 {
-  position: absolute;
+  position: relative;
   height: 57.22%;
   width: 34.53%;
-  top: 7.64%;
+  margin-top: 7.64%;
   right: 33.05%;
   bottom: 35.14%;
-  left: 32.42%;
+  margin-left: 32.42%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1886,13 +1883,13 @@
 }
 
 .vector-icon37 {
-  position: absolute;
+  position: relative;
   height: 57.22%;
   width: 34.53%;
-  top: 5.97%;
+  margin-top: 5.97%;
   right: 33.52%;
   bottom: 36.81%;
-  left: 31.95%;
+  margin-left: 31.95%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1900,48 +1897,48 @@
 }
 
 .part-5 {
-  position: absolute;
-  top: 21.81%;
-  left: 42.43%;
+  position: relative;
+  margin-top: 21.81%;
+  margin-left: 42.43%;
   font-size: var(--font-size-34xl);
   color: white;
 }
 
 .sightpath9 {
-  position: absolute;
-  top: 32.22%;
-  left: 40%;
+  position: relative;
+  margin-top: 32.22%;
+  margin-left: 40%;
   font-size: var(--font-size-24xl);
   color: white;
 }
 
 .b55 {
-  position: absolute;
-  top: 40.69%;
-  left: 35.36%;
+  position: relative;
+  margin-top: 40.69%;
+  margin-left: 35.36%;
   font-size: var(--font-size-24xl);
   color: white;
 }
 
 .slide39-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
-  
+
 }
 
 .group-icon3 {
-  position: absolute;
+  position: relative;
   height: 43.06%;
   width: 63.12%;
-  top: 49.03%;
+  margin-top: 49.03%;
   right: 21.09%;
   bottom: 7.92%;
-  left: 15.78%;
+  margin-left: 15.78%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1949,13 +1946,13 @@
 }
 
 .clip-path-group12 {
-  position: absolute;
+  position: relative;
   height: 15.97%;
   width: 8.98%;
-  top: 75%;
+  margin-top: 75%;
   right: 8.28%;
   bottom: 9.03%;
-  left: 82.73%;
+  margin-left: 82.73%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1963,13 +1960,13 @@
 }
 
 .vector-icon39 {
-  position: absolute;
+  position: relative;
   height: 11.81%;
   width: 19.06%;
-  top: 9.03%;
+  margin-top: 9.03%;
   right: 0%;
   bottom: 79.17%;
-  left: 80.94%;
+  margin-left: 80.94%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -1977,154 +1974,154 @@
 }
 
 .b56 {
-  position: absolute;
-  top: 12.08%;
-  left: 86.2%;
+  position: relative;
+  margin-top: 12.08%;
+  margin-left: 86.2%;
   color: var(--color-white);
 }
 
 .b57 {
-  position: absolute;
-  top: 10.69%;
-  left: 14.89%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 14.89%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .div81 {
-  position: absolute;
-  top: 27.78%;
-  left: 36.09%;
+  position: relative;
+  margin-top: 27.78%;
+  margin-left: 36.09%;
 }
 
 .div82 {
-  position: absolute;
-  top: 35.83%;
-  left: 17.78%;
+  position: relative;
+  margin-top: 35.83%;
+  margin-left: 17.78%;
 }
 
 .sightpath10 {
-  position: absolute;
-  top: 35.83%;
-  left: 62.78%;
+  position: relative;
+  margin-top: 35.83%;
+  margin-left: 62.78%;
 }
 
 .slide38-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
 }
 
 .b58 {
-  position: absolute;
-  top: 10.69%;
-  left: 9.19%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 9.19%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .line {
-  position: absolute;
-  top: 10.69%;
-  left: 19.5%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 19.5%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .notify {
-  position: absolute;
-  top: 10.69%;
-  left: 31.84%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 31.84%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .b59 {
-  position: absolute;
-  top: 10.69%;
-  left: 50.81%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 50.81%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .div83 {
-  position: absolute;
-  top: 28.47%;
-  left: 19.17%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 19.17%;
 }
 
 .line-developer {
-  position: absolute;
-  top: 28.47%;
-  left: 29.59%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 29.59%;
 }
 
 .div84 {
-  position: absolute;
-  top: 28.47%;
-  left: 48.65%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 48.65%;
 }
 
 .line-login {
-  position: absolute;
-  top: 28.47%;
-  left: 51.88%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 51.88%;
 }
 
 .div85 {
-  position: absolute;
-  top: 28.47%;
-  left: 64.82%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 64.82%;
 }
 
 .line1 {
-  position: absolute;
-  top: 28.47%;
-  left: 70.45%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 70.45%;
 }
 
 .div86 {
-  position: absolute;
-  top: 28.47%;
-  left: 76.04%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 76.04%;
 }
 
 .div87 {
-  position: absolute;
-  top: 35.14%;
-  left: 33.23%;
+  position: relative;
+  margin-top: 35.14%;
+  margin-left: 33.23%;
 }
 
 .div88 {
-  position: absolute;
-  top: 41.81%;
-  left: 30.62%;
+  position: relative;
+  margin-top: 41.81%;
+  margin-left: 30.62%;
 }
 
 .line-notify {
-  position: absolute;
-  top: 41.81%;
-  left: 41.04%;
+  position: relative;
+  margin-top: 41.81%;
+  margin-left: 41.04%;
 }
 
 .div89 {
-  position: absolute;
-  top: 41.81%;
-  left: 55.01%;
+  position: relative;
+  margin-top: 41.81%;
+  margin-left: 55.01%;
 }
 
 .group-icon4 {
-  position: absolute;
+  position: relative;
   height: 21.39%;
   width: 11.8%;
-  top: 61.53%;
+  margin-top: 61.53%;
   right: 50%;
   bottom: 17.08%;
-  left: 38.2%;
+  margin-left: 38.2%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2132,13 +2129,13 @@
 }
 
 .group-icon5 {
-  position: absolute;
+  position: relative;
   height: 21.67%;
   width: 13.59%;
-  top: 62.78%;
+  margin-top: 62.78%;
   right: 79.84%;
   bottom: 15.56%;
-  left: 6.56%;
+  margin-left: 6.56%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2146,13 +2143,13 @@
 }
 
 .clip-path-group13 {
-  position: absolute;
+  position: relative;
   height: 20.56%;
   width: 12.97%;
-  top: 63.06%;
+  margin-top: 63.06%;
   right: 80.16%;
   bottom: 16.39%;
-  left: 6.88%;
+  margin-left: 6.88%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2160,13 +2157,13 @@
 }
 
 .clip-path-group14 {
-  position: absolute;
+  position: relative;
   height: 9.86%;
   width: 23.59%;
-  top: 68.47%;
+  margin-top: 68.47%;
   right: 6.87%;
   bottom: 21.67%;
-  left: 69.53%;
+  margin-left: 69.53%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2174,13 +2171,13 @@
 }
 
 .vector-icon41 {
-  position: absolute;
+  position: relative;
   height: 6%;
   width: 7.47%;
-  top: 70.4%;
+  margin-top: 70.4%;
   right: 67.78%;
   bottom: 23.6%;
-  left: 24.75%;
+  margin-left: 24.75%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2188,13 +2185,13 @@
 }
 
 .vector-icon42 {
-  position: absolute;
+  position: relative;
   height: 6%;
   width: 7.47%;
-  top: 70.4%;
+  margin-top: 70.4%;
   right: 36.45%;
   bottom: 23.6%;
-  left: 56.08%;
+  margin-left: 56.08%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2202,9 +2199,9 @@
 }
 
 .b60 {
-  position: absolute;
-  top: 12.08%;
-  left: 86.2%;
+  position: relative;
+  margin-top: 12.08%;
+  margin-left: 86.2%;
   font-size: var(--font-size-13xl);
   color: var(--color-white);
 }
@@ -2212,52 +2209,52 @@
 .slide37-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .b61 {
-  position: absolute;
-  top: 10.69%;
-  left: 34.69%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 34.69%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .div90 {
-  position: absolute;
-  top: 43.61%;
-  left: 5.39%;
+  position: relative;
+  margin-top: 43.61%;
+  margin-left: 5.39%;
 }
 
 .collaborative-filtering {
-  position: absolute;
-  top: 43.61%;
-  left: 20.59%;
+  position: relative;
+  margin-top: 43.61%;
+  margin-left: 20.59%;
 }
 
 .div91 {
-  position: absolute;
-  top: 50.28%;
-  left: 5.39%;
+  position: relative;
+  margin-top: 50.28%;
+  margin-left: 5.39%;
 }
 
 .div92 {
-  position: absolute;
-  top: 56.94%;
-  left: 5.39%;
+  position: relative;
+  margin-top: 56.94%;
+  margin-left: 5.39%;
 }
 
 .group-icon6 {
-  position: absolute;
+  position: relative;
   height: 67.22%;
   width: 29.45%;
-  top: 28.33%;
+  margin-top: 28.33%;
   right: 8.2%;
   bottom: 4.44%;
-  left: 62.34%;
+  margin-left: 62.34%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2265,9 +2262,9 @@
 }
 
 .b62 {
-  position: absolute;
-  top: 12.08%;
-  left: 87.6%;
+  position: relative;
+  margin-top: 12.08%;
+  margin-left: 87.6%;
   font-size: var(--font-size-13xl);
   color: var(--color-white);
 }
@@ -2275,76 +2272,76 @@
 .slide36-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .div93 {
-  position: absolute;
-  top: 28.89%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 28.89%;
+  margin-left: 4.69%;
   font-size: var(--font-size-6xl);
 }
 
 .python {
-  position: absolute;
-  top: 28.89%;
-  left: 13.86%;
+  position: relative;
+  margin-top: 28.89%;
+  margin-left: 13.86%;
   font-size: var(--font-size-6xl);
 }
 
 .div94 {
-  position: absolute;
-  top: 28.89%;
-  left: 22.33%;
+  position: relative;
+  margin-top: 28.89%;
+  margin-left: 22.33%;
   font-size: var(--font-size-6xl);
 }
 
 .surprise {
-  position: absolute;
-  top: 28.89%;
-  left: 43.76%;
+  position: relative;
+  margin-top: 28.89%;
+  margin-left: 43.76%;
   font-size: var(--font-size-6xl);
 }
 
 .div95 {
-  position: absolute;
-  top: 34.72%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 34.72%;
+  margin-left: 4.69%;
   font-size: var(--font-size-6xl);
 }
 
 .div96 {
-  position: absolute;
-  top: 46.67%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 46.67%;
+  margin-left: 4.69%;
   font-size: var(--font-size-6xl);
 }
 
 .div97 {
-  position: absolute;
-  top: 52.5%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 52.5%;
+  margin-left: 4.69%;
   font-size: var(--font-size-6xl);
 }
 
 .div98 {
-  position: absolute;
-  top: 58.47%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 58.47%;
+  margin-left: 4.69%;
   font-size: var(--font-size-6xl);
 }
 
 .clip-path-group15 {
-  position: absolute;
+  position: relative;
   height: 28.06%;
   width: 22.58%;
-  top: 25.42%;
+  margin-top: 25.42%;
   right: 9.92%;
   bottom: 46.53%;
-  left: 67.5%;
+  margin-left: 67.5%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2352,13 +2349,13 @@
 }
 
 .clip-path-group16 {
-  position: absolute;
+  position: relative;
   height: 26.81%;
   width: 24.77%;
-  top: 67.92%;
+  margin-top: 67.92%;
   right: 9.14%;
   bottom: 5.28%;
-  left: 66.09%;
+  margin-left: 66.09%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2366,13 +2363,13 @@
 }
 
 .vector-icon48 {
-  position: absolute;
+  position: relative;
   height: 11.2%;
   width: 3.92%;
-  top: 54.8%;
+  margin-top: 54.8%;
   right: 19.21%;
   bottom: 34%;
-  left: 76.87%;
+  margin-left: 76.87%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2380,13 +2377,13 @@
 }
 
 .vector-icon49 {
-  position: absolute;
+  position: relative;
   height: 27.22%;
   width: 52.27%;
-  top: 67.78%;
+  margin-top: 67.78%;
   right: 43.91%;
   bottom: 5%;
-  left: 3.83%;
+  margin-left: 3.83%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2394,129 +2391,129 @@
 }
 
 .div99 {
-  position: absolute;
-  top: 69.72%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 69.72%;
+  margin-left: 4.69%;
 }
 
 .div100 {
-  position: absolute;
-  top: 75.83%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 75.83%;
+  margin-left: 4.69%;
 }
 
 .aws {
-  position: absolute;
-  top: 75.83%;
-  left: 15.63%;
+  position: relative;
+  margin-top: 75.83%;
+  margin-left: 15.63%;
 }
 
 .div101 {
-  position: absolute;
-  top: 75.83%;
-  left: 20.75%;
+  position: relative;
+  margin-top: 75.83%;
+  margin-left: 20.75%;
 }
 
 .div102 {
-  position: absolute;
-  top: 81.81%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 81.81%;
+  margin-left: 4.69%;
 }
 
 .surprise1 {
-  position: absolute;
-  top: 81.81%;
-  left: 11.26%;
+  position: relative;
+  margin-top: 81.81%;
+  margin-left: 11.26%;
 }
 
 .div103 {
-  position: absolute;
-  top: 81.81%;
-  left: 20.75%;
+  position: relative;
+  margin-top: 81.81%;
+  margin-left: 20.75%;
 }
 
 .div104 {
-  position: absolute;
-  top: 87.78%;
-  left: 4.69%;
+  position: relative;
+  margin-top: 87.78%;
+  margin-left: 4.69%;
 }
 
 .surprise2 {
-  position: absolute;
-  top: 87.78%;
-  left: 24.38%;
+  position: relative;
+  margin-top: 87.78%;
+  margin-left: 24.38%;
 }
 
 .div105 {
-  position: absolute;
-  top: 87.78%;
-  left: 33.87%;
+  position: relative;
+  margin-top: 87.78%;
+  margin-left: 33.87%;
 }
 
 .slide35-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
 }
 
 .b65 {
-  position: absolute;
-  top: 12.78%;
-  left: 18.27%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 18.27%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .ai {
-  position: absolute;
-  top: 12.78%;
-  left: 28.59%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 28.59%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .b66 {
-  position: absolute;
-  top: 12.78%;
-  left: 35.24%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 35.24%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .labelling {
-  position: absolute;
-  top: 12.78%;
-  left: 54.3%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 54.3%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .div106 {
-  position: absolute;
-  top: 28.47%;
-  left: 23.65%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 23.65%;
   font-size: var(--font-size-8xl);
 }
 
 .div107 {
-  position: absolute;
-  top: 35.14%;
-  left: 22.45%;
+  position: relative;
+  margin-top: 35.14%;
+  margin-left: 22.45%;
   font-size: var(--font-size-8xl);
 }
 
 .group-icon7 {
-  position: absolute;
+  position: relative;
   height: 17.92%;
   width: 10.08%;
-  top: 60.69%;
+  margin-top: 60.69%;
   right: 45.94%;
   bottom: 21.39%;
-  left: 43.98%;
+  margin-left: 43.98%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2524,27 +2521,27 @@
 }
 
 .stst {
-  position: absolute;
-  top: 55%;
-  left: 71.74%;
+  position: relative;
+  margin-top: 55%;
+  margin-left: 71.74%;
   font-family: var(--font-calibri);
   color: var(--color-black);
 }
 
 .b68 {
-  position: absolute;
-  top: 61.53%;
-  left: 59.63%;
+  position: relative;
+  margin-top: 61.53%;
+  margin-left: 59.63%;
 }
 
 .vector-icon52 {
-  position: absolute;
+  position: relative;
   height: 5.17%;
   width: 8.41%;
-  top: 66.37%;
+  margin-top: 66.37%;
   right: 33.64%;
   bottom: 28.46%;
-  left: 57.96%;
+  margin-left: 57.96%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2552,13 +2549,13 @@
 }
 
 .clip-path-group17 {
-  position: absolute;
+  position: relative;
   height: 24.03%;
   width: 22.5%;
-  top: 53.19%;
+  margin-top: 53.19%;
   right: 69.14%;
   bottom: 22.78%;
-  left: 8.36%;
+  margin-left: 8.36%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2566,19 +2563,19 @@
 }
 
 .b69 {
-  position: absolute;
-  top: 61.39%;
-  left: 34.39%;
+  position: relative;
+  margin-top: 61.39%;
+  margin-left: 34.39%;
 }
 
 .vector-icon53 {
-  position: absolute;
+  position: relative;
   height: 5.03%;
   width: 8.41%;
-  top: 66.1%;
+  margin-top: 66.1%;
   right: 59.11%;
   bottom: 28.87%;
-  left: 32.49%;
+  margin-left: 32.49%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2586,13 +2583,13 @@
 }
 
 .clip-path-group18 {
-  position: absolute;
+  position: relative;
   height: 11.81%;
   width: 16.8%;
-  top: 51.25%;
+  margin-top: 51.25%;
   right: 13.05%;
   bottom: 36.94%;
-  left: 70.16%;
+  margin-left: 70.16%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2600,13 +2597,13 @@
 }
 
 .clip-path-group19 {
-  position: absolute;
+  position: relative;
   height: 11.67%;
   width: 16.72%;
-  top: 63.61%;
+  margin-top: 63.61%;
   right: 13.12%;
   bottom: 24.72%;
-  left: 70.16%;
+  margin-left: 70.16%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2614,13 +2611,13 @@
 }
 
 .clip-path-group20 {
-  position: absolute;
+  position: relative;
   height: 11.67%;
   width: 16.72%;
-  top: 76.11%;
+  margin-top: 76.11%;
   right: 13.12%;
   bottom: 12.22%;
-  left: 70.16%;
+  margin-left: 70.16%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2628,127 +2625,127 @@
 }
 
 .b70 {
-  position: absolute;
-  top: 54.72%;
-  left: 75.22%;
+  position: relative;
+  margin-top: 54.72%;
+  margin-left: 75.22%;
   font-size: var(--font-size-8xl);
   color: var(--color-black);
 }
 
 .b71 {
-  position: absolute;
-  top: 66.94%;
-  left: 75.22%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 75.22%;
   font-size: var(--font-size-8xl);
   color: var(--color-black);
 }
 
 .b72 {
-  position: absolute;
-  top: 79.58%;
-  left: 75.45%;
+  position: relative;
+  margin-top: 79.58%;
+  margin-left: 75.45%;
   font-size: var(--font-size-8xl);
   color: var(--color-black);
 }
 
 .b73 {
-  position: absolute;
-  top: 71.94%;
-  left: 8.68%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 8.68%;
 }
 
 .gpt {
-  position: absolute;
-  top: 81.25%;
-  left: 40.92%;
+  position: relative;
+  margin-top: 81.25%;
+  margin-left: 40.92%;
 }
 
 .b74 {
-  position: absolute;
-  top: 81.25%;
-  left: 45.07%;
+  position: relative;
+  margin-top: 81.25%;
+  margin-left: 45.07%;
 }
 
 .b75 {
-  position: absolute;
-  top: 81.25%;
-  left: 46.36%;
+  position: relative;
+  margin-top: 81.25%;
+  margin-left: 46.36%;
 }
 
 .b76 {
-  position: absolute;
-  top: 81.25%;
-  left: 49.55%;
+  position: relative;
+  margin-top: 81.25%;
+  margin-left: 49.55%;
 }
 
 .turbo {
-  position: absolute;
-  top: 81.25%;
-  left: 50.84%;
+  position: relative;
+  margin-top: 81.25%;
+  margin-left: 50.84%;
 }
 
 .slide34-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
 }
 
 .b77 {
-  position: absolute;
-  top: 10.69%;
-  left: 36.88%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 36.88%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .div108 {
-  position: absolute;
-  top: 28.47%;
-  left: 17.76%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 17.76%;
 }
 
 .fixturesjson {
-  position: absolute;
-  top: 28.47%;
-  left: 66.51%;
+  position: relative;
+  margin-top: 28.47%;
+  margin-left: 66.51%;
 }
 
 .div109 {
-  position: absolute;
-  top: 35.14%;
-  left: 26.82%;
+  position: relative;
+  margin-top: 35.14%;
+  margin-left: 26.82%;
 }
 
 .django {
-  position: absolute;
-  top: 35.14%;
-  left: 32.44%;
+  position: relative;
+  margin-top: 35.14%;
+  margin-left: 32.44%;
 }
 
 .loaddata {
-  position: absolute;
-  top: 35.14%;
-  left: 42.04%;
+  position: relative;
+  margin-top: 35.14%;
+  margin-left: 42.04%;
 }
 
 .div110 {
-  position: absolute;
-  top: 35.14%;
-  left: 54.02%;
+  position: relative;
+  margin-top: 35.14%;
+  margin-left: 54.02%;
 }
 
 .clip-path-group21 {
-  position: absolute;
+  position: relative;
   height: 19.44%;
   width: 11.25%;
-  top: 67.78%;
+  margin-top: 67.78%;
   right: 80.55%;
   bottom: 12.78%;
-  left: 8.2%;
+  margin-left: 8.2%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2756,20 +2753,20 @@
 }
 
 .b78 {
-  position: absolute;
-  top: 61.81%;
-  left: 10.57%;
+  position: relative;
+  margin-top: 61.81%;
+  margin-left: 10.57%;
   font-size: var(--font-size-2xl);
 }
 
 .clip-path-group22 {
-  position: absolute;
+  position: relative;
   height: 20%;
   width: 11.41%;
-  top: 67.92%;
+  margin-top: 67.92%;
   right: 58.28%;
   bottom: 12.08%;
-  left: 30.31%;
+  margin-left: 30.31%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2777,20 +2774,20 @@
 }
 
 .fixturesjson1 {
-  position: absolute;
-  top: 60.97%;
-  left: 31.22%;
+  position: relative;
+  margin-top: 60.97%;
+  margin-left: 31.22%;
   font-size: var(--font-size-2xl);
 }
 
 .clip-path-group23 {
-  position: absolute;
+  position: relative;
   height: 15.28%;
   width: 17.11%;
-  top: 60.42%;
+  margin-top: 60.42%;
   right: 31.17%;
   bottom: 24.31%;
-  left: 51.72%;
+  margin-left: 51.72%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2798,27 +2795,27 @@
 }
 
 .b79 {
-  position: absolute;
-  top: 78.33%;
-  left: 55.38%;
+  position: relative;
+  margin-top: 78.33%;
+  margin-left: 55.38%;
   font-size: var(--font-size-lgi);
 }
 
 .b80 {
-  position: absolute;
-  top: 82.36%;
-  left: 53.61%;
+  position: relative;
+  margin-top: 82.36%;
+  margin-left: 53.61%;
   font-size: var(--font-size-lgi);
 }
 
 .clip-path-group24 {
-  position: absolute;
+  position: relative;
   height: 20.69%;
   width: 10.23%;
-  top: 60.28%;
+  margin-top: 60.28%;
   right: 11.56%;
   bottom: 19.03%;
-  left: 78.2%;
+  margin-left: 78.2%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2826,30 +2823,30 @@
 }
 
 .postgre {
-  position: absolute;
-  top: 80.83%;
-  left: 77.75%;
+  position: relative;
+  margin-top: 80.83%;
+  margin-left: 77.75%;
   font-size: var(--font-size-13xl);
   font-family: var(--font-calibri);
 }
 
 .sql {
-  position: absolute;
-  top: 80.83%;
-  left: 85.53%;
+  position: relative;
+  margin-top: 80.83%;
+  margin-left: 85.53%;
   font-size: var(--font-size-13xl);
   font-family: var(--font-calibri);
   color: #ff9900;
 }
 
 .vector-icon55 {
-  position: absolute;
+  position: relative;
   height: 5.45%;
   width: 6.22%;
-  top: 70.96%;
+  margin-top: 70.96%;
   right: 72.39%;
   bottom: 23.6%;
-  left: 21.39%;
+  margin-left: 21.39%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2857,13 +2854,13 @@
 }
 
 .vector-icon56 {
-  position: absolute;
+  position: relative;
   height: 5.59%;
   width: 6.22%;
-  top: 70.82%;
+  margin-top: 70.82%;
   right: 49.97%;
   bottom: 23.6%;
-  left: 43.82%;
+  margin-left: 43.82%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2871,13 +2868,13 @@
 }
 
 .vector-icon57 {
-  position: absolute;
+  position: relative;
   height: 5.59%;
   width: 6.22%;
-  top: 70.4%;
+  margin-top: 70.4%;
   right: 23.09%;
   bottom: 24.01%;
-  left: 70.69%;
+  margin-left: 70.69%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2887,106 +2884,106 @@
 .slide33-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .div111 {
-  position: absolute;
-  top: 76.94%;
-  left: 23.67%;
+  position: relative;
+  margin-top: 76.94%;
+  margin-left: 23.67%;
 }
 
 .python1 {
-  position: absolute;
-  top: 76.94%;
-  left: 34.08%;
+  position: relative;
+  margin-top: 76.94%;
+  margin-left: 34.08%;
 }
 
 .div112 {
-  position: absolute;
-  top: 76.94%;
-  left: 43.79%;
+  position: relative;
+  margin-top: 76.94%;
+  margin-left: 43.79%;
 }
 
 .div113 {
-  position: absolute;
-  top: 83.61%;
-  left: 23.67%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 23.67%;
 }
 
 .django1 {
-  position: absolute;
-  top: 83.61%;
-  left: 31.69%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 31.69%;
 }
 
 .div114 {
-  position: absolute;
-  top: 83.61%;
-  left: 41.54%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 41.54%;
 }
 
 .mvt {
-  position: absolute;
-  top: 83.61%;
-  left: 44.77%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 44.77%;
 }
 
 .div115 {
-  position: absolute;
-  top: 83.61%;
-  left: 51.16%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 51.16%;
 }
 
 .div116 {
-  position: absolute;
-  top: 90.28%;
-  left: 23.67%;
+  position: relative;
+  margin-top: 90.28%;
+  margin-left: 23.67%;
 }
 
 .view {
-  position: absolute;
-  top: 90.28%;
-  left: 29.29%;
+  position: relative;
+  margin-top: 90.28%;
+  margin-left: 29.29%;
 }
 
 .div117 {
-  position: absolute;
-  top: 90.28%;
-  left: 35.76%;
+  position: relative;
+  margin-top: 90.28%;
+  margin-left: 35.76%;
 }
 
 .div118 {
-  position: absolute;
-  top: 90.28%;
-  left: 43.78%;
+  position: relative;
+  margin-top: 90.28%;
+  margin-left: 43.78%;
   color: var(--color-darkorange-200);
 }
 
 .div119 {
-  position: absolute;
-  top: 90.28%;
-  left: 58.99%;
+  position: relative;
+  margin-top: 90.28%;
+  margin-left: 58.99%;
 }
 
 .div120 {
-  position: absolute;
-  top: 90.28%;
-  left: 62.22%;
+  position: relative;
+  margin-top: 90.28%;
+  margin-left: 62.22%;
   color: var(--color-darkorange-200);
 }
 
 .clip-path-group25 {
-  position: absolute;
+  position: relative;
   height: 48.61%;
   width: 54.22%;
-  top: 25.69%;
+  margin-top: 25.69%;
   right: 22.89%;
   bottom: 25.69%;
-  left: 22.89%;
+  margin-left: 22.89%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -2994,17 +2991,17 @@
 }
 
 .web {
-  position: absolute;
-  top: 10.69%;
-  left: 39.73%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 39.73%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .b83 {
-  position: absolute;
-  top: 10.69%;
-  left: 51.52%;
+  position: relative;
+  margin-top: 10.69%;
+  margin-left: 51.52%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
@@ -3012,140 +3009,140 @@
 .slide32-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .div121 {
-  position: absolute;
-  top: 30.56%;
-  left: 11.94%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 11.94%;
 }
 
 .html {
-  position: absolute;
-  top: 30.56%;
-  left: 33.37%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 33.37%;
 }
 
 .div122 {
-  position: absolute;
-  top: 30.56%;
-  left: 40.15%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 40.15%;
 }
 
 .css {
-  position: absolute;
-  top: 30.56%;
-  left: 42.45%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 42.45%;
 }
 
 .div123 {
-  position: absolute;
-  top: 30.56%;
-  left: 46.98%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 46.98%;
 }
 
 .javascript {
-  position: absolute;
-  top: 30.56%;
-  left: 49.27%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 49.27%;
 }
 
 .div124 {
-  position: absolute;
-  top: 30.56%;
-  left: 62.41%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 62.41%;
 }
 
 .react {
-  position: absolute;
-  top: 30.56%;
-  left: 80.74%;
+  position: relative;
+  margin-top: 30.56%;
+  margin-left: 80.74%;
 }
 
 .js {
-  position: absolute;
-  top: 35.97%;
-  left: 11.94%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 11.94%;
 }
 
 .div125 {
-  position: absolute;
-  top: 35.97%;
-  left: 14.45%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 14.45%;
 }
 
 .animatecss {
-  position: absolute;
-  top: 35.97%;
-  left: 16.74%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 16.74%;
 }
 
 .div126 {
-  position: absolute;
-  top: 35.97%;
-  left: 32.04%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 32.04%;
 }
 
 .bootstrap {
-  position: absolute;
-  top: 35.97%;
-  left: 37.43%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 37.43%;
 }
 
 .div127 {
-  position: absolute;
-  top: 35.97%;
-  left: 50.16%;
+  position: relative;
+  margin-top: 35.97%;
+  margin-left: 50.16%;
 }
 
 .div128 {
-  position: absolute;
-  top: 41.53%;
-  left: 11.94%;
+  position: relative;
+  margin-top: 41.53%;
+  margin-left: 11.94%;
 }
 
 .ui {
-  position: absolute;
-  top: 41.53%;
-  left: 27.98%;
+  position: relative;
+  margin-top: 41.53%;
+  margin-left: 27.98%;
 }
 
 .div129 {
-  position: absolute;
-  top: 41.53%;
-  left: 30.62%;
+  position: relative;
+  margin-top: 41.53%;
+  margin-left: 30.62%;
 }
 
 .div130 {
-  position: absolute;
-  top: 52.5%;
-  left: 11.94%;
+  position: relative;
+  margin-top: 52.5%;
+  margin-left: 11.94%;
 }
 
 .rwd {
-  position: absolute;
-  top: 52.5%;
-  left: 21.91%;
+  position: relative;
+  margin-top: 52.5%;
+  margin-left: 21.91%;
 }
 
 .div131 {
-  position: absolute;
-  top: 52.5%;
-  left: 28.42%;
+  position: relative;
+  margin-top: 52.5%;
+  margin-left: 28.42%;
 }
 
 .clip-path-group26 {
-  position: absolute;
+  position: relative;
   height: 20.97%;
   width: 11.25%;
-  top: 62.92%;
+  margin-top: 62.92%;
   right: 72.73%;
   bottom: 16.11%;
-  left: 16.02%;
+  margin-left: 16.02%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3153,13 +3150,13 @@
 }
 
 .group-icon8 {
-  position: absolute;
+  position: relative;
   height: 18.47%;
   width: 15.86%;
-  top: 64.17%;
+  margin-top: 64.17%;
   right: 57.03%;
   bottom: 17.36%;
-  left: 27.11%;
+  margin-left: 27.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3167,13 +3164,13 @@
 }
 
 .clip-path-group27 {
-  position: absolute;
+  position: relative;
   height: 15.28%;
   width: 22.34%;
-  top: 65.83%;
+  margin-top: 65.83%;
   right: 35.62%;
   bottom: 18.89%;
-  left: 42.03%;
+  margin-left: 42.03%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3181,13 +3178,13 @@
 }
 
 .clip-path-group28 {
-  position: absolute;
+  position: relative;
   height: 18.89%;
   width: 13.36%;
-  top: 64.44%;
+  margin-top: 64.44%;
   right: 19.53%;
   bottom: 16.67%;
-  left: 67.11%;
+  margin-left: 67.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3195,17 +3192,17 @@
 }
 
 .web1 {
-  position: absolute;
-  top: 10.83%;
-  left: 39.73%;
+  position: relative;
+  margin-top: 10.83%;
+  margin-left: 39.73%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
 
 .b85 {
-  position: absolute;
-  top: 10.83%;
-  left: 51.52%;
+  position: relative;
+  margin-top: 10.83%;
+  margin-left: 51.52%;
   font-size: var(--font-size-29xl);
   color: var(--color-darkorange-300);
 }
@@ -3213,21 +3210,21 @@
 .slide31-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-6xl);
 }
 
 .clip-path-group29 {
-  position: absolute;
+  position: relative;
   height: 14.72%;
   width: 7.97%;
-  top: 30.14%;
+  margin-top: 30.14%;
   right: 87.34%;
   bottom: 55.14%;
-  left: 4.69%;
+  margin-left: 4.69%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3235,13 +3232,13 @@
 }
 
 .clip-path-group30 {
-  position: absolute;
+  position: relative;
   height: 9.31%;
   width: 11.56%;
-  top: 32.92%;
+  margin-top: 32.92%;
   right: 73.59%;
   bottom: 57.78%;
-  left: 14.84%;
+  margin-left: 14.84%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3249,52 +3246,52 @@
 }
 
 .front-end {
-  position: absolute;
-  top: 26.11%;
-  left: 4.91%;
+  position: relative;
+  margin-top: 26.11%;
+  margin-left: 4.91%;
   font-size: var(--font-size-2xl);
 }
 
 .web2 {
-  position: absolute;
-  top: 15.42%;
-  left: 3.53%;
+  position: relative;
+  margin-top: 15.42%;
+  margin-left: 3.53%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .b86 {
-  position: absolute;
-  top: 15.42%;
-  left: 10.52%;
+  position: relative;
+  margin-top: 15.42%;
+  margin-left: 10.52%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .ai1 {
-  position: absolute;
-  top: 57.92%;
-  left: 3.69%;
+  position: relative;
+  margin-top: 57.92%;
+  margin-left: 3.69%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .b87 {
-  position: absolute;
-  top: 57.92%;
-  left: 7.29%;
+  position: relative;
+  margin-top: 57.92%;
+  margin-left: 7.29%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .clip-path-group31 {
-  position: absolute;
+  position: relative;
   height: 11.53%;
   width: 6.48%;
-  top: 21.25%;
+  margin-top: 21.25%;
   right: 30.23%;
   bottom: 67.22%;
-  left: 63.28%;
+  margin-left: 63.28%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3302,13 +3299,13 @@
 }
 
 .vector-icon64 {
-  position: absolute;
+  position: relative;
   height: 11.81%;
   width: 6.64%;
-  top: 21.11%;
+  margin-top: 21.11%;
   right: 30.16%;
   bottom: 67.08%;
-  left: 63.2%;
+  margin-left: 63.2%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3316,13 +3313,13 @@
 }
 
 .group-icon9 {
-  position: absolute;
+  position: relative;
   height: 10.28%;
   width: 5.78%;
-  top: 48.19%;
+  margin-top: 48.19%;
   right: 30.31%;
   bottom: 41.53%;
-  left: 63.91%;
+  margin-left: 63.91%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3330,13 +3327,13 @@
 }
 
 .group-icon10 {
-  position: absolute;
+  position: relative;
   height: 12.22%;
   width: 6.88%;
-  top: 77.5%;
+  margin-top: 77.5%;
   right: 30%;
   bottom: 10.28%;
-  left: 63.13%;
+  margin-left: 63.13%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3344,13 +3341,13 @@
 }
 
 .vector-icon65 {
-  position: absolute;
+  position: relative;
   height: 39.31%;
   width: 54.77%;
-  top: 11.53%;
+  margin-top: 11.53%;
   right: 43.67%;
   bottom: 49.17%;
-  left: 1.56%;
+  margin-left: 1.56%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3358,20 +3355,20 @@
 }
 
 .back-end {
-  position: absolute;
-  top: 25.97%;
-  left: 16.75%;
+  position: relative;
+  margin-top: 25.97%;
+  margin-left: 16.75%;
   font-size: var(--font-size-2xl);
 }
 
 .vector-icon66 {
-  position: absolute;
+  position: relative;
   height: 39.17%;
   width: 54.53%;
-  top: 54.03%;
+  margin-top: 54.03%;
   right: 43.67%;
   bottom: 6.81%;
-  left: 1.8%;
+  margin-left: 1.8%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3379,13 +3376,13 @@
 }
 
 .group-icon11 {
-  position: absolute;
+  position: relative;
   height: 12.5%;
   width: 7.03%;
-  top: 74.44%;
+  margin-top: 74.44%;
   right: 87.81%;
   bottom: 13.06%;
-  left: 5.16%;
+  margin-left: 5.16%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3393,13 +3390,13 @@
 }
 
 .vector-icon67 {
-  position: absolute;
+  position: relative;
   height: 24.72%;
   width: 37.97%;
-  top: 11.53%;
+  margin-top: 11.53%;
   right: 2.11%;
   bottom: 63.75%;
-  left: 59.92%;
+  margin-left: 59.92%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3407,70 +3404,70 @@
 }
 
 .b88 {
-  position: absolute;
-  top: 14.44%;
-  left: 62.19%;
+  position: relative;
+  margin-top: 14.44%;
+  margin-left: 62.19%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .gpt1 {
-  position: absolute;
-  top: 70%;
-  left: 2.66%;
+  position: relative;
+  margin-top: 70%;
+  margin-left: 2.66%;
   font-size: var(--font-size-lgi);
 }
 
 .b89 {
-  position: absolute;
-  top: 70%;
-  left: 5.89%;
+  position: relative;
+  margin-top: 70%;
+  margin-left: 5.89%;
   font-size: var(--font-size-lgi);
 }
 
 .b90 {
-  position: absolute;
-  top: 70%;
-  left: 6.89%;
+  position: relative;
+  margin-top: 70%;
+  margin-left: 6.89%;
   font-size: var(--font-size-lgi);
 }
 
 .b91 {
-  position: absolute;
-  top: 70%;
-  left: 9.36%;
+  position: relative;
+  margin-top: 70%;
+  margin-left: 9.36%;
   font-size: var(--font-size-lgi);
 }
 
 .turbo1 {
-  position: absolute;
-  top: 70%;
-  left: 10.36%;
+  position: relative;
+  margin-top: 70%;
+  margin-left: 10.36%;
   font-size: var(--font-size-lgi);
 }
 
 .recommender1 {
-  position: absolute;
-  top: 66.11%;
-  left: 15.62%;
+  position: relative;
+  margin-top: 66.11%;
+  margin-left: 15.62%;
   font-size: var(--font-size-2xl);
 }
 
 .system {
-  position: absolute;
-  top: 69.58%;
-  left: 18.62%;
+  position: relative;
+  margin-top: 69.58%;
+  margin-left: 18.62%;
   font-size: var(--font-size-2xl);
 }
 
 .vector-icon68 {
-  position: absolute;
+  position: relative;
   height: 27.08%;
   width: 37.89%;
-  top: 37.5%;
+  margin-top: 37.5%;
   right: 2.11%;
   bottom: 35.42%;
-  left: 60%;
+  margin-left: 60%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3478,29 +3475,29 @@
 }
 
 .line2 {
-  position: absolute;
-  top: 40.83%;
-  left: 62.51%;
+  position: relative;
+  margin-top: 40.83%;
+  margin-left: 62.51%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .b92 {
-  position: absolute;
-  top: 40.83%;
-  left: 70.08%;
+  position: relative;
+  margin-top: 40.83%;
+  margin-left: 70.08%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .vector-icon69 {
-  position: absolute;
+  position: relative;
   height: 27.08%;
   width: 38.13%;
-  top: 66.11%;
+  margin-top: 66.11%;
   right: 1.88%;
   bottom: 6.81%;
-  left: 60%;
+  margin-left: 60%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3508,53 +3505,53 @@
 }
 
 .github {
-  position: absolute;
-  top: 69.31%;
-  left: 62.93%;
+  position: relative;
+  margin-top: 69.31%;
+  margin-left: 62.93%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .b93 {
-  position: absolute;
-  top: 69.31%;
-  left: 74.64%;
+  position: relative;
+  margin-top: 69.31%;
+  margin-left: 74.64%;
   font-size: var(--font-size-10xl);
   color: var(--color-darkorange-100);
 }
 
 .b94 {
-  position: absolute;
-  top: 71.53%;
-  left: 30.36%;
+  position: relative;
+  margin-top: 71.53%;
+  margin-left: 30.36%;
 }
 
 .b95 {
-  position: absolute;
-  top: 76.81%;
-  left: 30.36%;
+  position: relative;
+  margin-top: 76.81%;
+  margin-left: 30.36%;
 }
 
 .b96 {
-  position: absolute;
-  top: 27.36%;
-  left: 30.4%;
+  position: relative;
+  margin-top: 27.36%;
+  margin-left: 30.4%;
 }
 
 .b97 {
-  position: absolute;
-  top: 32.64%;
-  left: 30.4%;
+  position: relative;
+  margin-top: 32.64%;
+  margin-left: 30.4%;
 }
 
 .vector-icon70 {
-  position: absolute;
+  position: relative;
   height: 21.94%;
   width: 26.02%;
-  top: 20.97%;
+  margin-top: 20.97%;
   right: 45.31%;
   bottom: 57.08%;
-  left: 28.67%;
+  margin-left: 28.67%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3562,13 +3559,13 @@
 }
 
 .vector-icon71 {
-  position: absolute;
+  position: relative;
   height: 22.08%;
   width: 26.02%;
-  top: 65%;
+  margin-top: 65%;
   right: 45.31%;
   bottom: 12.92%;
-  left: 28.67%;
+  margin-left: 28.67%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3576,55 +3573,55 @@
 }
 
 .b98 {
-  position: absolute;
-  top: 22.5%;
-  left: 73.18%;
+  position: relative;
+  margin-top: 22.5%;
+  margin-left: 73.18%;
 }
 
 .python2 {
-  position: absolute;
-  top: 22.5%;
-  left: 77.56%;
+  position: relative;
+  margin-top: 22.5%;
+  margin-left: 77.56%;
 }
 
 .b99 {
-  position: absolute;
-  top: 27.78%;
-  left: 73.18%;
+  position: relative;
+  margin-top: 27.78%;
+  margin-left: 73.18%;
 }
 
 .b100 {
-  position: absolute;
-  top: 49.58%;
-  left: 73.55%;
+  position: relative;
+  margin-top: 49.58%;
+  margin-left: 73.55%;
 }
 
 .b101 {
-  position: absolute;
-  top: 54.86%;
-  left: 73.55%;
+  position: relative;
+  margin-top: 54.86%;
+  margin-left: 73.55%;
 }
 
 .b102 {
-  position: absolute;
-  top: 79.31%;
-  left: 73.55%;
+  position: relative;
+  margin-top: 79.31%;
+  margin-left: 73.55%;
 }
 
 .b103 {
-  position: absolute;
-  top: 84.58%;
-  left: 73.55%;
+  position: relative;
+  margin-top: 84.58%;
+  margin-left: 73.55%;
 }
 
 .vector-icon72 {
-  position: absolute;
+  position: relative;
   height: 13.33%;
   width: 24.3%;
-  top: 47.5%;
+  margin-top: 47.5%;
   right: 3.59%;
   bottom: 39.17%;
-  left: 72.11%;
+  margin-left: 72.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3632,13 +3629,13 @@
 }
 
 .clip-path-group32 {
-  position: absolute;
+  position: relative;
   height: 12.22%;
   width: 9.77%;
-  top: 74.58%;
+  margin-top: 74.58%;
   right: 73.59%;
   bottom: 13.19%;
-  left: 16.64%;
+  margin-left: 16.64%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3646,13 +3643,13 @@
 }
 
 .vector-icon73 {
-  position: absolute;
+  position: relative;
   height: 13.33%;
   width: 24.3%;
-  top: 20.56%;
+  margin-top: 20.56%;
   right: 3.59%;
   bottom: 66.11%;
-  left: 72.11%;
+  margin-left: 72.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3660,13 +3657,13 @@
 }
 
 .vector-icon74 {
-  position: absolute;
+  position: relative;
   height: 13.33%;
   width: 24.3%;
-  top: 76.94%;
+  margin-top: 76.94%;
   right: 3.59%;
   bottom: 9.72%;
-  left: 72.11%;
+  margin-left: 72.11%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3674,13 +3671,13 @@
 }
 
 .vector-icon75 {
-  position: absolute;
+  position: relative;
   height: 12.22%;
   width: 21.64%;
-  top: 47.64%;
+  margin-top: 47.64%;
   right: 38.59%;
   bottom: 40.14%;
-  left: 39.77%;
+  margin-left: 39.77%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3688,13 +3685,13 @@
 }
 
 .vector-icon76 {
-  position: absolute;
+  position: relative;
   height: 12.78%;
   width: 22.34%;
-  top: 47.22%;
+  margin-top: 47.22%;
   right: 38.13%;
   bottom: 40%;
-  left: 39.53%;
+  margin-left: 39.53%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3702,9 +3699,9 @@
 }
 
 .b104 {
-  position: absolute;
-  top: 50.28%;
-  left: 44.23%;
+  position: relative;
+  margin-top: 50.28%;
+  margin-left: 44.23%;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-100);
 }
@@ -3712,109 +3709,108 @@
 .slide30-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .b105 {
-  position: absolute;
-  top: 75.56%;
-  left: 13.94%;
+  position: relative;
+  margin-top: 75.56%;
+  margin-left: 13.94%;
   color: white;
 }
 
 .sightpath11 {
-  position: absolute;
-  top: 75.56%;
-  left: 34.56%;
+  position: relative;
+  margin-top: 75.56%;
+  margin-left: 34.56%;
   color: white;
 }
 
 .b106 {
-  position: absolute;
-  top: 75.56%;
-  left: 50.01%;
+  position: relative;
+  margin-top: 75.56%;
+  margin-left: 50.01%;
   color: white;
 }
 
 .b107 {
-  position: absolute;
-  top: 83.61%;
-  left: 13.94%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 13.94%;
   color: white;
 }
 
 .part-4 {
-  position: absolute;
-  top: 21.81%;
-  left: 42.43%;
+  margin-left: 42.43%;
   color: white;
   font-size: var(--font-size-34xl);
+  font-weight:bold;
 }
 
 .b108 {
-  position: absolute;
-  top: 32.22%;
-  left: 36.03%;
+  position: relative;
+  margin-top: 32.22%;
+  margin-left: 36.03%;
   color: white;
   font-size: var(--font-size-24xl);
 }
 
 .b111 {
-  position: absolute;
-  top: 40.69%;
-  left: 37.34%;
+  position: relative;
+  margin-top: 40.69%;
+  margin-left: 37.34%;
   color: white;
   font-size: var(--font-size-24xl);
 }
 
 .slide29-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
   color: var(--color-gray-100);
 }
 
 .waiting-for {
-  position: absolute;
-  top: 42.5%;
-  left: 36.69%;
+  position: relative;
+  margin-top: 42.5%;
+  margin-left: 36.69%;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-300);
 }
 
 .b112 {
-  position: absolute;
-  top: 50.56%;
-  left: 41.15%;
+  position: relative;
+  margin-top: 50.56%;
+  margin-left: 41.15%;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-300);
 }
 
 .b113 {
-  position: absolute;
-  top: 12.22%;
-  left: 41.15%;
+  position: relative;
+  margin-top: 12.22%;
+  margin-left: 41.15%;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-300);
 }
 
 .clip-path-group33 {
-  position: absolute;
+  position: relative;
   height: 55.83%;
   width: 93.13%;
-  top: 31.25%;
+  margin-top: 31.25%;
   right: 3.44%;
   bottom: 12.92%;
-  left: 3.44%;
+  margin-left: 3.44%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3822,13 +3818,13 @@
 }
 
 .vector-icon84 {
-  position: absolute;
+  position: relative;
   height: 2.5%;
   width: 2.5%;
-  top: 48.47%;
+  margin-top: 48.47%;
   right: 30.31%;
   bottom: 49.03%;
-  left: 67.19%;
+  margin-left: 67.19%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3836,37 +3832,37 @@
 }
 
 .div132 {
-  position: absolute;
-  top: 54.72%;
-  left: 67.96%;
+  position: relative;
+  margin-top: 54.72%;
+  margin-left: 67.96%;
 }
 
 .line-notify1 {
-  position: absolute;
-  top: 54.72%;
-  left: 77.49%;
+  position: relative;
+  margin-top: 54.72%;
+  margin-left: 77.49%;
 }
 
 .div133 {
-  position: absolute;
-  top: 60.83%;
-  left: 67.96%;
+  position: relative;
+  margin-top: 60.83%;
+  margin-left: 67.96%;
 }
 
 .div134 {
-  position: absolute;
-  top: 66.81%;
-  left: 67.96%;
+  position: relative;
+  margin-top: 66.81%;
+  margin-left: 67.96%;
 }
 
 .clip-path-group34 {
-  position: absolute;
+  position: relative;
   height: 67.22%;
   width: 27.81%;
-  top: 22.08%;
+  margin-top: 22.08%;
   right: 48.52%;
   bottom: 10.69%;
-  left: 23.67%;
+  margin-left: 23.67%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3876,46 +3872,46 @@
 .slide28-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .div135 {
-  position: absolute;
-  top: 44.03%;
-  left: 9.64%;
+  position: relative;
+  margin-top: 44.03%;
+  margin-left: 9.64%;
 }
 
 .div136 {
-  position: absolute;
-  top: 50.69%;
-  left: 9.64%;
+  position: relative;
+  margin-top: 50.69%;
+  margin-left: 9.64%;
 }
 
 .div137 {
-  position: absolute;
-  top: 57.36%;
-  left: 9.64%;
+  position: relative;
+  margin-top: 57.36%;
+  margin-left: 9.64%;
 }
 
 .div138 {
-  position: absolute;
-  top: 64.03%;
-  left: 9.64%;
+  position: relative;
+  margin-top: 64.03%;
+  margin-left: 9.64%;
 }
 
 .clip-path-group36 {
-  position: absolute;
+  position: relative;
   height: 62.08%;
   width: 34.45%;
-  top: 30.42%;
+  margin-top: 30.42%;
   right: 7.97%;
   bottom: 7.5%;
-  left: 57.58%;
+  margin-left: 57.58%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3923,9 +3919,9 @@
 }
 
 .b115 {
-  position: absolute;
-  top: 12.78%;
-  left: 39.09%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 39.09%;
   font-size: var(--font-size-13xl);
   color: var(--color-darkorange-200);
 }
@@ -3933,41 +3929,41 @@
 .slide27-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .waiting-for1 {
-  position: absolute;
-  top: 42.5%;
-  left: 36.69%;
+  position: relative;
+  margin-top: 42.5%;
+  margin-left: 36.69%;
   font-size: var(--font-size-18xl);
 }
 
 .b116 {
-  position: absolute;
-  top: 50.56%;
-  left: 41.15%;
+  position: relative;
+  margin-top: 50.56%;
+  margin-left: 41.15%;
   font-size: var(--font-size-18xl);
 }
 
 .b117 {
-  position: absolute;
-  top: 12.22%;
-  left: 41.15%;
+  position: relative;
+  margin-top: 12.22%;
+  margin-left: 41.15%;
   font-size: var(--font-size-18xl);
 }
 
 .vector-icon88 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 99.69%;
-  top: 0%;
+  margin-top: 0%;
   right: 0%;
   bottom: 0%;
-  left: 0.31%;
+  margin-left: 0.31%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3975,13 +3971,13 @@
 }
 
 .vector-icon89 {
-  position: absolute;
+  position: relative;
   height: 2.36%;
   width: 2.58%;
-  top: 57.92%;
+  margin-top: 57.92%;
   right: 56.17%;
   bottom: 39.72%;
-  left: 41.25%;
+  margin-left: 41.25%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -3989,13 +3985,13 @@
 }
 
 .vector-icon90 {
-  position: absolute;
+  position: relative;
   height: 2.36%;
   width: 2.58%;
-  top: 80.28%;
+  margin-top: 80.28%;
   right: 56.17%;
   bottom: 17.36%;
-  left: 41.25%;
+  margin-left: 41.25%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4003,37 +3999,37 @@
 }
 
 .div139 {
-  position: absolute;
-  top: 65.56%;
-  left: 61.04%;
+  position: relative;
+  margin-top: 65.56%;
+  margin-left: 61.04%;
   color: var(--color-white);
 }
 
 .div140 {
-  position: absolute;
-  top: 71.67%;
-  left: 61.04%;
+  position: relative;
+  margin-top: 71.67%;
+  margin-left: 61.04%;
   color: var(--color-white);
 }
 
 .div141 {
-  position: absolute;
-  top: 77.64%;
-  left: 61.04%;
+  position: relative;
+  margin-top: 77.64%;
+  margin-left: 61.04%;
   color: var(--color-gainsboro);
 }
 
 .div142 {
-  position: absolute;
-  top: 83.61%;
-  left: 61.04%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 61.04%;
   color: var(--color-gainsboro);
 }
 
 .b118 {
-  position: absolute;
-  top: 12.78%;
-  left: 35.97%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 35.97%;
   font-size: var(--font-size-13xl);
   color: var(--color-darkorange-200);
 }
@@ -4041,64 +4037,64 @@
 .slide26-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-300);
 }
 
 .waiting-for2 {
-  position: absolute;
-  top: 42.5%;
-  left: 36.69%;
+  position: relative;
+  margin-top: 42.5%;
+  margin-left: 36.69%;
 }
 
 .b119 {
-  position: absolute;
-  top: 50.56%;
-  left: 41.15%;
+  position: relative;
+  margin-top: 50.56%;
+  margin-left: 41.15%;
 }
 
 .b120 {
-  position: absolute;
-  top: 12.22%;
-  left: 41.15%;
+  position: relative;
+  margin-top: 12.22%;
+  margin-left: 41.15%;
 }
 
 .b121 {
-  position: absolute;
-  top: 12.64%;
-  left: 42.19%;
+  position: relative;
+  margin-top: 12.64%;
+  margin-left: 42.19%;
   font-size: var(--font-size-13xl);
   color: var(--color-darkorange-200);
 }
 
 .div143 {
-  position: absolute;
-  top: 26.94%;
-  left: 67.28%;
+  position: relative;
+  margin-top: 26.94%;
+  margin-left: 67.28%;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .div144 {
-  position: absolute;
-  top: 33.06%;
-  left: 67.28%;
+  position: relative;
+  margin-top: 33.06%;
+  margin-left: 67.28%;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .clip-path-group39 {
-  position: absolute;
+  position: relative;
   height: 90%;
   width: 23.36%;
-  top: 5%;
+  margin-top: 5%;
   right: 67.58%;
   bottom: 5%;
-  left: 9.06%;
+  margin-left: 9.06%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4108,124 +4104,124 @@
 .slide25-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-300);
 }
 
 .div145 {
-  position: absolute;
-  top: 26.81%;
-  left: 17.56%;
+  position: relative;
+  margin-top: 26.81%;
+  margin-left: 17.56%;
 }
 
 .b124 {
-  position: absolute;
-  top: 26.81%;
-  left: 35.06%;
+  position: relative;
+  margin-top: 26.81%;
+  margin-left: 35.06%;
   color: var(--color-darkorange-200);
 }
 
 .div146 {
-  position: absolute;
-  top: 33.61%;
-  left: 17.56%;
+  position: relative;
+  margin-top: 33.61%;
+  margin-left: 17.56%;
 }
 
 .div147 {
-  position: absolute;
-  top: 40.42%;
-  left: 17.56%;
+  position: relative;
+  margin-top: 40.42%;
+  margin-left: 17.56%;
 }
 
 .div148 {
-  position: absolute;
-  top: 47.22%;
-  left: 17.56%;
+  position: relative;
+  margin-top: 47.22%;
+  margin-left: 17.56%;
 }
 
 .div149 {
-  position: absolute;
-  top: 64.17%;
-  left: 58.67%;
+  position: relative;
+  margin-top: 64.17%;
+  margin-left: 58.67%;
 }
 
 .ai2 {
-  position: absolute;
-  top: 64.17%;
-  left: 63.83%;
+  position: relative;
+  margin-top: 64.17%;
+  margin-left: 63.83%;
 }
 
 .div150 {
-  position: absolute;
-  top: 64.17%;
-  left: 67.16%;
+  position: relative;
+  margin-top: 64.17%;
+  margin-left: 67.16%;
 }
 
 .b125 {
-  position: absolute;
-  top: 64.17%;
-  left: 72.32%;
+  position: relative;
+  margin-top: 64.17%;
+  margin-left: 72.32%;
 }
 
 .div151 {
-  position: absolute;
-  top: 64.17%;
-  left: 88.41%;
+  position: relative;
+  margin-top: 64.17%;
+  margin-left: 88.41%;
 }
 
 .div152 {
-  position: absolute;
-  top: 70.97%;
-  left: 58.67%;
+  position: relative;
+  margin-top: 70.97%;
+  margin-left: 58.67%;
 }
 
 .slide24-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .div153 {
-  position: absolute;
-  top: 58.89%;
-  left: 5.86%;
+  position: relative;
+  margin-top: 58.89%;
+  margin-left: 5.86%;
 }
 
 .div154 {
-  position: absolute;
-  top: 58.89%;
-  left: 46.02%;
+  position: relative;
+  margin-top: 58.89%;
+  margin-left: 46.02%;
 }
 
 .div155 {
-  position: absolute;
-  top: 58.89%;
-  left: 48.19%;
+  position: relative;
+  margin-top: 58.89%;
+  margin-left: 48.19%;
 }
 
 .div156 {
-  position: absolute;
-  top: 65%;
-  left: 5.86%;
+  position: relative;
+  margin-top: 65%;
+  margin-left: 5.86%;
 }
 
 .clip-path-group42 {
-  position: absolute;
+  position: relative;
   height: 62.92%;
   width: 31.95%;
-  top: 32.78%;
+  margin-top: 32.78%;
   right: 3.36%;
   bottom: 4.31%;
-  left: 64.69%;
+  margin-left: 64.69%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4233,13 +4229,13 @@
 }
 
 .vector-icon99 {
-  position: absolute;
+  position: relative;
   height: 2.5%;
   width: 6.72%;
-  top: 81.53%;
+  margin-top: 81.53%;
   right: 28.2%;
   bottom: 15.97%;
-  left: 65.08%;
+  margin-left: 65.08%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4247,40 +4243,40 @@
 }
 
 .div157 {
-  position: absolute;
-  top: 74.31%;
-  left: 5.82%;
+  position: relative;
+  margin-top: 74.31%;
+  margin-left: 5.82%;
 }
 
 .div158 {
-  position: absolute;
-  top: 80.42%;
-  left: 5.82%;
+  position: relative;
+  margin-top: 80.42%;
+  margin-left: 5.82%;
 }
 
 .div159 {
-  position: absolute;
-  top: 86.39%;
-  left: 5.82%;
+  position: relative;
+  margin-top: 86.39%;
+  margin-left: 5.82%;
 }
 
 .div160 {
-  position: absolute;
-  top: 86.39%;
-  left: 10.19%;
+  position: relative;
+  margin-top: 86.39%;
+  margin-left: 10.19%;
   color: var(--color-darkorange-200);
 }
 
 .div161 {
-  position: absolute;
-  top: 86.39%;
-  left: 23.32%;
+  position: relative;
+  margin-top: 86.39%;
+  margin-left: 23.32%;
 }
 
 .b129 {
-  position: absolute;
-  top: 12.78%;
-  left: 32.84%;
+  position: relative;
+  margin-top: 12.78%;
+  margin-left: 32.84%;
   font-size: var(--font-size-13xl);
   color: var(--color-darkorange-200);
 }
@@ -4288,18 +4284,18 @@
 .slide23-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .div162 {
-  position: absolute;
-  top: 20.56%;
-  left: 29.76%;
+  position: relative;
+  margin-top: 20.56%;
+  margin-left: 29.76%;
   font-size: var(--font-size-5xl);
   color: var(--color-white);
 }
@@ -4307,86 +4303,86 @@
 .slide22-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-300);
 }
 
 .b132 {
-  position: absolute;
-  top: 14.17%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 14.17%;
+  margin-left: 8.32%;
   font-size: var(--font-size-34xl);
   color: var(--color-orange-100);
 }
 
 .b133 {
-  position: absolute;
-  top: 17.08%;
-  left: 43.22%;
+  position: relative;
+  margin-top: 17.08%;
+  margin-left: 43.22%;
   font-size: var(--font-size-13xl);
 }
 
 .div163 {
-  position: absolute;
-  top: 36.81%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 36.81%;
+  margin-left: 8.32%;
   color: var(--color-gray-200);
 }
 
 .div164 {
-  position: absolute;
-  top: 44.31%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 8.32%;
   color: var(--color-gray-200);
 }
 
 .div165 {
-  position: absolute;
-  top: 51.94%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 51.94%;
+  margin-left: 8.32%;
   color: var(--color-gray-200);
 }
 
 .div166 {
-  position: absolute;
-  top: 59.44%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 59.44%;
+  margin-left: 8.32%;
   color: var(--color-gray-200);
 }
 
 .div167 {
-  position: absolute;
-  top: 66.94%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 8.32%;
   color: var(--color-gray-200);
 }
 
 .b134 {
-  position: absolute;
-  top: 66.94%;
-  left: 13.74%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 13.74%;
   color: rgba(246, 144, 2, 0.22);
 }
 
 .div168 {
-  position: absolute;
-  top: 66.94%;
-  left: 38.11%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 38.11%;
   color: var(--color-gray-200);
 }
 
 .clip-path-group44 {
-  position: absolute;
+  position: relative;
   height: 19.23%;
   width: 15.38%;
-  top: 49.5%;
+  margin-top: 49.5%;
   right: 30.89%;
   bottom: 31.27%;
-  left: 53.73%;
+  margin-left: 53.73%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4394,47 +4390,47 @@
 }
 
 .b135 {
-  position: absolute;
-  top: 44.44%;
-  left: 24.59%;
+  position: relative;
+  margin-top: 44.44%;
+  margin-left: 24.59%;
 }
 
 .b136 {
-  position: absolute;
-  top: 44.44%;
-  left: 43.51%;
+  position: relative;
+  margin-top: 44.44%;
+  margin-left: 43.51%;
 }
 
 .b137 {
-  position: absolute;
-  top: 74.44%;
-  left: 4.72%;
+  position: relative;
+  margin-top: 74.44%;
+  margin-left: 4.72%;
   font-size: var(--font-size-5xl);
 }
 
 .b138 {
-  position: absolute;
-  top: 80.56%;
-  left: 4.72%;
+  position: relative;
+  margin-top: 80.56%;
+  margin-left: 4.72%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .b139 {
-  position: absolute;
-  top: 86.53%;
-  left: 4.72%;
+  position: relative;
+  margin-top: 86.53%;
+  margin-left: 4.72%;
   font-size: var(--font-size-5xl);
 }
 
 .clip-path-group45 {
-  position: absolute;
+  position: relative;
   height: 30.99%;
   width: 13.26%;
-  top: 46.49%;
+  margin-top: 46.49%;
   right: 69.99%;
   bottom: 22.53%;
-  left: 16.75%;
+  margin-left: 16.75%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4442,168 +4438,168 @@
 }
 
 .b140 {
-  position: absolute;
-  top: 68.33%;
-  left: 47.88%;
+  position: relative;
+  margin-top: 68.33%;
+  margin-left: 47.88%;
   font-size: var(--font-size-5xl);
 }
 
 .b141 {
-  position: absolute;
-  top: 68.33%;
-  left: 62.88%;
+  position: relative;
+  margin-top: 68.33%;
+  margin-left: 62.88%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .b142 {
-  position: absolute;
-  top: 74.44%;
-  left: 47.88%;
+  position: relative;
+  margin-top: 74.44%;
+  margin-left: 47.88%;
   font-size: var(--font-size-5xl);
 }
 
 .b143 {
-  position: absolute;
-  top: 80.42%;
-  left: 47.88%;
+  position: relative;
+  margin-top: 80.42%;
+  margin-left: 47.88%;
   font-size: var(--font-size-5xl);
 }
 
 .b144 {
-  position: absolute;
-  top: 80.42%;
-  left: 52.88%;
+  position: relative;
+  margin-top: 80.42%;
+  margin-left: 52.88%;
   font-size: var(--font-size-5xl);
   color: var(--color-darkorange-200);
 }
 
 .b145 {
-  position: absolute;
-  top: 86.39%;
-  left: 47.88%;
+  position: relative;
+  margin-top: 86.39%;
+  margin-left: 47.88%;
   font-size: var(--font-size-5xl);
 }
 
 .slide21-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .b147 {
-  position: absolute;
-  top: 17.08%;
-  left: 43.11%;
+  position: relative;
+  margin-top: 17.08%;
+  margin-left: 43.11%;
   font-size: var(--font-size-13xl);
 }
 
 .div169 {
-  position: absolute;
-  top: 36.81%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 36.81%;
+  margin-left: 8.32%;
 }
 
 .div170 {
-  position: absolute;
-  top: 44.31%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 8.32%;
 }
 
 .b148 {
-  position: absolute;
-  top: 44.31%;
-  left: 29.99%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 29.99%;
 }
 
 .div171 {
-  position: absolute;
-  top: 44.31%;
-  left: 40.82%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 40.82%;
 }
 
 .b149 {
-  position: absolute;
-  top: 44.31%;
-  left: 43.53%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 43.53%;
 }
 
 .div172 {
-  position: absolute;
-  top: 44.31%;
-  left: 54.36%;
+  position: relative;
+  margin-top: 44.31%;
+  margin-left: 54.36%;
 }
 
 .div173 {
-  position: absolute;
-  top: 51.94%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 51.94%;
+  margin-left: 8.32%;
 }
 
 .div174 {
-  position: absolute;
-  top: 59.44%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 59.44%;
+  margin-left: 8.32%;
 }
 
 .div175 {
-  position: absolute;
-  top: 66.94%;
-  left: 8.32%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 8.32%;
 }
 
 .b150 {
-  position: absolute;
-  top: 66.94%;
-  left: 13.74%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 13.74%;
   color: var(--color-darkorange-200);
 }
 
 .b151 {
-  position: absolute;
-  top: 66.94%;
-  left: 38.11%;
+  position: relative;
+  margin-top: 66.94%;
+  margin-left: 38.11%;
 }
 
 .slide20-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .b154 {
-  position: absolute;
-  top: 32.22%;
-  left: 35.36%;
+  position: relative;
+  margin-top: 32.22%;
+  margin-left: 35.36%;
   color: white;
   font-size: var(--font-size-24xl);
 }
 
 .slide19-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
   color: var(--color-gray-100);
 }
 
 .vector-icon108 {
-  position: absolute;
+  position: relative;
   height: 99.93%;
   width: 99.96%;
-  top: 0%;
+  margin-top: 0%;
   right: 0.04%;
   bottom: 0.07%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4611,66 +4607,66 @@
 }
 
 .b156 {
-  position: absolute;
-  top: 32.2%;
-  left: 20.73%;
+  position: relative;
+  margin-top: 32.2%;
+  margin-left: 20.73%;
 }
 
 .b157 {
-  position: absolute;
-  top: 43.58%;
-  left: 20.73%;
+  position: relative;
+  margin-top: 43.58%;
+  margin-left: 20.73%;
 }
 
 .sightpath12 {
-  position: absolute;
-  top: 42.05%;
-  left: 53.94%;
+  position: relative;
+  margin-top: 42.05%;
+  margin-left: 53.94%;
   font-size: var(--font-size-29xl);
   color: var(--color-chocolate);
 }
 
 .b158 {
-  position: absolute;
-  top: 53.57%;
-  left: 20.73%;
+  position: relative;
+  margin-top: 53.57%;
+  margin-left: 20.73%;
 }
 
 .b159 {
-  position: absolute;
-  top: 62.87%;
-  left: 20.73%;
+  position: relative;
+  margin-top: 62.87%;
+  margin-left: 20.73%;
 }
 
 .group32 {
-  position: absolute;
+  position: relative;
   height: 100.07%;
   width: 100.04%;
-  top: 0%;
+  margin-top: 0%;
   right: -0.04%;
   bottom: -0.07%;
-  left: 0%;
+  margin-left: 0%;
 }
 
 .slide18-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-18xl);
-  
+
 }
 
 .vector-icon111 {
-  position: absolute;
+  position: relative;
   height: 46.22%;
   width: 80.42%;
-  top: 47.34%;
+  margin-top: 47.34%;
   right: 9.28%;
   bottom: 6.44%;
-  left: 10.3%;
+  margin-left: 10.3%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4678,13 +4674,13 @@
 }
 
 .vector-icon112 {
-  position: absolute;
+  position: relative;
   height: 45.85%;
   width: 80.31%;
-  top: 45.14%;
+  margin-top: 45.14%;
   right: 10.63%;
   bottom: 9.01%;
-  left: 9.06%;
+  margin-left: 9.06%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4692,13 +4688,13 @@
 }
 
 .clip-path-group47 {
-  position: absolute;
+  position: relative;
   height: 7.92%;
   width: 37.97%;
-  top: 57.36%;
+  margin-top: 57.36%;
   right: 48.28%;
   bottom: 34.72%;
-  left: 13.75%;
+  margin-left: 13.75%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4706,67 +4702,67 @@
 }
 
 .b160 {
-  position: absolute;
-  top: 51.53%;
-  left: 12.63%;
+  position: relative;
+  margin-top: 51.53%;
+  margin-left: 12.63%;
 }
 
 .b161 {
-  position: absolute;
-  top: 58.19%;
-  left: 12.63%;
+  position: relative;
+  margin-top: 58.19%;
+  margin-left: 12.63%;
 }
 
 .b162 {
-  position: absolute;
-  top: 58.19%;
-  left: 16.38%;
+  position: relative;
+  margin-top: 58.19%;
+  margin-left: 16.38%;
 }
 
 .b163 {
-  position: absolute;
-  top: 64.86%;
-  left: 12.63%;
+  position: relative;
+  margin-top: 64.86%;
+  margin-left: 12.63%;
 }
 
 .b164 {
-  position: absolute;
-  top: 64.86%;
-  left: 16.38%;
+  position: relative;
+  margin-top: 64.86%;
+  margin-left: 16.38%;
 }
 
 .b165 {
-  position: absolute;
-  top: 71.53%;
-  left: 12.63%;
+  position: relative;
+  margin-top: 71.53%;
+  margin-left: 12.63%;
 }
 
 .b166 {
-  position: absolute;
-  top: 17.92%;
-  left: 11.06%;
+  position: relative;
+  margin-top: 17.92%;
+  margin-left: 11.06%;
   font-size: var(--font-size-24xl);
   color: var(--color-darkorange-200);
 }
 
 .slide17-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
-  
+
 }
 
 .vector-icon113 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 70.18%;
-  top: 0%;
+  margin-top: 0%;
   right: 18.26%;
   bottom: 0%;
-  left: 11.57%;
+  margin-left: 11.57%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4774,41 +4770,41 @@
 }
 
 .b167 {
-  position: absolute;
-  top: 7.64%;
-  left: 17.41%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 17.41%;
   font-size: var(--font-size-29xl);
 }
 
 .b168 {
-  position: absolute;
-  top: 7.64%;
-  left: 21.62%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 21.62%;
   font-size: var(--font-size-29xl);
 }
 
 .b169 {
-  position: absolute;
-  top: 7.64%;
-  left: 38.07%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 38.07%;
   font-size: var(--font-size-29xl);
 }
 
 .b170 {
-  position: absolute;
-  top: 7.64%;
-  left: 42.24%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 42.24%;
   font-size: var(--font-size-29xl);
 }
 
 .vector-icon114 {
-  position: absolute;
+  position: relative;
   height: 49.72%;
   width: 100%;
-  top: 22.08%;
+  margin-top: 22.08%;
   right: -11.57%;
   bottom: 28.19%;
-  left: 11.57%;
+  margin-left: 11.57%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4816,13 +4812,13 @@
 }
 
 .group-icon12 {
-  position: absolute;
+  position: relative;
   height: 39.03%;
   width: 25.77%;
-  top: 27.22%;
+  margin-top: 27.22%;
   right: 59.7%;
   bottom: 33.75%;
-  left: 14.53%;
+  margin-left: 14.53%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4830,13 +4826,13 @@
 }
 
 .vector-icon115 {
-  position: absolute;
+  position: relative;
   height: 45.69%;
   width: 28.4%;
-  top: 23.89%;
+  margin-top: 23.89%;
   right: 58.39%;
   bottom: 30.42%;
-  left: 13.21%;
+  margin-left: 13.21%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4844,86 +4840,86 @@
 }
 
 .b171 {
-  position: absolute;
-  top: 31.53%;
-  left: 43.5%;
+  position: relative;
+  margin-top: 31.53%;
+  margin-left: 43.5%;
   color: var(--color-orange-100);
 }
 
 .b172 {
-  position: absolute;
-  top: 38.19%;
-  left: 43.5%;
+  position: relative;
+  margin-top: 38.19%;
+  margin-left: 43.5%;
   color: var(--color-orange-100);
 }
 
 .div176 {
-  position: absolute;
-  top: 44.86%;
-  left: 43.5%;
+  position: relative;
+  margin-top: 44.86%;
+  margin-left: 43.5%;
 }
 
 .div177 {
-  position: absolute;
-  top: 51.53%;
-  left: 43.5%;
+  position: relative;
+  margin-top: 51.53%;
+  margin-left: 43.5%;
 }
 
 .div178 {
-  position: absolute;
-  top: 58.19%;
-  left: 43.5%;
+  position: relative;
+  margin-top: 58.19%;
+  margin-left: 43.5%;
 }
 
 .div179 {
-  position: absolute;
-  top: 78.89%;
-  left: 15.04%;
+  position: relative;
+  margin-top: 78.89%;
+  margin-left: 15.04%;
   color: var(--color-white);
 }
 
 .b173 {
-  position: absolute;
-  top: 78.89%;
-  left: 32.14%;
+  position: relative;
+  margin-top: 78.89%;
+  margin-left: 32.14%;
   color: var(--color-orange-100);
 }
 
 .div180 {
-  position: absolute;
-  top: 85.56%;
-  left: 15.04%;
+  position: relative;
+  margin-top: 85.56%;
+  margin-left: 15.04%;
   color: var(--color-white);
 }
 
 .group34 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 142.5%;
-  top: 0%;
+  margin-top: 0%;
   right: -26.02%;
   bottom: 0%;
-  left: -16.48%;
+  margin-left: -16.48%;
 }
 
 .slide16-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   color: var(--color-gainsboro);
 }
 
 .vector-icon116 {
-  position: absolute;
+  position: relative;
   height: 90%;
   width: 70.18%;
-  top: 0%;
+  margin-top: 0%;
   right: 17.98%;
   bottom: 10%;
-  left: 11.84%;
+  margin-left: 11.84%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4931,45 +4927,45 @@
 }
 
 .b174 {
-  position: absolute;
-  top: 6.88%;
-  left: 17.68%;
+  position: relative;
+  margin-top: 6.88%;
+  margin-left: 17.68%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .b175 {
-  position: absolute;
-  top: 6.88%;
-  left: 21.9%;
+  position: relative;
+  margin-top: 6.88%;
+  margin-left: 21.9%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .b176 {
-  position: absolute;
-  top: 6.88%;
-  left: 38.34%;
+  position: relative;
+  margin-top: 6.88%;
+  margin-left: 38.34%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .b177 {
-  position: absolute;
-  top: 6.88%;
-  left: 42.51%;
+  position: relative;
+  margin-top: 6.88%;
+  margin-left: 42.51%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .vector-icon117 {
-  position: absolute;
+  position: relative;
   height: 80%;
   width: 100%;
-  top: 20%;
+  margin-top: 20%;
   right: -11.84%;
   bottom: 0%;
-  left: 11.84%;
+  margin-left: 11.84%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -4977,57 +4973,57 @@
 }
 
 .b178 {
-  position: absolute;
-  top: 27.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 27.75%;
+  margin-left: 15.1%;
   color: var(--color-orange-100);
 }
 
 .b179 {
-  position: absolute;
-  top: 35.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 35.75%;
+  margin-left: 15.1%;
   color: var(--color-orange-100);
 }
 
 .div181 {
-  position: absolute;
-  top: 43.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 43.75%;
+  margin-left: 15.1%;
 }
 
 .div182 {
-  position: absolute;
-  top: 51.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 51.75%;
+  margin-left: 15.1%;
 }
 
 .div183 {
-  position: absolute;
-  top: 59.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 59.75%;
+  margin-left: 15.1%;
 }
 
 .div184 {
-  position: absolute;
-  top: 67.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 67.75%;
+  margin-left: 15.1%;
 }
 
 .div185 {
-  position: absolute;
-  top: 75.75%;
-  left: 15.1%;
+  position: relative;
+  margin-top: 75.75%;
+  margin-left: 15.1%;
 }
 
 .clip-path-group51 {
-  position: absolute;
+  position: relative;
   height: 52.63%;
   width: 27.47%;
-  top: 28.88%;
+  margin-top: 28.88%;
   right: 20.72%;
   bottom: 18.5%;
-  left: 51.81%;
+  margin-left: 51.81%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5035,13 +5031,13 @@
 }
 
 .vector-icon118 {
-  position: absolute;
+  position: relative;
   height: 58.63%;
   width: 30.1%;
-  top: 25.88%;
+  margin-top: 25.88%;
   right: 19.41%;
   bottom: 15.5%;
-  left: 50.49%;
+  margin-left: 50.49%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5049,32 +5045,32 @@
 }
 
 .group35 {
-  position: absolute;
+  position: relative;
   height: 111.11%;
   width: 142.5%;
-  top: 0%;
+  margin-top: 0%;
   right: -25.62%;
   bottom: -11.11%;
-  left: -16.87%;
+  margin-left: -16.87%;
 }
 
 .slide15-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .vector-icon119 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 70.18%;
-  top: 0%;
+  margin-top: 0%;
   right: 18.42%;
   bottom: 0%;
-  left: 11.4%;
+  margin-left: 11.4%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5082,13 +5078,13 @@
 }
 
 .vector-icon120 {
-  position: absolute;
+  position: relative;
   height: 49.72%;
   width: 100%;
-  top: 22.36%;
+  margin-top: 22.36%;
   right: -11.4%;
   bottom: 27.92%;
-  left: 11.4%;
+  margin-left: 11.4%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5096,13 +5092,13 @@
 }
 
 .clip-path-group54 {
-  position: absolute;
+  position: relative;
   height: 39.03%;
   width: 25.82%;
-  top: 27.22%;
+  margin-top: 27.22%;
   right: 59.92%;
   bottom: 33.75%;
-  left: 14.25%;
+  margin-left: 14.25%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5110,13 +5106,13 @@
 }
 
 .vector-icon121 {
-  position: absolute;
+  position: relative;
   height: 45.69%;
   width: 28.45%;
-  top: 23.89%;
+  margin-top: 23.89%;
   right: 58.61%;
   bottom: 30.42%;
-  left: 12.94%;
+  margin-left: 12.94%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5124,133 +5120,133 @@
 }
 
 .div186 {
-  position: absolute;
-  top: 31.67%;
-  left: 44.09%;
+  position: relative;
+  margin-top: 31.67%;
+  margin-left: 44.09%;
 }
 
 .div187 {
-  position: absolute;
-  top: 38.33%;
-  left: 44.09%;
+  position: relative;
+  margin-top: 38.33%;
+  margin-left: 44.09%;
 }
 
 .b180 {
-  position: absolute;
-  top: 51.67%;
-  left: 44.09%;
+  position: relative;
+  margin-top: 51.67%;
+  margin-left: 44.09%;
   color: var(--color-orange-100);
 }
 
 .b181 {
-  position: absolute;
-  top: 58.33%;
-  left: 44.09%;
+  position: relative;
+  margin-top: 58.33%;
+  margin-left: 44.09%;
   color: var(--color-orange-100);
 }
 
 .b182 {
-  position: absolute;
-  top: 7.64%;
-  left: 17.24%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 17.24%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .b183 {
-  position: absolute;
-  top: 7.64%;
-  left: 21.46%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 21.46%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .b184 {
-  position: absolute;
-  top: 7.64%;
-  left: 37.9%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 37.9%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .b185 {
-  position: absolute;
-  top: 7.64%;
-  left: 42.07%;
+  position: relative;
+  margin-top: 7.64%;
+  margin-left: 42.07%;
   font-size: var(--font-size-29xl);
   color: var(--color-gainsboro);
 }
 
 .div188 {
-  position: absolute;
-  top: 77.78%;
-  left: 14.1%;
+  position: relative;
+  margin-top: 77.78%;
+  margin-left: 14.1%;
 }
 
 .b186 {
-  position: absolute;
-  top: 77.78%;
-  left: 31.2%;
+  position: relative;
+  margin-top: 77.78%;
+  margin-left: 31.2%;
   color: var(--color-orange-100);
 }
 
 .div189 {
-  position: absolute;
-  top: 84.44%;
-  left: 14.1%;
+  position: relative;
+  margin-top: 84.44%;
+  margin-left: 14.1%;
 }
 
 .div190 {
-  position: absolute;
-  top: 91.11%;
-  left: 14.1%;
+  position: relative;
+  margin-top: 91.11%;
+  margin-left: 14.1%;
 }
 
 .sightpath13 {
-  position: absolute;
-  top: 91.11%;
-  left: 50.21%;
+  position: relative;
+  margin-top: 91.11%;
+  margin-left: 50.21%;
 }
 
 .div191 {
-  position: absolute;
-  top: 91.11%;
-  left: 58.78%;
+  position: relative;
+  margin-top: 91.11%;
+  margin-left: 58.78%;
 }
 
 .div192 {
-  position: absolute;
-  top: 91.11%;
-  left: 60.46%;
+  position: relative;
+  margin-top: 91.11%;
+  margin-left: 60.46%;
 }
 
 .group36 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 142.5%;
-  top: 0%;
+  margin-top: 0%;
   right: -26.25%;
   bottom: 0%;
-  left: -16.25%;
+  margin-left: -16.25%;
 }
 
 .slide14-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
 }
 
 .vector-icon122 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 70.18%;
-  top: 0%;
+  margin-top: 0%;
   right: 17.16%;
   bottom: 0%;
-  left: 12.66%;
+  margin-left: 12.66%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5258,13 +5254,13 @@
 }
 
 .vector-icon123 {
-  position: absolute;
+  position: relative;
   height: 40.97%;
   width: 100%;
-  top: 24.17%;
+  margin-top: 24.17%;
   right: -12.66%;
   bottom: 34.86%;
-  left: 12.66%;
+  margin-left: 12.66%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5272,171 +5268,171 @@
 }
 
 .b187 {
-  position: absolute;
-  top: 8.75%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 8.75%;
+  margin-left: 18.51%;
   font-size: var(--font-size-34xl);
   color: var(--color-darkorange-200);
 }
 
 .div193 {
-  position: absolute;
-  top: 71.94%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 18.51%;
 }
 
 .b188 {
-  position: absolute;
-  top: 71.94%;
-  left: 20.77%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 20.77%;
 }
 
 .b189 {
-  position: absolute;
-  top: 71.94%;
-  left: 28.08%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 28.08%;
 }
 
 .b190 {
-  position: absolute;
-  top: 71.94%;
-  left: 30.35%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 30.35%;
 }
 
 .b191 {
-  position: absolute;
-  top: 71.94%;
-  left: 37.66%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 37.66%;
 }
 
 .b192 {
-  position: absolute;
-  top: 71.94%;
-  left: 39.92%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 39.92%;
 }
 
 .b193 {
-  position: absolute;
-  top: 71.94%;
-  left: 47.23%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 47.23%;
 }
 
 .b194 {
-  position: absolute;
-  top: 71.94%;
-  left: 49.5%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 49.5%;
 }
 
 .div194 {
-  position: absolute;
-  top: 71.94%;
-  left: 56.81%;
+  position: relative;
+  margin-top: 71.94%;
+  margin-left: 56.81%;
 }
 
 .div195 {
-  position: absolute;
-  top: 78.61%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 78.61%;
+  margin-left: 18.51%;
 }
 
 .b195 {
-  position: absolute;
-  top: 78.61%;
-  left: 42.04%;
+  position: relative;
+  margin-top: 78.61%;
+  margin-left: 42.04%;
 }
 
 .div196 {
-  position: absolute;
-  top: 78.61%;
-  left: 48.77%;
+  position: relative;
+  margin-top: 78.61%;
+  margin-left: 48.77%;
 }
 
 .b196 {
-  position: absolute;
-  top: 78.61%;
-  left: 53.81%;
+  position: relative;
+  margin-top: 78.61%;
+  margin-left: 53.81%;
 }
 
 .div197 {
-  position: absolute;
-  top: 78.61%;
-  left: 60.54%;
+  position: relative;
+  margin-top: 78.61%;
+  margin-left: 60.54%;
 }
 
 .div198 {
-  position: absolute;
-  top: 85.28%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 85.28%;
+  margin-left: 18.51%;
 }
 
 .b197 {
-  position: absolute;
-  top: 27.64%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 27.64%;
+  margin-left: 18.51%;
   font-size: var(--font-size-13xl);
   color: var(--color-orange-100);
 }
 
 .b198 {
-  position: absolute;
-  top: 28.75%;
-  left: 29.03%;
+  position: relative;
+  margin-top: 28.75%;
+  margin-left: 29.03%;
   font-size: var(--font-size-5xl);
 }
 
 .b199 {
-  position: absolute;
-  top: 37.22%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 37.22%;
+  margin-left: 18.51%;
   font-size: var(--font-size-13xl);
   color: var(--color-orange-100);
 }
 
 .b200 {
-  position: absolute;
-  top: 38.33%;
-  left: 29.03%;
+  position: relative;
+  margin-top: 38.33%;
+  margin-left: 29.03%;
   font-size: var(--font-size-5xl);
 }
 
 .b201 {
-  position: absolute;
-  top: 46.81%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 46.81%;
+  margin-left: 18.51%;
   font-size: var(--font-size-13xl);
   color: var(--color-orange-100);
 }
 
 .b202 {
-  position: absolute;
-  top: 47.92%;
-  left: 29.03%;
+  position: relative;
+  margin-top: 47.92%;
+  margin-left: 29.03%;
   font-size: var(--font-size-5xl);
 }
 
 .b203 {
-  position: absolute;
-  top: 56.39%;
-  left: 18.51%;
+  position: relative;
+  margin-top: 56.39%;
+  margin-left: 18.51%;
   font-size: var(--font-size-13xl);
   color: var(--color-orange-100);
 }
 
 .b204 {
-  position: absolute;
-  top: 57.5%;
-  left: 29.03%;
+  position: relative;
+  margin-top: 57.5%;
+  margin-left: 29.03%;
   font-size: var(--font-size-5xl);
 }
 
 .vector-icon124 {
-  position: absolute;
+  position: relative;
   height: 31.67%;
   width: 0.82%;
-  top: 28.75%;
+  margin-top: 28.75%;
   right: 84.27%;
   bottom: 39.58%;
-  left: 14.91%;
+  margin-left: 14.91%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5444,55 +5440,55 @@
 }
 
 .group37 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 142.5%;
-  top: 0%;
+  margin-top: 0%;
   right: -24.45%;
   bottom: 0%;
-  left: -18.05%;
+  margin-left: -18.05%;
 }
 
 .slide13-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   color: var(--color-gainsboro);
 }
 
 .div199 {
-  position: absolute;
-  top: 30.83%;
-  left: 21.26%;
+  position: relative;
+  margin-top: 30.83%;
+  margin-left: 21.26%;
   font-size: var(--font-size-13xl);
 }
 
 .div200 {
-  position: absolute;
-  top: 84.17%;
-  left: 21.26%;
+  position: relative;
+  margin-top: 84.17%;
+  margin-left: 21.26%;
   font-size: var(--font-size-13xl);
 }
 
 .b205 {
-  position: absolute;
-  top: 10.14%;
-  left: 21.67%;
+  position: relative;
+  margin-top: 10.14%;
+  margin-left: 21.67%;
   font-size: var(--font-size-18xl);
   color: var(--color-darkorange-200);
 }
 
 .group-icon13 {
-  position: absolute;
+  position: relative;
   height: 19.72%;
   width: 11.09%;
-  top: 43.19%;
+  margin-top: 43.19%;
   right: 70.78%;
   bottom: 37.08%;
-  left: 18.13%;
+  margin-left: 18.13%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5500,37 +5496,37 @@
 }
 
 .div201 {
-  position: absolute;
-  top: 67.5%;
-  left: 12.71%;
+  position: relative;
+  margin-top: 67.5%;
+  margin-left: 12.71%;
 }
 
 .div202 {
-  position: absolute;
-  top: 73.61%;
-  left: 14.9%;
+  position: relative;
+  margin-top: 73.61%;
+  margin-left: 14.9%;
 }
 
 .div203 {
-  position: absolute;
-  top: 67.5%;
-  left: 65.36%;
+  position: relative;
+  margin-top: 67.5%;
+  margin-left: 65.36%;
 }
 
 .div204 {
-  position: absolute;
-  top: 73.61%;
-  left: 64.27%;
+  position: relative;
+  margin-top: 73.61%;
+  margin-left: 64.27%;
 }
 
 .clip-path-group57 {
-  position: absolute;
+  position: relative;
   height: 19.58%;
   width: 11.09%;
-  top: 43.33%;
+  margin-top: 43.33%;
   right: 19.92%;
   bottom: 37.08%;
-  left: 68.98%;
+  margin-left: 68.98%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5538,13 +5534,13 @@
 }
 
 .clip-path-group58 {
-  position: absolute;
+  position: relative;
   height: 19.58%;
   width: 11.09%;
-  top: 43.06%;
+  margin-top: 43.06%;
   right: 44.45%;
   bottom: 37.36%;
-  left: 44.45%;
+  margin-left: 44.45%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5552,61 +5548,61 @@
 }
 
 .div205 {
-  position: absolute;
-  top: 67.64%;
-  left: 41.86%;
+  position: relative;
+  margin-top: 67.64%;
+  margin-left: 41.86%;
 }
 
 .div206 {
-  position: absolute;
-  top: 73.75%;
-  left: 41.86%;
+  position: relative;
+  margin-top: 73.75%;
+  margin-left: 41.86%;
 }
 
 .slide12-1 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-5xl);
   color: var(--color-gainsboro);
 }
 
 .part-2 {
-  position: absolute;
-  top: 25.97%;
-  left: 42.43%;
+  position: relative;
+  margin-top: 25.97%;
+  margin-left: 42.43%;
   font-size: var(--font-size-34xl);
 }
 
 .b208 {
-  position: absolute;
-  top: 36.39%;
-  left: 33.38%;
+  position: relative;
+  margin-top: 36.39%;
+  margin-left: 33.38%;
   font-size: var(--font-size-24xl);
 }
 
 .slide11-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
-  
+
 }
 
 .clip-path-group59 {
-  position: absolute;
+  position: relative;
   height: 7.36%;
   width: 37.11%;
-  top: 72.78%;
+  margin-top: 72.78%;
   right: 50%;
   bottom: 19.86%;
-  left: 12.89%;
+  margin-left: 12.89%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5614,83 +5610,83 @@
 }
 
 .b209 {
-  position: absolute;
-  top: 53.47%;
-  left: 14.45%;
+  position: relative;
+  margin-top: 53.47%;
+  margin-left: 14.45%;
 }
 
 .b210 {
-  position: absolute;
-  top: 60.14%;
-  left: 14.45%;
+  position: relative;
+  margin-top: 60.14%;
+  margin-left: 14.45%;
 }
 
 .b211 {
-  position: absolute;
-  top: 66.81%;
-  left: 14.45%;
+  position: relative;
+  margin-top: 66.81%;
+  margin-left: 14.45%;
 }
 
 .b212 {
-  position: absolute;
-  top: 73.47%;
-  left: 14.45%;
+  position: relative;
+  margin-top: 73.47%;
+  margin-left: 14.45%;
 }
 
 .b213 {
-  position: absolute;
-  top: 17.92%;
-  left: 9.81%;
+  position: relative;
+  margin-top: 17.92%;
+  margin-left: 9.81%;
   font-size: var(--font-size-24xl);
   color: var(--color-darkorange-200);
 }
 
 .slide10-1 {
   position: relative;
-  
-  left: 0px;
+
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
-  
+
 }
 
 .b214 {
-  position: absolute;
-  top: 71.11%;
-  left: 19.56%;
+  position: relative;
+  margin-top: 71.11%;
+  margin-left: 19.56%;
   font-size: var(--font-size-8xl);
 }
 
 .b215 {
-  position: absolute;
-  top: 71.11%;
-  left: 43.51%;
+  position: relative;
+  margin-top: 71.11%;
+  margin-left: 43.51%;
   font-size: var(--font-size-8xl);
 }
 
 .b216 {
-  position: absolute;
-  top: 71.11%;
-  left: 48.8%;
+  position: relative;
+  margin-top: 71.11%;
+  margin-left: 48.8%;
   font-size: var(--font-size-8xl);
 }
 
 .b217 {
-  position: absolute;
-  top: 78.61%;
-  left: 19.56%;
+  position: relative;
+  margin-top: 78.61%;
+  margin-left: 19.56%;
   font-size: var(--font-size-8xl);
 }
 
 .rectangle-icon {
-  position: absolute;
+  position: relative;
   height: 98.33%;
   width: 79.61%;
-  top: 1.67%;
+  margin-top: 1.67%;
   right: 9.77%;
   bottom: 0%;
-  left: 10.63%;
+  margin-left: 10.63%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5698,54 +5694,54 @@
 }
 
 .div207 {
-  position: absolute;
-  top: 95.28%;
-  left: 0.75%;
+  position: relative;
+  margin-top: 95.28%;
+  margin-left: 0.75%;
 }
 
 .div208 {
-  position: absolute;
-  top: 95.28%;
-  left: 7.83%;
+  position: relative;
+  margin-top: 95.28%;
+  margin-left: 7.83%;
 }
 
 .div209 {
-  position: absolute;
-  top: 95.28%;
-  left: 10.15%;
+  position: relative;
+  margin-top: 95.28%;
+  margin-left: 10.15%;
 }
 
 .div210 {
-  position: absolute;
-  top: 95.28%;
-  left: 11.09%;
+  position: relative;
+  margin-top: 95.28%;
+  margin-left: 11.09%;
 }
 
 .div211 {
-  position: absolute;
-  top: 95.28%;
-  left: 13.41%;
+  position: relative;
+  margin-top: 95.28%;
+  margin-left: 13.41%;
 }
 
 .slide9 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-lgi);
   color: var(--color-gainsboro);
 }
 
 .vector-icon135 {
-  position: absolute;
+  position: relative;
   height: 87.29%;
   width: 85.3%;
-  top: 5.29%;
+  margin-top: 5.29%;
   right: 14.7%;
   bottom: 7.42%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5753,42 +5749,42 @@
 }
 
 .b218 {
-  position: absolute;
-  top: 73.67%;
-  left: 7.98%;
+  position: relative;
+  margin-top: 73.67%;
+  margin-left: 7.98%;
   font-size: var(--font-size-8xl);
   color: var(--color-orange-100);
 }
 
 .div212 {
-  position: absolute;
-  top: 63%;
-  left: 15.62%;
+  position: relative;
+  margin-top: 63%;
+  margin-left: 15.62%;
   font-size: var(--font-size-8xl);
 }
 
 .div213 {
-  position: absolute;
-  top: 52.33%;
-  left: 7.53%;
+  position: relative;
+  margin-top: 52.33%;
+  margin-left: 7.53%;
   font-size: var(--font-size-8xl);
 }
 
 .div214 {
-  position: absolute;
-  top: 41.66%;
-  left: 11.62%;
+  position: relative;
+  margin-top: 41.66%;
+  margin-left: 11.62%;
   font-size: var(--font-size-8xl);
 }
 
 .group-icon14 {
-  position: absolute;
+  position: relative;
   height: 34.92%;
   width: 32.59%;
-  top: 42.39%;
+  margin-top: 42.39%;
   right: 38.02%;
   bottom: 22.7%;
-  left: 29.39%;
+  margin-left: 29.39%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5796,98 +5792,98 @@
 }
 
 .b219 {
-  position: absolute;
-  top: 71.12%;
-  left: 55.57%;
+  position: relative;
+  margin-top: 71.12%;
+  margin-left: 55.57%;
   font-size: var(--font-size-5xl);
 }
 
 .b220 {
-  position: absolute;
-  top: 60.57%;
-  left: 50.03%;
+  position: relative;
+  margin-top: 60.57%;
+  margin-left: 50.03%;
   font-size: var(--font-size-5xl);
 }
 
 .b221 {
-  position: absolute;
-  top: 49.9%;
-  left: 35.97%;
+  position: relative;
+  margin-top: 49.9%;
+  margin-left: 35.97%;
   font-size: var(--font-size-5xl);
 }
 
 .b222 {
-  position: absolute;
-  top: 39.36%;
-  left: 32.1%;
+  position: relative;
+  margin-top: 39.36%;
+  margin-left: 32.1%;
   font-size: var(--font-size-5xl);
 }
 
 .b223 {
-  position: absolute;
-  top: 20.32%;
-  left: 6.86%;
+  position: relative;
+  margin-top: 20.32%;
+  margin-left: 6.86%;
   font-size: var(--font-size-13xl);
 }
 
 .b224 {
-  position: absolute;
-  top: 28.69%;
-  left: 6.86%;
+  position: relative;
+  margin-top: 28.69%;
+  margin-left: 6.86%;
   font-size: var(--font-size-13xl);
 }
 
 .b225 {
-  position: absolute;
-  top: 26.75%;
-  left: 38.85%;
+  position: relative;
+  margin-top: 26.75%;
+  margin-left: 38.85%;
   font-size: var(--font-size-29xl);
   color: var(--color-orange-100);
 }
 
 .div215 {
-  position: absolute;
-  top: 83.61%;
-  left: 3.4%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 3.4%;
   color: var(--color-gainsboro);
 }
 
 .yes123 {
-  position: absolute;
-  top: 83.61%;
-  left: 10.02%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 10.02%;
   color: var(--color-gainsboro);
 }
 
 .div216 {
-  position: absolute;
-  top: 83.61%;
-  left: 16.27%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 16.27%;
   color: var(--color-gainsboro);
 }
 
 .div217 {
-  position: absolute;
-  top: 83.61%;
-  left: 22.89%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 22.89%;
   color: var(--color-gainsboro);
 }
 
 .div218 {
-  position: absolute;
-  top: 83.61%;
-  left: 26.43%;
+  position: relative;
+  margin-top: 83.61%;
+  margin-left: 26.43%;
   color: var(--color-gainsboro);
 }
 
 .vector-icon136 {
-  position: absolute;
+  position: relative;
   height: 78.48%;
   width: 97.23%;
-  top: 9.51%;
+  margin-top: 9.51%;
   right: 0.04%;
   bottom: 12.01%;
-  left: 2.72%;
+  margin-left: 2.72%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5895,13 +5891,13 @@
 }
 
 .clip-path-group61 {
-  position: absolute;
+  position: relative;
   height: 87.29%;
   width: 27.11%;
-  top: 5.29%;
+  margin-top: 5.29%;
   right: 14.7%;
   bottom: 7.42%;
-  left: 58.19%;
+  margin-left: 58.19%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5909,33 +5905,33 @@
 }
 
 .group42 {
-  position: absolute;
+  position: relative;
   height: 114.56%;
   width: 117.23%;
-  top: -6.06%;
+  margin-top: -6.06%;
   right: -17.23%;
   bottom: -8.5%;
-  left: 0%;
+  margin-left: 0%;
 }
 
 .slide8 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-lgi);
 }
 
 .vector-icon138 {
-  position: absolute;
+  position: relative;
   height: 50.69%;
   width: 63.36%;
-  top: 5.28%;
+  margin-top: 5.28%;
   right: 33.28%;
   bottom: 44.03%;
-  left: 3.36%;
+  margin-left: 3.36%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -5943,337 +5939,185 @@
 }
 
 .div219 {
-  position: absolute;
-  top: 10.69%;
-  left: 7.29%;
-}
-
-.div220 {
-  position: absolute;
-  top: 19.72%;
-  left: 7.29%;
-}
-
-.div221 {
-  position: absolute;
-  top: 28.89%;
-  left: 7.29%;
-}
-
-.div222 {
-  position: absolute;
-  top: 37.92%;
-  left: 7.29%;
-}
-
-.div223 {
-  position: absolute;
-  top: 46.94%;
-  left: 7.29%;
+  position: relative;
+  margin-left: 7.29%;
 }
 
 .vector-icon139 {
-  position: absolute;
+  position: relative;
   height: 34.44%;
   width: 63.36%;
-  top: 59.58%;
+  margin-top: 59.58%;
   right: 33.28%;
   bottom: 5.97%;
-  left: 3.36%;
+  margin-left: 3.36%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
 }
 
-.div224 {
-  position: absolute;
-  top: 65%;
-  left: 7.27%;
-}
-
-.div225 {
-  position: absolute;
-  top: 74.03%;
-  left: 7.27%;
-}
-
 .b226 {
-  position: absolute;
-  top: 83.19%;
-  left: 7.27%;
+  position: relative;
+  margin-top: 83.19%;
   color: var(--color-darkorange-200);
-}
-
-.div226 {
-  position: absolute;
-  top: 83.19%;
-  left: 57.27%;
 }
 
 .slide7 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
 }
 
 .div227 {
-  position: absolute;
-  top: 63.61%;
-  left: 18.25%;
+  position: relative;
+  margin-left: 18.25%;
   font-size: var(--font-size-40xl);
 }
 
 .div228 {
-  position: absolute;
-  top: 68.75%;
-  left: 42.5%;
+  position: relative;
+  margin-left: 42.5%;
   font-size: var(--font-size-29xl);
 }
 
 .b227 {
-  position: absolute;
-  top: 51.11%;
-  left: 33.5%;
+  position: relative;
+  margin-left: 20.5%;
   font-size: var(--font-size-40xl);
 }
 
 .div229 {
-  position: absolute;
-  top: 35.28%;
-  left: 37.26%;
+  position: relative;
+  margin-left: 37.26%;
 }
 
 .div230 {
-  position: absolute;
-  top: 39.86%;
-  left: 22.35%;
+  position: relative;
+  margin-left: 22.35%;
   font-size: var(--font-size-18xl);
 }
 
 .div231 {
-  position: absolute;
-  top: 63.47%;
-  left: 62.41%;
+  position: relative;
+  margin-left: 62.41%;
   font-size: var(--font-size-18xl);
 }
 
 .div232 {
-  position: absolute;
-  top: 9.86%;
-  left: 7.64%;
-  font-size: var(--font-size-8xl);
-  color: var(--color-white);
-}
-
-.div233 {
-  position: absolute;
-  top: 16.53%;
-  left: 7.64%;
-  font-size: var(--font-size-8xl);
-  color: var(--color-white);
-}
-
-.div234 {
-  position: absolute;
-  top: 23.19%;
-  left: 7.64%;
+  margin-left: 7.64%;
   font-size: var(--font-size-8xl);
   color: var(--color-white);
 }
 
 .div235 {
-  position: absolute;
-  top: 37.08%;
-  left: 57.35%;
+  position: relative;
+  margin-left: 57.35%;
   font-size: 61px;
 }
 
 .div236 {
-  position: absolute;
-  top: 48.06%;
-  left: 68.99%;
-  font-size: var(--font-size-13xl);
-}
-
-.div237 {
-  position: absolute;
-  top: 48.06%;
-  left: 74.61%;
-  font-size: var(--font-size-13xl);
-}
-
-.div238 {
-  position: absolute;
-  top: 48.06%;
-  left: 76.28%;
+  position: relative;
+  margin-left: 68.99%;
   font-size: var(--font-size-13xl);
 }
 
 .div239 {
-  position: absolute;
-  top: 77.78%;
-  left: 61.78%;
+  position: relative;
+  margin-left: 61.78%;
 }
 
 .div240 {
-  position: absolute;
-  top: 50.56%;
-  left: 13.35%;
+  position: relative;
+  margin-left: 13.35%;
 }
 
 .slide6 {
   position: relative;
 
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-24xl);
   color: var(--color-darkorange-200);
 }
 
 .b228 {
-  position: absolute;
-  top: 32.22%;
-  left: 37.34%;
+  text-align: center;
   color: white;
+  font-weight:bold;
 }
 
 .b229 {
-  position: absolute;
-  top: 40.69%;
-  left: 35.36%;
+  text-align: center;
   color: white;
+  font-weight:bold;
 }
 
 .b230 {
-  position: relative;
-  top: 75.56%;
-  left: 15.19%;
+  text-align: center;
   font-size: var(--font-size-13xl);
   color: white;
+  font-weight:bold;
 }
 
-.b231 {
-  position: absolute;
-  top: 83.61%;
-  left: 15.19%;
-  font-size: var(--font-size-13xl);
-  color: white;
-}
 
 .slide5 {
   position: relative;
-  
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-24xl);
   color: var(--color-gray-100);
 }
 
 .div241 {
-  position: absolute;
-  top: 33.06%;
-  left: 34.38%;
-}
-
-.div242 {
-  position: absolute;
-  top: 43.61%;
-  left: 34.38%;
-}
-
-.div243 {
-  position: absolute;
-  top: 54.31%;
-  left: 25%;
-}
-
-.div244 {
-  position: absolute;
-  top: 65%;
-  left: 34.38%;
+  margin-left: 20%;
 }
 
 .slide4 {
   position: relative;
-
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: var(--font-size-13xl);
   color: var(--color-gainsboro);
 }
 
 .about-sightpath {
-  position: absolute;
-  top: 15.83%;
-  left: 7.64%;
+  margin-top: 7.64%;
+  margin-left: 7.64%;
   font-size: var(--font-size-18xl);
 }
 
 .div245 {
-  position: absolute;
-  top: 32.64%;
-  left: 7.64%;
-}
-
-.div246 {
-  position: absolute;
-  top: 39.31%;
-  left: 7.64%;
-}
-
-.div247 {
-  position: absolute;
-  top: 45.97%;
-  left: 7.64%;
-}
-
-.div248 {
-  position: absolute;
-  top: 59.31%;
-  left: 7.64%;
-}
-
-.div249 {
-  position: absolute;
-  top: 65.97%;
-  left: 7.64%;
-}
-
-.div250 {
-  position: absolute;
-  top: 72.64%;
-  left: 7.64%;
+  margin-top: 7.64%;
+  margin-left: 7.64%;
 }
 
 .to-create-a {
-  position: absolute;
-  top: 79.31%;
-  left: 7.64%;
+  position: relative;
+  margin-top: 79.31%;
+  margin-left: 7.64%;
 }
 
 .group47 {
   position: relative;
   width: 100%;
-  height: 720px;
 }
 
 .slide3 {
+  height: 100%  /* 720px */;
   position: relative;
-
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -6282,13 +6126,13 @@
 }
 
 .vector-icon148 {
-  position: absolute;
+  position: relative;
   height: 100%;
   width: 100%;
-  top: 0%;
+  margin-top: 0%;
   right: 0%;
   bottom: 0%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6296,13 +6140,13 @@
 }
 
 .vector-icon149 {
-  position: absolute;
+  position: relative;
   height: 10.51%;
   width: 44.17%;
-  top: 64.05%;
+  margin-top: 64.05%;
   right: 2.1%;
   bottom: 25.45%;
-  left: 53.74%;
+  margin-left: 53.74%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6310,13 +6154,13 @@
 }
 
 .vector-icon150 {
-  position: absolute;
+  position: relative;
   height: 10.33%;
   width: 44.14%;
-  top: 61.87%;
+  margin-top: 61.87%;
   right: 3.52%;
   bottom: 27.81%;
-  left: 52.34%;
+  margin-left: 52.34%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6325,7 +6169,6 @@
 
 .rectangle-icon2 {
   position: absolute;
-  height: 12.8%;
   width: 44.69%;
   top: 60.49%;
   right: 2.58%;
@@ -6338,13 +6181,13 @@
 }
 
 .vector-icon151 {
-  position: absolute;
+  position: relative;
   height: 10.37%;
   width: 46.28%;
-  top: 52.21%;
+  margin-top: 52.21%;
   right: 49.36%;
   bottom: 37.42%;
-  left: 4.36%;
+  margin-left: 4.36%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6352,13 +6195,13 @@
 }
 
 .vector-icon152 {
-  position: absolute;
+  position: relative;
   height: 10.19%;
   width: 46.17%;
-  top: 50.03%;
+  margin-top: 50.03%;
   right: 50.86%;
   bottom: 39.79%;
-  left: 2.97%;
+  margin-left: 2.97%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6367,7 +6210,6 @@
 
 .rectangle-icon3 {
   position: absolute;
-  height: 11.98%;
   width: 43.75%;
   top: 49.06%;
   right: 52.89%;
@@ -6380,13 +6222,13 @@
 }
 
 .vector-icon153 {
-  position: absolute;
+  position: relative;
   height: 10.51%;
   width: 46.28%;
-  top: 75.88%;
+  margin-top: 75.88%;
   right: 49.36%;
   bottom: 13.61%;
-  left: 4.36%;
+  margin-left: 4.36%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6394,13 +6236,13 @@
 }
 
 .vector-icon154 {
-  position: absolute;
+  position: relative;
   height: 10.33%;
   width: 46.17%;
-  top: 73.71%;
+  margin-top: 73.71%;
   right: 50.86%;
   bottom: 15.97%;
-  left: 2.97%;
+  margin-left: 2.97%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6409,7 +6251,6 @@
 
 .rectangle-icon4 {
   position: absolute;
-  height: 12.8%;
   width: 43.75%;
   top: 72.05%;
   right: 52.89%;
@@ -6422,13 +6263,13 @@
 }
 
 .vector-icon155 {
-  position: absolute;
+  position: relative;
   height: 10.37%;
   width: 44.17%;
-  top: 40.37%;
+  margin-top: 40.37%;
   right: 2.1%;
   bottom: 49.26%;
-  left: 53.74%;
+  margin-left: 53.74%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6436,13 +6277,13 @@
 }
 
 .vector-icon156 {
-  position: absolute;
+  position: relative;
   height: 10.19%;
   width: 44.14%;
-  top: 38.19%;
+  margin-top: 38.19%;
   right: 3.52%;
   bottom: 51.63%;
-  left: 52.34%;
+  margin-left: 52.34%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6451,7 +6292,6 @@
 
 .rectangle-icon5 {
   position: absolute;
-  height: 12.8%;
   width: 44.77%;
   top: 36.81%;
   right: 2.58%;
@@ -6464,13 +6304,13 @@
 }
 
 .vector-icon157 {
-  position: absolute;
+  position: relative;
   height: 10.37%;
   width: 46.28%;
-  top: 28.53%;
+  margin-top: 28.53%;
   right: 49.28%;
   bottom: 61.1%;
-  left: 4.44%;
+  margin-left: 4.44%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6478,13 +6318,13 @@
 }
 
 .vector-icon158 {
-  position: absolute;
+  position: relative;
   height: 10.19%;
   width: 46.09%;
-  top: 26.48%;
+  margin-top: 26.48%;
   right: 50.94%;
   bottom: 63.33%;
-  left: 2.97%;
+  margin-left: 2.97%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6493,7 +6333,6 @@
 
 .rectangle-icon6 {
   position: absolute;
-  height: 12.8%;
   width: 49.45%;
   top: 24.56%;
   right: 47.19%;
@@ -6507,7 +6346,6 @@
 
 .rectangle-icon7 {
   position: absolute;
-  height: 7.02%;
   width: 24.22%;
   top: 9%;
   right: 37.89%;
@@ -6520,23 +6358,23 @@
 }
 
 .content {
-  position: absolute;
-  top: 0%;
-  left: 0%;
+  position: relative;
+  margin-top: 0%;
+  margin-left: 0%;
 }
 
 .group48 {
   position: relative;
   width: 100%;
-  height: 726.38px;
+  height: 50vh;
 }
 
 .slide2 {
   position: relative;
   background-color: white;
-  left: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -6547,13 +6385,13 @@
 }
 
 .vector-icon159 {
-  position: absolute;
+  position: relative;
   height: 99.07%;
   width: 100%;
-  top: 0.96%;
+  margin-top: 0.96%;
   right: 0%;
   bottom: -0.03%;
-  left: 0%;
+  margin-left: 0%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6561,8 +6399,7 @@
 }
 
 .clip-path-group62 {
-  position: absolute;
-  height: 32.64%;
+  position: relative;
   width: 80.2%;
   top: 32.03%;
   right: 7.07%;
@@ -6575,13 +6412,13 @@
 }
 
 .rectangle-icon8 {
-  position: absolute;
+  position: relative;
   height: 36.6%;
   width: 59.84%;
-  top: 22.39%;
+  margin-top: 22.39%;
   right: 25.7%;
   bottom: 41%;
-  left: 14.45%;
+  margin-left: 14.45%;
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
@@ -6589,8 +6426,7 @@
 }
 
 .rectangle-icon9 {
-  position: absolute;
-  height: 7.43%;
+  position: relative;
   width: 54.38%;
   top: 63.67%;
   right: 21.64%;
@@ -6603,21 +6439,20 @@
 }
 
 .group49 {
-  position: absolute;
-  height: 100.94%;
+  position: relative;
   width: 100%;
-  top: -0.97%;
+  margin-top: -0.97%;
   right: 0%;
   bottom: 0.03%;
-  left: 0%;
+  margin-left: 0%;
 }
 
 .slide1 {
   position: relative;
-  top: 0px;
-  left: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
   width: 100%;
-  height: 720px;
+  height: 100%  /* 720px */;
   overflow: hidden;
   font-size: 54px;
   font-family: var(--font-arial);
@@ -6626,12 +6461,11 @@
 .slide50-1-parent {
   position: relative;
   width: 100%;
-  height: 36000px;
   text-align: left;
   font-size: var(--font-size-8xl);
   color: var(--color-white);
   font-family: var(--font-microsoft-jhenghei);
-  
+
   max-width: 1280px;
   margin: auto;
 }
