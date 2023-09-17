@@ -17,4 +17,6 @@ urlpatterns = [
     path("competition_info/<str:pk>", views.competition_info, name="competition_info"),
     path("find_competitions/", views.find_competitions, name="find_competitions"),
     path("", views.home_page, name="home_page"),
+
+    path("about/", views.about, name="about"),
 ]
