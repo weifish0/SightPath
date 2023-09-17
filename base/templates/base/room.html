@@ -17,6 +17,8 @@
         <a href="{% url 'update_room' room.id %}">編輯</a>
         <a href="{% url 'delete_room' room.id %}">刪除</a>
         <hr>
+        <small>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}">{{room.topic.name}}</a></small>
+        <hr>
         <p>討論串內容: <br>{{room.description}}</p>
         <small>建立時間: {{room.created}}</small>
         <br>
