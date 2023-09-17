@@ -10,7 +10,9 @@
     <br>
     <small>最近更新: {{room.updated}}</small>
     <br>
-    <small>{{room.topic.name}}</small>
+    <small>
+        <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}">{{room.topic.name}}</a>
+    </small>
 </div>
 <hr>
 {% endfor %}
