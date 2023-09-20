@@ -27,12 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # TODO
 # SECURITY WARNING: keep the secret key used in production secret!
-if 'RENDER' in os.environ:
-    print("連接 SECRET_KEY")
-    SECRET_KEY = os.environ.get('SECRET_KEY', default='None')
-else:
-    Django_SECRET_KEY = os.getenv("Django_SECRET_KEY")
-    SECRET_KEY = Django_SECRET_KEY
+SECRET_KEY = os.getenv("Django_SECRET_KEY")
 
 
 '''
@@ -40,20 +35,12 @@ detect if you are running on Render by checking
 if the RENDER environment variable is present in the application environment
 '''
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
-# DEBUG = True
+# if you are in development, add "DEV" variable into your .env file
+DEBUG = 'DEV' in os.environ
 
 
-# TODO
-if 'RENDER' in os.environ:
-    print("連接 ALLOWED_HOSTS")
-    ALLOWED_HOSTS = ["sightpath.tw"]
-    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-    if RENDER_EXTERNAL_HOSTNAME:    
-        ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-else:
-    ALLOWED_HOSTS = ["127.0.0.1", "sightpath.tw"]
-    CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "sightpath.tw"]
+CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 
 # Application definition
 
