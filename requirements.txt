@@ -6,6 +6,5 @@ django-allauth==0.54.0
 dj-database-url==2.0.0
 psycopg2-binary==2.9.6
 whitenoise==6.5.0
-gunicorn==21.2.0
 python-dotenv==0.21.0
 line-bot-sdk==3.2.0
