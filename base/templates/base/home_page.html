@@ -8,6 +8,7 @@
 
 
 <div class="home_page_container">
+    <h5>找到 {{competitions_count}} 個比賽</h5>
 
     <div class="tinder">
         <div class="tinder--status">
@@ -16,25 +17,36 @@
         </div>
 
         <div class="tinder--cards">
+            {% for competition in competitions %}
             <div class="tinder--card">
-                <h3>Demo card 1</h3>
-                <p>This is a demo for Tinder like swipe cards</p>
+                <h4>
+                    <a href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
+                </h4>
+
+                {% for tag in competition.tags.all %}
+                <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+                {% endfor %}
+
+                <p>籌辦組織: {{competition.agency_title}}</p>
+                <p>瀏覽次數: {{competition.page_views}}</p>
+                <p>開始報名日期: {{competition.start_time}}</p>
+                <p>截止日期: {{competition.end_time}}</p>
+                <!--  <p>標籤: {{competition.tags}}</p> -->
+
             </div>
-            <div class="tinder--card">
-                <h3>Demo card 2</h3>
-                <p>This is a demo for Tinder like swipe cards</p>
-            </div>
-            <div class="tinder--card">
-                <h3>Demo card 3</h3>
-                <p>This is a demo for Tinder like swipe cards</p>
-            </div>
+            {% endfor %}
         </div>
 
-       <!--  <div class="tinder--buttons">
+
+        <!--  <div class="tinder--buttons">
             <button id="nope"><i class="fa fa-remove"></i></button>
             <button id="love"><i class="fa fa-heart"></i></button>
         </div> -->
     </div>
 </div>
+
+
+<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<script src="/static/scripts/tinder.js"></script>
 
 {% endblock contents %}
