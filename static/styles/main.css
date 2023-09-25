@@ -6,11 +6,6 @@
     margin: 0;
 }
 
-body {
-    overflow: hidden;
-    font-family: sans-serif;
-}
-
 .tinder {
     width: 100vw;
     height: 100vh;

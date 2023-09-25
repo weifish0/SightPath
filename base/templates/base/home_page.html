@@ -2,6 +2,12 @@
 
 {% block contents %}
 
+<style>
+    body {
+        overflow: hidden;
+    }
+</style>
+
 {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>
 {% endif %}
