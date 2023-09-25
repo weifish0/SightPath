@@ -1,29 +1,40 @@
 {% extends "main.html" %}
 
 {% block contents %}
-<style>
-    .home_page_container{
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-    }
-</style>
 
 {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>
 {% endif %}
 
-<h1>home_page</h1>
+
 <div class="home_page_container">
-    
-    <div>
-        
-        
-    </div>
 
-    <div>
-        
-    </div>
+    <div class="tinder">
+        <div class="tinder--status">
+            <i class="fa fa-remove"></i>
+            <i class="fa fa-heart"></i>
+        </div>
 
+        <div class="tinder--cards">
+            <div class="tinder--card">
+                <h3>Demo card 1</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+            <div class="tinder--card">
+                <h3>Demo card 2</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+            <div class="tinder--card">
+                <h3>Demo card 3</h3>
+                <p>This is a demo for Tinder like swipe cards</p>
+            </div>
+        </div>
+
+       <!--  <div class="tinder--buttons">
+            <button id="nope"><i class="fa fa-remove"></i></button>
+            <button id="love"><i class="fa fa-heart"></i></button>
+        </div> -->
+    </div>
 </div>
 
 {% endblock contents %}
