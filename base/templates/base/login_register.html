@@ -3,7 +3,7 @@
 {% block contents %}
 
 {% if page == "login" %}
-<div class="login_container d-flex justify-content-center">
+<div class="div_container d-flex justify-content-center">
     <form class="login_form" method="POST", action="">
       {% csrf_token %}
       {% if messages %}

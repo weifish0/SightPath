@@ -1,18 +1,16 @@
 {% extends "main.html" %}
 
-
-
 {% block contents %}
 
-<!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
-<h1>{{user.username}}</h1>
-{% if user.is_authenticated %}
+<div class="div_container">
+    <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
+    <h1>{{user.username}}</h1>
+    {% if user.is_authenticated %}
     {% if request.user.username == user.username %}
     <a href="{% url 'edit_profile' request.user.username %}">編輯個人檔案</a>
     {% endif %}
-{% endif %}
+    {% endif %}
 
-<div class="profile_container">
     <div>
         {% include "base/room_topics_component.html" %}
     </div>

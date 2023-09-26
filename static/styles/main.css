@@ -12,48 +12,21 @@ nav {
     width: 100%;
 }
 
-body {
-    height: 100vh;
-}
-
 .navbar>.container-fluid {
     background: white;
     z-index: 100;
 }
 
-.login_container {
-    position: relative;
-    height: 100%;
-    padding-top: 60px;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
-.profile_container {
+.div_container {
+    margin: 0;
     position: relative;
-    height: 100%;
-    padding-top: 60px;
-}
-
-.room_container {
-    position: relative;
-    height: 100%;
-    padding-top: 60px;
-}
-
-.chatroom_home_container {
-    position: relative;
-    height: 100%;
-    padding-top: 60px;
-}
-
-.find_competitions_page_container {
-    position: relative;
-    height: 100%;
-    padding-top: 60px;
-}
-
-.home_page_container {
-    position: relative;
-    height: 100%;
+    height: 100dvh;
+    width: 100vw;
     padding-top: 60px;
 }
 
@@ -102,8 +75,9 @@ body {
 }
 
 .tinder--cards {
+    width: 100vw;
     flex-grow: 1;
-    padding-top: 40px;
+    padding-top: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -116,6 +90,7 @@ body {
     width: 90vw;
     max-width: 400px;
     min-height: 100px;
+    height: 60%;
     background: #b0f6f0;
     padding-bottom: 40px;
     border-radius: 8px;
