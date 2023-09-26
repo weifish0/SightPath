@@ -6,13 +6,13 @@
 <p>hello {{request.user.username}}~</p>
 {% endif %}
 
-<div class="find_competitions_page_container">
-    <div>
-        {% include "base/competition_feed.html" %}
-    </div>
-    
+<div class="div_container grid">
     <div>
         {% include "base/competition_tags.html" %}
+    </div>
+
+    <div>
+        {% include "base/competition_feed.html" %}
     </div>
 </div>
 

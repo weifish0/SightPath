@@ -1,9 +1,8 @@
 {% extends "main.html" %}
 
-
 {% block contents %}
 
-<div class="room_container">
+<div class="div_container">
     <div>
         <h2>{{room.name}}</h2>
         <a href="{% url 'update_room' room.id %}">編輯</a>
