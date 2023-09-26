@@ -3,5 +3,4 @@
 <br>
 {% for competition_tag in competition_tags %}
 <a href="{% url 'find_competitions' %}?competition_category={{competition_tag}}">{{competition_tag}}</a>
-<br>
 {% endfor %}
