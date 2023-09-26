@@ -18,7 +18,7 @@ body {
 
 .navbar>.container-fluid {
     background: white;
-    z-index: 2;
+    z-index: 100;
 }
 
 .login_container {
