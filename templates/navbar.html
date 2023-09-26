@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'chatroom_home' %}">SightPath</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
         {% endif %}
       </ul>
       <form class="d-inline-flex align-items-center" role="search" method="get" action="">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+        <input class="form-inline me-2" type="search" placeholder="Search" aria-label="Search" name="q">
         <button class="btn btn-outline-success me-3" type="submit">搜索</button>  
       </form>
       

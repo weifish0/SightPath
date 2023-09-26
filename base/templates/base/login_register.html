@@ -3,8 +3,8 @@
 {% block contents %}
 
 {% if page == "login" %}
-<div class="d-flex justify-content-center mt-5">
-    <form method="POST", action="">
+<div class="login_container d-flex justify-content-center">
+    <form class="login_form" method="POST", action="">
       {% csrf_token %}
       {% if messages %}
       <ul class="messages">

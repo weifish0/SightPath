@@ -3,13 +3,6 @@
 
 {% block contents %}
 
-<style>
-    .chatroom_home_container{
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-    }
-</style>
-
 {% if request.user.is_authenticated %}
 <p>hello {{request.user.username}}~</p>
 {% endif %}

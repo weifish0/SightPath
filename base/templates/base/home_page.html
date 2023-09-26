@@ -2,21 +2,15 @@
 
 {% block contents %}
 
-<style>
-    body {
-        overflow: hidden;
-    }
-</style>
-
 {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>
 {% endif %}
 
 
 <div class="home_page_container">
-    <h5>找到 {{competitions_count}} 個比賽</h5>
-
     <div class="tinder">
+        <h5>找到 {{competitions_count}} 個比賽</h5>
+
         <div class="tinder--status">
             <i class="fa fa-remove"></i>
             <i class="fa fa-heart"></i>
