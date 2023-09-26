@@ -4,13 +4,6 @@
 
 {% block contents %}
 
-<style>
-    .profile_container{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-    }
-</style>
-
 <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
 <h1>{{user.username}}</h1>
 {% if user.is_authenticated %}
