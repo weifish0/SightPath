@@ -4,7 +4,7 @@
 
 {% if page == "login" %}
 <div class="div_container d-flex justify-content-center">
-    <form class="login_form" method="POST", action="">
+    <form class="login_form mt-3" method="POST", action="">
       {% csrf_token %}
       {% if messages %}
       <ul class="messages">
@@ -37,7 +37,7 @@
 
 {% else %}
 <div class="d-flex justify-content-center mt-5">
-    <form method="POST", action="">
+    <form class="login_form mt-3" method="POST", action="">
       {% csrf_token %}
       {% if messages %}
       <ul class="messages">
