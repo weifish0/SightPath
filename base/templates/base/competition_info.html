@@ -1,29 +1,30 @@
 {% extends "main.html" %}
 
 {% block contents %}
-<h2>{{competition.name}}</h2>
-<hr>
-<small>開始報名日期: {{competition.start_time}}</small>
-<br>
-<small>截止日期: {{competition.end_time}}</small>
-<hr>
-<small>籌辦組織: {{competition.agency_title}}</small>
+<div class="div_container">
+    <h2>{{competition.name}}</h2>
+    <hr>
+    <small>開始報名日期: {{competition.start_time}}</small>
+    <br>
+    <small>截止日期: {{competition.end_time}}</small>
+    <hr>
+    <small>籌辦組織: {{competition.agency_title}}</small>
 
 
-{% if competition.url != None %}
-<hr>
-<p>比賽網址: <a href="{{competition.url}}">{{competition.url}}</a></p>
-<hr>
-{% endif %}
+    {% if competition.url != None %}
+    <hr>
+    <p>比賽網址: <a href="{{competition.url}}">{{competition.url}}</a></p>
+    <hr>
+    {% endif %}
 
 
 
-<hr>
-<p>標籤:</p>
-{% for tag in tags %}
-<a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
-{% endfor %}
-<hr>
-
+    <hr>
+    <p>標籤:</p>
+    {% for tag in tags %}
+    <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+    {% endfor %}
+    <hr>
+</div>
 {{competition.guide_line_html|safe}}
 {% endblock contents %}
