@@ -25,6 +25,6 @@
     <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
     {% endfor %}
     <hr>
+    {{competition.guide_line_html|safe}}
 </div>
-{{competition.guide_line_html|safe}}
 {% endblock contents %}
