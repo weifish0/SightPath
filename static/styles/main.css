@@ -42,7 +42,7 @@ a {
 .navbar {
     position: absolute;
     top: 0px;
-    width: 100vw;
+    width: min(100vw, 100%);
     background: #F8F8F8;
 }
 
