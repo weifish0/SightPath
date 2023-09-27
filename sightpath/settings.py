@@ -39,7 +39,7 @@ if the RENDER environment variable is present in the application environment
 DEBUG = 'DEV' in os.environ
 
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "sightpath.tw", "192.168.43.190", "192.168.22.181"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "sightpath.tw", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
 CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 
 # Application definition
