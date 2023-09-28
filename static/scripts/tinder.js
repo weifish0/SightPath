@@ -16,7 +16,6 @@ function initCards(card, index) {
 }
 
 initCards();
-
 allCards.forEach(function (el) {
     var hammertime = new Hammer(el);
 
@@ -27,6 +26,7 @@ allCards.forEach(function (el) {
     hammertime.on('pan', function (event) {
         if (event.deltaX === 0) return;
         if (event.center.x === 0 && event.center.y === 0) return;
+        if (event.target.classList.contains("noHammer")) return; //austin 20230928
 
         tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
         tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
@@ -39,6 +39,8 @@ allCards.forEach(function (el) {
     });
 
     hammertime.on('panend', function (event) {
+        if (event.target.classList.contains("noHammer")) return; //austin 20230928
+
         el.classList.remove('moving');
         tinderContainer.classList.remove('tinder_love');
         tinderContainer.classList.remove('tinder_nope');
@@ -47,6 +49,7 @@ allCards.forEach(function (el) {
         var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
 
         event.target.classList.toggle('removed', !keep);
+        event.target.remove(); //austin 20230928
 
         if (keep) {
             event.target.style.transform = '';
@@ -81,7 +84,6 @@ function createButtonListener(love) {
         } else {
             card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
         }
-
         initCards();
 
         event.preventDefault();
