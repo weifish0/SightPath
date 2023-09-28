@@ -2,13 +2,6 @@
 
 {% block contents %}
 
-<style>
-    body {
-        position: fixed;
-        overflow: hidden;
-    }
-</style>
-
 {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>
 {% endif %}
@@ -27,12 +20,15 @@
             {% for competition in competitions %}
             <div class="tinder--card">
                 <h4>
-                    <a class="text-info" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
+                    <a class="text-info noHammer"
+                        href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
                 </h4>
 
-                {% for tag in competition.tags.all %}
-                <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
-                {% endfor %}
+                <div class="tags_all">
+                    {% for tag in competition.tags.all %}
+                    <a class="noHammer" href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+                    {% endfor %}
+                </div>
 
                 <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
                 <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
