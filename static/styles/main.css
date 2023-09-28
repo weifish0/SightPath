@@ -3,6 +3,10 @@ a {
     word-break: break-all;
 }
 
+table {
+    width: 100%;
+}
+
 .tags_all{
     max-height: 3em;
     overflow: hidden;
@@ -82,7 +86,7 @@ img {
 
 .tinder {
     overflow: hidden;
-    height: max(100%, 650px);
+    height: max(100%, 700px);
     display: flex;
     flex-direction: column;
     position: relative;
