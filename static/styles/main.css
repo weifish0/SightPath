@@ -2,6 +2,15 @@ a {
     text-decoration: none;
 }
 
+.tags_all{
+    max-height: 3em;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
 .form-inline {
     border-radius: 5px;
     height: 35px;
@@ -18,7 +27,8 @@ a {
 }
 
 .login_form {
-    min-width: 350px;
+    width: 70%;
+    max-width: 350px;
     height: auto;
 }
 
@@ -71,12 +81,12 @@ a {
 
 .tinder {
     overflow: hidden;
-    height: 100%;
+    height: max(100%, 650px);
     display: flex;
     flex-direction: column;
     position: relative;
     opacity: 0;
-    transition: opacity 0.05s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
 }
 
 .loaded.tinder {
@@ -126,10 +136,10 @@ a {
 
 .tinder--card {
     display: inline-block;
-    width: 90vw;
+    width: 75vw;
     max-width: 400px;
     min-height: 100px;
-    height: 60%;
+
     background: #150e07;
     padding: 20px;
     border-radius: 8px;
