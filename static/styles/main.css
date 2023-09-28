@@ -86,7 +86,7 @@ img {
 
 .tinder {
     overflow: hidden;
-    height: max(100%, 700px);
+    height: max(100%, 45em);
     display: flex;
     flex-direction: column;
     position: relative;
