@@ -46,7 +46,8 @@ allCards.forEach(function (el) {
         tinderContainer.classList.remove('tinder_nope');
 
         var moveOutWidth = document.body.clientWidth;
-        var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
+        var keep = Math.abs(event.deltaX) < 16 || Math.abs(event.velocityX) < 0.1;
+        // 80 0.5 austin20230928
 
         event.target.classList.toggle('removed', !keep);
         event.target.remove(); //austin 20230928

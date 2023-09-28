@@ -19,12 +19,12 @@
         <div class="tinder--cards">
             {% for competition in competitions %}
             <div class="tinder--card">
-                <h4>
+                <h3>
                     <a class="text-info noHammer"
                         href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
-                </h4>
+                </h3>
 
-                <div class="tags_all">
+                <div class="tags_all noHammer">
                     {% for tag in competition.tags.all %}
                     <a class="noHammer" href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
                     {% endfor %}
