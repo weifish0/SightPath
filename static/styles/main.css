@@ -3,8 +3,8 @@ a {
     word-break: break-all;
 }
 
-table {
-    width: 100%;
+figure {
+    max-width: 100% !important;
 }
 
 .tags_all{
