@@ -1,5 +1,6 @@
 a {
     text-decoration: none;
+    word-break: break-all;
 }
 
 .tags_all{
