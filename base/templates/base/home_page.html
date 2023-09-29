@@ -7,9 +7,9 @@
 {% endif %}
 
 
-<div class="div_container">
+<div class="home_container">
     <div class="tinder">
-        <h5>找到 {{competitions_count}} 個比賽</h5>
+        <h5 style="padding-left:10px">找到 {{competitions_count}} 個比賽</h5>
 
         <div class="tinder--status">
             <i class="fa fa-remove"></i>
@@ -35,7 +35,6 @@
                 <p class="text-light">開始報名日期: {{competition.start_time}}</p>
                 <p class="text-light">截止日期: {{competition.end_time}}</p>
                 <!--  <p>標籤: {{competition.tags}}</p> -->
-
             </div>
             {% endfor %}
         </div>
