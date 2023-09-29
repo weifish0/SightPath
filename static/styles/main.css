@@ -18,6 +18,8 @@ img {
 
 .form-inline {
     border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
     height: 35px;
     width: 180px;
     border: 1px solid black;
@@ -48,6 +50,8 @@ img {
 .dot {
     border: 1px solid black;
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     width: 16px;
     height: 16px;
     display: inline-flex;
@@ -65,7 +69,7 @@ img {
 
 .navbar>.container-fluid {
     background: #F8F8F8;
-    z-index: 100;
+    z-index: 2;
     padding-bottom: 7px;
     padding-top: 7px;
 }
@@ -73,20 +77,24 @@ img {
 .grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding-left: 15px;
-    padding-right: 10px;
 }
 
 .div_container {
     margin: 0;
-    height: 100dvh;
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 15px;
+    padding-right: 10px;
+    height: 100%;
+}
+
+.home_container {
+    margin: 0;
     width: 100%;
     padding-top: 60px;
 }
 
 .tinder {
-    overflow: hidden;
-    height: max(100%, 45em);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -129,11 +137,13 @@ img {
 }
 
 .tinder--cards {
+    display: flex;
+    flex-wrap: wrap;
+
     width: 100vw;
     flex-grow: 1;
     padding-top: 100px;
     text-align: center;
-    display: flex;
     justify-content: center;
     /* align-items: flex-end; */
     z-index: 1;
@@ -141,15 +151,20 @@ img {
 
 .tinder--card {
     display: inline-block;
-    width: 75vw;
+    overflow-y: auto;
+
+    width: 80vw;
     max-width: 400px;
     min-height: 100px;
+    max-height: 65vh;
 
     background: #150e07;
     padding: 20px;
     border-radius: 8px;
-    overflow: hidden;
-    position: absolute;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+    position: fixed;
     will-change: transform;
     transition: all 0.3s ease-in-out;
     cursor: -webkit-grab;
@@ -191,6 +206,8 @@ img {
 
 .tinder--buttons button {
     border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     line-height: 60px;
     width: 60px;
     border: 0;
