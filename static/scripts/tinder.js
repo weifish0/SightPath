@@ -1,15 +1,16 @@
 var tinderContainer = document.querySelector('.tinder');
 var allCards = document.querySelectorAll('.tinder--card');
-var nope = document.getElementById('nope');
-var love = document.getElementById('love');
+//var nope = document.getElementById('nope');
+//var love = document.getElementById('love');
 
 function initCards(card, index) {
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
     newCards.forEach(function (card, index) {
-        card.style.zIndex = allCards.length - index;
+        card.style.zIndex = -index; // allCards.length - index
         card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
-        card.style.opacity = (10 - index) / 10;
+        if (index < 5) card.style.opacity = Math.pow(3, -index);
+        else card.style.opacity = 0;
     });
 
     tinderContainer.classList.add('loaded');
@@ -27,6 +28,7 @@ allCards.forEach(function (el) {
         if (event.deltaX === 0) return;
         if (event.center.x === 0 && event.center.y === 0) return;
         if (event.target.classList.contains("noHammer")) return; //austin 20230928
+        if (event.target.style.zIndex != 0) return; //austin 20230929
 
         tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
         tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
@@ -40,14 +42,15 @@ allCards.forEach(function (el) {
 
     hammertime.on('panend', function (event) {
         if (event.target.classList.contains("noHammer")) return; //austin 20230928
+        if (event.target.style.zIndex != 0) return; //austin 20230929
 
         el.classList.remove('moving');
         tinderContainer.classList.remove('tinder_love');
         tinderContainer.classList.remove('tinder_nope');
 
         var moveOutWidth = document.body.clientWidth;
-        var keep = Math.abs(event.deltaX) < 16 || Math.abs(event.velocityX) < 0.1;
-        // 80 0.5 austin20230928
+        var keep = 0;
+        // var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5
 
         event.target.classList.toggle('removed', !keep);
         event.target.remove(); //austin 20230928
@@ -91,8 +94,8 @@ function createButtonListener(love) {
     };
 }
 
-var nopeListener = createButtonListener(false);
-var loveListener = createButtonListener(true);
+//var nopeListener = createButtonListener(false);
+//var loveListener = createButtonListener(true);
 
-nope.addEventListener('click', nopeListener);
-love.addEventListener('click', loveListener);
+//nope.addEventListener('click', nopeListener);
+//love.addEventListener('click', loveListener);
