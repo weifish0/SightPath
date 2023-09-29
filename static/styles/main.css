@@ -17,9 +17,13 @@ img {
 }
 
 .form-inline {
+    appearance: none;
+    -webkit-appearance: none;
+
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
+    
     height: 35px;
     width: 180px;
     border: 1px solid black;
@@ -142,7 +146,7 @@ img {
 
     width: 100vw;
     flex-grow: 1;
-    padding-top: 100px;
+    padding-top: 70px;
     text-align: center;
     justify-content: center;
     /* align-items: flex-end; */
@@ -156,7 +160,7 @@ img {
     width: 80vw;
     max-width: 400px;
     min-height: 100px;
-    max-height: 65vh;
+    max-height: 65dvh;
 
     background: #150e07;
     padding: 20px;

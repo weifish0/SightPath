@@ -2,6 +2,13 @@
 
 {% block contents %}
 
+<style>
+    body {
+        position: fixed;
+        overflow: hidden;
+    }
+</style>
+
 {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>
 {% endif %}
@@ -19,10 +26,10 @@
         <div class="tinder--cards">
             {% for competition in competitions %}
             <div class="tinder--card">
-                <h3>
+                <h4>
                     <a class="text-info noHammer"
                         href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
-                </h3>
+                </h4>
 
                 <div class="tags_all noHammer">
                     {% for tag in competition.tags.all %}
