@@ -40,6 +40,7 @@ def login_page(request):
                 return redirect("chatroom_home")
             except:
                 superuser = authenticate(request, email=email, password=password)
+                print(f"{superuser=}")
                 login(request, superuser)
                 print("超級帳號登陸")
                 return redirect("chatroom_home")
