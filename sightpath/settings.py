@@ -12,7 +12,13 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from dotenv import load_dotenv
+import os
+from dotenv import load_dotenv
 from pathlib import Path
+import dj_database_url
+
+# load env
+load_dotenv()
 import dj_database_url
 
 # load env
