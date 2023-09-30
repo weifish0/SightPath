@@ -5,9 +5,9 @@ from django.contrib.auth.models import AbstractUser
 # python .\manage.py dumpdata base > data_fixture.json
 
 # 加載刷新competition_tag和competition資料 (之後部屬可以設置每天早上四點執行一次指令)
-# python ./base/fixtures/competitions_fixture_generate.py
-# python manage.py loaddata ./base/fixtures/tags_fixture.json
-# python manage.py loaddata ./base/fixtures/competitions_fixture.json
+# python3 ./base/fixtures/competitions_fixture_generator.py
+# python3 manage.py loaddata ./base/fixtures/tags_fixture.json
+# python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
 
 
 class User(AbstractUser):
