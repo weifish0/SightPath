@@ -174,6 +174,10 @@ def create_room(request):
     # 使用者送出表單
     if request.method == "POST":
         topic_name = request.POST.get("topic")
+
+        if topic_name != None and topic_name != "":
+            # topice_name不能含有空格
+            topic_name = topic_name.replace(" ", "")
         
         # 超級帳號可以直接以此創建topic
         if superuser_auth:
