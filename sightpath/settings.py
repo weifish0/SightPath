@@ -87,8 +87,8 @@ AUTHENTICATION_BACKENDS = (
 SOCIALACCOUNT_PROVIDERS = {
     'line': {
         'APP': {
-            'client_id': '2000823665',
-            'secret': '8900cb90fce3639f5cee54be396bb646',
+            'client_id': os.getenv('client_id'),
+            'secret': os.getenv("secret"),
             'key': '',
         },
         'SCOPE':[
@@ -100,25 +100,9 @@ SOCIALACCOUNT_PROVIDERS = {
         # }
     }
 }
-"""
-"line": {
-        "app":{
-            "client_id": "2000823665",
-            "secret": "8900cb90fce3639f5cee54be396bb646",
-            # "response_type": "code",
-            # "redirect_uri": "http://127.0.0.1:8000/accounts/line/login/callback",
-            # "state": "",
-            # "scope": [
-            #     "profile",
-            #     "openid",
-               
-            #     # 需要申請
-            #     # "email",
-            # ] 
-        }
-    }
-}
-"""
+
+# 使用者使用 line login完成後回到主畫面
+LOGIN_REDIRECT_URL = "/"
 
 # TODO
 MIDDLEWARE = [
