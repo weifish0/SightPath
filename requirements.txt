@@ -1,7 +1,9 @@
 django==4.2.1
 djangorestframework==3.14.0
 django-cors-headers==4.2.0
-pillow==10.0.0
 django-allauth==0.54.0
+whitenoise
+
+pillow==10.0.0
 python-dotenv==0.21.0
 line-bot-sdk==3.2.0
