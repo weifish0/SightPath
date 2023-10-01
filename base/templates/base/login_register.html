@@ -3,6 +3,8 @@
 {% block contents %}
 
 {% if page == "login" %}
+
+{% load socialaccount %}
 <div class="div_container d-flex justify-content-center">
     <form class="login_form mt-3" method="POST", action="">
       {% csrf_token %}
@@ -29,7 +31,8 @@
         <label class="form-check-label" for="exampleCheck1" name="remember_login">記住帳號</label>
       </div>
       <button type="submit" class="btn btn-primary mb-5" name="login">登入</button>
-
+      <br>
+      <a href="{% provider_login_url 'line' %}">line登入</a>
       <p>沒有帳號?</p>
       <a href="{% url 'register_page' %}">註冊</a>
     </form>
