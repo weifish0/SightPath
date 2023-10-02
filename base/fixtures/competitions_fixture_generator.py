@@ -55,10 +55,16 @@ def generate_fixture():
             url = data["officialUrl"]
             cover_img_url = data["coverImage"]["url"]
             
-            start_time_obj = datetime.fromtimestamp(data["startTime"])
-            end_time_obj = datetime.fromtimestamp(data['endTime'])
-            start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
-            end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S')  
+
+            start_time_str = ""
+            end_time_str = ""
+            if data["startTime"] is not None:
+                start_time_obj = datetime.fromtimestamp(data["startTime"])
+                start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
+            if data['endTime'] is not None:
+                end_time_obj = datetime.fromtimestamp(data['endTime'])
+                end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S') 
+            
             
             guide_line = data["guideline"]
             organizer_title = data["organizerTitle"]
