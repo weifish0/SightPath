@@ -67,7 +67,7 @@ img {
 .navbar {
     position: absolute;
     top: 0px;
-    width: 100dvw;
+    width: min(100%, 100vw);
     background: #F8F8F8;
     padding: 0;
 }
