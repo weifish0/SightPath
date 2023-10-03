@@ -40,7 +40,7 @@ if the RENDER environment variable is present in the application environment
 DEBUG = 'DEV' in os.environ
 
 if "DEV" not in os.environ:
-    ALLOWED_HOSTS = ["sightpath.tw", "168.138.42.18", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
     CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 else:
     if "TEST_NGROK_URL" in os.environ:
