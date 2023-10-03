@@ -56,8 +56,8 @@ def generate_fixture():
             cover_img_url = data["coverImage"]["url"]
             
 
-            start_time_str = ""
-            end_time_str = ""
+            start_time_str = "1984-01-01 00:00:00"
+            end_time_str = "1984-01-01 00:00:00"
             if data["startTime"] is not None:
                 start_time_obj = datetime.fromtimestamp(data["startTime"])
                 start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
