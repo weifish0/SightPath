@@ -38,6 +38,7 @@ img {
 }
 
 .login_form {
+    z-index: 1;
     width: 70%;
     max-width: 350px;
     height: auto;
