@@ -69,31 +69,36 @@ class CompetitionTag(models.Model):
 
 class Competition(models.Model):
     name = models.TextField()
-    url = models.TextField(null=True)
-    
+    url = models.URLField(null=True)
+    cover_img_url = models.URLField(null=True)
+    start_time = models.DateTimeField(null=True)
+    end_time = models.DateTimeField(null=True)
+    guide_line_html = models.TextField(null=True)
+    organizer_title = models.TextField(null=True)
+    page_views = models.IntegerField(null=True) 
+    contact_email = models.EmailField(null=True)
+    contact_name = models.TextField(null=True)
+    contact_phone = models.TextField(null=True)
+    tags = models.ManyToManyField(
+        CompetitionTag, blank=True
+    )
     limit_highschool = models.BooleanField(null=True)
     limit_none = models.BooleanField(null=True)
     limit_other = models.BooleanField(null=True)
     
-    organizer_title = models.TextField(null=True)
-    
-    page_views = models.IntegerField(null=True)
-    
-    contact_email = models.EmailField(null=True)
-    contact_name = models.TextField(null=True)
-    contact_phone = models.TextField(null=True)
-    
+    def __str__(self):
+        return f"{self.name}"
+
+class Activities(models.Model):
+    name = models.TextField()
+    eventIdNumber = models.TextField(null=True)
     start_time = models.DateTimeField(null=True)
     end_time = models.DateTimeField(null=True)
-    
-    guide_line_html = models.TextField(null=True)
-    
-    cover_img_url = models.URLField(null=True)
-    
-    tags = models.ManyToManyField(
-        CompetitionTag, blank=True
-    )
+    eventPlaceType = models.TextField(null=True)
+    location = models.TextField(null=True)
+    isAD = models.BooleanField(null=True)
+    photoUrl = models.URLField(null=True)
+    strtags = models.TextField(null=True)
     
     def __str__(self):
         return f"{self.name}"
-    
