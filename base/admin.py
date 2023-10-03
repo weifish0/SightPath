@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Topic, Message, Competition, User, CompetitionTag
+from .models import Room, Topic, Message, Competition, User, CompetitionTag, Activities
 
 
 class UserAdmin(admin.ModelAdmin):
@@ -14,3 +14,4 @@ admin.site.register(Message)
 admin.site.register(Competition, CompetitionAdmin)
 admin.site.register(User, UserAdmin)
 admin.site.register(CompetitionTag)
+admin.site.register(Activities)
