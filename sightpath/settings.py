@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import sys
 
 # load env
 load_dotenv()
@@ -38,6 +39,19 @@ if the RENDER environment variable is present in the application environment
 # SECURITY WARNING: don't run with debug turned on in production!
 # if you are in development, add "DEV" variable into your .env file
 DEBUG = 'DEV' in os.environ
+
+"""
+if 'loaddata' in sys.argv:
+    # is database used sqlite3?
+    # disable sqlite foreign key checks
+    print("Loading data from fixtures - disabling foreign key checks")
+    from django.db.backends.signals import connection_created
+    def disable_foreign_keys(sender, connection, **kwargs):
+        cursor = connection.cursor()
+        cursor.execute('PRAGMA foreign_keys=OFF;')
+    connection_created.connect(disable_foreign_keys)
+"""
+
 
 if "DEV" not in os.environ:
     ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
