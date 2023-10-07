@@ -1,0 +1,114 @@
+[
+  {
+    "model": "base.competitiontag",
+    "pk": 1,
+    "fields": {
+      "tag_name": "繪畫比賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 2,
+    "fields": {
+      "tag_name": "平面設計比賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 3,
+    "fields": {
+      "tag_name": "產品設計比賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 4,
+    "fields": {
+      "tag_name": "綜合設計"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 5,
+    "fields": {
+      "tag_name": "攝影比賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 6,
+    "fields": {
+      "tag_name": "影片比賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 7,
+    "fields": {
+      "tag_name": "文學獎"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 8,
+    "fields": {
+      "tag_name": "創意寫作"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 9,
+    "fields": {
+      "tag_name": "企劃競賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 10,
+    "fields": {
+      "tag_name": "創業競賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 11,
+    "fields": {
+      "tag_name": "程式競賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 12,
+    "fields": {
+      "tag_name": "音樂大賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 13,
+    "fields": {
+      "tag_name": "歌唱比賽"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 14,
+    "fields": {
+      "tag_name": "詞曲創作"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 15,
+    "fields": {
+      "tag_name": "運動"
+    }
+  },
+  {
+    "model": "base.competitiontag",
+    "pk": 16,
+    "fields": {
+      "tag_name": "選秀"
+    }
+  }
+]
