@@ -10,3 +10,4 @@ line-bot-sdk==3.2.0
 
 text2vec
 torch
+opencc
