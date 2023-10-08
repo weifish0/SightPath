@@ -54,17 +54,17 @@ if 'loaddata' in sys.argv:
 
 
 if "DEV" not in os.environ:
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
+    ALLOWED_HOSTS = ["sightpath.tw", "www.sightpath.tw", "127.0.0.1", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
     CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 else:
     if "TEST_NGROK_URL" in os.environ:
         TEST_NGROK_URL = os.getenv("TEST_NGROK_URL")
         TEST_NGROK_HOST = TEST_NGROK_URL[TEST_NGROK_URL.index("//")+2:]
         
-        ALLOWED_HOSTS = ["192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST]
+        ALLOWED_HOSTS = ["192.168.22.180", "www.sightpath.tw", "sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST]
         CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL]
     else:
-        ALLOWED_HOSTS = ["192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost"]
+        ALLOWED_HOSTS = ["192.168.22.180", "www.sightpath.tw", "sightpath.tw", "127.0.0.1", "localhost"]
 
 # Application definition
 
