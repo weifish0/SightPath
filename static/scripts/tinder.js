@@ -1,9 +1,12 @@
-var tinderContainer = document.querySelector('.tinder');
-var allCards = document.querySelectorAll('.tinder--card');
 //var nope = document.getElementById('nope');
 //var love = document.getElementById('love');
 
-function initCards(card, index) {
+var tinderContainer = document.querySelector('.tinder');
+
+initCards();
+init();
+
+function initCards() {
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
     newCards.forEach(function (card, index) {
@@ -16,48 +19,50 @@ function initCards(card, index) {
     tinderContainer.classList.add('loaded');
 }
 
-initCards();
-allCards.forEach(function (el) {
-    var hammertime = new Hammer(el);
+function init() {
+    var allCards = document.querySelectorAll('.tinder--card');
 
-    hammertime.on('pan', function (event) {
-        el.classList.add('moving');
-    });
+    allCards.forEach(function (el) {
+        var hammertime = new Hammer(el);
 
-    hammertime.on('pan', function (event) {
-        if (event.deltaX === 0) return;
-        if (event.center.x === 0 && event.center.y === 0) return;
-        if (event.target.classList.contains("noHammer")) return; //austin 20230928
-        if (event.target.style.zIndex != 0) return; //austin 20230929
+        hammertime.on('pan', function (event) {
+            el.classList.add('moving');
+        });
 
-        tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
-        tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
+        hammertime.on('pan', function (event) {
+            if (event.deltaX === 0) return;
+            if (event.center.x === 0 && event.center.y === 0) return;
+            if (event.target.classList.contains("noHammer")) return; //austin 20230928
+            if (event.target.style.zIndex != 0) return; //austin 20230929
 
-        var xMulti = event.deltaX * 0.03;
-        var yMulti = event.deltaY / 80;
-        var rotate = xMulti * yMulti;
+            tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
+            tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
 
-        event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
-    });
+            var xMulti = event.deltaX * 0.03;
+            var yMulti = event.deltaY / 80;
+            var rotate = xMulti * yMulti;
 
-    hammertime.on('panend', function (event) {
-        if (event.target.classList.contains("noHammer")) return; //austin 20230928
-        if (event.target.style.zIndex != 0) return; //austin 20230929
+            event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
+        });
 
-        el.classList.remove('moving');
-        tinderContainer.classList.remove('tinder_love');
-        tinderContainer.classList.remove('tinder_nope');
+        hammertime.on('panend', function (event) {
+            if (event.target.classList.contains("noHammer")) return; //austin 20230928
+            if (event.target.style.zIndex != 0) return; //austin 20230929
 
-        var moveOutWidth = document.body.clientWidth;
-        var keep = 0;
-        // var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5
+            el.classList.remove('moving');
+            tinderContainer.classList.remove('tinder_love');
+            tinderContainer.classList.remove('tinder_nope');
 
-        event.target.classList.toggle('removed', !keep);
-        event.target.remove(); //austin 20230928
+            var moveOutWidth = document.body.clientWidth;
+            var keep = 0;
+            // var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5
 
-        if (keep) {
-            event.target.style.transform = '';
-        } else {
+            event.target.classList.toggle('removed', !keep);
+            event.target.remove(); //austin 20230928
+
+            /* if (keep) {
+                event.target.style.transform = '';
+            } else { */
             var endX = Math.max(Math.abs(event.velocityX) * moveOutWidth, moveOutWidth);
             var toX = event.deltaX > 0 ? endX : -endX;
             var endY = Math.abs(event.velocityY) * moveOutWidth;
@@ -68,11 +73,28 @@ allCards.forEach(function (el) {
 
             event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
             initCards();
-        }
-    });
-});
 
-function createButtonListener(love) {
+            //}
+            allCards = document.querySelectorAll('.tinder--card');
+            if (allCards.length < 4) {
+                $.ajax({
+                    type: "GET",
+                    url: "/home_update",
+                    data: {},
+                    success: function (newData) {
+                        $('.tinder--cards').html(newData);
+                        initCards();
+                        init();
+                    }
+                });
+            }
+        });
+    });
+}
+
+
+
+/* function createButtonListener(love) {
     return function (event) {
         var cards = document.querySelectorAll('.tinder--card:not(.removed)');
         var moveOutWidth = document.body.clientWidth * 1.5;
@@ -92,7 +114,7 @@ function createButtonListener(love) {
 
         event.preventDefault();
     };
-}
+} */
 
 //var nopeListener = createButtonListener(false);
 //var loveListener = createButtonListener(true);

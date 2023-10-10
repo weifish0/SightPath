@@ -308,39 +308,32 @@ def competition_info(request, pk):
     context = {"competition": competition, "tags": tags}
     return render(request, "base/competition_info.html", context)
 
-""" 
-def home_page(request):
-    return render(request, "base/home_page.html")
- """
-
-def home_page(request):
-    competition_tags = CompetitionTag.objects.all()
-    
-    # competition_tag為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
-    competition_category = request.GET.get("competition_category")
-    q = request.GET.get("q") if request.GET.get("q") != None else ""
-
-    # 有competition_tag參數則優先使用topic_category進行搜索
-    if competition_category != None:
-        competitions = Competition.objects.filter(Q(tags__tag_name__exact=competition_category))
-    else:
-        #TODO: 改進搜索功能
-        #TODO: 進階搜索功能
-        competitions = Competition.objects.filter(Q(name__icontains=q)
-                                                | Q(organizer_title__icontains=q))
-        
-        #randomly pick 10~30 elements
-        valid_id_list = list(competitions.values_list('id', flat=True))
-        random_id_list = random.sample(valid_id_list, min(len(valid_id_list), random.randint(10,30)))
-        competitions = competitions.filter(id__in=random_id_list)
-
-
-    competitions_count = competitions.count()
-    
-    context = {"competitions": competitions, "competition_tags": competition_tags, "competitions_count": competitions_count, "competition_category": competition_category}
-    return render(request, "base/home_page.html", context)
-
-
 
 def about(request):
     return render(request, "base/about.html")
+
+
+
+def home_page(request):
+    return render(request, "base/home_page.html", rand_context())
+
+def home_update(request):
+    return render(request, "base/tinder_card.html", rand_context())
+
+
+def rand_context():
+    competition_tags = CompetitionTag.objects.all()
+    
+    competitions = Competition.objects.filter(Q(name__icontains="")
+                                                | Q(organizer_title__icontains=""))
+
+    #randomly pick 30 elements
+    valid_id_list = list(competitions.values_list('id', flat=True))
+    random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 30))
+    competitions = competitions.filter(id__in=random_id_list)
+
+    competitions_count = competitions.count()
+    
+    return {"competitions": competitions,
+            "competition_tags": competition_tags,
+            "competitions_count": competitions_count}
