@@ -5,9 +5,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
-from .models import Room,Topic, Message, User, Competition, CompetitionTag, Activities
+from .models import *
 from .forms import RoomForm, UserForm, CustomUserCreationForm
 import random
+from django.http import JsonResponse
+from django.forms.models import model_to_dict
+from django.core import serializers
+import json
 
 """
 目標
@@ -281,7 +285,7 @@ def edit_profile(request, pk):
 ##### need to sync with def home_page
 def find_competitions(request):
     competition_tags = CompetitionTag.objects.all()
-    
+
     # competition_tag為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
     competition_category = request.GET.get("competition_category")
     q = request.GET.get("q") if request.GET.get("q") != None else ""
@@ -313,6 +317,9 @@ def about(request):
     return render(request, "base/about.html")
 
 
+def competition_vec(request, pk):
+    competition = Competition.objects.get(id=pk)
+    return JsonResponse({"emb": competition.emb}, safe=False)
 
 def home_page(request):
     return render(request, "base/home_page.html", rand_context())

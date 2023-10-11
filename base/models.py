@@ -65,7 +65,7 @@ class CompetitionTag(models.Model):
         
     def __str__(self):
         return f"{self.tag_name}"
-
+    
 
 class Competition(models.Model):
     name = models.TextField()
@@ -85,7 +85,8 @@ class Competition(models.Model):
     limit_highschool = models.BooleanField(null=True)
     limit_none = models.BooleanField(null=True)
     limit_other = models.BooleanField(null=True)
-    
+    emb = models.CharField(max_length=800)
+
     def __str__(self):
         return f"{self.name}"
 
