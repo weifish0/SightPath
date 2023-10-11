@@ -40,7 +40,7 @@ if the RENDER environment variable is present in the application environment
 # if you are in development, add "DEV" variable into your .env file
 DEBUG = 'DEV' in os.environ
 
-"""
+
 if 'loaddata' in sys.argv:
     # is database used sqlite3?
     # disable sqlite foreign key checks
@@ -49,8 +49,9 @@ if 'loaddata' in sys.argv:
     def disable_foreign_keys(sender, connection, **kwargs):
         cursor = connection.cursor()
         cursor.execute('PRAGMA foreign_keys=OFF;')
+        cursor.execute('PRAGMA legacy_alter_table = ON')
     connection_created.connect(disable_foreign_keys)
-"""
+
 
 
 if "DEV" not in os.environ:

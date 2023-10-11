@@ -20,6 +20,7 @@ urlpatterns = [
 
     path("", views.home_page, name="home_page"),
     path("home_update/", views.home_update, name="home_update"),
+    path("competition_vec/<str:pk>", views.competition_vec, name="competition_vec"),
    
 
     path("about/", views.about, name="about"),
