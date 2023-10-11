@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Topic, Message, Competition, User, CompetitionTag, Activities
+from .models import *
 
 
 class UserAdmin(admin.ModelAdmin):

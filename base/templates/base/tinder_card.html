@@ -1,5 +1,5 @@
 {% for competition in competitions %}
-<div class="tinder--card">
+<div class="tinder--card" id="{{competition.id}}">
     <h4>
         <a class="text-info noHammer" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
     </h4>

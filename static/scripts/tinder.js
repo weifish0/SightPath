@@ -6,6 +6,32 @@ var tinderContainer = document.querySelector('.tinder');
 initCards();
 init();
 
+function storeData(id, is_love) {
+    const request = indexedDB.open("model_data");
+    request.onsuccess = function (e) {
+        //console.log("f")
+        let db = e.target.result;
+        let items;
+        // get an object store to operate on it
+        if (is_love) {
+            let transaction = db.transaction("love", "readwrite"); // (1)
+            items = transaction.objectStore("love"); // (2)
+        }
+        else {
+            let transaction = db.transaction("nope", "readwrite"); // (1)
+            items = transaction.objectStore("nope");
+        }
+        let suc = items.put(id, id);
+        //items.add(8);
+
+        db.close();
+    };
+    /*   if (!db.objectStoreNames.contains('books')) { // if there's no "books" store
+          db.createObjectStore('books', {keyPath: 'id'}); // create it
+      } */
+}
+
+
 function initCards() {
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
@@ -22,7 +48,40 @@ function initCards() {
 function init() {
     var allCards = document.querySelectorAll('.tinder--card');
 
+    const request = indexedDB.open("model_data");
+    request.onupgradeneeded = function (e) {
+        db = e.target.result;
+        console.log('running onupgradeneeded');
+        const store_love = db.createObjectStore('love');
+        const store_nope = db.createObjectStore('nope');
+    };
+    request.onsuccess = function (e) {
+        let db = e.target.result;
+        let transaction = db.transaction("love", "readwrite"); // (1)
+        let items = transaction.objectStore("love");
+
+        let records = items.getAll()
+        records.onsuccess = function() {
+            console.log(records.result);
+        };
+        
+        db.close();
+    };
+    
+
+
     allCards.forEach(function (el) {
+        $.ajax({
+            type: "GET",
+            url: "/competition_vec/" + el.id.toString(),
+            dataType: 'json',
+            data: {},
+            success: function (newData) {
+                //console.log(newData)
+            }
+        });
+
+
         var hammertime = new Hammer(el);
 
         hammertime.on('pan', function (event) {
@@ -38,6 +97,7 @@ function init() {
             tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
             tinderContainer.classList.toggle('tinder_nope', event.deltaX < 0);
 
+
             var xMulti = event.deltaX * 0.03;
             var yMulti = event.deltaY / 80;
             var rotate = xMulti * yMulti;
@@ -50,8 +110,15 @@ function init() {
             if (event.target.style.zIndex != 0) return; //austin 20230929
 
             el.classList.remove('moving');
-            tinderContainer.classList.remove('tinder_love');
-            tinderContainer.classList.remove('tinder_nope');
+
+            if (tinderContainer.classList.contains('tinder_love')){
+                tinderContainer.classList.remove('tinder_love');
+                storeData(event.target.id, true)
+            }
+            else {
+                tinderContainer.classList.remove('tinder_nope');
+                storeData(event.target.id, false)
+            }
 
             var moveOutWidth = document.body.clientWidth;
             var keep = 0;
