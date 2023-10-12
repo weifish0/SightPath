@@ -33,6 +33,27 @@ function storeData(id, is_love) {
 
 
 function initCards() {
+    var firstCard = document.querySelectorAll('.tinder--card:first-child')[0];
+    $.ajax({
+        type: "GET",
+        url: "/competition_vec/" + firstCard.id.toString(),
+        dataType: 'json',
+        data: {},
+        success: function (newData) {
+            const request = indexedDB.open("model_data");
+            request.onsuccess = function (e) {
+                let db = e.target.result;
+                let transaction = db.transaction("tmp", "readwrite"); // (1)
+                let items = transaction.objectStore("tmp");
+
+                let suc = items.add(newData, firstCard.id);
+                db.close();
+            };
+        }
+    });
+
+
+
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
 
     newCards.forEach(function (card, index) {
@@ -48,40 +69,14 @@ function initCards() {
 function init() {
     var allCards = document.querySelectorAll('.tinder--card');
 
-    const request = indexedDB.open("model_data");
-    request.onupgradeneeded = function (e) {
-        db = e.target.result;
-        console.log('running onupgradeneeded');
-        const store_love = db.createObjectStore('love');
-        const store_nope = db.createObjectStore('nope');
-    };
-    request.onsuccess = function (e) {
-        let db = e.target.result;
-        let transaction = db.transaction("love", "readwrite"); // (1)
-        let items = transaction.objectStore("love");
-
-        let records = items.getAll()
-        records.onsuccess = function() {
-            console.log(records.result);
-        };
-        
-        db.close();
-    };
-    
+    getData("love").then(function(result){
+        /* console.log("test-love:");
+        console.log(result); */
+    });
+    train();
 
 
     allCards.forEach(function (el) {
-        $.ajax({
-            type: "GET",
-            url: "/competition_vec/" + el.id.toString(),
-            dataType: 'json',
-            data: {},
-            success: function (newData) {
-                //console.log(newData)
-            }
-        });
-
-
         var hammertime = new Hammer(el);
 
         hammertime.on('pan', function (event) {
@@ -111,7 +106,7 @@ function init() {
 
             el.classList.remove('moving');
 
-            if (tinderContainer.classList.contains('tinder_love')){
+            if (tinderContainer.classList.contains('tinder_love')) {
                 tinderContainer.classList.remove('tinder_love');
                 storeData(event.target.id, true)
             }
@@ -158,7 +153,6 @@ function init() {
         });
     });
 }
-
 
 
 /* function createButtonListener(love) {
