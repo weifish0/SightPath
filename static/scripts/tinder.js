@@ -46,6 +46,27 @@ async function predict(id) {
 
 function initCards() {
     var firstCard = document.querySelectorAll('.tinder--card:first-child')[0];
+
+    if (firstCard == null) {
+        $.ajax({
+            type: "GET",
+            url: "/home_update",
+            data: {},
+            success: async function (newData) {
+                //var rm = await tf.io.removeModel('indexeddb://model');
+                var request = indexedDB.deleteDatabase("model_data");
+                request.onsuccess = function (e) {
+                    console.log("deleted  model_data successfully")
+                }
+
+                console.log("null")
+                $('.tinder--cards').html(newData);
+                initCards();
+                init();
+            }
+        });
+    }
+
     $.ajax({
         type: "GET",
         url: "/competition_vec/" + firstCard.id.toString(),
@@ -74,25 +95,6 @@ function initCards() {
 
 
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
-    if (newCards.length == 0) {
-        $.ajax({
-            type: "GET",
-            url: "/home_update",
-            data: {},
-            success: async function (newData) {
-                var rm = await tf.io.removeModel('indexeddb://model');
-                var req = indexedDB.deleteDatabase("model_data");
-                req.onsuccess = function (e) {
-                    console.log("deleted  model_data successfully")
-                }
-
-                $('.tinder--cards').html(newData);
-                initCards();
-                init();
-            }
-        });
-    }
-
     newCards.forEach(function (card, index) {
         card.style.zIndex = -index; // allCards.length - index
         card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
