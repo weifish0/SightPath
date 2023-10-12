@@ -319,7 +319,7 @@ def about(request):
 
 def competition_vec(request, pk):
     competition = Competition.objects.get(id=pk)
-    return JsonResponse({"emb": competition.emb}, safe=False)
+    return JsonResponse({"emb": competition.emb})
 
 def home_page(request):
     return render(request, "base/home_page.html", rand_context())
