@@ -2,6 +2,7 @@
 //var love = document.getElementById('love');
 
 var tinderContainer = document.querySelector('.tinder');
+const shape = 768;
 
 initCards();
 init();
@@ -31,6 +32,17 @@ function storeData(id, is_love) {
       } */
 }
 
+async function predict(id) {
+    let tmp_emb = await getData("tmp", id);
+    try {
+        const model = await tf.loadLayersModel('indexeddb://model');
+        tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1,shape]);
+
+        return model.predict(tensor).dataSync()[0];
+    } catch (error) {
+        return -10;
+    }
+}
 
 function initCards() {
     var firstCard = document.querySelectorAll('.tinder--card:first-child')[0];
@@ -41,17 +53,20 @@ function initCards() {
         data: {},
         success: function (newData) {
             const request = indexedDB.open("model_data");
-            request.onsuccess = function (e) {
+            request.onsuccess = async function (e) {
                 let db = e.target.result;
                 let transaction = db.transaction("tmp", "readwrite"); // (1)
                 let items = transaction.objectStore("tmp");
 
                 let suc = items.add(newData, firstCard.id);
                 db.close();
+
+                /////////////////
+                let score = await predict(firstCard.id);
+                console.log(score)
             };
         }
     });
-
 
 
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
@@ -69,10 +84,10 @@ function initCards() {
 function init() {
     var allCards = document.querySelectorAll('.tinder--card');
 
-    getData("love").then(function(result){
-        /* console.log("test-love:");
-        console.log(result); */
-    });
+    /* getData("love").then(function(result){
+        console.log("test-love:");
+        console.log(result);
+    }); */
     train();
 
 
