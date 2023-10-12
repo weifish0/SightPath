@@ -19,7 +19,7 @@ function getData(string, id = "no") {
 
             records.onsuccess = function () {
                 let love = records.result;
-                resolve(love)
+                resolve(love);
             };
             db.close();
         }
@@ -32,16 +32,16 @@ async function train() {
     let love = await getData("love");
     let nope = await getData("nope");
     let tmp_emb;
-    let love_emb = [];
-    let nope_emb = [];
+    let emb = [];
 
+    //console.log(nope.length);
     for (let i = 0; i < love.length; i++) {
         tmp_emb = await getData("tmp", love[i]);
-        love_emb.push(JSON.parse(tmp_emb["emb"]))
+        emb.push(JSON.parse(tmp_emb["emb"]))
     }
     for (let i = 0; i < nope.length; i++) {
         tmp_emb = await getData("tmp", nope[i]);
-        nope_emb.push(JSON.parse(tmp_emb["emb"]))
+        emb.push(JSON.parse(tmp_emb["emb"]))
     }
 
     let model;
@@ -68,22 +68,16 @@ async function train() {
 
 
     for (let i = 0; i < epoch_num; i++) {
+        let pos = tf.fill([love.length, 1], 1);
+        let neg = tf.fill([nope.length, 1], -1);
+
         const h = await model.fit(
-            tf.tensor(love_emb),
-            tf.fill([love_emb.length, 1], 1), {
+            tf.tensor(emb),
+            tf.concat([pos, neg], axis=0), {
             batchSize: 4,
             epochs: 3
         });
         console.log("love Loss after Epoch " + i + " : " + h.history.loss[0]);
-    }
-    for (let i = 0; i < epoch_num; i++) {
-        const h = await model.fit(
-            tf.tensor(nope_emb),
-            tf.fill([nope_emb.length, 1], -1), {
-            batchSize: 4,
-            epochs: 3
-        });
-        console.log("nope Loss after Epoch " + i + " : " + h.history.loss[0]);
     }
 
     const saveResults = await model.save('indexeddb://model');

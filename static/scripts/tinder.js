@@ -36,11 +36,11 @@ async function predict(id) {
     let tmp_emb = await getData("tmp", id);
     try {
         const model = await tf.loadLayersModel('indexeddb://model');
-        tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1,shape]);
+        tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1, shape]);
 
         return model.predict(tensor).dataSync()[0];
     } catch (error) {
-        return -10;
+        return "err";
     }
 }
 
@@ -63,13 +63,35 @@ function initCards() {
 
                 /////////////////
                 let score = await predict(firstCard.id);
-                console.log(score)
+                console.log(firstCard.id, score)
+                if (score < 0) {
+                    firstCard.remove();
+                    initCards();
+                }
             };
         }
     });
 
 
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
+    if (newCards.length == 0) {
+        $.ajax({
+            type: "GET",
+            url: "/home_update",
+            data: {},
+            success: async function (newData) {
+                var rm = await tf.io.removeModel('indexeddb://model');
+                var req = indexedDB.deleteDatabase("model_data");
+                req.onsuccess = function (e) {
+                    console.log("deleted  model_data successfully")
+                }
+
+                $('.tinder--cards').html(newData);
+                initCards();
+                init();
+            }
+        });
+    }
 
     newCards.forEach(function (card, index) {
         card.style.zIndex = -index; // allCards.length - index
