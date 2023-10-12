@@ -334,9 +334,9 @@ def rand_context():
     competitions = Competition.objects.filter(Q(name__icontains="")
                                                 | Q(organizer_title__icontains=""))
 
-    #randomly pick 30 elements
+    #randomly pick 50 elements
     valid_id_list = list(competitions.values_list('id', flat=True))
-    random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 30))
+    random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 50))
     competitions = competitions.filter(id__in=random_id_list)
 
     competitions_count = competitions.count()
