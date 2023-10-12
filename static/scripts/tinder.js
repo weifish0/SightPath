@@ -53,7 +53,7 @@ function initCards() {
             url: "/home_update",
             data: {},
             success: async function (newData) {
-                //var rm = await tf.io.removeModel('indexeddb://model');
+                var rm = await tf.io.removeModel('indexeddb://model');
                 var request = indexedDB.deleteDatabase("model_data");
                 request.onsuccess = function (e) {
                     console.log("deleted  model_data successfully")
