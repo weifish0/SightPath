@@ -3,6 +3,7 @@
 
 var tinderContainer = document.querySelector('.tinder');
 const shape = 768;
+let score_cnt = 0;
 
 initCards();
 init();
@@ -44,28 +45,24 @@ async function predict(id) {
     }
 }
 
+function loadCards() {
+    $.ajax({
+        type: "GET",
+        url: "/home_update",
+        data: {},
+        success: async function (newData) {
+            console.log("null")
+            $('.tinder--cards').html(newData);
+            initCards();
+            init();
+        }
+    });
+}
+
 function initCards() {
     var firstCard = document.querySelectorAll('.tinder--card:first-child')[0];
 
-    if (firstCard == null) {
-        $.ajax({
-            type: "GET",
-            url: "/home_update",
-            data: {},
-            success: async function (newData) {
-                var rm = await tf.io.removeModel('indexeddb://model');
-                var request = indexedDB.deleteDatabase("model_data");
-                request.onsuccess = function (e) {
-                    console.log("deleted  model_data successfully")
-                }
-
-                console.log("null")
-                $('.tinder--cards').html(newData);
-                initCards();
-                init();
-            }
-        });
-    }
+    if (firstCard == null) loadCards();
 
     $.ajax({
         type: "GET",
@@ -86,16 +83,33 @@ function initCards() {
                 let score = await predict(firstCard.id);
                 console.log(firstCard.id, score)
                 if (score < 0) {
+                    score_cnt++;
+                    if (score_cnt >= 15) {
+                        var rm = await tf.io.removeModel('indexeddb://model');
+                        var request = indexedDB.deleteDatabase("model_data");
+                        request.onsuccess = function (e) {
+                            console.log("deleted  model_data successfully")
+                        }
+
+                        await getData("love");
+                    }
+                    
                     firstCard.remove();
                     initCards();
+                }
+                else {
+                    score_cnt = 0;
                 }
             };
         }
     });
 
 
+    firstCard.style.transition = "all 0.3s ease-in-out";
+
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
     newCards.forEach(function (card, index) {
+        //card.style.transition = "all 0.3s ease-in-out";
         card.style.zIndex = -index; // allCards.length - index
         card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
         if (index < 5) card.style.opacity = Math.pow(3, -index);
@@ -177,18 +191,7 @@ function init() {
 
             //}
             allCards = document.querySelectorAll('.tinder--card');
-            if (allCards.length < 4) {
-                $.ajax({
-                    type: "GET",
-                    url: "/home_update",
-                    data: {},
-                    success: function (newData) {
-                        $('.tinder--cards').html(newData);
-                        initCards();
-                        init();
-                    }
-                });
-            }
+            if (allCards.length < 4) loadCards();
         });
     });
 }
