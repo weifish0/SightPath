@@ -62,7 +62,10 @@ function loadCards() {
 function initCards() {
     var firstCard = document.querySelectorAll('.tinder--card:first-child')[0];
 
-    if (firstCard == null) loadCards();
+    if (firstCard == null) {
+        loadCards();
+        return;
+    }
 
     $.ajax({
         type: "GET",
