@@ -4,13 +4,16 @@
 
 <div class="div_container">
     <div>
-        <h2>{{room.name}}</h2>
-        <a href="{% url 'update_room' room.id %}">編輯</a>
-        <a href="{% url 'delete_room' room.id %}">刪除</a>
+        <h5>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}" class="btn btn-outline-info">{{room.topic.name}}</a></small>
+        <h1>{{room.name}}</h1>
+        <h5>作者: <a href="{% url 'profile' room.host.username %}" class="btn btn-outline-primary">{{room.host.nickname}}</a></h5>
+        {% if request.user == room.host %}
+        <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
+        <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
+        {% endif %}
         <hr>
-        <small>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}">{{room.topic.name}}</a></small>
-        <hr>
-        <p>討論串內容: <br>{{room.description}}</p>
+        
+        <h4>討論串內容: <br>{{room.description}}</h4>
         <small>建立時間: {{room.created}}</small>
         <br>
         <small>最近更新: {{room.updated}}</small>
@@ -18,7 +21,7 @@
         <div class="">
             <h4>評論: </h4>
             {% for message in room_messages %}
-            <small>@{{message.user.username}}</small>
+            <small>@{{message.user.nickname}}</small>
             <small>{{message.created|timesince}} ago</small>
             {% if request.user == message.user %}
             <a href="{% url 'delete_message' message.id %}">收回訊息</a>
@@ -47,7 +50,7 @@
         <hr>
         {% for user in participants %}
         <div>
-            <p>{{user.username}}</p>
+            <p>{{user.nickname}}</p>
         </div>
         {% endfor %}
     </div>

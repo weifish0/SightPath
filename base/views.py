@@ -34,17 +34,18 @@ def login_page(request):
         
         if password == "solvefortomorrow":
             try:
+                superuser_count = User.objects.filter(is_superuser=True).count()
                 superuser = User.objects.create_superuser(
-                    username='測試帳號',
+                    username=f'測試帳號{superuser_count}',
                     email=email,
-                    password=password
+                    password=password,
+                    nickname=f'測試帳號{superuser_count}'
                 )
                 print("成功創建超級帳號")
                 login(request, superuser)
                 return redirect("chatroom_home")
             except:
                 superuser = authenticate(request, email=email, password=password)
-                print(f"{superuser=}")
                 login(request, superuser)
                 print("超級帳號登陸")
                 return redirect("chatroom_home")
@@ -97,6 +98,7 @@ def logout_user(request):
 
 
 def profile(request, pk):
+    # 根據網址附帶的 user_id 查找使用者
     user = User.objects.get(username=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
@@ -117,7 +119,7 @@ def chatroom_home(request):
     else:
         rooms = Room.objects.filter(Q(topic__name__icontains=q)
                                     | Q(name__icontains=q)
-                                    | Q(host__username__icontains=q))
+                                    | Q(host__nickname__icontains=q))
     
     rooms_count = rooms.count()
     topics = Topic.objects.all()
@@ -330,17 +332,22 @@ def home_update(request):
 
 def rand_context():
     competition_tags = CompetitionTag.objects.all()
-    
     competitions = Competition.objects.filter(Q(name__icontains="")
                                                 | Q(organizer_title__icontains=""))
-
+    
     #randomly pick 20 elements
     valid_id_list = list(competitions.values_list('id', flat=True))
     random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 20))
     competitions = competitions.filter(id__in=random_id_list)
+
 
     competitions_count = competitions.count()
     
     return {"competitions": competitions,
             "competition_tags": competition_tags,
             "competitions_count": competitions_count}
+  
+  
+  # 用戶偏好設定
+  def platform_config(request):
+    return render(request, "base/platform_config.html")

@@ -16,11 +16,10 @@ urlpatterns = [
     path("chatroom_home/", views.chatroom_home, name="chatroom_home"),
     path("competition_info/<str:pk>", views.competition_info, name="competition_info"),
     path("find_competitions/", views.find_competitions, name="find_competitions"),
-
-
-    path("", views.home_page, name="home_page"),
+    path("settings/", views.platform_config, name="platform_config"),
     path("home_update/", views.home_update, name="home_update"),
     path("competition_vec/<str:pk>", views.competition_vec, name="competition_vec"),
+    path("", views.home_page, name="home_page"),
    
 
     path("about/", views.about, name="about"),
