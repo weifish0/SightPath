@@ -15,7 +15,7 @@
 
     <div>
         <h5>找到 {{rooms_count}} 個相關討論串</h5>
-        <a href="{% url 'create_room' %}?topic_category={{topic_category}}">建立討論串</a>
+        <a href="{% url 'create_room' %}?topic_category={{topic_category}}" class="btn btn-success">建立討論串</a>
         <hr>
         
         {% include "base/room_feed_component.html" %}
