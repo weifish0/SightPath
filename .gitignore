@@ -6,7 +6,7 @@ ngrok.exe
 *.pot
 *.pyc
 __pycache__
-db
+db.sqlite3
 media
 
 
