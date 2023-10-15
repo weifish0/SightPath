@@ -10,6 +10,7 @@ python manage.py migrate
 # python ./base/fixtures/competitions_fixture_generator.py
 python manage.py loaddata ./base/fixtures/tags_fixture.json
 python manage.py loaddata ./base/fixtures/competitions_fixture.json
+python manage.py loaddata ./base/fixtures/activities_fixture.json
 #########
 
 python manage.py collectstatic --no-input

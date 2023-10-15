@@ -4,7 +4,6 @@ import os
 from datetime import datetime, timezone
 
 def generate_fixture():
-    
     web_url = "https://api.bhuntr.com/cms/bhuntr/contest?language=tw&target=competition&limit=1000&page=1&sort=mixed&keyword=&timeline=notEnded&identify=&prizeRange=none&location=taiwan&deadline=none&category=&canApplyCertificate=no"
 
     response = requests.get(web_url).text
@@ -55,10 +54,16 @@ def generate_fixture():
             url = data["officialUrl"]
             cover_img_url = data["coverImage"]["url"]
             
-            start_time_obj = datetime.fromtimestamp(data["startTime"])
-            end_time_obj = datetime.fromtimestamp(data['endTime'])
-            start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
-            end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S')  
+
+            start_time_str = "1984-01-01 00:00:00"
+            end_time_str = "1984-01-01 00:00:00"
+            if data["startTime"] is not None:
+                start_time_obj = datetime.fromtimestamp(data["startTime"])
+                start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
+            if data['endTime'] is not None:
+                end_time_obj = datetime.fromtimestamp(data['endTime'])
+                end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S') 
+            
             
             guide_line = data["guideline"]
             organizer_title = data["organizerTitle"]
@@ -96,9 +101,8 @@ def generate_fixture():
                                    "limit_none": limit_none,
                                    "limit_other": limit_other}})
             created_competitions.append(name)
-                    
-                    
-                    
+
+            
     print(f"共建立{len(created_tags)}個tag物件")
     print(f"共建立{len(created_competitions)}個competition物件")
     
@@ -110,6 +114,8 @@ def generate_fixture():
     with open(competitions_fixture_file_path, "w", encoding="utf-8") as fp:
         json.dump(output_competitions_fixture, fp, indent=2, ensure_ascii=False)         
         # file.write(json.dumps(output_fixtures, indent=2, ensure_ascii=False))       
+
+
 
 if __name__ == "__main__":
     generate_fixture()
