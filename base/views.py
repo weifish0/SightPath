@@ -12,6 +12,8 @@ from django.http import JsonResponse
 from django.forms.models import model_to_dict
 from django.core import serializers
 import json
+from dotenv import load_dotenv
+import os
 
 """
 目標
@@ -32,7 +34,8 @@ def login_page(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         
-        if password == "solvefortomorrow":
+        load_dotenv()
+        if password == os.getenv('superuser_key'):
             try:
                 superuser_count = User.objects.filter(is_superuser=True).count()
                 superuser = User.objects.create_superuser(
