@@ -349,5 +349,5 @@ def rand_context():
   
   
   # 用戶偏好設定
-  def platform_config(request):
+def platform_config(request):
     return render(request, "base/platform_config.html")
