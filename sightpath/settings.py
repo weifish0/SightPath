@@ -15,6 +15,7 @@ from dotenv import load_dotenv
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+import sys
 
 # load env
 load_dotenv()
@@ -39,18 +40,32 @@ if the RENDER environment variable is present in the application environment
 # if you are in development, add "DEV" variable into your .env file
 DEBUG = 'DEV' in os.environ
 
+
+if 'loaddata' in sys.argv:
+    # is database used sqlite3?
+    # disable sqlite foreign key checks
+    print("Loading data from fixtures - disabling foreign key checks")
+    from django.db.backends.signals import connection_created
+    def disable_foreign_keys(sender, connection, **kwargs):
+        cursor = connection.cursor()
+        cursor.execute('PRAGMA foreign_keys=OFF;')
+        cursor.execute('PRAGMA legacy_alter_table = ON')
+    connection_created.connect(disable_foreign_keys)
+
+
+
 if "DEV" not in os.environ:
-    ALLOWED_HOSTS = ["sightpath.tw", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
     CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 else:
     if "TEST_NGROK_URL" in os.environ:
         TEST_NGROK_URL = os.getenv("TEST_NGROK_URL")
         TEST_NGROK_HOST = TEST_NGROK_URL[TEST_NGROK_URL.index("//")+2:]
         
-        ALLOWED_HOSTS = ["127.0.0.1", "localhost", TEST_NGROK_HOST]
+        ALLOWED_HOSTS = ["192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST]
         CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL]
     else:
-        ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+        ALLOWED_HOSTS = ["192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost"]
 
 # Application definition
 
