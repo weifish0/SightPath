@@ -95,9 +95,6 @@ SOCIALACCOUNT_PROVIDERS = {
             "profile",
             "openid",
         ],
-        # "AUTH_PARAMS": {
-        #     "access_type": "online",
-        # }
     }
 }
 
@@ -131,7 +128,7 @@ ROOT_URLCONF = "sightpath.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/"templates"],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
