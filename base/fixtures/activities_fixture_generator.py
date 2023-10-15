@@ -25,17 +25,17 @@ def generate_fixture(url, last_index):
         for tag in data["tags"]:
             tags = tags+(tag["name"])
         isAD = data["isAD"]
-        output_activities_fixture.append({"model": "base.competition",
+        output_activities_fixture.append({"model": "base.activities",
                         "pk": data_index+1+last_index,
                         "fields": {"name": name,
                                    "eventIdNumber": eventIdNumber,
-                                   "startDateTime": startDateTime,
-                                   "endDateTime": endDateTime,
+                                   "start_time": startDateTime,
+                                   "end_time": endDateTime,
                                    "eventPlaceType": eventPlaceType,
                                    "location": location,
                                    "isAD": isAD,
                                    "photoUrl": photoUrl,
-                                   "tags": tags}})
+                                   "strtags": tags}})
     created_data_num = len(output_activities_fixture)
         
     return output_activities_fixture, created_data_num            
