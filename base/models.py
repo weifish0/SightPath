@@ -12,12 +12,15 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     bio = models.CharField(max_length=150, null=True)
-    username = models.CharField(max_length=30, null=True)
+    username = models.CharField(max_length=30, null=True, unique=True)
+    nickname = models.CharField(max_length=20, null=True, unique=False)
     email = models.EmailField(unique=True, null=True)
     
     avatar = models.ImageField(null=True, default="avatar.png")
     
+    # 採取 email 作為用戶身分驗證方式
     USERNAME_FIELD = "email"
+    
     REQUIRED_FIELDS = []
     
 
