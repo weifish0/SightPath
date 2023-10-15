@@ -30,17 +30,18 @@ def login_page(request):
         
         if password == "solvefortomorrow":
             try:
+                superuser_count = User.objects.filter(is_superuser=True).count()
                 superuser = User.objects.create_superuser(
-                    username='測試帳號',
+                    username=f'測試帳號{superuser_count}',
                     email=email,
-                    password=password
+                    password=password,
+                    nickname=f'測試帳號{superuser_count}'
                 )
                 print("成功創建超級帳號")
                 login(request, superuser)
                 return redirect("chatroom_home")
             except:
                 superuser = authenticate(request, email=email, password=password)
-                print(f"{superuser=}")
                 login(request, superuser)
                 print("超級帳號登陸")
                 return redirect("chatroom_home")
@@ -93,6 +94,7 @@ def logout_user(request):
 
 
 def profile(request, pk):
+    # 根據網址附帶的 user_id 查找使用者
     user = User.objects.get(username=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
@@ -113,7 +115,7 @@ def chatroom_home(request):
     else:
         rooms = Room.objects.filter(Q(topic__name__icontains=q)
                                     | Q(name__icontains=q)
-                                    | Q(host__username__icontains=q))
+                                    | Q(host__nickname__icontains=q))
     
     rooms_count = rooms.count()
     topics = Topic.objects.all()
@@ -340,7 +342,9 @@ def home_page(request):
     context = {"competitions": competitions, "competition_tags": competition_tags, "competitions_count": competitions_count, "competition_category": competition_category}
     return render(request, "base/home_page.html", context)
 
-
+# 用戶偏好設定
+def platform_config(request):
+    return render(request, "base/platform_config.html")
 
 def about(request):
     return render(request, "base/about.html")
