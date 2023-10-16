@@ -21,7 +21,7 @@
         <div class="">
             <h4>評論: </h4>
             {% for message in room_messages %}
-            <small>@{{message.user.nickname}}</small>
+            <small><a href="{% url 'profile' message.user.id %}">@{{message.user.nickname}}</a></small>
             <small>{{message.created|timesince}} ago</small>
             {% if request.user == message.user %}
             <a href="{% url 'delete_message' message.id %}">收回訊息</a>
@@ -50,7 +50,7 @@
         <hr>
         {% for user in participants %}
         <div>
-            <p>{{user.nickname}}</p>
+            <a href="{% url 'profile' user.id %}">{{user.nickname}}</a>
         </div>
         {% endfor %}
     </div>
