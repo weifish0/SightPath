@@ -53,7 +53,7 @@ class CustomUserManager(BaseUserManager):
         return self._create_user(email, password, nickname, **extra_fields)
 
 class User(AbstractBaseUser, PermissionsMixin):
-    bio = models.CharField(max_length=150, null=True, default='')
+    bio = models.CharField(max_length=150, null=True, default='', blank=True)
     nickname = models.CharField(max_length=20, null=True)
     email = models.EmailField(unique=True)
     avatar = models.ImageField(null=True, default="avatar.png")
@@ -73,7 +73,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         max_id = User.objects.aggregate(max_id=models.Max('id'))['max_id']
 
         if max_id == None:
-            max_id = 1
+            max_id = 0
         
         # 若用戶快捷登陸，則為用戶設置預設用戶名稱
         print(f'{self.nickname=}')
