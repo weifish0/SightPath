@@ -3,7 +3,7 @@
 {% for reply in myrooms_replies %}
 <div>
     <small>{{reply.created|timesince}} ago</small>
-    <small><a href="{% url 'profile' reply.user.username %}">{{reply.user.username}}</a>回覆了你的貼文:
+    <small><a href="{% url 'profile' reply.user.id %}">{{reply.user.nickname}}</a>回覆了你的貼文:
         <a href="{% url 'room' reply.room.id %}">{{reply.room.name}}</a>
     </small>
     <br>
