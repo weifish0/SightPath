@@ -30,6 +30,9 @@ def login_page(request):
     if request.user.is_authenticated:
         return redirect("chatroom_home")
     
+    # context中參數告訴template要渲染登入頁面    
+    context = {"page": "login"}
+    
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
@@ -59,7 +62,7 @@ def login_page(request):
             user = User.objects.get(email=email)
         except:
             messages.error(request, "帳號不存在")
-            return render(request, "base/login_register.html")
+            return render(request, "base/login_register.html", context)
         
         user = authenticate(request, email=email, password=password)
         if user is not None:
@@ -67,16 +70,13 @@ def login_page(request):
             return redirect("chatroom_home")
         else:
             messages.error(request, "密碼錯誤")
-            return render(request, "base/login_register.html")
-    
-    # context中參數告訴template要註冊頁面還是登入頁面    
-    context = {"page": "login"}
+            return render(request, "base/login_register.html", context)
     
     return render(request, "base/login_register.html", context)
 
 
 def register_page(request):
-    context = {"form": CustomUserCreationForm()}
+    context = {"form": CustomUserCreationForm(), "page": "register"}
     
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)

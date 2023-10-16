@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang="en">
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,12 @@
 
 <body>
     {% include "navbar.html" %}
+
+    {% block body %}
+
     {% block content %}{% endblock content %}
+    
+    {% endblock body %}
 
     {% block extra_body %}{% endblock extra_body %}
 
