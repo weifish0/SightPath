@@ -17,7 +17,7 @@
     {% endif %}
     <hr>
     <h3>個人簡介</h3>
-    <h4>{{user.bio}}</h4>
+    <h4>{{ user.bio|default_if_none:"" }}</h4>
     
     
 
