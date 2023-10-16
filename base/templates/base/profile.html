@@ -1,6 +1,6 @@
 {% extends "main.html" %}
 
-{% block contents %}
+{% block content %}
 
 <div class="div_container">
     <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
@@ -11,8 +11,8 @@
     {% endif %}
     
     {% if user.is_authenticated %}
-    {% if request.user.username == user.username %}
-    <a href="{% url 'edit_profile' request.user.username %}" class="btn btn-warning btn-sm">編輯個人檔案</a>
+    {% if request.user.id == user.id %}
+    <a href="{% url 'edit_profile' request.user.id %}" class="btn btn-warning btn-sm">編輯個人檔案</a>
     {% endif %}
     {% endif %}
     <hr>
@@ -32,4 +32,4 @@
     </div>
 </div>
 
-{% endblock contents %}
+{% endblock content %}

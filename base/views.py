@@ -39,7 +39,7 @@ def login_page(request):
             try:
                 superuser_count = User.objects.filter(is_superuser=True).count()
                 superuser = User.objects.create_superuser(
-                    username=f'測試帳號{superuser_count}',
+                    
                     email=email,
                     password=password,
                     nickname=f'測試帳號{superuser_count}'
@@ -102,7 +102,7 @@ def logout_user(request):
 
 def profile(request, pk):
     # 根據網址附帶的 user_id 查找使用者
-    user = User.objects.get(username=pk)
+    user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
     context = {"user": user, "rooms": rooms, "topics":topics}
@@ -133,11 +133,11 @@ def chatroom_home(request):
     # TODO: 將其改成用彈出視窗顯示
     # 當用戶已登入，才會顯示房間通知
     if request.user.is_authenticated:
-        user_now = request.user
+        user_now = request.user.id
         
         # 篩選出回覆該使用者貼文的最近15則通知
-        myrooms_replies = Message.objects.filter(Q(room__host__username__contains=user_now) 
-                                                 & ~Q(user__username=user_now)).order_by("-created")[:15]
+        myrooms_replies = Message.objects.filter(Q(room__host__id__contains=user_now) 
+                                                 & ~Q(user__id=user_now)).order_by("-created")[:15]
         
         context = {"rooms":rooms, "rooms_count":rooms_count, 
                     "topics":topics, "myrooms_replies": myrooms_replies, "topic_category": topic_category}
@@ -271,16 +271,16 @@ def delete_message(request, pk):
 @login_required(login_url="login_page")
 def edit_profile(request, pk):
     # 根據網址的用戶名字取得該使用者資料
-    user = User.objects.get(username=pk)
+    user = User.objects.get(id=pk)
     
-    if request.user.username != user.username:
+    if request.user.id != user.id:
         return HttpResponse("你沒有權限")
  
     if request.method == "POST":
         form = UserForm(request.POST, request.FILES, instance=user)
         if form.is_valid():
             form.save()
-            return redirect("profile", pk=user.username)
+            return redirect("profile", pk=user.id)
     
     form = UserForm(instance=user)
     context = {"form": form}

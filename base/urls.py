@@ -1,11 +1,13 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
-
 urlpatterns = [
+    # 帳號登入
+    path('accounts/', include('allauth.urls')),
     path("login/", views.login_page, name="login_page"),
     path("regitster/", views.register_page, name="register_page"),
     path("logout/", views.logout_user, name="logout_user"),
+    
     path("profile/<str:pk>/", views.profile, name="profile"),
     path("room/<str:pk>/", views.room, name="room"),
     path("create_room/", views.create_room, name="create_room"),

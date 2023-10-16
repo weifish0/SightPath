@@ -1,6 +1,6 @@
 {% extends "main.html" %}
 
-{% block contents %}
+{% block content %}
 
 {% if request.user.is_authenticated %}
 <p>hello {{request.user.username}}~</p>
@@ -16,4 +16,4 @@
     </div>
 </div>
 
-{% endblock contents %}
+{% endblock content %}

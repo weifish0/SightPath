@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
+from django.utils.translation import gettext_lazy as _
 
 #  用此指令可取得當前資料
 # python .\manage.py dumpdata base > data_fixture.json
@@ -9,19 +10,75 @@ from django.contrib.auth.models import AbstractUser
 # python3 manage.py loaddata ./base/fixtures/tags_fixture.json
 # python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
 
+class CustomUserManager(BaseUserManager):
+    """定義一個沒有username field 的model manager"""
 
-class User(AbstractUser):
-    bio = models.CharField(max_length=150, null=True)
-    username = models.CharField(max_length=30, null=True, unique=True)
-    nickname = models.CharField(max_length=20, null=True, unique=False)
-    email = models.EmailField(unique=True, null=True)
-    
+    use_in_migrations = True
+
+    def _create_user(self, email, password, nickname, **extra_fields):
+        """透過email和password創建帳號"""
+        if not email:
+            raise ValueError('The given email must be set')
+        if not password:
+            raise ValueError('Password is not provided')
+        
+        user = self.model(
+            email = self.normalize_email(email), 
+            nickname = nickname,
+            **extra_fields
+            )
+        
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+
+    def create_user(self, email, password, nickname, **extra_fields):
+        """透過密碼創建一個 regular user帳號"""
+        extra_fields.setdefault('is_staff', False)
+        extra_fields.setdefault('is_active', True)
+        extra_fields.setdefault('is_superuser', False)
+        return self._create_user(email, password, nickname, **extra_fields)
+
+    def create_superuser(self, email, password, nickname, **extra_fields):
+        """透過密碼創建一個 super user帳號"""
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_active', True)
+        extra_fields.setdefault('is_superuser', True)
+
+        if extra_fields.get('is_staff') is not True:
+            raise ValueError('Superuser must have is_staff=True.')
+        if extra_fields.get('is_superuser') is not True:
+            raise ValueError('Superuser must have is_superuser=True.')
+
+        return self._create_user(email, password, nickname, **extra_fields)
+
+class User(AbstractBaseUser, PermissionsMixin):
+    bio = models.CharField(max_length=150, null=True, default='')
+    nickname = models.CharField(max_length=20, default='')
+    email = models.EmailField(unique=True)
     avatar = models.ImageField(null=True, default="avatar.png")
+        
+    is_staff = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
+    is_superuser = models.BooleanField(default=False)
     
+    objects = CustomUserManager()
+        
     # 採取 email 作為用戶身分驗證方式
     USERNAME_FIELD = "email"
-    
     REQUIRED_FIELDS = []
+    
+    def save(self, *args, **kwargs):
+        # 獲取當前模型的最大ID索引值
+        max_id = User.objects.aggregate(max_id=models.Max('id'))['max_id']
+
+        # 設置用戶名稱
+        self.nickname = f"第{max_id}位使用者"
+        super(User, self).save(*args, **kwargs)
+    
+    class Meta:
+        verbose_name = 'User'
+        verbose_name_plural = 'Users'
     
 
 class Topic(models.Model):
@@ -34,9 +91,9 @@ class Room(models.Model):
     class Meta:
         # 資料庫的索引順序，會優先按照updated排，相同updated則按照created排序，-可以讓該資料變為倒序，也就是最近更新的會在第一個
         ordering = ["-updated", "-created"]
-    # 刪除使用者時不刪除該房間, 將值設為 null
+    # 刪除user時不刪除該room, 將值設為 null
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    # 刪除話題時不刪除該房間, 將值設為 null
+    # 刪除topic時不刪除該room, 將值設為 null
     topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     name = models.CharField(max_length=50)
     description = models.TextField(null=True, blank=True)
@@ -88,7 +145,7 @@ class Competition(models.Model):
     limit_highschool = models.BooleanField(null=True)
     limit_none = models.BooleanField(null=True)
     limit_other = models.BooleanField(null=True)
-    emb = models.CharField(max_length=800)
+    emb = models.CharField(max_length=800, null=True)
 
     def __str__(self):
         return f"{self.name}"

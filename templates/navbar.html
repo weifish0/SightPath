@@ -21,7 +21,7 @@
             設定
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{% url 'profile' request.user.username %}">個人檔案</a></li>
+            <li><a class="dropdown-item" href="{% url 'profile' request.user.id %}">個人檔案</a></li>
             <li><a class="dropdown-item" href="{% url 'platform_config' %}">系統設定</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
