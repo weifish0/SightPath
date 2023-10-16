@@ -82,7 +82,7 @@ def register_page(request):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect("chatroom_home")
         # TODO: 補充註冊錯誤的原因提示
         
