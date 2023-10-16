@@ -1,11 +1,12 @@
 {% extends "main.html" %}
 
-{% block contents %}
+{% block content %}
 
 <br>
 <br>
 <br>
-
+<br>
+<br>
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
@@ -19,4 +20,4 @@
     <button type="submit" class="btn btn-primary">確定</button>
 </form>
 
-{% endblock contents %}
+{% endblock content %}

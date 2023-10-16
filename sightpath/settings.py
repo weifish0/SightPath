@@ -113,6 +113,13 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
 # 使用者使用 line login完成後回到主畫面
 LOGIN_REDIRECT_URL = "/"
 
