@@ -76,8 +76,6 @@ class User(AbstractBaseUser, PermissionsMixin):
             max_id = 0
         
         # 若用戶快捷登陸，則為用戶設置預設用戶名稱
-        print(f'{self.nickname=}')
-        print(f'{max_id=}')
         if self.nickname == None:
             self.nickname = f"第{max_id+1}位使用者"
         super(User, self).save(*args, **kwargs)
