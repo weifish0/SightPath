@@ -54,7 +54,7 @@ class CustomUserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     bio = models.CharField(max_length=150, null=True, default='')
-    nickname = models.CharField(max_length=20, default='')
+    nickname = models.CharField(max_length=20, null=True)
     email = models.EmailField(unique=True)
     avatar = models.ImageField(null=True, default="avatar.png")
         
@@ -72,8 +72,14 @@ class User(AbstractBaseUser, PermissionsMixin):
         # 獲取當前模型的最大ID索引值
         max_id = User.objects.aggregate(max_id=models.Max('id'))['max_id']
 
-        # 設置用戶名稱
-        self.nickname = f"第{max_id}位使用者"
+        if max_id == None:
+            max_id = 1
+        
+        # 若用戶快捷登陸，則為用戶設置預設用戶名稱
+        print(f'{self.nickname=}')
+        print(f'{max_id=}')
+        if self.nickname == None:
+            self.nickname = f"第{max_id+1}位使用者"
         super(User, self).save(*args, **kwargs)
     
     class Meta:
