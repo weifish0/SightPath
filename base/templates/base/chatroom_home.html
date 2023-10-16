@@ -4,7 +4,7 @@
 {% block content %}
 
 {% if request.user.is_authenticated %}
-<p>hello {{request.user.username}}~</p>
+<p>hello {{request.user.nickname}}~</p>
 {% endif %}
 
 <div class="div_container grid">
