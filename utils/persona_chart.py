@@ -3,7 +3,6 @@ import matplotlib
 from numpy import random
 import seaborn as sns
 
-# ref: https://proclusacademy.com/blog/customize_matplotlib_piechart/
 
 x = [67.98, 54.23, 40.67]
 x.extend(random.randint(1, 30, 14))
