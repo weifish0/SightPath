@@ -2,7 +2,7 @@
 //var love = document.getElementById('love');
 
 var tinderContainer = document.querySelector('.tinder');
-const shape = 768;
+const shape = 18; //768
 let score_cnt = 0;
 
 initCards();
@@ -39,6 +39,7 @@ async function predict(id) {
         const model = await tf.loadLayersModel('indexeddb://model');
         tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1, shape]);
 
+        // console.log(model.predict(tensor).dataSync());
         return model.predict(tensor).dataSync()[0];
     } catch (error) {
         return "err";
@@ -85,9 +86,9 @@ function initCards() {
                 /////////////////
                 let score = await predict(firstCard.id);
                 console.log(firstCard.id, score)
-                if (score < 0) {
+                if (score < 0.5) {
                     score_cnt++;
-                    if (score_cnt >= 15) {
+                    if (score_cnt >= 30) {
                         var rm = await tf.io.removeModel('indexeddb://model');
                         var request = indexedDB.deleteDatabase("model_data");
                         request.onsuccess = function (e) {
