@@ -55,10 +55,11 @@ async function train() {
         console.log("indexeddb model not loaded")
 
         model = tf.sequential({
-            layers: [tf.layers.dense({
-                units: 1,
-                inputShape: [shape]
-            })]
+            layers: [
+                tf.layers.dense({units: 128, inputShape: [shape]}),
+                tf.layers.dropout(0.2),
+                tf.layers.dense({units: 1, activation:"sigmoid"})
+            ]
         });
         model.compile({
             optimizer: 'adam',
@@ -69,7 +70,7 @@ async function train() {
 
     for (let i = 0; i < epoch_num; i++) {
         let pos = tf.fill([love.length, 1], 1);
-        let neg = tf.fill([nope.length, 1], -1);
+        let neg = tf.fill([nope.length, 1], 0);
 
         const h = await model.fit(
             tf.tensor(emb),
