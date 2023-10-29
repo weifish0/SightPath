@@ -1,6 +1,6 @@
 [
   {
-    "model": "base.activities",
+    "model": "base.activity",
     "pk": 1,
     "fields": {
       "name": "讀書會領讀人的引導技術課程(舉辦讀書會的技術)",
@@ -9,13 +9,15 @@
       "end_time": "2023-11-04T09:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 13,
+      "pageView": 1503,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309210107101888583207_P520x260.jpg",
-      "strtags": "讀書會帶領"
+      "mainTag": 11
     }
   },
   {
-    "model": "base.activities",
+    "model": "base.activity",
     "pk": 2,
     "fields": {
       "name": "【個人品牌課程】10大個人品牌獲利模式",
@@ -24,13 +26,15 @@
       "end_time": "2023-10-26T13:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 16,
+      "pageView": 593,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2308010418481094792418_P520x260.jpg",
-      "strtags": "社群媒體行銷"
+      "mainTag": 11
     }
   },
   {
-    "model": "base.activities",
+    "model": "base.activity",
     "pk": 3,
     "fields": {
       "name": "「ESG創新技術」能源科技專題",
@@ -54,9 +58,11 @@
       "end_time": "2023-11-03T13:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 3,
+      "pageView": 274,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2308301012211172110061_P520x260.jpg",
-      "strtags": "職場芳療"
+      "mainTag": 11
     }
   },
   {
@@ -774,6 +780,8 @@
       "end_time": "2023-11-02T13:30:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 2,
+      "pageView": 60,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2211030309144099449580_P520x260.jpg",
       "strtags": "短視頻"
@@ -879,14 +887,16 @@
       "end_time": "2023-12-26T13:30:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 11,
+      "pageView": 655,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2307251056201476335087_P520x260.jpg",
       "strtags": "一致性"
     }
   },
   {
-    "model": "base.activities",
-    "pk": 60,
+    "model": "base.activity",
+    "pk": 6,
     "fields": {
       "name": "※報名即贈一對一諮詢！【不限語言】星座學習法：12星座外語學習方法",
       "eventIdNumber": "2310020622061886023190",
@@ -894,6 +904,8 @@
       "end_time": "2023-10-29T07:30:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 10,
+      "pageView": 831,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310181129431390084388_P520x260.jpg",
       "strtags": "學習方法"
@@ -1734,9 +1746,11 @@
       "end_time": "2023-11-04T04:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 53,
+      "pageView": 3955,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2212091257332106112283_P520x260.jpg",
-      "strtags": "自然流量"
+      "mainTag": 11
     }
   },
   {
@@ -1749,9 +1763,11 @@
       "end_time": "2023-12-06T09:40:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 6,
+      "pageView": 242,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309260328101671587846_P520x260.jpg",
-      "strtags": "AI"
+      "mainTag": 11
     }
   },
   {
@@ -1764,9 +1780,11 @@
       "end_time": "2023-12-09T04:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 18,
+      "pageView": 665,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2305230918591791506030_P520x260.jpg",
-      "strtags": "社群"
+      "mainTag": 11
     }
   },
   {
@@ -1779,9 +1797,11 @@
       "end_time": "2023-11-27T14:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 0,
+      "pageView": 59,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2303030424341310976090_P520x260.jpg",
-      "strtags": "商標智財"
+      "mainTag": 11
     }
   },
   {
@@ -1854,6 +1874,8 @@
       "end_time": "2023-11-23T14:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 4,
+      "pageView": 71,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310010409161161671886_P520x260.jpg",
       "strtags": "零售"
@@ -2619,9 +2641,11 @@
       "end_time": "2023-11-26T09:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 13,
+      "pageView": 675,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310051007082891276010_P520x260.jpg",
-      "strtags": "職涯探索"
+      "mainTag": 11
     }
   },
   {
@@ -2664,6 +2688,8 @@
       "end_time": "2023-11-23T14:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 9,
+      "pageView": 171,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310010409161161671886_P520x260.jpg",
       "strtags": "零售"
@@ -3444,9 +3470,11 @@
       "end_time": "2023-11-12T09:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 3,
+      "pageView": 267,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310101418402075190640_P520x260.jpg",
-      "strtags": "自我成長"
+      "mainTag": 11
     }
   },
   {
@@ -3459,9 +3487,11 @@
       "end_time": "2023-10-28T09:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 9,
+      "pageView": 266,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309281135241948222040_P520x260.jpg",
-      "strtags": "商業"
+      "mainTag": 11
     }
   },
   {
@@ -3474,9 +3504,11 @@
       "end_time": "2023-11-23T14:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 1,
+      "pageView": 57,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310010409161161671886_P520x260.jpg",
-      "strtags": "零售"
+      "mainTag": 11
     }
   },
   {
@@ -3489,9 +3521,11 @@
       "end_time": "2023-12-20T13:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 5,
+      "pageView": 358,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310050606495692682640_P520x260.jpg",
-      "strtags": "攝影, 影像, 讀書會, 書展, 講座"
+      "mainTag": 11
     }
   },
   {
@@ -3504,9 +3538,11 @@
       "end_time": "2023-11-30T13:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 1,
+      "pageView": 60,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309201418553810725620_P520x260.jpg",
-      "strtags": "職場溝通"
+      "mainTag": 11
     }
   },
   {
@@ -3528,12 +3564,14 @@
     "model": "base.activities",
     "pk": 236,
     "fields": {
-      "name": "商周學院｜2023職場必修課 - 跨世代領導學",
-      "eventIdNumber": "2303160928418110920230",
-      "start_time": "2023-11-21T01:30:00",
-      "end_time": "2023-11-21T08:30:00",
+      "name": "玩美花趣-小小花藝師體驗學習營",
+      "eventIdNumber": "2310161449391752719071",
+      "start_time": "2023-11-11T05:30:00",
+      "end_time": "2023-11-12T06:50:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 9,
+      "pageView": 879,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2101060855531217976655_P520x260.jpg",
       "strtags": "職場溝通"
@@ -4344,9 +4382,11 @@
       "end_time": "2023-11-21T08:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 7,
+      "pageView": 208,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2101060855531217976655_P520x260.jpg",
-      "strtags": "職場溝通"
+      "mainTag": 11
     }
   },
   {
@@ -4389,6 +4429,8 @@
       "end_time": "2023-11-20T12:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 0,
+      "pageView": 35,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2307130113271741722552_P520x260.jpg",
       "strtags": "職場必備技能"
@@ -5184,9 +5226,11 @@
       "end_time": "2023-11-10T08:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 6,
+      "pageView": 221,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2302010912211787475803_P520x260.jpg",
-      "strtags": "COVID-FREE"
+      "mainTag": 11
     }
   },
   {
@@ -5199,6 +5243,8 @@
       "end_time": "2023-11-20T12:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 2,
+      "pageView": 99,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2307130113271741722552_P520x260.jpg",
       "strtags": "職場必備技能"
@@ -5244,6 +5290,8 @@
       "end_time": "2023-12-01T09:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 1,
+      "pageView": 1045,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310040936411346507684_P520x260.jpg",
       "strtags": "購物中心"
@@ -6024,6 +6072,8 @@
       "end_time": "2023-11-05T08:30:00",
       "eventPlaceType": "Offline",
       "location": "Taoyuan City",
+      "likeCount": 5,
+      "pageView": 190,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310130905262087717631_P520x260.jpg",
       "strtags": "電商"
@@ -6879,6 +6929,8 @@
       "end_time": "2023-11-21T09:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 4,
+      "pageView": 110,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310240637327697256750_P520x260.jpg",
       "strtags": "行銷年會"
@@ -6894,9 +6946,11 @@
       "end_time": "2023-11-06T07:30:00",
       "eventPlaceType": "Offline",
       "location": "New Taipei City",
+      "likeCount": 4,
+      "pageView": 3330,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309130412411205463480_P520x260.jpg",
-      "strtags": "髮型師"
+      "mainTag": 11
     }
   },
   {
@@ -6954,6 +7008,8 @@
       "end_time": "2023-12-16T04:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 4,
+      "pageView": 327,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310201648451757048613_P520x260.jpg",
       "strtags": "COVID-FREE"
@@ -7734,6 +7790,8 @@
       "end_time": "2023-11-18T08:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 1,
+      "pageView": 35,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/userupload/0adf4d26c2924dccbcbcf36ffa0608c6_P520x260.jpg",
       "strtags": "週休二日"
@@ -7788,27 +7846,31 @@
     "model": "base.activities",
     "pk": 520,
     "fields": {
-      "name": "【我是記者：優質內容與社會影響力】場次 2",
-      "eventIdNumber": "2310120847485436360730",
-      "start_time": "2023-11-11T06:00:00",
-      "end_time": "2023-11-11T07:30:00",
+      "name": "NLP感知位置：跳脫職場困境的溝通術",
+      "eventIdNumber": "2310201650187920751260",
+      "start_time": "2023-12-16T01:30:00",
+      "end_time": "2023-12-16T04:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 4,
+      "pageView": 27,
       "isAD": false,
-      "photoUrl": "https://static.accupass.com/eventbanner/2310121008041954460697_P520x260.jpg",
-      "strtags": "採訪"
+      "photoUrl": "https://static.accupass.com/eventbanner/2310201648451757048613_P520x260.jpg",
+      "mainTag": 11
     }
   },
   {
     "model": "base.activities",
     "pk": 521,
     "fields": {
-      "name": "【心理牌卡工作坊】用「人生設計卡」發展你的職場優勢能力",
-      "eventIdNumber": "2309190421141552165769",
-      "start_time": "2023-11-25T10:30:00",
-      "end_time": "2023-11-25T13:30:00",
+      "name": "【工作ｘ生活美學工作坊】企業創新實務做法讀書會＋日式茶道體驗",
+      "eventIdNumber": "2310130941471307401527",
+      "start_time": "2023-12-14T05:30:00",
+      "end_time": "2023-12-14T09:00:00",
       "eventPlaceType": "Offline",
-      "location": "Taipei City",
+      "location": "Hsinchu City",
+      "likeCount": 0,
+      "pageView": 26,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309191417311825729889_P520x260.jpg",
       "strtags": "職業生涯規劃"
@@ -8604,9 +8666,11 @@
       "end_time": "2023-11-11T07:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 11,
+      "pageView": 296,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310121008041954460697_P520x260.jpg",
-      "strtags": "採訪"
+      "mainTag": 11
     }
   },
   {
@@ -8619,9 +8683,11 @@
       "end_time": "2023-11-25T13:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 19,
+      "pageView": 307,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309191417311825729889_P520x260.jpg",
-      "strtags": "職業生涯規劃"
+      "mainTag": 11
     }
   },
   {
@@ -8634,6 +8700,8 @@
       "end_time": "2023-11-17T12:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 8,
+      "pageView": 280,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310121050021028127509_P520x260.jpg",
       "strtags": ""
@@ -9444,14 +9512,16 @@
       "end_time": "2023-11-17T12:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 14,
+      "pageView": 291,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310121050021028127509_P520x260.jpg",
-      "strtags": ""
+      "mainTag": 11
     }
   },
   {
-    "model": "base.activities",
-    "pk": 631,
+    "model": "base.activity",
+    "pk": 39,
     "fields": {
       "name": "台美股未來展望與走勢，專家給你的投資建議｜威士忌品飲、投資趨勢",
       "eventIdNumber": "2309280317081242616473",
@@ -9549,6 +9619,8 @@
       "end_time": "2023-12-13T04:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 5,
+      "pageView": 1869,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2304070541444770504490_P520x260.jpg",
       "strtags": "ChatGPT"
@@ -10359,6 +10431,8 @@
       "end_time": "2023-12-13T04:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 9,
+      "pageView": 517,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2304070541444770504490_P520x260.jpg",
       "strtags": "ChatGPT"
@@ -11124,21 +11198,25 @@
       "end_time": "2024-01-27T04:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 12,
+      "pageView": 1187,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2307261038267868434800_P520x260.jpg",
-      "strtags": "程式"
+      "mainTag": 11
     }
   },
   {
     "model": "base.activities",
     "pk": 743,
     "fields": {
-      "name": "【情緒管理課程】 情緒一點就爆炸：我的情商學習之路-11/4",
-      "eventIdNumber": "2308181146211780546910",
-      "start_time": "2023-11-04T02:00:00",
-      "end_time": "2023-11-04T04:00:00",
+      "name": "AI 時代下的自媒體經營術：從定位思考到視覺呈現的高效技巧",
+      "eventIdNumber": "2310200557362743627190",
+      "start_time": "2023-12-16T01:30:00",
+      "end_time": "2023-12-16T08:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 5,
+      "pageView": 140,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2207101025191085218430_P520x260.jpg",
       "strtags": "社會－情緒學習(SEL)"
@@ -11949,9 +12027,11 @@
       "end_time": "2023-11-04T04:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 4,
+      "pageView": 65,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2207101025191085218430_P520x260.jpg",
-      "strtags": "社會－情緒學習(SEL)"
+      "mainTag": 11
     }
   },
   {
@@ -11979,6 +12059,8 @@
       "end_time": "2023-12-13T04:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 11,
+      "pageView": 463,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2304070541444770504490_P520x260.jpg",
       "strtags": "ChatGPT"
@@ -12774,6 +12856,8 @@
       "end_time": "2023-12-16T08:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 13,
+      "pageView": 1216,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310200555175822520900_P520x260.jpg",
       "strtags": "ChatGPT"
@@ -12819,6 +12903,8 @@
       "end_time": "2023-11-23T13:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 1,
+      "pageView": 48,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310120348391312890186_P520x260.jpg",
       "strtags": "CSR/ESG"
@@ -12834,9 +12920,11 @@
       "end_time": "2023-12-10T07:45:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 8,
+      "pageView": 89,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310171739501693739837_P520x260.jpg",
-      "strtags": "百岳前訓練"
+      "mainTag": 11
     }
   },
   {
@@ -12849,9 +12937,11 @@
       "end_time": "2023-11-14T15:55:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 37,
+      "pageView": 1192,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309280946049554506150_P520x260.jpg",
-      "strtags": "自學程式"
+      "mainTag": 11
     }
   },
   {
@@ -12954,6 +13044,8 @@
       "end_time": "2023-11-18T13:00:00",
       "eventPlaceType": "Online",
       "location": "Taipei City",
+      "likeCount": 4,
+      "pageView": 82,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2210060812191752563690_P520x260.jpg",
       "strtags": "學習規劃"
@@ -13689,9 +13781,11 @@
       "end_time": "2023-11-16T09:00:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 10,
+      "pageView": 113,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309141112175778311420_P520x260.jpg",
-      "strtags": "趨勢論壇"
+      "mainTag": 11
     }
   },
   {
@@ -14274,6 +14368,8 @@
       "end_time": "2023-11-11T07:30:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 2,
+      "pageView": 32,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2310121008041954460697_P520x260.jpg",
       "strtags": "採訪"
@@ -14529,6 +14625,8 @@
       "end_time": "2023-11-18T09:15:00",
       "eventPlaceType": "Offline",
       "location": "Taipei City",
+      "likeCount": 9,
+      "pageView": 504,
       "isAD": false,
       "photoUrl": "https://static.accupass.com/eventbanner/2309271959574885281340_P520x260.jpg",
       "strtags": "人脈"

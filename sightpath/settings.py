@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from dotenv import load_dotenv
-import os
-from dotenv import load_dotenv
 from pathlib import Path
 import sys
 
@@ -27,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# TODO
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("Django_SECRET_KEY")
 
@@ -51,7 +49,6 @@ if 'loaddata' in sys.argv:
         cursor.execute('PRAGMA foreign_keys=OFF;')
         cursor.execute('PRAGMA legacy_alter_table = ON')
     connection_created.connect(disable_foreign_keys)
-
 
 
 if "DEV" not in os.environ:
