@@ -1,0 +1,149 @@
+[
+  {
+    "model": "base.activityTag",
+    "pk": 1,
+    "fields": {
+      "tag_name": "travel"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 2,
+    "fields": {
+      "tag_name": "fashion"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 3,
+    "fields": {
+      "tag_name": "blockchain"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 4,
+    "fields": {
+      "tag_name": "investment"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 5,
+    "fields": {
+      "tag_name": "startup"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 6,
+    "fields": {
+      "tag_name": "entertainment"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 7,
+    "fields": {
+      "tag_name": "design"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 8,
+    "fields": {
+      "tag_name": "pet"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 9,
+    "fields": {
+      "tag_name": "sports"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 10,
+    "fields": {
+      "tag_name": "business"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 11,
+    "fields": {
+      "tag_name": "learning"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 12,
+    "fields": {
+      "tag_name": "family"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 13,
+    "fields": {
+      "tag_name": "food"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 14,
+    "fields": {
+      "tag_name": "film"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 15,
+    "fields": {
+      "tag_name": "health"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 16,
+    "fields": {
+      "tag_name": "charitable"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 17,
+    "fields": {
+      "tag_name": "music"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 18,
+    "fields": {
+      "tag_name": "technology"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 19,
+    "fields": {
+      "tag_name": "handmade"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 20,
+    "fields": {
+      "tag_name": "arts"
+    }
+  },
+  {
+    "model": "base.activityTag",
+    "pk": 21,
+    "fields": {
+      "tag_name": "photography"
+    }
+  }
+]

@@ -5,10 +5,16 @@ from django.utils.translation import gettext_lazy as _
 #  用此指令可取得當前資料
 # python .\manage.py dumpdata base > data_fixture.json
 
-# 加載刷新competition_tag和competition資料 (之後部屬可以設置每天早上四點執行一次指令)
-# python3 ./base/fixtures/competitions_fixture_generator.py
-# python3 manage.py loaddata ./base/fixtures/tags_fixture.json
-# python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
+'''
+加載刷新competition_tag和competition資料 (之後部屬可以設置每天早上四點執行一次指令)
+
+# 注意執行順序(由上往下)
+
+python3 ./base/fixtures/competitions_fixture_generator.py
+python3 manage.py loaddata ./base/fixtures/competition_tags_fixture.json
+python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
+'''
+
 
 class CustomUserManager(BaseUserManager):
     """定義一個沒有username field 的model manager"""
@@ -126,11 +132,17 @@ class Message(models.Model):
     
 class CompetitionTag(models.Model):
     tag_name = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return f"{self.tag_name}"
+  
+  
+class OurTag(models.Model):
+    tag_name = models.CharField(max_length=50)
     description = models.CharField(max_length=400)
     
     def __str__(self):
         return f"{self.tag_name}"
-    
 
 class Competition(models.Model):
     name = models.TextField()
@@ -150,21 +162,33 @@ class Competition(models.Model):
     limit_highschool = models.BooleanField(null=True)
     limit_none = models.BooleanField(null=True)
     limit_other = models.BooleanField(null=True)
+    
+    # 推薦演算法相關
+    our_tags = models.ManyToManyField(
+        OurTag, blank=True
+    )
     emb = models.CharField(max_length=800, null=True)
 
     def __str__(self):
         return f"{self.name}"
 
-class Activities(models.Model):
+class ActivityMainTag(models.Model):
+    tag_name = models.CharField(max_length=50)
+    def __str__(self):
+        return f"{self.tag_name}"
+
+class Activity(models.Model):
     name = models.TextField()
     eventIdNumber = models.TextField(null=True)
     start_time = models.DateTimeField(null=True)
     end_time = models.DateTimeField(null=True)
     eventPlaceType = models.TextField(null=True)
     location = models.TextField(null=True)
+    likeCount = models.IntegerField(null=True)
+    pageView = models.IntegerField(null=True)
     isAD = models.BooleanField(null=True)
     photoUrl = models.URLField(null=True)
-    strtags = models.TextField(null=True)
-    
+    mainTag = models.ForeignKey(ActivityMainTag, on_delete=models.CASCADE, null=True)
+
     def __str__(self):
         return f"{self.name}"
