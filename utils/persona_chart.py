@@ -2,9 +2,10 @@ import matplotlib.pyplot as plt
 import matplotlib
 from numpy import random
 import seaborn as sns
-
+import os
 
 x = [67.98, 54.23, 40.67]
+y = [67.98, 54.23, 40.67, 29, 13,14, 17, 15, 29, 12, 21, 20, 18, 18, 13, 14, 9]
 x.extend(random.randint(1, 30, 14))
 print(x)
 
@@ -31,18 +32,20 @@ explode_data = []
 for i in range(len(data_categories)):
     explode_data.append(0.05)
 
+color = '447D7A'
+
 sns.set(font_scale = 1.2)
 matplotlib.rc('font', family='Microsoft JhengHei')
+matplotlib.rcParams['text.color'] = 'white'
 plt.figure(figsize=(8,8))
 
-plt.pie(x,
+plt.pie(y,
         textprops={'weight': 'bold', 'size': 14},  # 設定文字樣式
         pctdistance=0.8,
         labels=data_categories,
         autopct="%.1f%%",
         explode=explode_data,
         colors=sns.color_palette('Set2'))
-
 
 plt.title(
     label="個人興趣傾向",
@@ -51,7 +54,17 @@ plt.title(
 )
 
 # Add a hole in the pie
-hole = plt.Circle((0, 0), 0.65, facecolor='white')
-plt.gcf().gca().add_artist(hole)
+# 正常版
+hole = plt.Circle((0, 0), 0.65, color="#447D7A")
 
-plt.show()
+# 去背版
+# hole = plt.Circle((0, 0), 0.65, facecolor='none')
+
+plt.gcf().gca().add_artist(hole)
+script_path = os.path.dirname(os.path.abspath(__file__))
+final_script_path = os.path.join(script_path, 'test_persona.png')
+
+# 存圖片
+plt.savefig(final_script_path, transparent = True)
+
+# plt.show()
