@@ -101,10 +101,14 @@ http://localhost:8000/
 ...
 
 ## 關於我們
-<img src="./static/images/about_us/groupfie.jpg">
+<img src="./static/images/about_us/groupfie.jpg" height="80%" width="80%">
 
-> 我們是由一群對開源軟體與程式設計懷抱熱忱的大學生和高中生所組成的四人團隊，我們相信只要懷抱熱情，programming可以改變世界。
->
+我們是由一群對開源軟體與程式設計懷抱熱忱的大學生和高中生所組成的四人團隊，我們相信只要懷抱熱情，programming可以改變世界。
+
+## sightpath吉祥物
+<img src="./static/images/mascot.png" height="60%" width="60%">
+
+流星所點綴的翅膀將引領學生去追逐宇宙中那看似遙不可及的熠熠繁星，貓頭鷹在西方的愛琴海和基督教文化中是「幸運、智慧」的象徵，願每位學子都能幸運的發現自己志向，向著星辰與深淵勇敢前行。
 
 ## 聯絡我們
 - Will Cheng: `will060710@gmail.com`
