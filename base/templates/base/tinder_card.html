@@ -1,5 +1,50 @@
 {% for competition in competitions %}
-<div class="tinder--card" id="{{competition.id}}">
+{% load static %}
+
+<div class="Wrapper tinder--card" id="{{competition.id}}">
+    <div class="TitleBar">
+        <a class="SitconX noHammer" href="{% url 'competition_info' competition.id %}">
+            {{competition.name}}</a>
+    </div>
+    <!-- <div class="ImageSection">
+        <img class="Image" src="https://via.placeholder.com/360x301" />
+    </div> -->
+    <div class="TagBar tags_all noHammer">
+        {% for tag in competition.tags.all %}
+        <div class="TagKind noHammer">
+            <a class="Tag noHammer" href="{% url 'find_competitions' %}?competition_category={{tag}}">
+                {{tag}}</a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="ShortDescription noHammer">
+        <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
+        <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
+        <p class="text-light">開始報名日期: {{competition.start_time}}</p>
+        <p class="text-light">截止日期: {{competition.end_time}}</p>
+        <!-- <div>活動簡介</div>
+        <div class="SitconXX">在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。</div> -->
+    </div>
+    <!-- <div class="Specials">
+        <div>活動特色</div>
+        <div class="SitconXX">在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。</div>
+    </div>
+    <div class="FullDescription">
+        <div>詳細資訊</div>
+    </div> -->
+    <div class="SeeMoreButton noHammer">
+        <div class="Frame6 noHammer">
+            <img class="Ellipse1 noHammer" src="{% static 'images/owl.png' %}" />
+            <div class="Sitcon noHammer">SightPath</div>
+        </div>
+        <div class="Button noHammer">
+            <div class="Button noHammer">了解詳細</div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="tinder--card" id="{{competition.id}}">
     <h4>
         <a class="text-info noHammer" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
     </h4>
@@ -14,6 +59,7 @@
     <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
     <p class="text-light">開始報名日期: {{competition.start_time}}</p>
     <p class="text-light">截止日期: {{competition.end_time}}</p>
-    <!--  <p>標籤: {{competition.tags}}</p> -->
-</div>
+     ####<p>標籤: {{competition.tags}}</p>
+</div> -->
+
 {% endfor %}
