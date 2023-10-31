@@ -338,10 +338,19 @@ def rand_context():
     competitions = Competition.objects.filter(Q(name__icontains="")
                                                 | Q(organizer_title__icontains=""))
     
+    
+
     #randomly pick 5 elements
     valid_id_list = list(competitions.values_list('id', flat=True))
     random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 5))
     competitions = competitions.filter(id__in=random_id_list)
+
+    #pick first 8 tags
+    for com in competitions:
+        id_list = list(com.tags.values_list('id', flat=True))
+        com.tags.set(com.tags.filter(id__in=id_list[0:8]))
+        # com.save()
+        # print(com.tags.all())
 
 
     competitions_count = competitions.count()
