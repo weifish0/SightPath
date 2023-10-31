@@ -14,11 +14,11 @@ from tags_description import *
         
 
 def generate_tags():
-    json_path = os.getcwd()+'\\base\\fixtures\\tags_fixture.json'
+    json_path = os.getcwd()+'/base/fixtures/ourtag_fixture.json'
     output_tags_fixture = []
 
     for i in range(len(tags)):
-        output_tags_fixture.append({"model": "base.competitiontag",
+        output_tags_fixture.append({"model": "base.ourtag",
                                     "pk": i+1,
                                     "fields": {"tag_name": tags[i],
                                                "description": descriptions[i]}})
