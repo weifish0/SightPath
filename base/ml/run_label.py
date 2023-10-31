@@ -30,12 +30,12 @@ if __name__ == "__main__":
 
 
     # pool = model.start_multi_process_pool()
-    comp_path = os.getcwd()+'\\base\\fixtures\\competitions_fixture.json'
+    comp_path = os.getcwd()+'/base/fixtures/competitions_fixture.json'
     tag_emb = []
     tags.generate_tags()
 
     comp = open(comp_path, "r", encoding="utf-8")
-    f = open(os.getcwd()+'\\base\\fixtures\\tags_fixture.json',
+    f = open(os.getcwd()+'/base/fixtures/ourtag_fixture.json',
              "r", encoding="utf-8")
     data = json.load(comp)
     df = json.load(f)
@@ -70,7 +70,7 @@ if __name__ == "__main__":
         # emb2_unshape = model(**inputs).pooler_output.detach().numpy()
         ######
         # +' '+html
-        data[d]["fields"]["tags"] = []
+        data[d]["fields"]["our_tags"] = []
         vec = []
 
         # np.array(emb2_unshape).tolist()
@@ -82,7 +82,7 @@ if __name__ == "__main__":
             vec.append(score)
 
             if score > 0.5:
-                data[d]["fields"]["tags"].append(pk+1)
+                data[d]["fields"]["our_tags"].append(pk+1)
             # score_v.append(score)
 
         data[d]["fields"]["emb"] = np.array(vec).tolist()

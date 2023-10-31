@@ -1,6 +1,6 @@
 [
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 1,
     "fields": {
       "tag_name": "資訊",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 2,
     "fields": {
       "tag_name": "工程",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 3,
     "fields": {
       "tag_name": "數理化",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 4,
     "fields": {
       "tag_name": "醫藥衛生",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 5,
     "fields": {
       "tag_name": "生命科學",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 6,
     "fields": {
       "tag_name": "生物資源",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 7,
     "fields": {
       "tag_name": "地球與環境",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 8,
     "fields": {
       "tag_name": "建築與設計",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 9,
     "fields": {
       "tag_name": "藝術",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 10,
     "fields": {
       "tag_name": "社會與心理",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 11,
     "fields": {
       "tag_name": "大眾傳播",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 12,
     "fields": {
       "tag_name": "外語",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 13,
     "fields": {
       "tag_name": "文史哲",
@@ -104,7 +104,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 14,
     "fields": {
       "tag_name": "教育",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 15,
     "fields": {
       "tag_name": "法政",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 16,
     "fields": {
       "tag_name": "管理",
@@ -128,7 +128,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 17,
     "fields": {
       "tag_name": "財經",
@@ -136,7 +136,7 @@
     }
   },
   {
-    "model": "base.competitiontag",
+    "model": "base.ourtag",
     "pk": 18,
     "fields": {
       "tag_name": "遊憩與運動",
