@@ -7,7 +7,7 @@
 Sightpath是專為高中生設計的活動推薦與生涯探索平台，通過AI模型精確推薦學系探索活動，讓高中生找到最適合自己的科系。
 
 
-<img src="https://github.com/weifish0/SightPath/blob/master/static/images/icon/sightpath_logo_ppt.png" width="350">
+<img src=".\static/images/icon/sightpath_logo_ppt_rmbg.png" width="350">
 
 
 ## 核心理念－改變現有的學習情況
@@ -27,22 +27,16 @@ Sightpath是專為高中生設計的活動推薦與生涯探索平台，通過AI
 - [x] 活動查找
 
 ## 網站設計圖
-<img src="https://github.com/weifish0/SightPath/blob/master/static/images/icon/web-draft.png">
-<img src="https://github.com/weifish0/SightPath/blob/master/static/images/icon/persona-draft.png">
+<img src="./static/images/icon/web-draft.png">
+<img src="./static/images/icon/persona-draft.png" >
 
 ## 開發
-python 版本建議為：`3.9.12`
+python 版本建議為：`3.9`
 
 ### 取得專案
 
 ```bash
 git clone https://github.com/weifish0/SightPath.git
-```
-
-### 移動到專案內
-
-```bash
-cd SightPath
 ```
 
 ### 安裝套件
@@ -57,7 +51,6 @@ pip install -r requirements.txt
 ```bash
 line_token=""
 line_secret=""
-Django_SECRET_KEY=""
 DEV=""
 ```
 
@@ -77,7 +70,7 @@ python3 manage.py runserver
 在瀏覽器網址列輸入以下即可看到畫面
 
 ```bash
-http://localhost:8080/
+http://localhost:8000/
 ```
 
 ## 資料夾說明
@@ -106,3 +99,12 @@ http://localhost:8080/
 - Bootstrap v5.1.3
 - python-dotenv v0.21.0
 ...
+
+## 關於我們
+<img src="./static/images/about_us/groupfie.jpg">
+
+> 我們是由一群對開源軟體與程式設計懷抱熱忱的大學生和高中生所組成的四人團隊，我們相信只要懷抱熱情，programming可以改變世界。
+>
+
+## 聯絡我們
+- Will Cheng: `will060710@gmail.com`
