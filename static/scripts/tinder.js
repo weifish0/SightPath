@@ -143,7 +143,7 @@ function init() {
         hammertime.on('pan', function (event) {
             if (event.deltaX === 0) return;
             if (event.center.x === 0 && event.center.y === 0) return;
-            if (event.target.classList.contains("noHammer")) return; //austin 20230928
+            // if (event.target.classList.contains("noHammer")) return; //austin 20230928
             if (event.target.style.zIndex != 0) return; //austin 20230929
 
             tinderContainer.classList.toggle('tinder_love', event.deltaX > 0);
@@ -154,11 +154,11 @@ function init() {
             var yMulti = event.deltaY / 80;
             var rotate = xMulti * yMulti;
 
-            event.target.style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
+            allCards[0].style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
         });
 
         hammertime.on('panend', function (event) {
-            if (event.target.classList.contains("noHammer")) return; //austin 20230928
+            // if (event.target.classList.contains("noHammer")) return; //austin 20230928
             if (event.target.style.zIndex != 0) return; //austin 20230929
 
             el.classList.remove('moving');
@@ -176,8 +176,8 @@ function init() {
             var keep = 0;
             // var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5
 
-            event.target.classList.toggle('removed', !keep);
-            event.target.remove(); //austin 20230928
+            allCards[0].classList.toggle('removed', !keep);
+            allCards[0].remove(); //austin 20230928
 
             /* if (keep) {
                 event.target.style.transform = '';
@@ -190,7 +190,7 @@ function init() {
             var yMulti = event.deltaY / 80;
             var rotate = xMulti * yMulti;
 
-            event.target.style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
+            allCards[0].style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
             initCards();
 
             //}
