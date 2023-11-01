@@ -1,6 +1,8 @@
 {% extends "main.html" %}
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/home_page.css' %}">
 
 {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>

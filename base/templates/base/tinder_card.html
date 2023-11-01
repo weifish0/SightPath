@@ -3,21 +3,21 @@
 
 <div class="Wrapper tinder--card" id="{{competition.id}}">
     <div class="TitleBar">
-        <a class="SitconX noHammer" href="{% url 'competition_info' competition.id %}">
+        <a class="SitconX" href="{% url 'competition_info' competition.id %}">
             {{competition.name}}</a>
     </div>
     <!-- <div class="ImageSection">
         <img class="Image" src="https://via.placeholder.com/360x301" />
     </div> -->
-    <div class="TagBar tags_all noHammer">
+    <div class="TagBar tags_all">
         {% for tag in competition.tags.all %}
-        <div class="TagKind noHammer">
-            <a class="Tag noHammer" href="{% url 'find_competitions' %}?competition_category={{tag}}">
+        <div class="TagKind">
+            <a class="Tag" href="{% url 'find_competitions' %}?competition_category={{tag}}">
                 {{tag}}</a>
         </div>
         {% endfor %}
     </div>
-    <div class="ShortDescription noHammer">
+    <div class="ShortDescription">
         <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
         <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
         <p class="text-light">開始報名日期: {{competition.start_time}}</p>
@@ -32,13 +32,13 @@
     <div class="FullDescription">
         <div>詳細資訊</div>
     </div> -->
-    <div class="SeeMoreButton noHammer">
-        <div class="Frame6 noHammer">
-            <img class="Ellipse1 noHammer" src="{% static 'images/owl.png' %}" />
-            <div class="Sitcon noHammer">SightPath</div>
+    <div class="SeeMoreButton">
+        <div class="Frame6">
+            <img class="Ellipse1" src="{% static 'images/owl.png' %}" />
+            <div class="Sitcon">SightPath</div>
         </div>
-        <div class="Button noHammer">
-            <div class="Button noHammer">了解詳細</div>
+        <div class="Button">
+            <div class="Button">了解詳細</div>
         </div>
     </div>
 </div>
@@ -46,10 +46,10 @@
 
 <!-- <div class="tinder--card" id="{{competition.id}}">
     <h4>
-        <a class="text-info noHammer" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
+        <a class="text-info" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
     </h4>
 
-    <div class="tags_all noHammer">
+    <div class="tags_all">
         {% for tag in competition.tags.all %}
         <a class="noHammer" href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
         {% endfor %}
