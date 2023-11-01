@@ -45,7 +45,10 @@ plt.pie(y,
         labels=data_categories,
         autopct="%.1f%%",
         explode=explode_data,
-        colors=sns.color_palette('Set2'))
+        colors=sns.color_palette('Set2'),
+        wedgeprops = {"edgecolor" : "white", 
+                      'linewidth': 0.3, 
+                      'antialiased': True})
 
 plt.title(
     label="個人興趣傾向",
@@ -62,9 +65,9 @@ hole = plt.Circle((0, 0), 0.65, color="#447D7A")
 
 plt.gcf().gca().add_artist(hole)
 script_path = os.path.dirname(os.path.abspath(__file__))
-final_script_path = os.path.join(script_path, 'test_persona.png')
+final_script_path = os.path.join(script_path, 'test_persona.svg')
 
 # 存圖片
-plt.savefig(final_script_path, transparent = True)
+plt.savefig(final_script_path, format="svg")
 
 # plt.show()
