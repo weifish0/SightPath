@@ -274,7 +274,7 @@ body {
     z-index: 2;
     width: 100%;
     text-align: center;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .tinder--status i {
@@ -343,21 +343,21 @@ body {
 
 .tinder--card img {
     max-width: 100%;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .tinder--card h3 {
     margin-top: 32px;
     font-size: 32px;
     padding: 0 16px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .tinder--card p {
     margin-top: 24px;
     font-size: 20px;
     padding: 0 16px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .tinder--buttons {
