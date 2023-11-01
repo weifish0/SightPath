@@ -1,6 +1,8 @@
 {% extends "main.html" %}
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/profile.css' %}">
 
 <div class="div_container">
     <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
@@ -9,7 +11,7 @@
     {% else %}
     <h1>{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
     {% endif %}
-    
+
     {% if user.is_authenticated %}
     {% if request.user.id == user.id %}
     <a href="{% url 'edit_profile' request.user.id %}" class="btn btn-warning btn-sm">編輯個人檔案</a>
@@ -18,8 +20,80 @@
     <hr>
     <h3>個人簡介</h3>
     <h4>{{ user.bio|default_if_none:"" }}</h4>
-    
-    
+
+
+
+
+    <div class="AndroidLarge2">
+        <div class="flex pb-2">
+            <img class="profile_img" src="{% static 'images/owl.png' %}" />
+            <div class="Frame13">
+                <div class="large">
+                    你的興趣儀表板</div>
+                <div class="small">
+                    找出你感興趣的學群</div>
+            </div>
+        </div>
+        <div class="img_container">
+            <img class="persona_img" src="{% static 'images/test_persona.png' %}" />
+        </div>
+
+        <div class="text">根據分析結果
+            <br />您最感興趣的前三個學群為：
+        </div>
+
+        <div class="Frame12">
+            <div class="Frame10">
+                <div>
+                    資訊工程</div>
+            </div>
+            <div class="Frame10">
+                <div>
+                    數理化學</div>
+            </div>
+            <div class="Frame10">
+                <div>
+                    醫藥衛生</div>
+            </div>
+        </div>
+
+        <div class="text">您喜歡過的競賽：</div>
+        <div class="grid">
+            <div class="Rectangle1">
+                <div class="title">
+                    2023 第一屆<br />全國科學量測量測競賽</div>
+                <div class="tag">
+                    #數理化學</div>
+                <div class="datetime">
+                    開始報名日期：2023/9/18<br />截止日期：2023/11/10</div>
+            </div>
+            <div class="Rectangle1">
+                <div class="title">
+                    2023 康寧創星家 - 創新應用競賽</div>
+                <div class="tag">
+                    #產品設計競賽</div>
+                <div class="datetime">
+                    開始報名日期：2023/6/1<br />截止日期：2023/11/6</div>
+            </div>
+            <div class="Rectangle1">
+                <div class="title">
+                    2023 康寧創星家 - 創新應用競賽</div>
+                <div class="tag">
+                    #產品設計競賽</div>
+                <div class="datetime">
+                    開始報名日期：2023/6/1<br />截止日期：2023/11/6</div>
+            </div>
+            <div class="Rectangle1">
+                <div class="title">
+                    2023 康寧創星家 - 創新應用競賽</div>
+                <div class="tag">
+                    #產品設計競賽</div>
+                <div class="datetime">
+                    開始報名日期：2023/6/1<br />截止日期：2023/11/6</div>
+            </div>
+        </div>
+    </div>
+
 
 
 
