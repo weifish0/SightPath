@@ -2,9 +2,15 @@
 
 
 {% block content %}
-
 {% if request.user.is_authenticated %}
-<p>hello {{request.user.nickname}}~</p>
+<div class="div_container">
+    <p>hello {{request.user.nickname}}~</p>
+    {% if request.user.is_superuser %}
+    <div class="alert alert-info" role="alert">
+        你擁有管理員權限
+    </div>
+    {% endif %}
+</div>
 {% endif %}
 
 <div class="div_container grid">
