@@ -23,7 +23,8 @@ function storeData(id, is_love) {
             let transaction = db.transaction("nope", "readwrite"); // (1)
             items = transaction.objectStore("nope");
         }
-        let suc = items.put(id, id);
+
+        if(id != '') suc = items.put(id, id);
         //items.add(8);
 
         db.close();

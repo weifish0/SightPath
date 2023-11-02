@@ -24,7 +24,7 @@
 
     {% if user.is_authenticated %}
     {% if request.user.id == user.id %}
-    <a href="{% url 'edit_profile' request.user.id %}" class="m1-15 btn btn-warning btn-sm">編輯個人檔案</a>
+    <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px" class="btn btn-warning btn-sm">編輯個人檔案</a>
     {% endif %}
     {% endif %}
     <hr>
