@@ -9,9 +9,7 @@ from .models import *
 from .forms import RoomForm, UserForm, CustomUserCreationForm
 import random
 from django.http import JsonResponse
-from django.forms.models import model_to_dict
-from django.core import serializers
-import json
+
 from dotenv import load_dotenv
 import os
 
@@ -112,6 +110,7 @@ def profile(request, pk):
 def chatroom_home(request):
     # topic_category為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
     topic_category = request.GET.get("topic_category")
+    
     # q值若找不到則設為空字串，原本會回傳None，但用django Q物件以None搜索會回報錯誤
     q = request.GET.get("q") if request.GET.get("q") != None else ""
     
@@ -124,11 +123,18 @@ def chatroom_home(request):
                                     | Q(name__icontains=q)
                                     | Q(host__nickname__icontains=q))
     
-    rooms_count = rooms.count()
+    # 找到被置頂的討論串
+    pin_rooms = Room.objects.filter(Q(pin_mode=True))
+    # 將置頂的討論串從普通rooms中移除
+    rooms = rooms.exclude(pin_mode=True).order_by("-updated")
+    
+    rooms_count = rooms.count() + pin_rooms.count()
+    # 取得所有討論事話題類別
     topics = Topic.objects.all()
     
     context = {"rooms":rooms, "rooms_count":rooms_count, 
-               "topics":topics, "topic_category": topic_category}
+               "topics":topics, "topic_category": topic_category,
+               "pin_rooms": pin_rooms}
     
     # TODO: 將其改成用彈出視窗顯示
     # 當用戶已登入，才會顯示房間通知
@@ -139,8 +145,7 @@ def chatroom_home(request):
         myrooms_replies = Message.objects.filter(Q(room__host__id__contains=user_now) 
                                                  & ~Q(user__id=user_now)).order_by("-created")[:15]
         
-        context = {"rooms":rooms, "rooms_count":rooms_count, 
-                    "topics":topics, "myrooms_replies": myrooms_replies, "topic_category": topic_category}
+        context.setdefault("myrooms_replies", myrooms_replies)
     
     return render(request, "base/chatroom_home.html", context)
 
@@ -250,6 +255,32 @@ def delete_room(request, pk):
         return redirect("chatroom_home")
     
     return render(request, "base/delete.html", context)
+
+
+@login_required(login_url="login_page")
+def pin_room(request, pk):
+    
+    if not request.user.is_superuser:
+        return HttpResponse("你沒有權限")
+    
+    # 將討論室設為置頂
+    room = Room.objects.get(id=pk)
+    room.pin_mode = True
+    room.save()
+    return redirect('chatroom_home')
+
+
+@login_required(login_url="login_page")
+def unpin_room(request, pk):
+    
+    if not request.user.is_superuser:
+        return HttpResponse("你沒有權限")
+    
+    # 將討論室取消置頂
+    room = Room.objects.get(id=pk)
+    room.pin_mode = False
+    room.save()
+    return redirect('chatroom_home')
 
 
 @login_required(login_url="login_page")

@@ -6,6 +6,16 @@
 
 <div class="profile_container">
     <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
+    <br>
+    <br>
+    <br>
+
+    {% if request.user.is_superuser %}
+    <div class="alert alert-info" role="alert">
+        你擁有管理員權限
+    </div>
+    {% endif %}
+    
     {% if user.email != '' %}
     <h1 class="ml-15">{{user.nickname}}</h1>
     {% else %}
