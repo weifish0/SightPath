@@ -9,6 +9,10 @@
 {% for competition in competitions %}
 <h3><a href="{% url 'competition_info' competition.id %}">{{competition.name}}</a></h3>
 
+{% for tag in competition.our_tags.all %}
+<a style="font-size: large;" href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+{% endfor %}
+<br>
 {% for tag in competition.tags.all %}
 <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
 {% endfor %}
