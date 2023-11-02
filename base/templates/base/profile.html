@@ -4,22 +4,22 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/profile.css' %}">
 
-<div class="div_container">
+<div class="profile_container">
     <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
     {% if user.email != '' %}
-    <h1>{{user.nickname}}</h1>
+    <h1 class="ml-15">{{user.nickname}}</h1>
     {% else %}
-    <h1>{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
+    <h1 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
     {% endif %}
 
     {% if user.is_authenticated %}
     {% if request.user.id == user.id %}
-    <a href="{% url 'edit_profile' request.user.id %}" class="btn btn-warning btn-sm">編輯個人檔案</a>
+    <a href="{% url 'edit_profile' request.user.id %}" class="m1-15 btn btn-warning btn-sm">編輯個人檔案</a>
     {% endif %}
     {% endif %}
     <hr>
-    <h3>個人簡介</h3>
-    <h4>{{ user.bio|default_if_none:"" }}</h4>
+    <h3 class="ml-15">個人簡介</h3>
+    <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
 
 
 
@@ -99,7 +99,7 @@
 
     <br>
     <hr>
-    <h3>文章:</h3>
+    <h3 class="ml-15">文章:</h3>
     <br>
     <div>
         {% include "base/room_feed_component.html" %}

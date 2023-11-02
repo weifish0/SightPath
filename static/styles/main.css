@@ -98,3 +98,21 @@ img {
     width: 100%;
     padding-top: 60px;
 }
+
+.profile_container {
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    padding-top: 60px;
+
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+    /* padding-left: auto;
+    padding-right: auto; */
+    height: 100%;
+}
+
+.ml-15 {
+    margin-left: 15px;
+}
