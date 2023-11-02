@@ -101,17 +101,28 @@ class Room(models.Model):
     class Meta:
         # 資料庫的索引順序，會優先按照updated排，相同updated則按照created排序，-可以讓該資料變為倒序，也就是最近更新的會在第一個
         ordering = ["-updated", "-created"]
+        
     # 刪除user時不刪除該room, 將值設為 null
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    
     # 刪除topic時不刪除該room, 將值設為 null
     topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
+    
+    # 討論串名稱
     name = models.CharField(max_length=50)
+    # 討論串介紹
     description = models.TextField(null=True, blank=True)
+    
+    # 討論串更新時間與建立時間
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
+    
+    # 討論串參與者
     participants = models.ManyToManyField(
         User, related_name="participants", blank=True
     )
+    # 置頂貼文
+    pin_mode = models.BooleanField(default=False)
     
     def __str__(self):
         return f"{self.name}"
