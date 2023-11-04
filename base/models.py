@@ -146,12 +146,13 @@ class CompetitionTag(models.Model):
     
     def __str__(self):
         return f"{self.tag_name}"
-  
-  
+
+
 class OurTag(models.Model):
     tag_name = models.CharField(max_length=50)
     description = models.CharField(max_length=400)
-    
+    emb = models.CharField(max_length=800, null=True)
+
     def __str__(self):
         return f"{self.tag_name}"
 
