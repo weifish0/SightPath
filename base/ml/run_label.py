@@ -2,7 +2,7 @@ import os
 import json
 import tags
 from text2vec import SentenceModel
-from transformers import BertTokenizer, BertModel
+# from transformers import BertTokenizer, BertModel
 import re
 from sklearn.metrics.pairwise import cosine_similarity
 # import opencc
@@ -35,8 +35,9 @@ if __name__ == "__main__":
     tags.generate_tags()
 
     comp = open(comp_path, "r", encoding="utf-8")
-    f = open(os.getcwd()+'/base/fixtures/ourtag_fixture.json',
-             "r", encoding="utf-8")
+    ourtag_path = os.getcwd()+'/base/fixtures/ourtag_fixture.json'
+    f = open(ourtag_path, "r", encoding="utf-8")
+
     data = json.load(comp)
     df = json.load(f)
     # Closing file
@@ -64,7 +65,7 @@ if __name__ == "__main__":
         ######
         content = data[d]["fields"]["name"]+' '+html
 
-        emb2_unshape = model.encode(content[0:400])
+        emb2 = model.encode(content[0:400]).reshape(1, -1)
 
         # inputs = tokenizer(content[0:400], return_tensors="pt")
         # emb2_unshape = model(**inputs).pooler_output.detach().numpy()
@@ -78,7 +79,7 @@ if __name__ == "__main__":
         for pk in range(len(tag_emb)):
             # if pk+1==11 and i==290:
             score = cosine_similarity(
-                emb2_unshape.reshape(1, -1), tag_emb[pk])[0][0]
+                emb2, tag_emb[pk])[0][0]
             vec.append(score)
 
             if score > 0.5:
@@ -87,8 +88,24 @@ if __name__ == "__main__":
 
         data[d]["fields"]["emb"] = np.array(vec).tolist()
 
+
+    for i in range(len(df)):
+        vec = []
+
+        for pk in range(len(tag_emb)):
+            # if pk+1==11 and i==290:
+            score = cosine_similarity(
+                tag_emb[i], tag_emb[pk])[0][0]
+            vec.append(score)
+
+        df[i]["fields"]["emb"] = np.array(vec).tolist()
+
+
     with open(comp_path, "w", encoding="utf-8") as fp:
         json.dump(data, fp, indent=2, ensure_ascii=False)
+
+    with open(ourtag_path, "w", encoding="utf-8") as fp:
+        json.dump(df, fp, indent=2, ensure_ascii=False)
 
         """
         vec = sorted(score_v)

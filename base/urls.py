@@ -24,7 +24,7 @@ urlpatterns = [
     path("find_competitions/", views.find_competitions, name="find_competitions"),
     path("settings/", views.platform_config, name="platform_config"),
     path("home_update/", views.home_update, name="home_update"),
-    path("competition_vec/<str:pk>", views.competition_vec, name="competition_vec"),
+    path("embvec/<str:isourtag>/<str:pk>/", views.embvec, name="embvec"),
     path("", views.home_page, name="home_page"),
    
 
