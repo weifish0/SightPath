@@ -33,15 +33,17 @@ $.when.apply(null, calls).then(async function () {
             return;
         }
     }
-        
-    console.log(scores);
 
-    var id;    
+
+    var id;
     var elem;
     frame.innerHTML = ""
-    sc_sort = scores.sort();
+    sc_org = scores.slice();
+    scores.sort()
+    
     for (i = 0; i < 3; i++){
-        id = scores.indexOf(sc_sort[shape - (i + 1)]);
+        id = sc_org.indexOf(scores[shape - (i + 1)]);
+        console.log(sc_org);
         elem = document.createElement('div');
         elem.className = "Frame10";
         elem.innerHTML = "<div>" + tags[id] + "</div>"
