@@ -53,18 +53,7 @@
         </div>
 
         <div class="Frame12">
-            <div class="Frame10">
-                <div>
-                    資訊工程</div>
-            </div>
-            <div class="Frame10">
-                <div>
-                    數理化學</div>
-            </div>
-            <div class="Frame10">
-                <div>
-                    醫藥衛生</div>
-            </div>
+            <img class="loading" src="{% static 'images/loading.gif' %}" />
         </div>
 
         <div class="text">您喜歡過的競賽：</div>
@@ -115,5 +104,12 @@
         {% include "base/room_feed_component.html" %}
     </div>
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+<script src="/static/scripts/classification.js"></script>
+<script src="/static/scripts/profile.js"></script>
 
 {% endblock content %}

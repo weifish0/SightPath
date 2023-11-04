@@ -34,18 +34,6 @@ function storeData(id, is_love) {
       } */
 }
 
-async function predict(id) {
-    let tmp_emb = await getData("tmp", id);
-    try {
-        const model = await tf.loadLayersModel('indexeddb://model');
-        tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1, shape]);
-
-        // console.log(model.predict(tensor).dataSync());
-        return model.predict(tensor).dataSync()[0];
-    } catch (error) {
-        return "err";
-    }
-}
 
 function loadCards() {
     $.ajax({
@@ -71,7 +59,7 @@ function initCards() {
 
     $.ajax({
         type: "GET",
-        url: "/competition_vec/" + firstCard.id.toString(),
+        url: "/embvec/comp/" + firstCard.id.toString(),
         dataType: 'json',
         data: {},
         success: function (newData) {

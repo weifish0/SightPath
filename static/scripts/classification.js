@@ -84,3 +84,19 @@ async function train() {
     const saveResults = await model.save('indexeddb://model');
 }
 
+async function predict(id, emb=[]) {
+    try {
+        let tmp_emb;
+        if (emb.length == 0) tmp_emb = await getData("tmp", id);
+        else tmp_emb = emb;
+
+        const model = await tf.loadLayersModel('indexeddb://model');
+        tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1, shape]);
+
+        // console.log(model.predict(tensor).dataSync());
+        return model.predict(tensor).dataSync()[0];
+    } catch (error) {
+        // console.log(error)
+        return error;
+    }
+}
