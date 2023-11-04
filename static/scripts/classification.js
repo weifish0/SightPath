@@ -56,7 +56,9 @@ async function train() {
 
         model = tf.sequential({
             layers: [
-                tf.layers.dense({units: 128, inputShape: [shape]}),
+                tf.layers.dense({units: 64, inputShape: [shape]}),
+                tf.layers.dense({units: 128}),
+                tf.layers.dense({units: 64}),
                 // tf.layers.dropout(0.2),
                 tf.layers.dense({units: 1, activation:"sigmoid"})
             ]
