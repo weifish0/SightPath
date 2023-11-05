@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
+from django.core.files.storage import FileSystemStorage
+import os
+from django.conf import settings
 
 #  用此指令可取得當前資料
 # python .\manage.py dumpdata base > data_fixture.json
@@ -27,13 +30,13 @@ class CustomUserManager(BaseUserManager):
             raise ValueError('The given email must be set')
         if not password:
             raise ValueError('Password is not provided')
-        
+
         user = self.model(
-            email = self.normalize_email(email), 
-            nickname = nickname,
+            email=self.normalize_email(email),
+            nickname=nickname,
             **extra_fields
-            )
-        
+        )
+
         user.set_password(password)
         user.save(using=self._db)
         return user
@@ -58,41 +61,57 @@ class CustomUserManager(BaseUserManager):
 
         return self._create_user(email, password, nickname, **extra_fields)
 
+
+class OverwriteStorage(FileSystemStorage):
+    def get_available_name(self, name, max_length=None):
+        if self.exists(name):
+            os.remove(os.path.join(settings.MEDIA_ROOT, name))
+        return name
+    
+
 class User(AbstractBaseUser, PermissionsMixin):
     bio = models.CharField(max_length=150, null=True, default='', blank=True)
     nickname = models.CharField(max_length=20, null=True)
     email = models.EmailField(unique=True)
     avatar = models.ImageField(null=True, default="avatar.png")
-        
+
     is_staff = models.BooleanField(default=True)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
-    
+
     objects = CustomUserManager()
-        
+
+    persona = models.ImageField(upload_to="persona",
+                                height_field=None,
+                                width_field=None,
+                                max_length=100,
+                                default="loading.gif",
+                                storage=OverwriteStorage())
+
     # 採取 email 作為用戶身分驗證方式
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-    
+
     def save(self, *args, **kwargs):
         # 獲取當前模型的最大ID索引值
         max_id = User.objects.aggregate(max_id=models.Max('id'))['max_id']
 
         if max_id == None:
             max_id = 0
-        
+
         # 若用戶快捷登陸，則為用戶設置預設用戶名稱
         if self.nickname == None:
             self.nickname = f"第{max_id+1}位使用者"
         super(User, self).save(*args, **kwargs)
-    
+
     class Meta:
         verbose_name = 'User'
         verbose_name_plural = 'Users'
-    
+
 
 class Topic(models.Model):
     name = models.CharField(max_length=50)
+
     def __str__(self):
         return f"{self.name}"
 
@@ -101,29 +120,29 @@ class Room(models.Model):
     class Meta:
         # 資料庫的索引順序，會優先按照updated排，相同updated則按照created排序，-可以讓該資料變為倒序，也就是最近更新的會在第一個
         ordering = ["-updated", "-created"]
-        
+
     # 刪除user時不刪除該room, 將值設為 null
     host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
-    
+
     # 刪除topic時不刪除該room, 將值設為 null
     topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
-    
+
     # 討論串名稱
     name = models.CharField(max_length=50)
     # 討論串介紹
     description = models.TextField(null=True, blank=True)
-    
+
     # 討論串更新時間與建立時間
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    
+
     # 討論串參與者
     participants = models.ManyToManyField(
         User, related_name="participants", blank=True
     )
     # 置頂貼文
     pin_mode = models.BooleanField(default=False)
-    
+
     def __str__(self):
         return f"{self.name}"
 
@@ -136,14 +155,14 @@ class Message(models.Model):
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    
+
     def __str__(self):
         return f"{self.body[0:20]}"
-    
-    
+
+
 class CompetitionTag(models.Model):
     tag_name = models.CharField(max_length=50)
-    
+
     def __str__(self):
         return f"{self.tag_name}"
 
@@ -156,6 +175,7 @@ class OurTag(models.Model):
     def __str__(self):
         return f"{self.tag_name}"
 
+
 class Competition(models.Model):
     name = models.TextField()
     url = models.URLField(null=True)
@@ -164,7 +184,7 @@ class Competition(models.Model):
     end_time = models.DateTimeField(null=True)
     guide_line_html = models.TextField(null=True)
     organizer_title = models.TextField(null=True)
-    page_views = models.IntegerField(null=True) 
+    page_views = models.IntegerField(null=True)
     contact_email = models.EmailField(null=True)
     contact_name = models.TextField(null=True)
     contact_phone = models.TextField(null=True)
@@ -174,7 +194,7 @@ class Competition(models.Model):
     limit_highschool = models.BooleanField(null=True)
     limit_none = models.BooleanField(null=True)
     limit_other = models.BooleanField(null=True)
-    
+
     # 推薦演算法相關
     our_tags = models.ManyToManyField(
         OurTag, blank=True
@@ -184,10 +204,13 @@ class Competition(models.Model):
     def __str__(self):
         return f"{self.name}"
 
+
 class ActivityMainTag(models.Model):
     tag_name = models.CharField(max_length=50)
+
     def __str__(self):
         return f"{self.tag_name}"
+
 
 class Activity(models.Model):
     name = models.TextField()
@@ -200,7 +223,8 @@ class Activity(models.Model):
     pageView = models.IntegerField(null=True)
     isAD = models.BooleanField(null=True)
     photoUrl = models.URLField(null=True)
-    mainTag = models.ForeignKey(ActivityMainTag, on_delete=models.CASCADE, null=True)
+    mainTag = models.ForeignKey(
+        ActivityMainTag, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f"{self.name}"
