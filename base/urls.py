@@ -29,4 +29,5 @@ urlpatterns = [
    
 
     path("about/", views.about, name="about"),
+    path("persona/", views.persona)
 ]

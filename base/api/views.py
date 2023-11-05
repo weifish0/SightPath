@@ -1,7 +1,9 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from base.models import Room
+from base.models import Room, User
 from .serializers import RoomSerializer
+from django.http import JsonResponse, FileResponse
+import json
 
 """
 未來目標(長期)

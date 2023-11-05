@@ -26,7 +26,7 @@ tags = ["資訊", "工程", "數理化", "醫藥衛生", "生命科學", "生物
 
 $.when.apply(null, calls).then(async function () {
     var frame = document.querySelector('.Frame12');
-    for (i = 0; i < shape; i++){
+    for (i = 0; i < shape; i++) {
         scores[i] = await sc_promise[i]
         if (scores[i] instanceof Error) {
             frame.innerHTML = "<h3>個人模型尚未建立</h3>"
@@ -35,20 +35,32 @@ $.when.apply(null, calls).then(async function () {
     }
 
 
+    $.ajax({
+        type: "GET",
+        url: "/persona",
+        dataType: 'json',
+        data: { "scores": JSON.stringify(scores) },
+        success: function (newData) {
+            document.querySelector('.persona').src =
+                "/static" + newData["url"] + "?t=1"
+        }
+    })
+
+
     var id;
     var elem;
     frame.innerHTML = ""
     sc_org = scores.slice();
     scores.sort()
-    
-    for (i = 0; i < 3; i++){
+
+    for (i = 0; i < 3; i++) {
         id = sc_org.indexOf(scores[shape - (i + 1)]);
-        console.log(sc_org);
+        // console.log(sc_org);
         elem = document.createElement('div');
         elem.className = "Frame10";
         elem.innerHTML = "<div>" + tags[id] + "</div>"
         frame.appendChild(elem);
 
         console.log("success append " + i.toString())
-    }    
+    }
 });
