@@ -6,7 +6,8 @@ import os
 import io
 
 def persona_chart(y):
-    plt.rcParams['font.sans-serif'] = ['Heiti TC']
+    # print([f.name for f in matplotlib.font_manager.fontManager.ttflist])
+    plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
     
     figure = io.BytesIO()
     # x = [67.98, 54.23, 40.67]
