@@ -6,9 +6,10 @@ import os
 import io
 import matplotlib.font_manager as font_manager
 
-
+# /home/ubuntu/SightPath/base/api/
 def persona_chart(y):
-    # print([f.name for f in matplotlib.font_manager.fontManager.ttflist])
+    # print([f.name for f in font_manager.fontManager.ttflist])
+    print(os.path.dirname(os.path.abspath(__file__)))
     font_files = font_manager.findSystemFonts(
         fontpaths=os.path.dirname(os.path.abspath(__file__)))
     for font_file in font_files:
