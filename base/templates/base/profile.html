@@ -22,6 +22,7 @@
     {% if user.is_authenticated %}
     {% if request.user.id == user.id %}
     <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px" class="btn btn-warning btn-sm">編輯個人檔案</a>
+    <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();" style="margin-left:15px" class="btn btn-danger btn-sm">刪除資料</a>
     {% endif %}
     {% endif %}
     <hr>
@@ -55,40 +56,7 @@
         </div>
 
         <div class="text">您喜歡過的競賽：</div>
-        <div class="grid">
-            <div class="Rectangle1">
-                <div class="title">
-                    2023 第一屆<br />全國科學量測量測競賽</div>
-                <div class="tag">
-                    #數理化學</div>
-                <div class="datetime">
-                    開始報名日期：2023/9/18<br />截止日期：2023/11/10</div>
-            </div>
-            <div class="Rectangle1">
-                <div class="title">
-                    2023 康寧創星家 - 創新應用競賽</div>
-                <div class="tag">
-                    #產品設計競賽</div>
-                <div class="datetime">
-                    開始報名日期：2023/6/1<br />截止日期：2023/11/6</div>
-            </div>
-            <div class="Rectangle1">
-                <div class="title">
-                    2023 康寧創星家 - 創新應用競賽</div>
-                <div class="tag">
-                    #產品設計競賽</div>
-                <div class="datetime">
-                    開始報名日期：2023/6/1<br />截止日期：2023/11/6</div>
-            </div>
-            <div class="Rectangle1">
-                <div class="title">
-                    2023 康寧創星家 - 創新應用競賽</div>
-                <div class="tag">
-                    #產品設計競賽</div>
-                <div class="datetime">
-                    開始報名日期：2023/6/1<br />截止日期：2023/11/6</div>
-            </div>
-        </div>
+        {% include "base/profile_card.html" %}
     </div>
 
 

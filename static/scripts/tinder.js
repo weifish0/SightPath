@@ -8,6 +8,21 @@ let score_cnt = 0;
 initCards();
 init();
 
+function ajax_save(love_or_nope, id) {
+    $.ajax({
+        type: "POST",
+        url: "/save/",
+        dataType: 'json',
+        data: {
+            "love_or_nope": love_or_nope,
+            "id": id,
+            "csrfmiddlewaretoken": CSRF_TOKEN
+        },
+        success: function (newData) {
+        }
+    })
+}
+
 function storeData(id, is_love) {
     const request = indexedDB.open("model_data");
     request.onsuccess = function (e) {
@@ -18,13 +33,15 @@ function storeData(id, is_love) {
         if (is_love) {
             let transaction = db.transaction("love", "readwrite"); // (1)
             items = transaction.objectStore("love"); // (2)
+            if (id != '') ajax_save("love", id)
         }
         else {
             let transaction = db.transaction("nope", "readwrite"); // (1)
             items = transaction.objectStore("nope");
+            if (id != '') ajax_save("nope", id)
         }
 
-        if(id != '') suc = items.put(id, id);
+        if (id != '') suc = items.put(id, id);
         //items.add(8);
 
         db.close();
@@ -77,16 +94,8 @@ function initCards() {
                 console.log(firstCard.id, score)
                 if (score < 0.5) {
                     score_cnt++;
-                    if (score_cnt >= 30) {
-                        var rm = await tf.io.removeModel('indexeddb://model');
-                        var request = indexedDB.deleteDatabase("model_data");
-                        request.onsuccess = function (e) {
-                            console.log("deleted  model_data successfully")
-                        }
+                    if (score_cnt >= 30) delete_data()
 
-                        await getData("love");
-                    }
-                    
                     firstCard.remove();
                     initCards();
                 }
