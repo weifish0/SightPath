@@ -188,17 +188,17 @@ if __name__ == "__main__":
         '公益': 9
     }
 
-    # output_activities_fixture, activities_tags_list = generate_multiple_activities_fixture(category_index_list)
+    output_activities_fixture, activities_tags_list = generate_multiple_activities_fixture(category_index_list)
     
-    # output_activities_tags_fixture = generate_activities_tags_fixture(activities_tags_list)
+    output_activities_tags_fixture = generate_activities_tags_fixture(activities_tags_list)
     
-    # transfer_activity_fixture_tags_to_pk(output_activities_fixture, activities_tags_list)
+    transfer_activity_fixture_tags_to_pk(output_activities_fixture, activities_tags_list)
     
-    # print(f'新增{len(output_activities_fixture)}個 activity物件')
-    # print(f'新增{len(output_activities_tags_fixture)}個 tag物件')
+    print(f'新增{len(output_activities_fixture)}個 activity物件')
+    print(f'新增{len(output_activities_tags_fixture)}個 tag物件')
     
-    # download_json_fixtures(output_activities_fixture, 'activities_fixture')
-    # download_json_fixtures(output_activities_tags_fixture, 'activities_tags_fixture')
+    download_json_fixtures(output_activities_fixture, 'activities_fixture')
+    download_json_fixtures(output_activities_tags_fixture, 'activities_tags_fixture')
         
     change_json_file_timefield_format('activities_fixture.json')
     
