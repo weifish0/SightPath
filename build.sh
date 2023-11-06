@@ -2,6 +2,15 @@
 # exit on error
 set -o errexit
 
+# sudo apt update
+# sudo apt install firewalld
+# sudo systemctl enable firewalld
+# sudo systemctl start firewalld
+# sudo firewall-cmd --state
+# sudo firewall-cmd --list-all
+# sudo firewall-cmd --permanent --add-port=80/tcp
+# sudo firewall-cmd --reload
+
 # sudo apt install ttf-mscorefonts-installer 
 # sudo apt install latex-cjk-chinese
 # sudo apt-get install language-pack-zh*
