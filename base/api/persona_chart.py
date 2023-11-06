@@ -7,13 +7,14 @@ import io
 import matplotlib.font_manager as font_manager
 
 # /home/ubuntu/SightPath/base/api/
+
+
 def persona_chart(y):
-    # print([f.name for f in font_manager.fontManager.ttflist])
     print(os.path.dirname(os.path.abspath(__file__)))
-    font_files = font_manager.findSystemFonts(
-        fontpaths=os.path.dirname(os.path.abspath(__file__)))
-    for font_file in font_files:
-        font_manager.fontManager.addfont(font_file)
+    font_manager.fontManager.addfont(
+        os.path.dirname(os.path.abspath(__file__)) + "/msjh.ttc"
+    )
+    print([f.name for f in font_manager.fontManager.ttflist])
 
     # print([f.name for f in font_manager.fontManager.ttflist])
     figure = io.BytesIO()
@@ -50,11 +51,11 @@ def persona_chart(y):
                         'linewidth': 0.3,
                         'antialiased': True})
 
-    plt.title(
-        label="個人興趣傾向",
-        fontdict={"fontsize": 16},
-        pad=20
-    )
+    # plt.title(
+    #     label="個人興趣傾向",
+    #     fontdict={"fontsize": 16},
+    #     pad=20
+    # )
 
     # Add a hole in the pie
     # 正常版
@@ -64,6 +65,7 @@ def persona_chart(y):
     # hole = plt.Circle((0, 0), 0.65, facecolor='none')
 
     plt.gcf().gca().add_artist(hole)
+
     script_path = os.path.dirname(os.path.abspath(__file__))
     final_script_path = os.path.join(script_path, 'test_persona.svg')
 
