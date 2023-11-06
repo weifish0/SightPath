@@ -41,8 +41,11 @@ $.when.apply(null, calls).then(async function () {
         dataType: 'json',
         data: { "scores": JSON.stringify(scores) },
         success: function (newData) {
-            document.querySelector('.persona').src =
-                "/static" + newData["url"] + "?t=1"
+            console.log(newData["url"])
+            if (newData["url"] != "") {
+                document.querySelector('.persona').src =
+                    "/static" + newData["url"] + "?t=1"
+            }
         }
     })
 
@@ -53,6 +56,7 @@ $.when.apply(null, calls).then(async function () {
     sc_org = scores.slice();
     scores.sort()
 
+    console.log(scores)
     for (i = 0; i < 3; i++) {
         id = sc_org.indexOf(scores[shape - (i + 1)]);
         // console.log(sc_org);
@@ -64,3 +68,11 @@ $.when.apply(null, calls).then(async function () {
         console.log("success append " + i.toString())
     }
 });
+
+
+// async function love_list() {
+//     let love = await getData("love");
+//     console.log(love)
+// }
+
+// love_list()

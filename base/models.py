@@ -81,6 +81,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
+    love = models.TextField(null=True, blank=True)
+    nope = models.TextField(null=True, blank=True)
     persona = models.ImageField(upload_to="persona",
                                 height_field=None,
                                 width_field=None,

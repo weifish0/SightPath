@@ -107,8 +107,17 @@ def profile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
-    context = {"user": user, "rooms": rooms, "topics": topics}
-    return render(request, "base/profile.html", context)
+
+    if user.love != None:
+        comp_love = Competition.objects.filter(id__in=json.loads(user.love))
+    else:
+        comp_love = None
+
+    return render(request, "base/profile.html",
+                  {"user": user,
+                   "rooms": rooms,
+                   "topics": topics,
+                   "comp_love": comp_love})
 
 
 def chatroom_home(request):
@@ -425,3 +434,44 @@ def persona(request):
         url = user.persona.url
 
     return JsonResponse({"url": url})
+
+
+def save(request):
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        user = User.objects.get(id=user_id)
+        # print (request.POST.get("love_or_nope"))
+        love_or_nope = request.POST.get("love_or_nope")
+        id = int(request.POST.get("id"))
+        arr = []
+
+        if love_or_nope == "love":
+            if user.love != None:
+                arr = json.loads(user.love)
+            arr.append(id)
+            user.love = json.dumps(arr)
+        elif love_or_nope == "nope":
+            if user.nope != None:
+                arr = json.loads(user.nope)
+            arr.append(id)
+            user.nope = json.dumps(arr)
+
+        user.save()
+
+    return JsonResponse({})
+
+
+@login_required(login_url="login_page")
+def delete_data(request, pk):
+    # 根據網址的用戶名字取得該使用者資料
+    user = User.objects.get(id=pk)
+
+    if request.user.id != user.id:
+        return redirect("profile", pk=user.id)
+    
+    user.persona = "loading.gif"
+    user.love = None
+    user.nope = None
+    user.save()
+    
+    return redirect("profile", pk=user.id)
