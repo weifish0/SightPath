@@ -6,13 +6,14 @@ import os
 import io
 import matplotlib.font_manager as font_manager
 
+
 def persona_chart(y):
     # print([f.name for f in matplotlib.font_manager.fontManager.ttflist])
-
-    font_files = font_manager.findSystemFonts(fontpaths="./")
+    font_files = font_manager.findSystemFonts(
+        fontpaths=os.path.dirname(os.path.abspath(__file__)))
     for font_file in font_files:
         font_manager.fontManager.addfont(font_file)
-    
+
     # print([f.name for f in font_manager.fontManager.ttflist])
     figure = io.BytesIO()
     # x = [67.98, 54.23, 40.67]
@@ -22,8 +23,8 @@ def persona_chart(y):
     # print(x)
 
     data_categories = ["資訊", "工程", "數理化", "醫藥衛生", "生命科學", "生物資源",
-    "地球與環境", "建築與設計", "藝術", "社會與心理", "大眾傳播", "外語",
-    "文史哲", "教育", "法政", "管理", "財經", "遊憩與運動"]
+                       "地球與環境", "建築與設計", "藝術", "社會與心理", "大眾傳播", "外語",
+                       "文史哲", "教育", "法政", "管理", "財經", "遊憩與運動"]
 
     explode_data = []
     for i in range(len(data_categories)):
