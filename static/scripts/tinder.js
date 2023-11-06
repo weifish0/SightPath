@@ -163,11 +163,11 @@ function init() {
 
             if (tinderContainer.classList.contains('tinder_love')) {
                 tinderContainer.classList.remove('tinder_love');
-                storeData(event.target.id, true)
+                storeData(allCards[0].id, true)
             }
             else {
                 tinderContainer.classList.remove('tinder_nope');
-                storeData(event.target.id, false)
+                storeData(allCards[0].id, false)
             }
 
             var moveOutWidth = document.body.clientWidth;

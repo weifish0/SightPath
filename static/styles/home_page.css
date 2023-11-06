@@ -62,7 +62,7 @@ body {
 .TagBar {
     align-self: stretch;
     /* height: 10px; */
-    margin: 2px;
+    margin: 2px 5px;
     /* padding-bottom: 8px; */
     background: #447D7A;
     /* flex-direction: column;
