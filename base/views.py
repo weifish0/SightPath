@@ -12,6 +12,8 @@ from django.http import JsonResponse
 
 from dotenv import load_dotenv
 import os
+import json
+from base.api.persona_chart import persona_chart
 
 """
 目標
@@ -105,14 +107,23 @@ def profile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
-    context = {"user": user, "rooms": rooms, "topics": topics}
-    return render(request, "base/profile.html", context)
+
+    if user.love != None:
+        comp_love = Competition.objects.filter(id__in=json.loads(user.love))
+    else:
+        comp_love = None
+
+    return render(request, "base/profile.html",
+                  {"user": user,
+                   "rooms": rooms,
+                   "topics": topics,
+                   "comp_love": comp_love})
 
 
 def chatroom_home(request):
     # topic_category為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
     topic_category = request.GET.get("topic_category")
-    
+
     # q值若找不到則設為空字串，原本會回傳None，但用django Q物件以None搜索會回報錯誤
     q = request.GET.get("q") if request.GET.get("q") != None else ""
 
@@ -125,20 +136,19 @@ def chatroom_home(request):
                                     | Q(name__icontains=q)
                                     | Q(host__nickname__icontains=q))
 
-    
     # 找到被置頂的討論串
     pin_rooms = Room.objects.filter(Q(pin_mode=True))
     # 將置頂的討論串從普通rooms中移除
     rooms = rooms.exclude(pin_mode=True).order_by("-updated")
-    
+
     rooms_count = rooms.count() + pin_rooms.count()
     # 取得所有討論事話題類別
     topics = Topic.objects.all()
-    
-    context = {"rooms":rooms, "rooms_count":rooms_count, 
-               "topics":topics, "topic_category": topic_category,
+
+    context = {"rooms": rooms, "rooms_count": rooms_count,
+               "topics": topics, "topic_category": topic_category,
                "pin_rooms": pin_rooms}
-    
+
     # TODO: 將其改成用彈出視窗顯示
     # 當用戶已登入，才會顯示房間通知
     if request.user.is_authenticated:
@@ -148,7 +158,6 @@ def chatroom_home(request):
         myrooms_replies = Message.objects.filter(Q(room__host__id__contains=user_now)
                                                  & ~Q(user__id=user_now)).order_by("-created")[:15]
 
-        
         context.setdefault("myrooms_replies", myrooms_replies)
 
     return render(request, "base/chatroom_home.html", context)
@@ -266,10 +275,10 @@ def delete_room(request, pk):
 
 @login_required(login_url="login_page")
 def pin_room(request, pk):
-    
+
     if not request.user.is_superuser:
         return HttpResponse("你沒有權限")
-    
+
     # 將討論室設為置頂
     room = Room.objects.get(id=pk)
     room.pin_mode = True
@@ -279,10 +288,10 @@ def pin_room(request, pk):
 
 @login_required(login_url="login_page")
 def unpin_room(request, pk):
-    
+
     if not request.user.is_superuser:
         return HttpResponse("你沒有權限")
-    
+
     # 將討論室取消置頂
     room = Room.objects.get(id=pk)
     room.pin_mode = False
@@ -409,3 +418,60 @@ def rand_context():
 
 def platform_config(request):
     return render(request, "base/platform_config.html")
+
+
+def persona(request):
+    url = ""
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        user = User.objects.get(id=user_id)
+        sc_arr = json.loads(request.GET.get("scores"))
+
+        user.persona.save("persona"+str(user_id)+".png",
+                          persona_chart(sc_arr))
+        user.save()
+
+        url = user.persona.url
+
+    return JsonResponse({"url": url})
+
+
+def save(request):
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        user = User.objects.get(id=user_id)
+        # print (request.POST.get("love_or_nope"))
+        love_or_nope = request.POST.get("love_or_nope")
+        id = int(request.POST.get("id"))
+        arr = []
+
+        if love_or_nope == "love":
+            if user.love != None:
+                arr = json.loads(user.love)
+            arr.append(id)
+            user.love = json.dumps(arr)
+        elif love_or_nope == "nope":
+            if user.nope != None:
+                arr = json.loads(user.nope)
+            arr.append(id)
+            user.nope = json.dumps(arr)
+
+        user.save()
+
+    return JsonResponse({})
+
+
+@login_required(login_url="login_page")
+def delete_data(request, pk):
+    # 根據網址的用戶名字取得該使用者資料
+    user = User.objects.get(id=pk)
+
+    if request.user.id != user.id:
+        return redirect("profile", pk=user.id)
+    
+    user.persona = "loading.gif"
+    user.love = None
+    user.nope = None
+    user.save()
+    
+    return redirect("profile", pk=user.id)
