@@ -11,12 +11,12 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('auth', '0012_alter_user_first_name_max_length'),
+        ("auth", "0012_alter_user_first_name_max_length"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='User',
+            name="User",
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('password', models.CharField(max_length=128, verbose_name='password')),
@@ -43,22 +43,50 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='ActivityMainTag',
+            name="ActivityTag",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('tag_name', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("tag_name", models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
-            name='CompetitionTag',
+            name="CompetitionTag",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('tag_name', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("tag_name", models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
-            name='OurTag',
+            name="OurTag",
             fields=[
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("tag_name", models.CharField(max_length=50)),
+                ("description", models.CharField(max_length=400)),
+                ("emb", models.CharField(max_length=800, null=True)),
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('tag_name', models.CharField(max_length=50)),
                 ('description', models.CharField(max_length=400)),
@@ -66,15 +94,63 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Topic',
+            name="Topic",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
-            name='Room',
+            name="Room",
             fields=[
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50)),
+                ("description", models.TextField(blank=True, null=True)),
+                ("updated", models.DateTimeField(auto_now=True)),
+                ("created", models.DateTimeField(auto_now_add=True)),
+                ("pin_mode", models.BooleanField(default=False)),
+                (
+                    "host",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "participants",
+                    models.ManyToManyField(
+                        blank=True,
+                        related_name="participants",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "topic",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="base.topic",
+                    ),
+                ),
+            ],
+            options={"ordering": ["-updated", "-created"],},
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
                 ('description', models.TextField(blank=True, null=True)),
@@ -90,41 +166,68 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Message',
+            name="Message",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('body', models.TextField()),
-                ('updated', models.DateTimeField(auto_now=True)),
-                ('created', models.DateTimeField(auto_now_add=True)),
-                ('room', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='base.room')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("body", models.TextField()),
+                ("updated", models.DateTimeField(auto_now=True)),
+                ("created", models.DateTimeField(auto_now_add=True)),
+                (
+                    "room",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="base.room"
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Competition',
+            name="Competition",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.TextField()),
-                ('url', models.URLField(null=True)),
-                ('cover_img_url', models.URLField(null=True)),
-                ('start_time', models.DateTimeField(null=True)),
-                ('end_time', models.DateTimeField(null=True)),
-                ('guide_line_html', models.TextField(null=True)),
-                ('organizer_title', models.TextField(null=True)),
-                ('page_views', models.IntegerField(null=True)),
-                ('contact_email', models.EmailField(max_length=254, null=True)),
-                ('contact_name', models.TextField(null=True)),
-                ('contact_phone', models.TextField(null=True)),
-                ('limit_highschool', models.BooleanField(null=True)),
-                ('limit_none', models.BooleanField(null=True)),
-                ('limit_other', models.BooleanField(null=True)),
-                ('emb', models.CharField(max_length=800, null=True)),
-                ('our_tags', models.ManyToManyField(blank=True, to='base.ourtag')),
-                ('tags', models.ManyToManyField(blank=True, to='base.competitiontag')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.TextField()),
+                ("url", models.URLField(null=True)),
+                ("cover_img_url", models.URLField(null=True)),
+                ("start_time", models.DateTimeField(null=True)),
+                ("end_time", models.DateTimeField(null=True)),
+                ("guide_line_html", models.TextField(null=True)),
+                ("organizer_title", models.TextField(null=True)),
+                ("page_views", models.IntegerField(null=True)),
+                ("contact_email", models.EmailField(max_length=254, null=True)),
+                ("contact_name", models.TextField(null=True)),
+                ("contact_phone", models.TextField(null=True)),
+                ("limit_highschool", models.BooleanField(null=True)),
+                ("limit_none", models.BooleanField(null=True)),
+                ("limit_other", models.BooleanField(null=True)),
+                ("emb", models.CharField(max_length=800, null=True)),
+                ("our_tags", models.ManyToManyField(blank=True, to="base.ourtag")),
+                ("tags", models.ManyToManyField(blank=True, to="base.competitiontag")),
             ],
         ),
         migrations.CreateModel(
-            name='Activity',
+            name="Activity",
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.TextField()),
