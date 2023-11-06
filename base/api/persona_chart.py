@@ -7,8 +7,6 @@ import io
 
 def persona_chart(y):
     # print([f.name for f in matplotlib.font_manager.fontManager.ttflist])
-    plt.rcParams['text.usetex'] = False
-    plt.rcParams['font.sans-serif'] = ['DejaVu Sans']
 
     figure = io.BytesIO()
     # x = [67.98, 54.23, 40.67]
@@ -28,8 +26,7 @@ def persona_chart(y):
     color = '447D7A'
 
     sns.set(font_scale=1.2)
-    matplotlib.rc('font', family='DejaVu Sans')
-    # Microsoft JhengHei
+    matplotlib.rc('font', family='Microsoft JhengHei')
     matplotlib.rcParams['text.color'] = 'white'
     plt.figure(figsize=(8, 8))
 
