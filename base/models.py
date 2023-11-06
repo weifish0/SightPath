@@ -13,6 +13,9 @@ from django.utils.translation import gettext_lazy as _
 python3 ./base/fixtures/competitions_fixture_generator.py
 python3 manage.py loaddata ./base/fixtures/competition_tags_fixture.json
 python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
+
+python3 manage.py loaddata ./base/fixtures/activities_tags_fixture.json
+python3 manage.py loaddata ./base/fixtures/activities_fixture.json
 '''
 
 
@@ -156,6 +159,7 @@ class OurTag(models.Model):
     def __str__(self):
         return f"{self.tag_name}"
 
+
 class Competition(models.Model):
     name = models.TextField()
     url = models.URLField(null=True)
@@ -184,10 +188,12 @@ class Competition(models.Model):
     def __str__(self):
         return f"{self.name}"
 
-class ActivityMainTag(models.Model):
+
+class ActivityTag(models.Model):
     tag_name = models.CharField(max_length=50)
     def __str__(self):
         return f"{self.tag_name}"
+
 
 class Activity(models.Model):
     name = models.TextField()
@@ -200,7 +206,8 @@ class Activity(models.Model):
     pageView = models.IntegerField(null=True)
     isAD = models.BooleanField(null=True)
     photoUrl = models.URLField(null=True)
-    mainTag = models.ForeignKey(ActivityMainTag, on_delete=models.CASCADE, null=True)
-
+    tags = models.ManyToManyField(
+        ActivityTag, blank=True
+    )
     def __str__(self):
         return f"{self.name}"

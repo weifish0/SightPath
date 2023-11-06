@@ -1,5 +1,12 @@
-1. 確認以line登入的使用者可以改名
-2. 置頂頁面
-3. 活動爬蟲
-4.[x] superuser顯示
-5. line登入使用者profile名稱顯示
+# feature development
+## important
+1. 儀錶板
+2. UI畫面
+3. 
+## less important
+
+# bug fix 
+## important
+1. 首頁活動的了結詳情按鈕無法點擊
+## less important
+1. 文章置頂後，在特定類標仍能被看見
