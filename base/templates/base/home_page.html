@@ -36,6 +36,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
 <script src="/static/scripts/classification.js"></script>
+
+<script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+</script>
 <script src="/static/scripts/tinder.js"></script>
 
 {% endblock content %}
