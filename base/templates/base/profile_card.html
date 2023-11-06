@@ -1,0 +1,17 @@
+{% load static %}
+
+{% if comp_love == None %}
+<h3>無資料</h3>
+{% endif %}
+
+<div class="grid">
+    {% for comp in comp_love %}
+    <div class="Rectangle1">
+        <div class="title">{{comp.name}}</div>
+        <div class="tag">{{comp.our_tags.first}}</div>
+        <div class="datetime">
+            開始報名日期: {{comp.start_time}}<br />
+            截止日期：{{comp.end_time}}</div>
+    </div>
+    {% endfor %}
+</div>

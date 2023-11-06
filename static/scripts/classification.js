@@ -80,7 +80,7 @@ async function train() {
             batchSize: 4,
             epochs: 3
         });
-        console.log("love Loss after Epoch " + i + " : " + h.history.loss[0]);
+        console.log("Loss after Epoch " + i + " : " + h.history.loss[0]);
     }
 
     const saveResults = await model.save('indexeddb://model');
@@ -101,4 +101,14 @@ async function predict(id, emb=[]) {
         // console.log(error)
         return error;
     }
+}
+
+async function delete_data() {
+    var rm = await tf.io.removeModel('indexeddb://model');
+    var request = indexedDB.deleteDatabase("model_data");
+    request.onsuccess = function (e) {
+        console.log("deleted  model_data successfully")
+    }
+
+    await getData("love");
 }

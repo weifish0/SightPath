@@ -26,8 +26,12 @@ urlpatterns = [
     path("home_update/", views.home_update, name="home_update"),
     path("embvec/<str:isourtag>/<str:pk>/", views.embvec, name="embvec"),
     path("", views.home_page, name="home_page"),
+
+    path("delete_data/<str:pk>/", views.delete_data, name="delete_data"),
    
 
     path("about/", views.about, name="about"),
-    path("persona/", views.persona)
+    path("persona/", views.persona),
+
+    path("save/", views.save)
 ]
