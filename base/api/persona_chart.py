@@ -6,7 +6,7 @@ import os
 import io
 
 def persona_chart(y):
-    plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']
+    plt.rcParams['font.sans-serif'] = ['Heiti TC']
     
     figure = io.BytesIO()
     # x = [67.98, 54.23, 40.67]
