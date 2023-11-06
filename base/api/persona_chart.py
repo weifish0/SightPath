@@ -4,10 +4,16 @@ from numpy import random
 import seaborn as sns
 import os
 import io
+import matplotlib.font_manager as font_manager
 
 def persona_chart(y):
     # print([f.name for f in matplotlib.font_manager.fontManager.ttflist])
 
+    font_files = font_manager.findSystemFonts(fontpaths="./")
+    for font_file in font_files:
+        font_manager.fontManager.addfont(font_file)
+    
+    # print([f.name for f in font_manager.fontManager.ttflist])
     figure = io.BytesIO()
     # x = [67.98, 54.23, 40.67]
     # y = [67.98, 54.23, 40.67, 29, 13, 14, 17,
@@ -26,6 +32,7 @@ def persona_chart(y):
     color = '447D7A'
 
     sns.set(font_scale=1.2)
+
     matplotlib.rc('font', family='Microsoft JhengHei')
     matplotlib.rcParams['text.color'] = 'white'
     plt.figure(figsize=(8, 8))
