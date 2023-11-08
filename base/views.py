@@ -241,7 +241,7 @@ def create_room(request):
 def update_room(request, pk):
     room = Room.objects.get(id=pk)
 
-    if request.user != room.host:
+    if request.user != room.host and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     # 抓取該討論室上次在資料庫存的資料
@@ -270,7 +270,7 @@ def update_room(request, pk):
 def delete_room(request, pk):
     room = Room.objects.get(id=pk)
 
-    if request.user != room.host:
+    if request.user != room.host and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     context = {"obj": room}
@@ -312,7 +312,7 @@ def unpin_room(request, pk):
 def delete_message(request, pk):
     message = Message.objects.get(id=pk)
 
-    if request.user != message.user:
+    if request.user != message.user and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     context = {"obj": message}
@@ -329,7 +329,7 @@ def edit_profile(request, pk):
     # 根據網址的用戶名字取得該使用者資料
     user = User.objects.get(id=pk)
 
-    if request.user.id != user.id:
+    if request.user.id != user.id and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     if request.method == "POST":
