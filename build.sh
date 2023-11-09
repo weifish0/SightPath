@@ -11,11 +11,6 @@ set -o errexit
 # sudo firewall-cmd --permanent --add-port=80/tcp
 # sudo firewall-cmd --reload
 
-# sudo apt install ttf-mscorefonts-installer 
-# sudo apt install latex-cjk-chinese
-# sudo apt-get install language-pack-zh*
-# sudo apt-get install chinese*
-
 
 pip install -r requirements.txt
 python3 manage.py makemigrations

@@ -76,6 +76,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
 <script src="/static/scripts/classification.js"></script>
+
+{% if user.is_authenticated %}
+{% if request.user.id == user.id %}
+<script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+</script>
 <script src="/static/scripts/profile.js"></script>
+{% endif %}
+{% endif %}
 
 {% endblock content %}
