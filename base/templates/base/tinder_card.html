@@ -11,7 +11,7 @@
         <img class="Image" src="https://via.placeholder.com/360x301" />
     </div> -->
     <div class="TagBar tags_all">
-        {% for tag in competition.tags.all %}
+        {% for tag in competition.tags.all|slice:"0:8" %}
         <div class="TagKind">
             <a class="Tag" href="{% url 'find_competitions' %}?competition_category={{tag}}">
                 {{tag}}</a>

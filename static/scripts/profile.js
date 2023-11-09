@@ -29,7 +29,7 @@ $.when.apply(null, calls).then(async function () {
     for (i = 0; i < shape; i++) {
         scores[i] = await sc_promise[i]
         if (scores[i] instanceof Error) {
-            frame.innerHTML = "<h3>個人模型尚未建立</h3>"
+            // frame.innerHTML = "<h3>個人模型尚未建立</h3>"
             return;
         }
     }
@@ -55,20 +55,33 @@ $.when.apply(null, calls).then(async function () {
 
     var id;
     var elem;
-    frame.innerHTML = ""
+    // frame.innerHTML = ""
 
     sc_sort = Array.from(Array(18).keys()).sort((a, b) => scores[b]-scores[a])
-    console.log(scores)
-    for (i = 0; i < 3; i++) {
-        id = sc_sort[i];
-        // console.log(sc_org);
-        elem = document.createElement('div');
-        elem.className = "Frame10";
-        elem.innerHTML = "<div>" + tags[id] + "</div>"
-        frame.appendChild(elem);
+    console.log(sc_sort);
 
-        console.log("success append " + i.toString())
-    }
+    $.ajax({
+        type: "POST",
+        url: "/top3/",
+        dataType: 'json',
+        data: {
+            "sc_sort": JSON.stringify(sc_sort.map(val => val+1)),
+            "csrfmiddlewaretoken": CSRF_TOKEN
+        },
+        success: function (newData) {
+        }
+    })
+
+    // for (i = 0; i < 3; i++) {
+    //     id = sc_sort[i];
+    //     // console.log(sc_org);
+    //     elem = document.createElement('div');
+    //     elem.className = "Frame10";
+    //     elem.innerHTML = "<div>" + tags[id] + "</div>"
+    //     frame.appendChild(elem);
+
+    //     console.log("success append " + i.toString())
+    // }
 });
 
 

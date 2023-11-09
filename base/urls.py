@@ -32,6 +32,7 @@ urlpatterns = [
 
     path("about/", views.about, name="about"),
     path("persona/", views.persona),
+    path("top3/", views.save_top3),
 
     path("save/", views.save)
 ]
