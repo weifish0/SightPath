@@ -11,30 +11,27 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'home_page' %}">首頁</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="{% url 'chatroom_home' %}">討論串</a>
         </li>
+        
+        {% comment "等頁面優化完畢再開放" %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'find_competitions' %}">找比賽</a>
         </li>
+        {% endcomment %}
+
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/weifish0/SightPath" target="_blank" rel="noopener noreferrer">GitHub</a>
         </li>
+
         {% if request.user.is_authenticated %}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            設定
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{% url 'profile' request.user.id %}">個人檔案</a></li>
-            <li><a class="dropdown-item" href="{% url 'platform_config' %}">系統設定</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' request.user.id %}">個人檔案</a>
         </li>
         {% endif %}
+
       </ul>
       <form class="d-inline-flex align-items-center" role="search" method="get" action="">
         <input class="form-inline me-2" type="search" placeholder="Search" aria-label="Search" name="q">
