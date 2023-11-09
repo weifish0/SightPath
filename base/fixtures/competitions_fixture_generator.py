@@ -52,7 +52,7 @@ def generate_fixture():
         # 確保是高中生能夠參加的比賽
         if limit_highschool or limit_none or limit_other:
             name = data["title"]        
-            url = data["officialUrl"]
+            url = data["alias"]
             cover_img_url = data["coverImage"]["url"]
             
             start_time_str = "1984-01-01 00:00:00"
@@ -85,7 +85,7 @@ def generate_fixture():
             output_competitions_fixture.append({"model": "base.competition",
                         "pk": len(created_competitions)+1,
                         "fields": {"name": name,
-                                   "url": url,
+                                   "url": f"https://bhuntr.com/tw/competitions/{url}",
                                    "cover_img_url": cover_img_url,
                                    "start_time": start_time_str,
                                    "end_time": end_time_str,

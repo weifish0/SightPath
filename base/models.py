@@ -15,20 +15,20 @@ from django.conf import settings
 
 
 # 將比賽fixture讀進資料庫
-python3 manage.py loaddata ./base/fixtures/competition_tags_fixture.json
-python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
+python manage.py loaddata ./base/fixtures/competition_tags_fixture.json
+python manage.py loaddata ./base/fixtures/competitions_fixture.json
 
 
 # 將活動fixture讀進資料庫
-python3 manage.py loaddata ./base/fixtures/activities_tags_fixture.json
-python3 manage.py loaddata ./base/fixtures/activities_fixture.json
+python manage.py loaddata ./base/fixtures/activities_tags_fixture.json
+python manage.py loaddata ./base/fixtures/activities_fixture.json
 
 
 # 更新比賽fixture
-python3 ./base/fixtures/competitions_fixture_generator.py
+python ./base/fixtures/competitions_fixture_generator.py
 
 # 更新活動fixture
-python3 ./base/fixtures/activities_fixture_generator.py
+python ./base/fixtures/activities_fixture_generator.py
 '''
 
 
