@@ -24,7 +24,7 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ["email", "password1", "password2", "nickname"]
         
-        
+# TODO 覆寫 django allauth 預設註冊模板
 # class CustomSocialAccountSignupForm(SignupForm):
 #     nickname = forms.CharField(max_length=30)
 #     def save(self, request):

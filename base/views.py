@@ -373,7 +373,6 @@ def find_competitions(request):
     context = {"competitions": competitions, "competition_tags": competition_tags,
                "competitions_count": competitions_count, "competition_category": competition_category}
     return render(request, "base/find_competitions_page.html", context)
-#####
 
 
 def competition_info(request, pk):
@@ -384,7 +383,7 @@ def competition_info(request, pk):
     return render(request, "base/competition_info.html", context)
 
 
-def about(request):
+def about_page(request):
     return render(request, "base/about.html")
 
 
@@ -428,9 +427,8 @@ def rand_context():
             "competition_tags": competition_tags,
             "competitions_count": competitions_count}
 
+
   # 用戶偏好設定
-
-
 def platform_config(request):
     return render(request, "base/platform_config.html")
 
@@ -464,7 +462,18 @@ def save_top3(request):
 
 
 @login_required(login_url="login_page")
-def save(request):
+def save_top3(request):
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        user = User.objects.get(id=user_id)
+        user.top3 = request.POST.get("sc_sort")
+        user.save()
+
+    return redirect("profile", pk=user.id)
+
+
+@login_required(login_url="login_page")
+def save_persona(request):
     if request.user.is_authenticated:
         user_id = request.user.id
         user = User.objects.get(id=user_id)
