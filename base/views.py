@@ -420,12 +420,13 @@ def platform_config(request):
     return render(request, "base/platform_config.html")
 
 
+@login_required(login_url="login_page")
 def persona(request):
     url = ""
     if request.user.is_authenticated:
         user_id = request.user.id
         user = User.objects.get(id=user_id)
-        sc_arr = json.loads(request.GET.get("scores"))
+        sc_arr = json.loads(request.POST.get("scores"))
 
         user.persona.save("persona"+str(user_id)+".png",
                           persona_chart(sc_arr))
@@ -436,6 +437,7 @@ def persona(request):
     return JsonResponse({"url": url})
 
 
+@login_required(login_url="login_page")
 def save(request):
     if request.user.is_authenticated:
         user_id = request.user.id

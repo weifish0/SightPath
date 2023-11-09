@@ -36,10 +36,13 @@ $.when.apply(null, calls).then(async function () {
 
 
     $.ajax({
-        type: "GET",
-        url: "/persona",
+        type: "POST",
+        url: "/persona/",
         dataType: 'json',
-        data: { "scores": JSON.stringify(scores) },
+        data: {
+            "scores": JSON.stringify(scores),
+            "csrfmiddlewaretoken": CSRF_TOKEN
+        },
         success: function (newData) {
             console.log(newData["url"])
             if (newData["url"] != "") {
@@ -53,12 +56,11 @@ $.when.apply(null, calls).then(async function () {
     var id;
     var elem;
     frame.innerHTML = ""
-    sc_org = scores.slice();
-    scores.sort()
 
+    sc_sort = Array.from(Array(18).keys()).sort((a, b) => scores[b]-scores[a])
     console.log(scores)
     for (i = 0; i < 3; i++) {
-        id = sc_org.indexOf(scores[shape - (i + 1)]);
+        id = sc_sort[i];
         // console.log(sc_org);
         elem = document.createElement('div');
         elem.className = "Frame10";
