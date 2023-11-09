@@ -82,6 +82,29 @@ class OverwriteStorage(FileSystemStorage):
         return name
     
 
+class Topic(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.name}"
+    
+
+class CompetitionTag(models.Model):
+    tag_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.tag_name}"
+
+
+class OurTag(models.Model):
+    tag_name = models.CharField(max_length=50)
+    description = models.CharField(max_length=400)
+    emb = models.CharField(max_length=800, null=True)
+
+    def __str__(self):
+        return f"{self.tag_name}"
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     bio = models.CharField(max_length=150, null=True, default='', blank=True)
     nickname = models.CharField(max_length=20, null=True)
@@ -94,6 +117,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
+    top3 = models.TextField(null=True, blank=True)
     love = models.TextField(null=True, blank=True)
     nope = models.TextField(null=True, blank=True)
     persona = models.ImageField(upload_to="persona",
@@ -102,7 +126,7 @@ class User(AbstractBaseUser, PermissionsMixin):
                                 max_length=100,
                                 default="loading.gif",
                                 storage=OverwriteStorage())
-
+    
     # 採取 email 作為用戶身分驗證方式
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
@@ -122,13 +146,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         verbose_name = 'User'
         verbose_name_plural = 'Users'
-
-
-class Topic(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return f"{self.name}"
 
 
 class Room(models.Model):
@@ -162,6 +179,7 @@ class Room(models.Model):
         return f"{self.name}"
 
 
+
 class Message(models.Model):
     # 當使用者被刪除後，刪除他在所有討論室傳的所有訊息
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -173,22 +191,6 @@ class Message(models.Model):
 
     def __str__(self):
         return f"{self.body[0:20]}"
-
-
-class CompetitionTag(models.Model):
-    tag_name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return f"{self.tag_name}"
-
-
-class OurTag(models.Model):
-    tag_name = models.CharField(max_length=50)
-    description = models.CharField(max_length=400)
-    emb = models.CharField(max_length=800, null=True)
-
-    def __str__(self):
-        return f"{self.tag_name}"
 
 
 class Competition(models.Model):

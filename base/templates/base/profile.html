@@ -12,7 +12,7 @@
         你擁有管理員權限
     </div>
     {% endif %}
-    
+
     {% if user.email != '' %}
     <h1 class="ml-15">{{user.nickname}}</h1>
     {% else %}
@@ -21,8 +21,10 @@
 
     {% if user.is_authenticated %}
     {% if request.user.id == user.id %}
-    <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px" class="btn btn-warning btn-sm">編輯個人檔案</a>
-    <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();" style="margin-left:15px" class="btn btn-danger btn-sm">刪除資料</a>
+    <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px"
+        class="btn btn-warning btn-sm">編輯個人檔案</a>
+    <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();" style="margin-left:15px"
+        class="btn btn-danger btn-sm">刪除資料</a>
     {% endif %}
     {% endif %}
     <hr>
@@ -52,7 +54,16 @@
         </div>
 
         <div class="Frame12">
-            <img class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" />
+            {% if top3 == None %}
+            <h3>個人模型尚未建立</h3>
+            {% endif %}
+
+            {% for item in top3|slice:"0:3" %}
+            <div class="Frame10">
+                <div>{{item}}</div>
+            </div>
+            {% endfor %}
+            <!-- <img class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" /> -->
         </div>
 
         <div class="text">您喜歡過的競賽：</div>
