@@ -10,11 +10,11 @@ import matplotlib.font_manager as font_manager
 
 
 def persona_chart(y):
-    print(os.path.dirname(os.path.abspath(__file__)))
+    # print(os.path.dirname(os.path.abspath(__file__)))
     font_manager.fontManager.addfont(
         os.path.dirname(os.path.abspath(__file__)) + "/msjh.ttc"
     )
-    print([f.name for f in font_manager.fontManager.ttflist])
+    # print([f.name for f in font_manager.fontManager.ttflist])
 
     # print([f.name for f in font_manager.fontManager.ttflist])
     figure = io.BytesIO()

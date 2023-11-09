@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 import os
 import json
 from base.api.persona_chart import persona_chart
+from django.db.models import Case, Value, When
 
 """
 目標
@@ -107,17 +108,22 @@ def profile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
-
+    comp_love = None
+    top3 = None
+    
     if user.love != None:
         comp_love = Competition.objects.filter(id__in=json.loads(user.love))
-    else:
-        comp_love = None
-
+    if user.top3 != None:
+        pk_list = json.loads(user.top3)
+        preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(pk_list)])
+        top3 = OurTag.objects.filter(pk__in=pk_list).order_by(preserved)
+    
     return render(request, "base/profile.html",
                   {"user": user,
                    "rooms": rooms,
                    "topics": topics,
-                   "comp_love": comp_love})
+                   "comp_love": comp_love,
+                   "top3": top3})
 
 
 def chatroom_home(request):
@@ -409,12 +415,12 @@ def rand_context():
     random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 5))
     competitions = competitions.filter(id__in=random_id_list)
 
-    # pick first 8 tags
-    for com in competitions:
-        id_list = list(com.tags.values_list('id', flat=True))
-        com.tags.set(com.tags.filter(id__in=id_list[0:8]))
-        # com.save()
-        # print(com.tags.all())
+    # # pick first 8 tags
+    # for com in competitions:
+    #     id_list = list(com.tags.values_list('id', flat=True))
+    #     com.tags.set(com.tags.filter(id__in=id_list[0:8]))
+    #     # com.save()
+    #     # print(com.tags.all())
 
     competitions_count = competitions.count()
 
@@ -444,6 +450,17 @@ def persona(request):
         url = user.persona.url
 
     return JsonResponse({"url": url})
+
+
+@login_required(login_url="login_page")
+def save_top3(request):
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        user = User.objects.get(id=user_id)
+        user.top3 = request.POST.get("sc_sort")
+        user.save()
+
+    return redirect("profile", pk=user.id)
 
 
 @login_required(login_url="login_page")
@@ -483,6 +500,7 @@ def delete_data(request, pk):
     user.persona = "loading.gif"
     user.love = None
     user.nope = None
+    user.top3 = None
     user.save()
     
     return redirect("profile", pk=user.id)
