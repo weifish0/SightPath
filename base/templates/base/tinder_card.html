@@ -18,28 +18,26 @@
         </div>
         {% endfor %}
     </div>
+    
     <div class="ShortDescription">
+        <img src="{{competition.cover_img_url}}" alt="">
+        {% if competition.agency_title != None %}
         <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
+        {% endif %}
+        <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
         <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
         <p class="text-light">開始報名日期: {{competition.start_time}}</p>
         <p class="text-light">截止日期: {{competition.end_time}}</p>
-        <!-- <div>活動簡介</div>
-        <div class="SitconXX">在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。</div> -->
+        
     </div>
-    <!-- <div class="Specials">
-        <div>活動特色</div>
-        <div class="SitconXX">在 SITCON 的第 X 週年，期望我們秉持初衷——讓學生們分享與交流知識，把各地學生串連起來的 X 字路口——也期望每人皆能在與大家的聊天與討論之中，找到自己的方向、熱情。</div>
-    </div>
-    <div class="FullDescription">
-        <div>詳細資訊</div>
-    </div> -->
+
     <div class="SeeMoreButton">
         <div class="Frame6">
             <img class="Ellipse1" src="{% static 'images/mascot.png' %}" />
             <div class="Sitcon">SightPath</div>
         </div>
         <div class="Button">
-            <div class="Button">了解詳細</div>
+            <a class="Button" href="{{ competition.url }}">了解詳細</a>
         </div>
     </div>
 </div>
