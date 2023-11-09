@@ -7,7 +7,7 @@
         <h5>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}" class="btn btn-outline-info">{{room.topic.name}}</a></small>
         <h1>{{room.name}}</h1>
         <h5>作者: <a href="{% url 'profile' room.host.id %}" class="btn btn-outline-primary">{{room.host.nickname}}</a></h5>
-        {% if request.user == room.host %}
+        {% if request.user == room.host or request.user.is_superuser %}
         <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
         <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
         {% endif %}
@@ -23,14 +23,13 @@
             {% for message in room_messages %}
             <small><a href="{% url 'profile' message.user.id %}">@{{message.user.nickname}}</a></small>
             <small>{{message.created|timesince}} ago</small>
-            {% if request.user == message.user %}
+            {% if request.user == message.user or request.user.is_superuser %}
             <a href="{% url 'delete_message' message.id %}">收回訊息</a>
             {% endif %}
             <p>{{message.body}}</p>
             {% endfor %}
         </div>
 
-        
 
         {% if request.user.is_authenticated %}
         <div class="">
