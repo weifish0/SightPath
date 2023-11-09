@@ -11,7 +11,7 @@ init();
 function ajax_save(love_or_nope, id) {
     $.ajax({
         type: "POST",
-        url: "/save/",
+        url: "/save_persona/",
         dataType: 'json',
         data: {
             "love_or_nope": love_or_nope,
