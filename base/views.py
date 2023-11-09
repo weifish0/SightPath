@@ -136,8 +136,17 @@ def chatroom_home(request):
                                     | Q(name__icontains=q)
                                     | Q(host__nickname__icontains=q))
 
-    # 找到被置頂的討論串
-    pin_rooms = Room.objects.filter(Q(pin_mode=True))
+    # 以topic索引則找被置頂且符合topic_category的討論串
+    if topic_category != None:
+        pin_rooms = Room.objects.filter(Q(pin_mode=True)
+                                        & Q(topic__name__exact=topic_category))
+    # 以搜索功能搜索討論串
+    elif q != "":
+        pin_rooms = Room.objects.filter(Q(pin_mode=True)
+                                        & (Q(name__icontains=q) | Q(host__nickname__icontains=q)))
+    else:
+        pin_rooms = Room.objects.filter(Q(pin_mode=True))
+    
     # 將置頂的討論串從普通rooms中移除
     rooms = rooms.exclude(pin_mode=True).order_by("-updated")
 
@@ -232,7 +241,7 @@ def create_room(request):
 def update_room(request, pk):
     room = Room.objects.get(id=pk)
 
-    if request.user != room.host:
+    if request.user != room.host and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     # 抓取該討論室上次在資料庫存的資料
@@ -261,7 +270,7 @@ def update_room(request, pk):
 def delete_room(request, pk):
     room = Room.objects.get(id=pk)
 
-    if request.user != room.host:
+    if request.user != room.host and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     context = {"obj": room}
@@ -303,7 +312,7 @@ def unpin_room(request, pk):
 def delete_message(request, pk):
     message = Message.objects.get(id=pk)
 
-    if request.user != message.user:
+    if request.user != message.user and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     context = {"obj": message}
@@ -320,7 +329,7 @@ def edit_profile(request, pk):
     # 根據網址的用戶名字取得該使用者資料
     user = User.objects.get(id=pk)
 
-    if request.user.id != user.id:
+    if request.user.id != user.id and not request.user.is_superuser:
         return HttpResponse("你沒有權限")
 
     if request.method == "POST":
