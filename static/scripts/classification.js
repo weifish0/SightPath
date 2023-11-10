@@ -1,7 +1,13 @@
+let ver = 0;
+let run_upgraded = 1;
+
 function getData(string, id = "no") {
-    const request = indexedDB.open("model_data");
+    // console.log("version" + ver.toString())
+    const request = indexedDB.open("model_data", ver + run_upgraded);
     return new Promise(function (resolve, reject) {
         request.onupgradeneeded = function (e) {
+            run_upgraded = 0;
+
             db = e.target.result;
             console.log('running onupgradeneeded');
             const store_love = db.createObjectStore('love');
@@ -10,10 +16,8 @@ function getData(string, id = "no") {
         };
         request.onsuccess = function (e) {
             let db = e.target.result;
-            const store_love = db.createObjectStore('love');
-            const store_nope = db.createObjectStore('nope');
-            const store_tmp = db.createObjectStore('tmp');
-            
+            ver = db.version; // ver = ver + run_upgraded
+
             let transaction = db.transaction(string, "readwrite"); // (1)
             let items = transaction.objectStore(string);
 
@@ -60,11 +64,11 @@ async function train() {
 
         model = tf.sequential({
             layers: [
-                tf.layers.dense({units: 64, inputShape: [shape]}),
-                tf.layers.dense({units: 128}),
-                tf.layers.dense({units: 64}),
+                tf.layers.dense({ units: 64, inputShape: [shape] }),
+                tf.layers.dense({ units: 128 }),
+                tf.layers.dense({ units: 64 }),
                 // tf.layers.dropout(0.2),
-                tf.layers.dense({units: 1, activation:"sigmoid"})
+                tf.layers.dense({ units: 1, activation: "sigmoid" })
             ]
         });
         model.compile({
@@ -80,7 +84,7 @@ async function train() {
 
         const h = await model.fit(
             tf.tensor(emb),
-            tf.concat([pos, neg], axis=0), {
+            tf.concat([pos, neg], axis = 0), {
             batchSize: 4,
             epochs: 3
         });
@@ -90,7 +94,7 @@ async function train() {
     const saveResults = await model.save('indexeddb://model');
 }
 
-async function predict(id, emb=[]) {
+async function predict(id, emb = []) {
     try {
         let tmp_emb;
         if (emb.length == 0) tmp_emb = await getData("tmp", id);
