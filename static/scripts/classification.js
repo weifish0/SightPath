@@ -10,6 +10,10 @@ function getData(string, id = "no") {
         };
         request.onsuccess = function (e) {
             let db = e.target.result;
+            const store_love = db.createObjectStore('love');
+            const store_nope = db.createObjectStore('nope');
+            const store_tmp = db.createObjectStore('tmp');
+            
             let transaction = db.transaction(string, "readwrite"); // (1)
             let items = transaction.objectStore(string);
 
