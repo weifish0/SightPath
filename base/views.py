@@ -115,7 +115,7 @@ def profile(request, pk):
     #     pk_list = json.loads(user.top3)
     #     preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(pk_list)])
     #     top3 = OurTag.objects.filter(pk__in=pk_list).order_by(preserved)
-
+    # print(user.love.all())
     return render(request, "base/profile.html",
                   {"user": user,
                    "rooms": rooms,
@@ -470,13 +470,14 @@ def save_persona(request):
         # print (request.POST.get("love_or_nope"))
         love_or_nope = request.POST.get("love_or_nope")
         id = int(request.POST.get("id"))
-
+        # user.save()
         if love_or_nope == "love":
             user.love.add(id)
         elif love_or_nope == "nope":
             user.nope.add(id)
 
         user.save()
+        # print(love_or_nope)
 
     return JsonResponse({})
 
