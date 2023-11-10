@@ -23,7 +23,7 @@ body {
 .TitleBar {
     align-self: stretch;
     /* height: 74px; */
-    padding: 10px;
+    padding: 10px 20px;
     background: #447D7A;
     justify-content: center;
     align-items: center;
@@ -64,7 +64,7 @@ body {
 .TagBar {
     align-self: stretch;
     /* height: 10px; */
-    margin: 2px 5px;
+    margin: 2px 10px;
     /* padding-bottom: 8px; */
     background: #447D7A;
     /* flex-direction: column;
@@ -296,11 +296,12 @@ body {
 }
 
 
+
+
 .tinder {
     display: flex;
     flex-direction: column;
     position: relative;
-    height: 100%;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
 }
@@ -310,29 +311,27 @@ body {
 }
 
 .tinder--cards {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    height: calc(100dvh - 60px);
+
+    flex-grow: 1;
+    /* padding-top: 70px; */
     text-align: center;
     justify-content: center;
-    padding-top: calc(max(10vw, 50px) - 50px);
-    padding-bottom: calc(max(10vw, 50px) - 50px);
-
-    height: 100%;
-
-    /* flex-grow: 1; */
-    /* padding-top: 70px; */
     /* align-items: flex-end; */
     z-index: 1;
 }
 
 .tinder--card {
-    grid-column-start: 1;
-    grid-row-start: 1;
-
     display: inline-block;
     overflow-y: auto;
 
-    height: 100%;
+    top: calc(max(10vw, 50px) - 50px);
+    bottom: calc(max(10vw, 50px) - 50px);
+    height: auto;
+    /* height: calc(100%); */
     /* width: 80vw; */
     max-width: 500px;
 
@@ -342,6 +341,7 @@ body {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
 
+    position: absolute;
     will-change: transform;
     /* transition: all 0.3s ease-in-out; */
     cursor: -webkit-grab;
