@@ -1,11 +1,11 @@
 {% load static %}
 
-{% if comp_love == None %}
+{% if user.love.count == 0 %}
 <h3>無資料</h3>
 {% endif %}
 
 <div class="grid">
-    {% for comp in comp_love %}
+    {% for comp in user.love.all %}
     <div class="Rectangle1">
         <div class="title">{{comp.name}}</div>
         <div class="tag">{{comp.our_tags.first}}</div>

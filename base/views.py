@@ -108,22 +108,18 @@ def profile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
-    comp_love = None
-    top3 = None
-    
-    if user.love != None:
-        comp_love = Competition.objects.filter(id__in=json.loads(user.love))
-    if user.top3 != None:
-        pk_list = json.loads(user.top3)
-        preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(pk_list)])
-        top3 = OurTag.objects.filter(pk__in=pk_list).order_by(preserved)
-    
+    # comp_love = None
+    # top3 = None
+    # print(user.top3.values())
+    # if user.top3 != None:
+    #     pk_list = json.loads(user.top3)
+    #     preserved = Case(*[When(pk=pk, then=pos) for pos, pk in enumerate(pk_list)])
+    #     top3 = OurTag.objects.filter(pk__in=pk_list).order_by(preserved)
+
     return render(request, "base/profile.html",
                   {"user": user,
                    "rooms": rooms,
-                   "topics": topics,
-                   "comp_love": comp_love,
-                   "top3": top3})
+                   "topics": topics})
 
 
 def chatroom_home(request):
@@ -455,21 +451,15 @@ def save_top3(request):
     if request.user.is_authenticated:
         user_id = request.user.id
         user = User.objects.get(id=user_id)
-        user.top3 = request.POST.get("sc_sort")
+        
+        pk_list = json.loads(request.POST.get("sc_sort"))
+        user.top3.set(pk_list)
+        for pos, pk in enumerate(pk_list):
+            user.top3.filter(id=pk).update(ord=pos)
+
         user.save()
 
-    return redirect("profile", pk=user.id)
-
-
-@login_required(login_url="login_page")
-def save_top3(request):
-    if request.user.is_authenticated:
-        user_id = request.user.id
-        user = User.objects.get(id=user_id)
-        user.top3 = request.POST.get("sc_sort")
-        user.save()
-
-    return redirect("profile", pk=user.id)
+    return JsonResponse({})
 
 
 @login_required(login_url="login_page")
@@ -480,18 +470,11 @@ def save_persona(request):
         # print (request.POST.get("love_or_nope"))
         love_or_nope = request.POST.get("love_or_nope")
         id = int(request.POST.get("id"))
-        arr = []
 
         if love_or_nope == "love":
-            if user.love != None:
-                arr = json.loads(user.love)
-            arr.append(id)
-            user.love = json.dumps(arr)
+            user.love.add(id)
         elif love_or_nope == "nope":
-            if user.nope != None:
-                arr = json.loads(user.nope)
-            arr.append(id)
-            user.nope = json.dumps(arr)
+            user.nope.add(id)
 
         user.save()
 
@@ -507,9 +490,9 @@ def delete_data(request, pk):
         return redirect("profile", pk=user.id)
     
     user.persona = "loading.gif"
-    user.love = None
-    user.nope = None
-    user.top3 = None
+    user.love.clear()
+    user.nope.clear()
+    user.top3.clear()
     user.save()
     
     return redirect("profile", pk=user.id)

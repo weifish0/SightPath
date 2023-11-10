@@ -103,8 +103,39 @@ class OurTag(models.Model):
     description = models.CharField(max_length=400)
     emb = models.CharField(max_length=800, null=True)
 
+    ord = models.IntegerField(null=True)
+    
     def __str__(self):
         return f"{self.tag_name}"
+    
+
+class Competition(models.Model):
+    name = models.TextField()
+    url = models.URLField(null=True)
+    cover_img_url = models.URLField(null=True)
+    start_time = models.DateTimeField(null=True)
+    end_time = models.DateTimeField(null=True)
+    guide_line_html = models.TextField(null=True)
+    organizer_title = models.TextField(null=True)
+    page_views = models.IntegerField(null=True)
+    contact_email = models.EmailField(null=True)
+    contact_name = models.TextField(null=True)
+    contact_phone = models.TextField(null=True)
+    tags = models.ManyToManyField(
+        CompetitionTag, blank=True
+    )
+    limit_highschool = models.BooleanField(null=True)
+    limit_none = models.BooleanField(null=True)
+    limit_other = models.BooleanField(null=True)
+
+    # 推薦演算法相關
+    our_tags = models.ManyToManyField(
+        OurTag, blank=True
+    )
+    emb = models.CharField(max_length=800, null=True)
+
+    def __str__(self):
+        return f"{self.name}"
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -119,9 +150,15 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomUserManager()
 
-    top3 = models.TextField(null=True, blank=True)
-    love = models.TextField(null=True, blank=True)
-    nope = models.TextField(null=True, blank=True)
+    top3 = models.ManyToManyField(
+        OurTag, blank=True
+    )
+    love = models.ManyToManyField(
+        Competition, blank=True, related_name="user_love"
+    )
+    nope = models.ManyToManyField(
+        Competition, blank=True, related_name="user_nope"
+    )
     persona = models.ImageField(upload_to="persona",
                                 height_field=None,
                                 width_field=None,
@@ -193,35 +230,6 @@ class Message(models.Model):
 
     def __str__(self):
         return f"{self.body[0:20]}"
-
-
-class Competition(models.Model):
-    name = models.TextField()
-    url = models.URLField(null=True)
-    cover_img_url = models.URLField(null=True)
-    start_time = models.DateTimeField(null=True)
-    end_time = models.DateTimeField(null=True)
-    guide_line_html = models.TextField(null=True)
-    organizer_title = models.TextField(null=True)
-    page_views = models.IntegerField(null=True)
-    contact_email = models.EmailField(null=True)
-    contact_name = models.TextField(null=True)
-    contact_phone = models.TextField(null=True)
-    tags = models.ManyToManyField(
-        CompetitionTag, blank=True
-    )
-    limit_highschool = models.BooleanField(null=True)
-    limit_none = models.BooleanField(null=True)
-    limit_other = models.BooleanField(null=True)
-
-    # 推薦演算法相關
-    our_tags = models.ManyToManyField(
-        OurTag, blank=True
-    )
-    emb = models.CharField(max_length=800, null=True)
-
-    def __str__(self):
-        return f"{self.name}"
 
 
 class ActivityTag(models.Model):
