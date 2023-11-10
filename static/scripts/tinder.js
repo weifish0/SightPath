@@ -92,7 +92,7 @@ function initCards() {
                 /////////////////
                 let score = await predict(firstCard.id);
                 console.log(firstCard.id, score)
-                if (score < 0.1) {
+                if (score < 0.01) {
                     score_cnt++;
                     if (score_cnt >= 20) delete_data()
 
