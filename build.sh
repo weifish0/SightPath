@@ -17,7 +17,10 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 
 #########
-# python ./base/fixtures/competitions_fixture_generator.py
+python3 ./base/fixtures/competitions_fixture_generator.py
+python3 ./base/ml/run_label.py
+
+#########
 python3 manage.py loaddata ./base/fixtures/competition_tags_fixture.json
 python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
 python3 manage.py loaddata ./base/fixtures/ourtag_fixture.json
