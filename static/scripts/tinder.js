@@ -155,7 +155,7 @@ function init() {
             allCards[0].style.transform = 'translate(' + event.deltaX + 'px, ' + event.deltaY + 'px) rotate(' + rotate + 'deg)';
         });
 
-        hammertime.on('panend', function (event) {
+        hammertime.on('panend pancancel', function (event) {
             // if (event.target.classList.contains("noHammer")) return; //austin 20230928
             if (event.target.style.zIndex != 0) return; //austin 20230929
             el.classList.remove('moving');
