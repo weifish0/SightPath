@@ -29,8 +29,8 @@ Sightpath是專為高中生設計的活動推薦與生涯探索平台，通過AI
 ## 網站設計圖
 
 <p float="left">
-  <img src="./static/images/icon/web-draft.png" width="100">
-  <img src="./static/images/icon/persona-draft.png" width="100">
+  <img src="./static/images/icon/web-draft.png" width="200">
+  <img src="./static/images/icon/persona-draft.png" width="200">
 </p>
 
 ## 開發
