@@ -29,6 +29,7 @@ $.when.apply(null, calls).then(async function () {
     for (i = 0; i < shape; i++) {
         scores[i] = await sc_promise[i]
         if (scores[i] instanceof Error) {
+            console.log("個人模型尚未建立")
             // frame.innerHTML = "<h3>個人模型尚未建立</h3>"
             return;
         }
@@ -53,11 +54,7 @@ $.when.apply(null, calls).then(async function () {
     })
 
 
-    var id;
-    var elem;
-    // frame.innerHTML = ""
-
-    sc_sort = Array.from(Array(18).keys()).sort((a, b) => scores[b]-scores[a])
+    sc_sort = Array.from(Array(18).keys()).sort((a, b) => scores[b] - scores[a])
     console.log(sc_sort);
 
     $.ajax({
@@ -65,24 +62,33 @@ $.when.apply(null, calls).then(async function () {
         url: "/top3/",
         dataType: 'json',
         data: {
-            "sc_sort": JSON.stringify(sc_sort.map(val => val+1)),
+            "sc_sort": JSON.stringify(sc_sort.map(val => val + 1)),
             "csrfmiddlewaretoken": CSRF_TOKEN
         },
         success: function (newData) {
         }
     })
 
-    // for (i = 0; i < 3; i++) {
-    //     id = sc_sort[i];
-    //     // console.log(sc_org);
-    //     elem = document.createElement('div');
-    //     elem.className = "Frame10";
-    //     elem.innerHTML = "<div>" + tags[id] + "</div>"
-    //     frame.appendChild(elem);
 
-    //     console.log("success append " + i.toString())
-    // }
+    frame.replaceChildren(
+        dom_elem(tags[sc_sort[0]]),
+        dom_elem(tags[sc_sort[1]]),
+        dom_elem(tags[sc_sort[2]])
+    )
+
+    console.log("success append 0,1,2")
 });
+
+function dom_elem(str) {
+    elem = document.createElement('div');
+    elem.className = "Frame10";
+
+    elem_inner = document.createElement('div');
+    elem_inner.innerHTML = str;
+
+    elem.appendChild(elem_inner);
+    return elem;
+}
 
 
 // async function love_list() {

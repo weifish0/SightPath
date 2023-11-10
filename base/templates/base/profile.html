@@ -54,11 +54,11 @@
         </div>
 
         <div class="Frame12">
-            {% if top3 == None %}
+            {% if user.top3.count == 0 %}
             <h3>個人模型尚未建立</h3>
             {% endif %}
 
-            {% for item in top3|slice:"0:3" %}
+            {% for item in user.top3.all|dictsort:"ord"|slice:"0:3" %}
             <div class="Frame10">
                 <div>{{item}}</div>
             </div>
