@@ -92,7 +92,7 @@ function initCards() {
                 /////////////////
                 let score = await predict(firstCard.id);
                 console.log(firstCard.id, score)
-                if (score < 0.01) {
+                if (score < 0.1) {
                     score_cnt++;
                     if (score_cnt >= 20) delete_data()
 
@@ -159,6 +159,8 @@ function init() {
             // if (event.target.classList.contains("noHammer")) return; //austin 20230928
             if (event.target.style.zIndex != 0) return; //austin 20230929
             el.classList.remove('moving');
+            if (tinderContainer.classList.contains('tinder_love'))
+                is_love = true
             tinderContainer.classList.remove('tinder_love');
             tinderContainer.classList.remove('tinder_nope');
 
@@ -168,9 +170,7 @@ function init() {
                 return;
             }
 
-            if (tinderContainer.classList.contains('tinder_love')) {
-                storeData(allCards[0].id, true)
-            }
+            if (is_love) storeData(allCards[0].id, true)
             else storeData(allCards[0].id, false)
 
             var moveOutWidth = document.body.clientWidth;
