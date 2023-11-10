@@ -27,8 +27,11 @@ Sightpath是專為高中生設計的活動推薦與生涯探索平台，通過AI
 - [x] 活動查找
 
 ## 網站設計圖
-<img src="./static/images/icon/web-draft.png">
-<img src="./static/images/icon/persona-draft.png" >
+
+<p float="left">
+  <img src="./static/images/icon/web-draft.png" width="100">
+  <img src="./static/images/icon/persona-draft.png" width="100">
+</p>
 
 ## 開發
 python 版本建議為：`3.9`
