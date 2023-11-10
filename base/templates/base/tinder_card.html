@@ -7,9 +7,6 @@
         <a class="SitconX" href="{% url 'competition_info' competition.id %}">
             {{competition.name}}</a>
     </div>
-    <!-- <div class="ImageSection">
-        <img class="Image" src="https://via.placeholder.com/360x301" />
-    </div> -->
     <div class="TagBar tags_all">
         {% for tag in competition.tags.all|slice:"0:8" %}
         <div class="TagKind">
@@ -20,7 +17,7 @@
     </div>
     
     <div class="ShortDescription">
-        <img src="{{competition.cover_img_url}}" alt="">
+        <img draggable="false" src="{{competition.cover_img_url}}" alt="">
         {% if competition.agency_title != None %}
         <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
         {% endif %}
@@ -37,7 +34,7 @@
             <div class="Sitcon">SightPath</div>
         </div>
         <div class="Button">
-            <a class="Button" href="{{ competition.url }}">了解詳細</a>
+            <a class="Button text-dark" href="{{ competition.url }}">了解詳細</a>
         </div>
     </div>
 </div>
