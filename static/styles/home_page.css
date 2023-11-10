@@ -2,6 +2,8 @@
 
 
 body {
+    height: 100vh;
+    width: 100vw;
     position: fixed;
     overflow: hidden;
 }
@@ -44,7 +46,7 @@ body {
 
 .ImageSection {
     align-self: stretch;
-    height: 301px;
+    height: 300px;
     background: #135B5F;
     border-radius: 6px;
     flex-direction: column;
@@ -300,6 +302,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.1s ease-in-out;
 }
@@ -311,10 +314,10 @@ body {
 .tinder--cards {
     display: flex;
     flex-wrap: wrap;
-
-    width: 100vw;
+    align-items: center;
+    
     flex-grow: 1;
-    padding-top: 70px;
+    /* padding-top: 70px; */
     text-align: center;
     justify-content: center;
     /* align-items: flex-end; */
@@ -325,11 +328,10 @@ body {
     display: inline-block;
     overflow-y: auto;
 
-    width: 80vw;
+    max-height: 500px;
+    height: 100%;
+    /* width: 80vw; */
     max-width: 500px;
-
-    min-height: 100px;
-    max-height: 65dvh;
 
     background: #447D7A;
     padding: 8px 0px;
@@ -337,7 +339,7 @@ body {
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
 
-    position: fixed;
+    position: absolute;
     will-change: transform;
     /* transition: all 0.3s ease-in-out; */
     cursor: -webkit-grab;

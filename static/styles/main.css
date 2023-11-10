@@ -66,8 +66,9 @@ img {
 
 .navbar {
     position: absolute;
-    top: 0px;
-    width: min(100%, 100vw);
+    top: 0;
+    left: 0;
+    right: 0;
     background: #F8F8F8;
     padding: 0;
 }
@@ -94,9 +95,13 @@ img {
 }
 
 .home_container {
-    margin: 0;
-    width: 100%;
-    padding-top: 60px;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    /* margin: 0;
+    width: 100%; */
 }
 
 .profile_container {
