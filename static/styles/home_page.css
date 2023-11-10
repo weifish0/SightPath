@@ -328,8 +328,12 @@ body {
     display: inline-block;
     overflow-y: auto;
 
-    max-height: 500px;
-    height: 100%;
+    /* min-height: 900px; */
+
+    top: calc(max(10vw, 50px) - 50px);
+    bottom: calc(max(10vw, 50px) - 50px);
+    height: auto;
+    /* height: calc(100%); */
     /* width: 80vw; */
     max-width: 500px;
 
