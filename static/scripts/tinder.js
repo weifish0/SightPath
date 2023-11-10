@@ -107,14 +107,14 @@ function initCards() {
     });
 
 
-    firstCard.style.transition = "all 0.3s ease-in-out";
+    // firstCard.style.transition = "all 0.3s ease-in-out";
 
     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
     newCards.forEach(function (card, index) {
         //card.style.transition = "all 0.3s ease-in-out";
         card.style.zIndex = -index; // allCards.length - index
-        card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
-        if (index < 5) card.style.opacity = Math.pow(3, -index);
+        // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
+        if (index < 2) card.style.opacity = Math.pow(3, -index);
         else card.style.opacity = 0;
     });
 
@@ -158,28 +158,26 @@ function init() {
         hammertime.on('panend', function (event) {
             // if (event.target.classList.contains("noHammer")) return; //austin 20230928
             if (event.target.style.zIndex != 0) return; //austin 20230929
-
             el.classList.remove('moving');
+            tinderContainer.classList.remove('tinder_love');
+            tinderContainer.classList.remove('tinder_nope');
+
+            var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.2
+            if (keep) {
+                allCards[0].style.transform = '';
+                return;
+            }
 
             if (tinderContainer.classList.contains('tinder_love')) {
-                tinderContainer.classList.remove('tinder_love');
                 storeData(allCards[0].id, true)
             }
-            else {
-                tinderContainer.classList.remove('tinder_nope');
-                storeData(allCards[0].id, false)
-            }
+            else storeData(allCards[0].id, false)
 
             var moveOutWidth = document.body.clientWidth;
-            var keep = 0;
-            // var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5
-
             allCards[0].classList.toggle('removed', !keep);
             allCards[0].remove(); //austin 20230928
 
-            /* if (keep) {
-                event.target.style.transform = '';
-            } else { */
+
             var endX = Math.max(Math.abs(event.velocityX) * moveOutWidth, moveOutWidth);
             var toX = event.deltaX > 0 ? endX : -endX;
             var endY = Math.abs(event.velocityY) * moveOutWidth;
@@ -191,7 +189,6 @@ function init() {
             allCards[0].style.transform = 'translate(' + toX + 'px, ' + (toY + event.deltaY) + 'px) rotate(' + rotate + 'deg)';
             initCards();
 
-            //}
             allCards = document.querySelectorAll('.tinder--card');
             if (allCards.length < 4) loadCards();
         });
