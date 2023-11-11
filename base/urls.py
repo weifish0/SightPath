@@ -15,6 +15,7 @@ urlpatterns = [
     path("delete_data/<str:pk>/", views.delete_data, name="delete_data"),
     path("persona/", views.persona),
     path("save_persona/", views.save_persona),
+    path("save_model/", views.save_model),
     
     # 討論串系統
     path("room/<str:pk>/", views.room, name="room"),
@@ -41,5 +42,4 @@ urlpatterns = [
     # 關於我們
     path("about/", views.about_page, name="about_page"),
     path("top3/", views.save_top3),
-
 ]

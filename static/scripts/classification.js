@@ -34,8 +34,34 @@ function getData(string, id = "no") {
     });
 }
 
-const epoch_num = 1;
 
+function handleSave(artifacts) {
+    // https://github.com/tensorflow/tfjs/issues/495
+    // https://stackoverflow.com/questions/6965107/converting-between-strings-and-arraybuffers
+    // https://github.com/feross/buffer
+    // https://github.com/browserify/browserify
+
+    artifacts.weightData = buffer.Buffer.from(artifacts.weightData)
+        .toString("base64");
+    // console.log(artifacts)
+
+    $.ajax({
+        type: "POST",
+        url: "/save_model/",
+        data: {
+            "artifacts": JSON.stringify(artifacts),
+            "csrfmiddlewaretoken": CSRF_TOKEN
+        },
+        success: async function (newData) {
+        }
+    });
+    // console.log(artifacts.modelTopology);
+    // console.log(artifacts.weightSpecs);
+    // console.log(artifacts.weightData);
+    return;
+}
+
+const epoch_num = 1;
 async function train() {
     let love = await getData("love");
     let nope = await getData("nope");
@@ -54,12 +80,24 @@ async function train() {
 
     let model;
     try {
-        model = await tf.loadLayersModel('indexeddb://model');
+        if (artifacts != "None") {
+            artifacts = JSON.parse(artifacts.replace(/&quot;/g, '"'))
+            weight = new Uint8Array(buffer.Buffer.from(artifacts.weightData, "base64")).buffer;
+            artifacts.weightData = weight;
+
+            model = await tf.loadLayersModel(tf.io.fromMemory(artifacts));
+            artifacts = "None";
+
+            console.log("model loaded from server")
+        }
+        else model = await tf.loadLayersModel('indexeddb://model');
+
         model.compile({
             optimizer: 'adam',
             loss: 'binaryCrossentropy'
         });
     } catch (error) {
+        console.log(error)
         console.log("indexeddb model not loaded")
 
         model = tf.sequential({
@@ -91,7 +129,11 @@ async function train() {
         console.log("Loss after Epoch " + i + " : " + h.history.loss[0]);
     }
 
-    const saveResults = await model.save('indexeddb://model');
+    await model.save('indexeddb://model');
+    // console.log(buffer.Buffer.from(model.getWeights()).toString("base64"))
+    // let result = await model.save(tf.io.withSaveHandler(async modelArtifacts => modelArtifacts));
+    await model.save(tf.io.withSaveHandler(handleSave));
+    // console.log(JSON.stringify(model.getWeights()));
 }
 
 async function predict(id, emb = []) {
