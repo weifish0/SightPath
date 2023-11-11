@@ -165,6 +165,7 @@ class User(AbstractBaseUser, PermissionsMixin):
                                 max_length=100,
                                 default="loading.gif",
                                 storage=OverwriteStorage())
+    artifacts = models.TextField(null=True, blank=True)
     
     # 採取 email 作為用戶身分驗證方式
     USERNAME_FIELD = "email"
