@@ -463,6 +463,18 @@ def save_top3(request):
 
 
 @login_required(login_url="login_page")
+def save_model(request):
+    if request.user.is_authenticated:
+        user_id = request.user.id
+        user = User.objects.get(id=user_id)
+        user.artifacts = request.POST.get("artifacts")
+        
+        user.save()
+
+    return JsonResponse({})
+
+
+@login_required(login_url="login_page")
 def save_persona(request):
     if request.user.is_authenticated:
         user_id = request.user.id
@@ -494,6 +506,7 @@ def delete_data(request, pk):
     user.love.clear()
     user.nope.clear()
     user.top3.clear()
+    user.artifacts = None
     user.save()
     
     return redirect("profile", pk=user.id)
