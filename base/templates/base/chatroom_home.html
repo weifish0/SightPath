@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="div_container grid">
-    <div>
+    <div class="flex_left">
         {% if request.user.is_authenticated %}
         <p>hello {{request.user.nickname}}~</p>
         {% if request.user.is_superuser %}
@@ -23,7 +23,7 @@
         {% endif %}
     </div>
 
-    <div class="mt-20">
+    <div class="mt-20 flex_right">
         <h5>找到 {{rooms_count}} 個相關討論串</h5>
         <a href="{% url 'create_room' %}?topic_category={{topic_category}}" class="btn btn-success">建立討論串</a>
         <hr>

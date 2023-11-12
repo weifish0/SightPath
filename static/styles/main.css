@@ -145,20 +145,23 @@ img {
     width: 100%;
 }
 
-.comp_flex {
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.flex {
     display: flex;
     flex-wrap: wrap;
-    /* display: grid;
-    grid-template-columns: 1fr 3fr; */
 }
 
-.competition_feed {
+.flex_right {
     min-width: 300px;
-    flex:3;
+    flex: 3;
 }
 
-.competition_tags {
-    flex:1;
+.flex_left {
+    flex: 1;
     min-width: 300px;
 
     margin-right: 20px;
