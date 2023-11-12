@@ -47,7 +47,7 @@ $.when.apply(null, calls).then(async function () {
         success: function (newData) {
             console.log(newData["url"])
             if (newData["url"] != "") {
-                document.querySelector('.persona').src =
+                document.querySelector('.persona_img').src =
                     "/static" + newData["url"] + "?t=1"
             }
         }

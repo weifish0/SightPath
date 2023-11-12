@@ -61,6 +61,23 @@ function handleSave(artifacts) {
     return;
 }
 
+async function loadModel(){
+    if (artifacts != "None") {
+        artifacts = JSON.parse(artifacts.replace(/&quot;/g, '"'))
+        weight = new Uint8Array(buffer.Buffer.from(artifacts.weightData, "base64")).buffer;
+        artifacts.weightData = weight;
+
+        model = await tf.loadLayersModel(tf.io.fromMemory(artifacts));
+        model.save('indexeddb://model');
+        artifacts = "None";
+
+        console.log("model loaded from server")
+    }
+    else model = await tf.loadLayersModel('indexeddb://model');
+
+    return model;
+}
+
 const epoch_num = 1;
 async function train() {
     let love = await getData("love");
@@ -80,18 +97,7 @@ async function train() {
 
     let model;
     try {
-        if (artifacts != "None") {
-            artifacts = JSON.parse(artifacts.replace(/&quot;/g, '"'))
-            weight = new Uint8Array(buffer.Buffer.from(artifacts.weightData, "base64")).buffer;
-            artifacts.weightData = weight;
-
-            model = await tf.loadLayersModel(tf.io.fromMemory(artifacts));
-            artifacts = "None";
-
-            console.log("model loaded from server")
-        }
-        else model = await tf.loadLayersModel('indexeddb://model');
-
+        model = await loadModel();
         model.compile({
             optimizer: 'adam',
             loss: 'binaryCrossentropy'
@@ -129,10 +135,10 @@ async function train() {
         console.log("Loss after Epoch " + i + " : " + h.history.loss[0]);
     }
 
-    await model.save('indexeddb://model');
+    model.save('indexeddb://model');
     // console.log(buffer.Buffer.from(model.getWeights()).toString("base64"))
     // let result = await model.save(tf.io.withSaveHandler(async modelArtifacts => modelArtifacts));
-    await model.save(tf.io.withSaveHandler(handleSave));
+    model.save(tf.io.withSaveHandler(handleSave));
     // console.log(JSON.stringify(model.getWeights()));
 }
 
@@ -142,7 +148,7 @@ async function predict(id, emb = []) {
         if (emb.length == 0) tmp_emb = await getData("tmp", id);
         else tmp_emb = emb;
 
-        const model = await tf.loadLayersModel('indexeddb://model');
+        var model = await loadModel();
         tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1, shape]);
 
         // console.log(model.predict(tensor).dataSync());
@@ -154,11 +160,11 @@ async function predict(id, emb = []) {
 }
 
 async function delete_data() {
-    var rm = await tf.io.removeModel('indexeddb://model');
+    tf.io.removeModel('indexeddb://model');
     var request = indexedDB.deleteDatabase("model_data");
     request.onsuccess = function (e) {
         console.log("deleted  model_data successfully")
     }
 
-    await getData("love");
+    getData("love");
 }
