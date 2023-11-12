@@ -31,10 +31,11 @@
         <label class="form-check-label" for="exampleCheck1" name="remember_login">記住帳號</label>
       </div>
       <button type="submit" class="btn btn-primary mb-5" name="login">登入</button>
+      <a href="{% provider_login_url 'line' %}" class="btn btn-success mb-5 ml-15">line登入</a>
       <br>
-      <a href="{% provider_login_url 'line' %}">line登入</a>
+      <br>
       <p>沒有帳號?</p>
-      <a href="{% url 'register_page' %}">註冊</a>
+      <a class="btn btn-primary" href="{% url 'register_page' %}">註冊</a>
     </form>
 </div>
 
