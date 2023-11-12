@@ -7,12 +7,16 @@
 
 <h5>找到 {{competitions_count}} 個比賽</h5>
 {% for competition in competitions %}
-<h3><a href="{% url 'competition_info' competition.id %}">{{competition.name}}</a></h3>
+<h3 class="shad">
+    <a class="link-secondary" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
+</h3>
 
 {% for tag in competition.our_tags.all %}
 <a style="font-size: large;" href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
 {% endfor %}
+{% if competition.our_tags.count %}
 <br>
+{% endif %}
 {% for tag in competition.tags.all %}
 <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
 {% endfor %}
