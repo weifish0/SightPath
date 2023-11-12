@@ -1,41 +1,34 @@
 {% extends "main.html" %}
 
-
 {% block content %}
-{% if request.user.is_authenticated %}
-<div class="div_container">
-    <p>hello {{request.user.nickname}}~</p>
-    {% if request.user.is_superuser %}
-    <div class="alert alert-info" role="alert">
-        你擁有管理員權限
-    </div>
-    {% endif %}
-</div>
-{% endif %}
 
 <div class="div_container grid">
-    
     <div>
+        {% if request.user.is_authenticated %}
+        <p>hello {{request.user.nickname}}~</p>
+        {% if request.user.is_superuser %}
+        <div class="alert alert-info" role="alert">
+            你擁有管理員權限
+        </div>
+        {% endif %}
+        {% endif %}
         {% include "base/room_topics_component.html" %}
+
+        {% if request.user.is_authenticated %}
+        <br>
+        <br>
+        <div>
+            {% include "base/notifications_component.html" %}
+        </div>
+        {% endif %}
     </div>
 
-    <div>
+    <div class="mt-20">
         <h5>找到 {{rooms_count}} 個相關討論串</h5>
         <a href="{% url 'create_room' %}?topic_category={{topic_category}}" class="btn btn-success">建立討論串</a>
         <hr>
-        
         {% include "base/room_feed_component.html" %}
-
     </div>
-
-    {% if request.user.is_authenticated %}
-    <div>
-        {% include "base/notifications_component.html" %}
-    </div>
-    {% endif %}
-
 </div>
 
 {% endblock content %}
-
-

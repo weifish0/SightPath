@@ -7,7 +7,7 @@ figure {
     max-width: 100% !important;
 }
 
-.tags_all{
+.tags_all {
     /* max-height: 3em; */
     overflow: hidden;
 }
@@ -23,7 +23,7 @@ img {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    
+
     height: 35px;
     width: 180px;
     border: 1px solid black;
@@ -80,6 +80,13 @@ img {
     padding-top: 7px;
 }
 
+.create_threads {
+    margin-top: 20px;
+    max-width: 400px;
+    display: grid;
+    gap: 20px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -120,4 +127,40 @@ img {
 
 .ml-15 {
     margin-left: 15px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.topic {
+    width: 200px;
+}
+
+.room_submit {
+    width: 100px;
+    height: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.fit {
+    width: 100%;
+}
+
+.competition_tags {
+    margin-right: 20px;
+    overflow-x: hidden;
+}
+
+.competition_tags div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.shad{
+    text-shadow: .2px .2px .2px black;
 }
