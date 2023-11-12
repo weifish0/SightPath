@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="div_container grid">
+<div class="div_container flex_container">
     <div class="flex_left">
         {% if request.user.is_authenticated %}
         <p>hello {{request.user.nickname}}~</p>
