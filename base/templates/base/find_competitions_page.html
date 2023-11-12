@@ -2,16 +2,28 @@
 
 {% block content %}
 
-{% if request.user.is_authenticated %}
-<p>hello {{request.user.nickname}}~</p>
-{% endif %}
-
 <div class="div_container grid">
-    <div style="overflow-x: hidden;">
-        {% include "base/competition_tags.html" %}
+    <div class="competition_tags">
+        {% if request.user.is_authenticated %}
+        <p>hello {{request.user.nickname}}~</p>
+        {% endif %}
+        <h3>比賽標籤</h3>
+        {% comment "等頁面優化完畢再開放" %}
+        {% endcomment %}
+        <br>
+        <a href="{% url 'find_competitions' %}" class="btn btn-light">全部</a>
+
+        <br>
+        <br>
+        <div>
+            {% for competition_tag in competition_tags %}
+            <a class="btn btn-light"
+                href="{% url 'find_competitions' %}?competition_category={{competition_tag}}">{{competition_tag}}</a>
+            {% endfor %}
+        </div>
     </div>
 
-    <div style="padding-left: 10px">
+    <div class="mt-20">
         {% include "base/competition_feed.html" %}
     </div>
 </div>

@@ -2,21 +2,18 @@
 
 {% block content %}
 
-<br>
-<br>
-<br>
+<div class="div_container">
+    <form action="" method="POST">
+        {% csrf_token %}
 
-<form action="" method="POST">
-    {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <label for="">{{field.label}}</label>
+            {{field}}
+        </div>
+        {% endfor %}
 
-    {% for field in form %}
-    <div>
-        <label for="">{{field.label}}</label>
-        {{field}}
-    </div>
-    {% endfor %}
-
-    <button type="submit" class="btn btn-primary">確定</button>
-</form>
-
+        <button type="submit" class="btn btn-primary">確定</button>
+    </form>
+</div>
 {% endblock content %}
