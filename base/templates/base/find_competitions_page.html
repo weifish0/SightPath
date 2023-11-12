@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<div class="div_container comp_flex">
-    <div class="competition_tags">
+<div class="div_container flex">
+    <div class="flex_left">
         {% if request.user.is_authenticated %}
         <p>hello {{request.user.nickname}}~</p>
         {% endif %}
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="mt-20 competition_feed">
+    <div class="mt-20 flex_right">
         {% include "base/competition_feed.html" %}
     </div>
 </div>
