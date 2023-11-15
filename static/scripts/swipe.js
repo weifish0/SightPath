@@ -65,7 +65,7 @@ function complete() {
 
         allCards = document.querySelectorAll('.tinder--card');
         if (allCards.length <= 1) loadCards();
-    }, innerWidth / 5)
+    }, innerWidth / 5 - 50)
 }
 
 function cancel() {
