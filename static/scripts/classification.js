@@ -43,7 +43,6 @@ function handleSave(artifacts) {
 
     artifacts.weightData = buffer.Buffer.from(artifacts.weightData)
         .toString("base64");
-    // console.log(artifacts)
 
     $.ajax({
         type: "POST",
@@ -52,7 +51,7 @@ function handleSave(artifacts) {
             "artifacts": JSON.stringify(artifacts),
             "csrfmiddlewaretoken": CSRF_TOKEN
         },
-        success: async function (newData) {
+        success: function (newData) {
         }
     });
     // console.log(artifacts.modelTopology);
@@ -61,8 +60,8 @@ function handleSave(artifacts) {
     return;
 }
 
-async function loadModel(){
-    if (artifacts != "None") {
+async function loadModel() {
+    if (artifacts != "None" && artifacts != "") {
         artifacts = JSON.parse(artifacts.replace(/&quot;/g, '"'))
         weight = new Uint8Array(buffer.Buffer.from(artifacts.weightData, "base64")).buffer;
         artifacts.weightData = weight;
@@ -85,12 +84,12 @@ async function train() {
     let tmp_emb;
     let emb = [];
 
-    //console.log(nope.length);
     for (let i = 0; i < love.length; i++) {
         tmp_emb = await getData("tmp", love[i]);
         emb.push(JSON.parse(tmp_emb["emb"]))
     }
     for (let i = 0; i < nope.length; i++) {
+        // console.log("nope[" + i.toString() + "]", nope[i])
         tmp_emb = await getData("tmp", nope[i]);
         emb.push(JSON.parse(tmp_emb["emb"]))
     }
@@ -136,10 +135,9 @@ async function train() {
     }
 
     model.save('indexeddb://model');
-    // console.log(buffer.Buffer.from(model.getWeights()).toString("base64"))
+
     // let result = await model.save(tf.io.withSaveHandler(async modelArtifacts => modelArtifacts));
     model.save(tf.io.withSaveHandler(handleSave));
-    // console.log(JSON.stringify(model.getWeights()));
 }
 
 async function predict(id, emb = []) {
@@ -154,7 +152,6 @@ async function predict(id, emb = []) {
         // console.log(model.predict(tensor).dataSync());
         return model.predict(tensor).dataSync()[0];
     } catch (error) {
-        // console.log(error)
         return error;
     }
 }
@@ -163,7 +160,7 @@ async function delete_data() {
     tf.io.removeModel('indexeddb://model');
     var request = indexedDB.deleteDatabase("model_data");
     request.onsuccess = function (e) {
-        console.log("deleted  model_data successfully")
+        console.log("deleted model_data successfully")
     }
 
     getData("love");

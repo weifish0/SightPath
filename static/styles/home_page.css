@@ -255,8 +255,6 @@ body {
 
 
 
-
-
 .tinder_love .fa-heart {
     opacity: 1;
     transform: scale(1.5);
@@ -282,7 +280,7 @@ body {
     z-index: 2;
     width: 100%;
     text-align: center;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 
 .tinder--status i {
@@ -294,7 +292,6 @@ body {
     width: 100px;
     margin-left: -50px;
 }
-
 
 
 
@@ -325,6 +322,10 @@ body {
 }
 
 .tinder--card {
+    /* user-select: none; */
+    opacity: 0;
+    touch-action: none;
+
     display: inline-block;
     overflow-y: auto;
 
@@ -357,20 +358,36 @@ body {
 }
 
 .tinder--card img {
+    pointer-events: none;
     max-width: 100%;
-    /* pointer-events: none; */
+    user-select: none;
 }
 
 .tinder--card h3 {
+    pointer-events: none;
+    user-select: none;
     margin-top: 32px;
     font-size: 32px;
     padding: 0 16px;
-    /* pointer-events: none; */
 }
 
 .tinder--card p {
+    pointer-events: none;
+    user-select: none;
     margin-top: 24px;
     font-size: 20px;
     padding: 0 16px;
-    /* pointer-events: none; */
+}
+
+.tinder--card a {
+    pointer-events: none;
+    user-select: none;
+}
+
+img.loading {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -5;
 }
