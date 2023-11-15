@@ -38,6 +38,8 @@ function setTransform(x, y, deg, duration) {
 }
 
 function complete() {
+    allCards[1].style.filter = ""
+
     moving = false;
     if (tinderContainer.classList.contains('tinder_love')) {
         moving = true
@@ -65,7 +67,7 @@ function complete() {
 
         allCards = document.querySelectorAll('.tinder--card');
         if (allCards.length <= 1) loadCards();
-    }, innerWidth / 5 - 50)
+    }, innerWidth / 5)
 }
 
 function cancel() {
