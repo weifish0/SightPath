@@ -103,11 +103,10 @@ function initCards() {
                     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
                     newCards.forEach(function (card, index) {
                         card.style.zIndex = -index; // allCards.length - index
-                        // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
                         card.style.opacity = 1
-                        if (index == 0) card.style.filter = ""
-                        else if (index == 1) card.style.filter = "brightness(70%)"
+                        // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
                     });
+                    newCards[1].style.filter = "brightness(70%)"
                 }
             };
         }
