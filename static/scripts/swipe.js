@@ -2,7 +2,7 @@
 
 scaling = false
 function onTouchStart(e) {
-    if (e.touches.length == 2) scaling = true;
+    if (e.touches.length >= 2) scaling = true;
     else scaling = false
 }
 
@@ -76,7 +76,7 @@ function complete() {
         initCards();
 
         allCards = document.querySelectorAll('.tinder--card');
-        if (allCards.length <= 2) loadCards();
+        if (allCards.length <= 1) loadCards();
     }, innerWidth / 5)
 }
 
