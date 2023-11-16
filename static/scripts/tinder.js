@@ -104,9 +104,9 @@ function initCards() {
                     newCards.forEach(function (card, index) {
                         card.style.zIndex = -index; // allCards.length - index
                         card.style.opacity = 1
+                        if (index >= 1) card.style.filter = "brightness(50%)"
                         // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
                     });
-                    newCards[1].style.filter = "brightness(70%)"
                 }
             };
         }
@@ -122,6 +122,7 @@ function init() {
     allCards = document.querySelectorAll('.tinder--card');
     allCards.forEach(function (e) {
         e.addEventListener('pointerdown', onPointerDown)
+        e.addEventListener("touchstart", onTouchStart)
     });
 }
 
