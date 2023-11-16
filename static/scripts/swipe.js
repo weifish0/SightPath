@@ -1,5 +1,11 @@
 // https://codepen.io/rudtjd2548/pen/qBodXzO
 
+scaling = false
+function onTouchStart(e) {
+    if (e.touches.length == 2) scaling = true;
+    else scaling = false
+}
+
 function onPointerDown(e) {
     // e.classList.add('moving');
     startX = e.clientX //clientX
@@ -14,20 +20,22 @@ function onPointerMove(e) {
     moveX = e.clientX - startX
     moveY = e.clientY - startY
     movementX = e.movementX
-    // movementY = e.movementY
+    movementY = e.movementY
 
-    tinderContainer.classList.toggle('tinder_love', moveX > 0);
-    tinderContainer.classList.toggle('tinder_nope', moveX < 0);
-    setTransform(moveX, moveY, 0) //rotate: (moveX / innerWidth) * 50
+    if (!scaling && Math.abs(movementY) < 2) {
+        tinderContainer.classList.toggle('tinder_love', moveX > 0);
+        tinderContainer.classList.toggle('tinder_nope', moveX < 0);
+        setTransform(moveX, moveY, 0) //rotate: (moveX / innerWidth) * 50
+    }
 }
 
+movementX = 0;
 function onPointerUp(e) {
     e.target.removeEventListener('pointermove', onPointerMove)
     e.target.removeEventListener('pointerup', onPointerUp)
     e.target.removeEventListener('pointerleave', onPointerUp)
-    
-    // detect mobile zooming: e.type=='pointerleave'
-    if (Math.abs(movementX) < 2 || e.type=='pointerleave') cancel()
+
+    if (Math.abs(movementX) < 2) cancel()
     else {
         e.target.removeEventListener('pointerdown', onPointerDown)
         complete()
@@ -68,7 +76,7 @@ function complete() {
         initCards();
 
         allCards = document.querySelectorAll('.tinder--card');
-        if (allCards.length <= 1) loadCards();
+        if (allCards.length <= 2) loadCards();
     }, innerWidth / 5)
 }
 
