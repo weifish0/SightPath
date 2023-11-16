@@ -15,8 +15,8 @@
         </div>
         {% endfor %}
     </div>
-    
-    <div class="ShortDescription">
+
+    <div class="ShortData">
         <img draggable="false" src="{{competition.cover_img_url}}" alt="">
         {% if competition.agency_title != None %}
         <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
@@ -24,7 +24,10 @@
         <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
         <p class="text-light">開始報名日期: {{competition.start_time}}</p>
         <p class="text-light">截止日期: {{competition.end_time}}</p>
-        
+    </div>
+
+    <div class="ShortDescription">
+        <p class="text-light">{{competition.guide_line_html|striptags|slice:200}}</p>
     </div>
 
     <div class="SeeMoreButton">
