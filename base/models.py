@@ -82,14 +82,14 @@ class OverwriteStorage(FileSystemStorage):
         if self.exists(name):
             os.remove(os.path.join(settings.MEDIA_ROOT, name))
         return name
-    
+
 
 class Topic(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self):
         return f"{self.name}"
-    
+
 
 class CompetitionTag(models.Model):
     tag_name = models.CharField(max_length=50)
@@ -101,13 +101,14 @@ class CompetitionTag(models.Model):
 class OurTag(models.Model):
     tag_name = models.CharField(max_length=50)
     description = models.CharField(max_length=400)
-    emb = models.CharField(max_length=800, null=True)
+    emb = models.TextField(null=True)
+    emb_org = models.TextField(null=True)
 
     ord = models.IntegerField(null=True)
-    
+
     def __str__(self):
         return f"{self.tag_name}"
-    
+
 
 class Competition(models.Model):
     name = models.TextField()
@@ -166,7 +167,7 @@ class User(AbstractBaseUser, PermissionsMixin):
                                 default="loading.gif",
                                 storage=OverwriteStorage())
     artifacts = models.TextField(null=True, blank=True)
-    
+
     # 採取 email 作為用戶身分驗證方式
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
@@ -219,7 +220,6 @@ class Room(models.Model):
         return f"{self.name}"
 
 
-
 class Message(models.Model):
     # 當使用者被刪除後，刪除他在所有討論室傳的所有訊息
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -254,5 +254,12 @@ class Activity(models.Model):
     tags = models.ManyToManyField(
         ActivityTag, blank=True
     )
+
+    # 推薦演算法相關
+    our_tags = models.ManyToManyField(
+        OurTag, blank=True
+    )
+    emb = models.TextField(null=True)
+
     def __str__(self):
         return f"{self.name}"

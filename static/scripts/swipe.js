@@ -14,18 +14,20 @@ function onPointerMove(e) {
     moveX = e.clientX - startX
     moveY = e.clientY - startY
     movementX = e.movementX
+    // movementY = e.movementY
 
     tinderContainer.classList.toggle('tinder_love', moveX > 0);
     tinderContainer.classList.toggle('tinder_nope', moveX < 0);
-    setTransform(moveX, moveY, (moveX / innerWidth) * 50)
+    setTransform(moveX, moveY, 0) //rotate: (moveX / innerWidth) * 50
 }
 
 function onPointerUp(e) {
     e.target.removeEventListener('pointermove', onPointerMove)
     e.target.removeEventListener('pointerup', onPointerUp)
     e.target.removeEventListener('pointerleave', onPointerUp)
-
-    if (Math.abs(movementX) < 2) cancel()
+    
+    // detect mobile zooming: e.type=='pointerleave'
+    if (Math.abs(movementX) < 2 || e.type=='pointerleave') cancel()
     else {
         e.target.removeEventListener('pointerdown', onPointerDown)
         complete()
@@ -54,7 +56,7 @@ function complete() {
     if (moving) {
         const flyX = Math.sign(moveX) * innerWidth * 1.3
         const flyY = (moveY / moveX) * flyX
-        setTransform(flyX, flyY, (flyX / innerWidth) * 50, innerWidth / 5)
+        setTransform(flyX, flyY, 0, innerWidth / 5) //rotate: (flyX / innerWidth) * 50
     }
     else return
 
