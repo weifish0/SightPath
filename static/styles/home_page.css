@@ -324,7 +324,9 @@ body {
 .tinder--card {
     /* user-select: none; */
     opacity: 0;
-    touch-action: pan-y pinch-zoom;
+    touch-action: none;
+    pointer-events: none;
+    filter: brightness(50%);
 
     display: inline-block;
     overflow-y: auto;
@@ -366,7 +368,7 @@ body {
 
 .tinder--card h3 {
     pointer-events: none;
-    user-select: none;
+    /* user-select: none; */
     margin-top: 32px;
     font-size: 32px;
     padding: 0 16px;
@@ -374,7 +376,7 @@ body {
 
 .tinder--card p {
     pointer-events: none;
-    user-select: none;
+    /* user-select: none; */
     margin-top: 24px;
     font-size: 20px;
     padding: 0 16px;
@@ -382,7 +384,7 @@ body {
 
 .tinder--card a {
     pointer-events: none;
-    user-select: none;
+    /* user-select: none; */
 }
 
 img.loading {
