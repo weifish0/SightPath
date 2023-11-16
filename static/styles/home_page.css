@@ -324,7 +324,7 @@ body {
 .tinder--card {
     /* user-select: none; */
     opacity: 0;
-    touch-action: pan-y;
+    touch-action: pan-y pinch-zoom;
 
     display: inline-block;
     overflow-y: auto;
