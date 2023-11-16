@@ -21,6 +21,7 @@ function onPointerMove(e) {
     moveY = e.clientY - startY
     movementX = e.movementX
     movementY = e.movementY
+    console.log("move")
 
     if (!scaling && Math.abs(movementY) < 2) {
         tinderContainer.classList.toggle('tinder_love', moveX > 0);
@@ -48,7 +49,7 @@ function setTransform(x, y, deg, duration) {
 }
 
 function complete() {
-    allCards[1].style.filter = ""
+    allCards[1].style.filter = "none"
 
     moving = false;
     if (tinderContainer.classList.contains('tinder_love')) {
