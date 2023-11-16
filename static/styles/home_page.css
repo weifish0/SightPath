@@ -388,6 +388,7 @@ body {
 }
 
 img.loading {
+    user-select: none;
     width: auto;
     height: auto;
     max-width: 100%;
