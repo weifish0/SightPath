@@ -90,7 +90,14 @@
 <script type="text/javascript">
     window.CSRF_TOKEN = "{{ csrf_token }}";
     var artifacts = "{{ request.user.artifacts }}"
+    var tagemb = {}
 </script>
+
+{% for tag in ourtag.all %}
+<script type="text/javascript">
+    tagemb["{{tag.pk}}"] = "{{tag.emb}}"
+</script>
+{% endfor %}
 <script src="/static/scripts/classification.js"></script>
 <script src="/static/scripts/profile.js"></script>
 {% endif %}
