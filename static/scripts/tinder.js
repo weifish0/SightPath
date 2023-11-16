@@ -52,7 +52,8 @@ function loadCards() {
         data: {},
         success: function (newData) {
             console.log("loadCards")
-            $('.tinder--cards').html(newData);
+            $('.tinder--cards').find('script').remove();
+            $('.tinder--cards').append(newData);
             initCards();
             init();
         }
