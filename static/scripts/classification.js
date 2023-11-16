@@ -10,9 +10,14 @@ function getData(string, id = "no") {
 
             db = e.target.result;
             console.log('running onupgradeneeded');
-            const store_love = db.createObjectStore('love');
-            const store_nope = db.createObjectStore('nope');
-            const store_tmp = db.createObjectStore('tmp');
+            try {
+                db.createObjectStore('love');
+                db.createObjectStore('nope');
+                db.createObjectStore('tmp');
+            }
+            catch (error) {
+                console.log(error);
+            }
         };
         request.onsuccess = function (e) {
             let db = e.target.result;
