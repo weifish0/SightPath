@@ -1,23 +1,15 @@
-let ver = 0;
-let run_upgraded = 1;
+let ver = 1;
 
 function getData(string, id = "no") {
     // console.log("version" + ver.toString())
-    const request = indexedDB.open("model_data", ver + run_upgraded);
+    const request = indexedDB.open("model_data", ver);
     return new Promise(function (resolve, reject) {
         request.onupgradeneeded = function (e) {
-            run_upgraded = 0;
-
             db = e.target.result;
             console.log('running onupgradeneeded');
-            try {
-                db.createObjectStore('love');
-                db.createObjectStore('nope');
-                db.createObjectStore('tmp');
-            }
-            catch (error) {
-                console.log(error)
-            }
+            db.createObjectStore('love');
+            db.createObjectStore('nope');
+            db.createObjectStore('tmp');
         };
         request.onsuccess = function (e) {
             let db = e.target.result;
