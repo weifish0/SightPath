@@ -41,6 +41,10 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    embvec["{{competition.pk}}"] = "{{ competition.emb }}";
+</script>
+
 {% endfor %}
 
 <img draggable="false" class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" />

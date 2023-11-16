@@ -21,7 +21,7 @@ function onPointerMove(e) {
     moveY = e.clientY - startY
     movementX = e.movementX
     movementY = e.movementY
-    console.log("move")
+    // console.log("move")
 
     if (!scaling && Math.abs(movementY) < 2) {
         tinderContainer.classList.toggle('tinder_love', moveX > 0);
