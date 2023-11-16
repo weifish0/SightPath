@@ -3,6 +3,7 @@ var tinderContainer = document.querySelector('.tinder');
 const shape = 18; //768
 let score_cnt = 0;
 
+getData("love");
 initCards();
 init();
 
@@ -62,61 +63,53 @@ function initCards() {
     var firstCard = document.querySelector('.tinder--card:first-child');
 
     if (firstCard == null) {
-        console.log("test")
+        // console.log("test")
         loadCards();
         return;
     }
 
-    $.ajax({
-        type: "GET",
-        url: "/embvec/comp/" + firstCard.id.toString(),
-        dataType: 'json',
-        data: {},
-        success: function (newData) {
-            const request = indexedDB.open("model_data");
-            request.onsuccess = async function (e) {
-                let db = e.target.result;
-                let transaction = db.transaction("tmp", "readwrite"); // (1)
-                let items = transaction.objectStore("tmp");
-                // console.log("firstCard.id", firstCard.id)
-                let suc = items.add(newData, firstCard.id);
-                db.close();
+    // "/embvec/comp/" + firstCard.id.toString()
+    var newData = embvec[firstCard.id.toString()];
+
+    const request = indexedDB.open("model_data");
+    request.onsuccess = async function (e) {
+        let db = e.target.result;
+        let transaction = db.transaction("tmp", "readwrite"); // (1)
+        let items = transaction.objectStore("tmp");
+        // console.log("firstCard.id", firstCard.id)
+        let suc = items.add(newData, firstCard.id);
+        db.close();
 
 
-                let score = await predict(firstCard.id);
-                console.log(firstCard.id, score)
-                if (score < 0.1) {
-                    score_cnt++;
-                    if (score_cnt >= 20) {
-                        delete_data();
-                    }
-                    firstCard.remove();
-                    initCards();
+        let score = await predict(firstCard.id);
+        console.log(firstCard.id, score)
+        if (score < 0.1) {
+            score_cnt++;
+            if (score_cnt >= 20) {
+                delete_data();
+            }
+            firstCard.remove();
+            initCards();
 
-                    // essential, to prevent the error:
-                    // classification.js:97 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'emb') at train
-                    allCards = document.querySelectorAll('.tinder--card');
-                }
-                else {
-                    score_cnt = 0;
-
-                    var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
-                    newCards.forEach(function (card, index) {
-                        if (index == 0) {
-                            card.style.cssText += "touch-action: pan-y pinch-zoom;";
-                            card.style.cssText += "pointer-events: auto;";
-                            card.style.filter = "none";
-                            card.style.opacity = 1;
-                        }
-                        if (index == 1) card.style.opacity = 1;
-
-                        card.style.zIndex = -index;
-                        // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
-                    });
-                }
-            };
+            // essential, to prevent the error:
+            // classification.js:97 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'emb') at train
+            allCards = document.querySelectorAll('.tinder--card');
         }
-    });
+        else {
+            score_cnt = 0;
+
+            var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
+            newCards.forEach(function (card, index) {
+                if (index <= 1) card.style.opacity = 1;
+                if (index >= 1) card.style.filter = "brightness(50%)";
+
+                card.style.zIndex = -index;
+                // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
+            });
+            newCards[0].style.cssText += "touch-action: pan-y pinch-zoom; pointer-events:auto;";
+        }
+    };
+    
     // firstCard.style.transition = "all 0.3s ease-in-out";
     tinderContainer.classList.add('loaded');
 }

@@ -10,9 +10,14 @@ function getData(string, id = "no") {
 
             db = e.target.result;
             console.log('running onupgradeneeded');
-            db.createObjectStore('love');
-            db.createObjectStore('nope');
-            db.createObjectStore('tmp');
+            try {
+                db.createObjectStore('love');
+                db.createObjectStore('nope');
+                db.createObjectStore('tmp');
+            }
+            catch (error) {
+                console.log(error)
+            }
         };
         request.onsuccess = function (e) {
             let db = e.target.result;
@@ -86,12 +91,12 @@ async function train() {
 
     for (let i = 0; i < love.length; i++) {
         tmp_emb = await getData("tmp", love[i]);
-        emb.push(JSON.parse(tmp_emb["emb"]))
+        emb.push(JSON.parse(tmp_emb))
     }
     for (let i = 0; i < nope.length; i++) {
         // console.log("nope[" + i.toString() + "]", nope[i])
         tmp_emb = await getData("tmp", nope[i]);
-        emb.push(JSON.parse(tmp_emb["emb"]))
+        emb.push(JSON.parse(tmp_emb))
     }
 
     let model;
@@ -147,7 +152,7 @@ async function predict(id, emb = []) {
         else tmp_emb = emb;
 
         var model = await loadModel();
-        tensor = tf.tensor(JSON.parse(tmp_emb["emb"]), [1, shape]);
+        tensor = tf.tensor(JSON.parse(tmp_emb), [1, shape]);
 
         // console.log(model.predict(tensor).dataSync());
         return model.predict(tensor).dataSync()[0];

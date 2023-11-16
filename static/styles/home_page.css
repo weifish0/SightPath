@@ -326,7 +326,6 @@ body {
     opacity: 0;
     touch-action: none;
     pointer-events: none;
-    filter: brightness(50%);
 
     display: inline-block;
     overflow-y: auto;
@@ -380,11 +379,6 @@ body {
     margin-top: 24px;
     font-size: 20px;
     padding: 0 16px;
-}
-
-.tinder--card a {
-    pointer-events: none;
-    /* user-select: none; */
 }
 
 img.loading {
