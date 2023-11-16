@@ -27,7 +27,7 @@
     </div>
 
     <div class="ShortDescription">
-        <p class="text-light">{{competition.guide_line_html|striptags|slice:200}}</p>
+        <p class="text-light">{{competition.guide_line_html|striptags|slice:150|cut:'&nbsp'|cut:'&amp'}}</p>
     </div>
 
     <div class="SeeMoreButton">
@@ -43,4 +43,4 @@
 
 {% endfor %}
 
-<img class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" />
+<img draggable="false" class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" />
