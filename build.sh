@@ -29,8 +29,8 @@ python3 manage.py loaddata ./base/fixtures/competition_tags_fixture.json
 python3 manage.py loaddata ./base/fixtures/competitions_fixture.json
 python3 manage.py loaddata ./base/fixtures/ourtag_fixture.json
 
-python manage.py loaddata ./base/fixtures/activities_tags_fixture.json
-python manage.py loaddata ./base/fixtures/activities_fixture.json
+python3 manage.py loaddata ./base/fixtures/activities_tags_fixture.json
+python3 manage.py loaddata ./base/fixtures/activities_fixture.json
 #########
 
 python manage.py collectstatic --no-input
