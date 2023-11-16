@@ -14,6 +14,7 @@ function onPointerDown(e) {
     e.target.addEventListener('pointermove', onPointerMove)
     e.target.addEventListener('pointerup', onPointerUp)
     e.target.addEventListener('pointerleave', onPointerUp)
+    e.target.addEventListener('pointercancel', onPointerUp)
 }
 
 function onPointerMove(e) {
@@ -35,6 +36,7 @@ function onPointerUp(e) {
     e.target.removeEventListener('pointermove', onPointerMove)
     e.target.removeEventListener('pointerup', onPointerUp)
     e.target.removeEventListener('pointerleave', onPointerUp)
+    e.target.removeEventListener('pointercancel', onPointerUp)
 
     if (Math.abs(movementX) < 2) cancel()
     else {
