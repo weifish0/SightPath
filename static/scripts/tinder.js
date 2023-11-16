@@ -60,10 +60,9 @@ function loadCards() {
 }
 
 function initCards() {
-    var firstCard = document.querySelector('.tinder--card:first-child');
+    var firstCard = document.querySelectorAll('.tinder--card')[0];
 
     if (firstCard == null) {
-        // console.log("test")
         loadCards();
         return;
     }
@@ -85,7 +84,7 @@ function initCards() {
         console.log(firstCard.id, score)
         if (score < 0.1) {
             score_cnt++;
-            if (score_cnt >= 20) {
+            if (score_cnt >= 15) {
                 delete_data();
             }
             firstCard.remove();
