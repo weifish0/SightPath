@@ -28,7 +28,7 @@
 {% endfor %}
 
 {% for room in rooms %}
-<div>
+<div class="div_container">
     {% if request.user.is_superuser %}
     <a href="{% url 'pin_room' room.id %}" class="btn btn-info btn-sm">設為置頂</a>
     <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
