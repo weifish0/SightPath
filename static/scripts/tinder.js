@@ -102,9 +102,15 @@ function initCards() {
 
                     var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
                     newCards.forEach(function (card, index) {
-                        card.style.zIndex = -index; // allCards.length - index
-                        card.style.opacity = 1
-                        if (index >= 1) card.style.filter = "brightness(50%)"
+                        if (index == 0) {
+                            card.style.cssText += "touch-action: pan-y pinch-zoom;";
+                            card.style.cssText += "pointer-events: auto;";
+                            card.style.filter = "none";
+                            card.style.opacity = 1;
+                        }
+                        if (index == 1) card.style.opacity = 1;
+
+                        card.style.zIndex = -index;
                         // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
                     });
                 }
