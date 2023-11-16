@@ -1,6 +1,5 @@
 import os
 import json
-import tags
 from text2vec import SentenceModel
 # from transformers import BertTokenizer, BertModel
 import re
@@ -30,9 +29,8 @@ if __name__ == "__main__":
 
 
     # pool = model.start_multi_process_pool()
-    comp_path = os.getcwd()+'/base/fixtures/competitions_fixture.json'
+    comp_path = os.getcwd()+'/base/fixtures/activities_fixture.json'
     tag_emb = []
-    tags.generate_tags()
 
     comp = open(comp_path, "r", encoding="utf-8")
     ourtag_path = os.getcwd()+'/base/fixtures/ourtag_fixture.json'
@@ -45,13 +43,7 @@ if __name__ == "__main__":
     f.close()
 
     for tag in df:
-        ######
-        emb1 = model.encode(tag["fields"]["description"][0:400])
-        # inputs = tokenizer(tag["fields"]["description"][0:400], return_tensors="pt")
-        # emb1 = model(**inputs).pooler_output.detach().numpy()
-        # print(emb1)
-        ######
-
+        emb1 = np.array(tag["fields"]["emb_org"])
         tag_emb.append(emb1.reshape(1, -1))
 
     i = 0
@@ -60,7 +52,8 @@ if __name__ == "__main__":
         i += 1
         print("rounds "+str(i))
 
-        html = cleanhtml(data[d]["fields"]["guide_line_html"])
+        html = ""
+        # html = cleanhtml(data[d]["fields"]["guide_line_html"])
 
         ######
         content = data[d]["fields"]["name"]+' '+html
@@ -82,30 +75,16 @@ if __name__ == "__main__":
                 emb2, tag_emb[pk])[0][0]
             vec.append(score)
 
-            if score > 0.5:
+            if score > 0.35:
                 data[d]["fields"]["our_tags"].append(pk+1)
             # score_v.append(score)
 
         data[d]["fields"]["emb"] = np.array(vec).tolist()
 
 
-    for i in range(len(df)):
-        vec = []
-
-        for pk in range(len(tag_emb)):
-            # if pk+1==11 and i==290:
-            score = cosine_similarity(
-                tag_emb[i], tag_emb[pk])[0][0]
-            vec.append(score)
-
-        df[i]["fields"]["emb"] = np.array(vec).tolist()
-
-
     with open(comp_path, "w", encoding="utf-8") as fp:
         json.dump(data, fp, indent=2, ensure_ascii=False)
 
-    with open(ourtag_path, "w", encoding="utf-8") as fp:
-        json.dump(df, fp, indent=2, ensure_ascii=False)
 
         """
         vec = sorted(score_v)

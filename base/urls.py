@@ -30,6 +30,7 @@ urlpatterns = [
     # 找比賽
     path("competition_info/<str:pk>", views.competition_info, name="competition_info"),
     path("find_competitions/", views.find_competitions, name="find_competitions"),
+    path("find_activities/", views.find_activities, name="find_activities"),
     
     # 用戶偏好設定
     path("settings/", views.platform_config, name="platform_config"),
