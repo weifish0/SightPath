@@ -108,6 +108,7 @@ def profile(request, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
     topics = Topic.objects.all()
+    ourtag = OurTag.objects.all()
     # comp_love = None
     # top3 = None
     # print(user.top3.values())
@@ -119,7 +120,8 @@ def profile(request, pk):
     return render(request, "base/profile.html",
                   {"user": user,
                    "rooms": rooms,
-                   "topics": topics})
+                   "topics": topics,
+                   "ourtag": ourtag})
 
 
 def chatroom_home(request):
