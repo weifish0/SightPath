@@ -75,7 +75,7 @@ if __name__ == "__main__":
                 emb2, tag_emb[pk])[0][0]
             vec.append(score)
 
-            if score > 0.35:
+            if score > 0.4:
                 data[d]["fields"]["our_tags"].append(pk+1)
             # score_v.append(score)
 
