@@ -9,23 +9,23 @@
 {% for activity in activities|slice:"0:500" %}
 <h3 class="shad">
     <!-- need activity.url -->
-    <a class="link-secondary" href="{{activity.photoUrl}}">{{activity.name}}</a>
+    <a class="link-secondary" href="{{activity.cover_img_url}}">{{activity.name}}</a>
 </h3>
 
 {% for tag in activity.our_tags.all %}
-<a style="font-size: large;" href="{% url 'find_activities' %}?activity_category={{tag}}">{{tag}}</a>
+<a style="font-size: large;" href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
 {% endfor %}
 {% if activity.our_tags.count %}
 <br>
 {% endif %}
 {% for tag in activity.tags.all %}
-<a href="{% url 'find_activities' %}?activity_category={{tag}}">{{tag}}</a>
+<a href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
 {% endfor %}
 
 <br>
 <small>活動地點: {{activity.location}} - {{activity.eventPlaceType}}</small>
 <br>
-<small>瀏覽次數: {{activity.pageView}}</small>
+<small>瀏覽次數: {{activity.page_views}}</small>
 <br>
 <small>讚數: {{activity.likeCount}}</small>
 <br>
