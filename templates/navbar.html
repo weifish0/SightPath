@@ -19,11 +19,11 @@
         {% comment "等頁面優化完畢再開放" %}
         {% endcomment %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'find_competitions' %}">找比賽</a>
+          <a class="nav-link" href="{% url 'find_competition' %}">找比賽</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'find_activities' %}">找活動</a>
+          <a class="nav-link" href="{% url 'find_activity' %}">找活動</a>
         </li>
 
         <li class="nav-item">
@@ -37,7 +37,7 @@
         {% endif %}
 
       </ul>
-      <form class="d-inline-flex align-items-center" style="margin-bottom: 0" role="search" method="get" action="/find_competitions">
+      <form class="d-inline-flex align-items-center" style="margin-bottom: 0" role="search" method="get" action="/find_competition">
         <input class="form-inline me-2" type="search" placeholder="Search" aria-label="Search" name="q">
         <button class="btn btn-outline-success me-3" type="submit">搜索</button>
       </form>

@@ -22,11 +22,11 @@
     <hr>
     <p>標籤:</p>
     {% for tag in our_tags %}
-    <a style="font-size: large;" href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+    <a style="font-size: large;" href="{% url 'find_competition' %}?competition_category={{tag}}">{{tag}}</a>
     {% endfor %}
     <br>
     {% for tag in tags %}
-    <a href="{% url 'find_competitions' %}?competition_category={{tag}}">{{tag}}</a>
+    <a href="{% url 'find_competition' %}?competition_category={{tag}}">{{tag}}</a>
     {% endfor %}
     <hr>
     {{competition.guide_line_html|safe}}
