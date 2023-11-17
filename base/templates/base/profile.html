@@ -32,8 +32,6 @@
     <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
 
 
-
-
     <div class="AndroidLarge2">
         <div class="flex pb-2">
             <img class="profile_img" src="{% static 'images/mascot.png' %}" />
@@ -66,7 +64,6 @@
             <!-- <img class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" /> -->
         </div>
 
-        <div class="text">您喜歡過的競賽：</div>
         {% include "base/profile_card.html" %}
     </div>
 

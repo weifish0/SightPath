@@ -15,6 +15,7 @@ import os
 import json
 from base.api.persona_chart import persona_chart
 from django.db.models import Case, Value, When
+from itertools import chain
 
 """
 目標
@@ -348,7 +349,7 @@ def edit_profile(request, pk):
 
 
 # need to sync with def home_page
-def find_competitions(request):
+def find_competition(request):
     ourtag = OurTag.objects.all()
 
     # competition_tag為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
@@ -370,10 +371,10 @@ def find_competitions(request):
 
     context = {"competitions": competitions, "competition_tags": ourtag,
                "competitions_count": competitions_count, "competition_category": competition_category}
-    return render(request, "base/find_competitions_page.html", context)
+    return render(request, "base/find_competition_page.html", context)
 
 # need to sync with def home_page
-def find_activities(request):
+def find_activity(request):
     ourtag = OurTag.objects.all()
 
     # competition_tag為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
@@ -394,7 +395,7 @@ def find_activities(request):
 
     context = {"activities": activities, "ourtag": ourtag,
                "activities_count": activities_count, "activity_category": activity_category}
-    return render(request, "base/find_activities_page.html", context)
+    return render(request, "base/find_activity_page.html", context)
 
 
 def competition_info(request, pk):
@@ -428,13 +429,16 @@ def home_update(request):
 
 def rand_context():
     competition_tags = CompetitionTag.objects.all()
-    competitions = Competition.objects.filter(Q(name__icontains="")
-                                              | Q(organizer_title__icontains=""))
+    competitions = Competition.objects.all()
+    activities = Activity.objects.all()
+    
+    # filter(Q(name__icontains="") | Q(organizer_title__icontains=""))
 
     # randomly pick 5 elements
-    valid_id_list = list(competitions.values_list('id', flat=True))
-    random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 5))
-    competitions = competitions.filter(id__in=random_id_list)
+    # valid_id_list = list(competitions.values_list('id', flat=True))
+    # random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 5))
+    comp_activity = list(competitions) + list(activities)
+    comp_activity = random.sample(comp_activity, 5)
 
     # # pick first 8 tags
     # for com in competitions:
@@ -442,12 +446,12 @@ def rand_context():
     #     com.tags.set(com.tags.filter(id__in=id_list[0:8]))
     #     # com.save()
     #     # print(com.tags.all())
+    # print(comp_activity)
+    count = len(comp_activity)
 
-    competitions_count = competitions.count()
-
-    return {"competitions": competitions,
+    return {"comp_activity": comp_activity,
             "competition_tags": competition_tags,
-            "competitions_count": competitions_count}
+            "count": count}
 
 
   # 用戶偏好設定
@@ -507,13 +511,23 @@ def save_persona(request):
         user = User.objects.get(id=user_id)
         # print (request.POST.get("love_or_nope"))
         love_or_nope = request.POST.get("love_or_nope")
-        id = int(request.POST.get("id"))
-        # user.save()
-        if love_or_nope == "love":
-            user.love.add(id)
-        elif love_or_nope == "nope":
-            user.nope.add(id)
 
+        id_str = request.POST.get("id")
+        head = id_str.rstrip('0123456789')
+        id = int(id_str[len(head):])
+
+        if head == "competition":
+            if love_or_nope == "love":
+                user.love_comp.add(id)
+            elif love_or_nope == "nope":
+                user.nope_comp.add(id)
+
+        elif head == "activity":
+            if love_or_nope == "love":
+                user.love_activity.add(id)
+            elif love_or_nope == "nope":
+                user.nope_activity.add(id)
+                
         user.save()
         # print(love_or_nope)
 
@@ -529,8 +543,12 @@ def delete_data(request, pk):
         return redirect("profile", pk=user.id)
     
     user.persona = "loading.gif"
-    user.love.clear()
-    user.nope.clear()
+
+    user.love_comp.clear()
+    user.nope_comp.clear()
+    user.love_activity.clear()
+    user.nope_activity.clear()
+
     user.top3.clear()
     user.artifacts = None
     user.save()
