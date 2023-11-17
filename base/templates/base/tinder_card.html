@@ -1,34 +1,45 @@
 {% load static %}
 
-{% for competition in competitions %}
+{% for comp in comp_activity %}
 
-<div class="Wrapper tinder--card" id="{{competition.id}}">
+<div class="Wrapper tinder--card" id="{{comp}}{{comp.id}}">
     <div class="TitleBar">
-        <a class="SitconX" href="{% url 'competition_info' competition.id %}">
-            {{competition.name}}</a>
+        {% if comp|stringformat:'s' == "competition" %}
+        <a class="SitconX" href="{% url 'competition_info' comp.id %}">
+            {{comp.name}}</a>
+        {% else %}
+        <a class="SitconX">{{comp.name}}</a>
+        {% endif %}
     </div>
+
     <div class="TagBar tags_all">
-        {% for tag in competition.tags.all|slice:"0:8" %}
+        {% for tag in comp.tags.all|slice:"0:8" %}
         <div class="TagKind">
-            <a class="Tag" href="{% url 'find_competitions' %}?competition_category={{tag}}">
+            {% with var=comp|stringformat:'s' %}
+            {% with tag_str=tag|stringformat:'s' category_str=var|add:'_category' %}
+            <a class="Tag" href="{% url 'find_'|add:var%}?{{category_str}}={{tag_str}}">
                 {{tag}}</a>
+            {% endwith %}
+            {% endwith %}
         </div>
         {% endfor %}
     </div>
 
     <div class="ShortData">
-        <img draggable="false" src="{{competition.cover_img_url}}" alt="">
-        {% if competition.agency_title != None %}
-        <p class="text-light">籌辦組織: {{competition.agency_title}}</p>
+        <img draggable="false" src="{{comp.cover_img_url}}" alt="">
+        {% if comp.agency_title != None %}
+        <p class="text-light">籌辦組織: {{comp.agency_title}}</p>
         {% endif %}
-        <p class="text-light">瀏覽次數: {{competition.page_views}}</p>
-        <p class="text-light">開始報名日期: {{competition.start_time}}</p>
-        <p class="text-light">截止日期: {{competition.end_time}}</p>
+        <p class="text-light">瀏覽次數: {{comp.page_views}}</p>
+        <p class="text-light">開始報名日期: {{comp.start_time}}</p>
+        <p class="text-light">截止日期: {{comp.end_time}}</p>
     </div>
 
+    {% if comp.guide_line_html != None %}
     <div class="ShortDescription">
-        <p class="text-light">{{competition.guide_line_html|striptags|slice:150|cut:'&nbsp'|cut:'&amp'}}</p>
+        <p class="text-light">{{comp.guide_line_html|striptags|slice:150|cut:'&nbsp'|cut:'&amp'}}</p>
     </div>
+    {% endif %}
 
     <div class="SeeMoreButton">
         <div class="Frame6">
@@ -36,13 +47,13 @@
             <div class="Sitcon">SightPath</div>
         </div>
         <div class="Button">
-            <a class="Button text-dark" href="{{ competition.url }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
+            <a class="Button text-dark" href="{{ comp.url }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
         </div>
     </div>
 </div>
 
 <script type="text/javascript">
-    embvec["{{competition.pk}}"] = "{{ competition.emb }}";
+    embvec["{{comp}}{{comp.id}}"] = "{{ comp.emb }}";
 </script>
 
 {% endfor %}

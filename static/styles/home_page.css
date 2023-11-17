@@ -360,13 +360,15 @@ body {
 }
 
 .tinder--card img {
+    opacity: 0;
     pointer-events: none;
     max-width: 100%;
     user-select: none;
 }
 
 .tinder--card h3 {
-    pointer-events: none;
+    opacity: 0;
+    /* pointer-events: none; */
     /* user-select: none; */
     margin-top: 32px;
     font-size: 32px;
@@ -374,11 +376,16 @@ body {
 }
 
 .tinder--card p {
-    pointer-events: none;
+    opacity: 0;
+    /* pointer-events: none; */
     /* user-select: none; */
     margin-top: 24px;
     font-size: 20px;
     padding: 0 16px;
+}
+
+.tinder--card a {
+    opacity: 0;
 }
 
 img.loading {
@@ -390,7 +397,7 @@ img.loading {
     z-index: -5;
 }
 
-.ShortDescription{
+.ShortDescription {
     background: #447D7A;
     word-wrap: break-word
 }

@@ -11,14 +11,14 @@
         {% comment "等頁面優化完畢再開放" %}
         {% endcomment %}
         <br>
-        <a href="{% url 'find_competitions' %}" class="btn btn-light">全部</a>
+        <a href="{% url 'find_competition' %}" class="btn btn-light">全部</a>
 
         <br>
         <br>
         <div>
             {% for competition_tag in competition_tags %}
             <a class="btn btn-light"
-                href="{% url 'find_competitions' %}?competition_category={{competition_tag}}">{{competition_tag}}</a>
+                href="{% url 'find_competition' %}?competition_category={{competition_tag}}">{{competition_tag}}</a>
             {% endfor %}
         </div>
     </div>
