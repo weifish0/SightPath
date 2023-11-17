@@ -107,9 +107,13 @@ function initCards() {
                 // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
             });
             newCards[0].style.cssText += "touch-action: pan-y pinch-zoom; pointer-events:auto;";
+            newCards[0].style.filter = "none"
+            newCards[0].querySelectorAll('*').forEach(function (child) {
+                child.style.opacity = 1;
+            });
         }
     };
-    
+
     // firstCard.style.transition = "all 0.3s ease-in-out";
     tinderContainer.classList.add('loaded');
 }

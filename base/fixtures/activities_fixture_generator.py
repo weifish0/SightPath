@@ -113,9 +113,10 @@ def generate_activities_fixture(category: str, category_index: int,
                                                         "eventPlaceType": eventPlaceType,
                                                         "location": location,
                                                         "likeCount": likeCount,
-                                                        "pageView": pageView,
+                                                        "page_views": pageView,
                                                         "isAD": isAD,
-                                                        "photoUrl": photoUrl,
+                                                        "cover_img_url": photoUrl,
+                                                        "url": "",
                                                         "tags": tags}})   
 
         activities_tags_list.append(category)

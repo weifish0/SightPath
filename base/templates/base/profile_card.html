@@ -1,11 +1,8 @@
 {% load static %}
 
-{% if user.love.count == 0 %}
-<h3>無資料</h3>
-{% endif %}
-
+<div class="text">您喜歡過的競賽</div>
 <div class="grid">
-    {% for comp in user.love.all %}
+    {% for comp in user.love_comp.all %}
     <div class="Rectangle1">
         <div class="title">{{comp.name}}</div>
         <div class="tag">{{comp.our_tags.first}}</div>
@@ -15,3 +12,25 @@
     </div>
     {% endfor %}
 </div>
+
+{% if user.love_comp.count == 0 %}
+<h3>無喜歡過的競賽</h3>
+{% endif %}
+
+
+<div class="text">您喜歡過的活動</div>
+<div class="grid">
+    {% for comp in user.love_activity.all %}
+    <div class="Rectangle1">
+        <div class="title">{{comp.name}}</div>
+        <div class="tag">{{comp.our_tags.first}}</div>
+        <div class="datetime">
+            開始報名日期: {{comp.start_time}}<br />
+            截止日期：{{comp.end_time}}</div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if user.love_activity.count == 0 %}
+<h3>無喜歡過的活動</h3>
+{% endif %}
