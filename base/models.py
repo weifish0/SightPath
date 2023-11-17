@@ -136,8 +136,41 @@ class Competition(models.Model):
     emb = models.CharField(max_length=800, null=True)
 
     def __str__(self):
-        return f"{self.name}"
+        return "competition"
 
+
+class ActivityTag(models.Model):
+    tag_name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return f"{self.tag_name}"
+
+
+class Activity(models.Model):
+    name = models.TextField()
+    eventIdNumber = models.TextField(null=True)
+    start_time = models.DateTimeField(null=True)
+    end_time = models.DateTimeField(null=True)
+    eventPlaceType = models.TextField(null=True)
+    location = models.TextField(null=True)
+    likeCount = models.IntegerField(null=True)
+    page_views = models.IntegerField(null=True)
+    isAD = models.BooleanField(null=True)
+    cover_img_url = models.URLField(null=True)
+    url = models.URLField(null=True)
+    tags = models.ManyToManyField(
+        ActivityTag, blank=True
+    )
+
+    # 推薦演算法相關
+    our_tags = models.ManyToManyField(
+        OurTag, blank=True
+    )
+    emb = models.TextField(null=True)
+
+    def __str__(self):
+        return "activity"
+    
 
 class User(AbstractBaseUser, PermissionsMixin):
     bio = models.CharField(max_length=150, null=True, default='', blank=True)
@@ -154,11 +187,17 @@ class User(AbstractBaseUser, PermissionsMixin):
     top3 = models.ManyToManyField(
         OurTag, blank=True
     )
-    love = models.ManyToManyField(
-        Competition, blank=True, related_name="user_love"
+    love_comp = models.ManyToManyField(
+        Competition, blank=True, related_name="love_comp"
     )
-    nope = models.ManyToManyField(
-        Competition, blank=True, related_name="user_nope"
+    nope_comp = models.ManyToManyField(
+        Competition, blank=True, related_name="nope_comp"
+    )
+    love_activity = models.ManyToManyField(
+        Activity, blank=True, related_name="love_activity"
+    )
+    nope_activity = models.ManyToManyField(
+        Activity, blank=True, related_name="nope_activity"
     )
     persona = models.ImageField(upload_to="persona",
                                 height_field=None,
@@ -231,35 +270,3 @@ class Message(models.Model):
 
     def __str__(self):
         return f"{self.body[0:20]}"
-
-
-class ActivityTag(models.Model):
-    tag_name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return f"{self.tag_name}"
-
-
-class Activity(models.Model):
-    name = models.TextField()
-    eventIdNumber = models.TextField(null=True)
-    start_time = models.DateTimeField(null=True)
-    end_time = models.DateTimeField(null=True)
-    eventPlaceType = models.TextField(null=True)
-    location = models.TextField(null=True)
-    likeCount = models.IntegerField(null=True)
-    pageView = models.IntegerField(null=True)
-    isAD = models.BooleanField(null=True)
-    photoUrl = models.URLField(null=True)
-    tags = models.ManyToManyField(
-        ActivityTag, blank=True
-    )
-
-    # 推薦演算法相關
-    our_tags = models.ManyToManyField(
-        OurTag, blank=True
-    )
-    emb = models.TextField(null=True)
-
-    def __str__(self):
-        return f"{self.name}"

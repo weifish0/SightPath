@@ -51,8 +51,6 @@ function setTransform(x, y, deg, duration) {
 }
 
 function complete() {
-    allCards[1].style.filter = "none"
-
     moving = false;
     if (tinderContainer.classList.contains('tinder_love')) {
         moving = true
