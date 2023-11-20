@@ -1,18 +1,44 @@
-.AndroidLarge2 {
-    /* display: table; */
-    margin-left: auto;
-    margin-right: auto;
+.profile_container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+
+    padding-top: 60px;
+    height: auto;
+}
+
+.profile_left {
+    flex: 1;
+    max-width: 300px;
+    min-width: 300px;
+
+    margin-left: 20px;
+    overflow-x: hidden;
+}
+
+.profile_right {
+    min-width: 300px;
+    max-width: 600px;
+    flex: 3;
+
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 15px;
 
-    max-width: 600px;
-    width: 100%;
-
     /* height: 100%; */
     position: relative;
     background: #447D7A
+}
+
+.profile_post {
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
 .Frame13 {
@@ -78,6 +104,8 @@
 }
 
 .Frame12 {
+    min-height: 80px;
+    color: #F0FFFF;
     width: 333px;
     /* left: 12px;
     top: 474px; */
@@ -208,6 +236,11 @@
 }
 
 .img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 150px;
     width: 352px;
-    text-align: center;
+    /* text-align: center; */
 }

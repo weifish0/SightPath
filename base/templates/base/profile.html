@@ -6,33 +6,33 @@
 
 <div class="profile_container">
     <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
+    <div class="profile_left">
+        {% if request.user.is_superuser %}
+        <div class="alert alert-info" role="alert">
+            你擁有管理員權限
+        </div>
+        {% endif %}
 
-    {% if request.user.is_superuser %}
-    <div class="alert alert-info" role="alert">
-        你擁有管理員權限
+        {% if user.email != '' %}
+        <h2 class="ml-15">{{user.nickname}}</h1>
+        {% else %}
+        <h2 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+        {% if request.user.id == user.id %}
+        <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px"
+            class="btn btn-warning btn-sm">編輯個人檔案</a>
+        <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();" style="margin-left:15px"
+            class="btn btn-danger btn-sm">刪除資料</a>
+        {% endif %}
+        {% endif %}
+        <hr>
+        <!-- <h3 class="ml-15">個人簡介</h3> -->
+        <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
     </div>
-    {% endif %}
 
-    {% if user.email != '' %}
-    <h1 class="ml-15">{{user.nickname}}</h1>
-    {% else %}
-    <h1 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
-    {% endif %}
-
-    {% if user.is_authenticated %}
-    {% if request.user.id == user.id %}
-    <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px"
-        class="btn btn-warning btn-sm">編輯個人檔案</a>
-    <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();" style="margin-left:15px"
-        class="btn btn-danger btn-sm">刪除資料</a>
-    {% endif %}
-    {% endif %}
-    <hr>
-    <h3 class="ml-15">個人簡介</h3>
-    <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
-
-
-    <div class="AndroidLarge2">
+    <div class="profile_right">
         <div class="flex pb-2">
             <img class="profile_img" src="{% static 'images/mascot.png' %}" />
             <div class="Frame13">
@@ -66,17 +66,15 @@
 
         {% include "base/profile_card.html" %}
     </div>
+</div>
 
-
-    <br>
-    <hr>
-    <h3 class="ml-15">文章:</h3>
+<div class="profile_post">
+    <h3 class="ml-15">我的文章</h3>
     <br>
     <div>
         {% include "base/room_feed_component.html" %}
     </div>
 </div>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>

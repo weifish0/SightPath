@@ -90,10 +90,11 @@ img {
 .div_container {
     margin: 0;
     width: 100%;
+    height: auto;
+
     padding-top: 60px;
     padding-left: 15px;
     padding-right: 10px;
-    height: 100%;
 }
 
 .home_container {
@@ -104,20 +105,6 @@ img {
     position: absolute;
     /* margin: 0;
     width: 100%; */
-}
-
-.profile_container {
-    margin: 0;
-    width: 100%;
-    max-width: 700px;
-    padding-top: 60px;
-
-    /* display: flex;
-    align-items: center;
-    flex-direction: column; */
-    /* padding-left: auto;
-    padding-right: auto; */
-    height: 100%;
 }
 
 .ml-15 {
@@ -153,6 +140,7 @@ img {
 .flex_container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .flex_right {
@@ -163,8 +151,6 @@ img {
 .flex_left {
     flex: 1;
     min-width: 300px;
-
-    margin-right: 20px;
     overflow-x: hidden;
 }
 
