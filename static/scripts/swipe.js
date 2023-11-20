@@ -8,8 +8,8 @@ function onTouchStart(e) {
 
 function onPointerDown(e) {
     // e.classList.add('moving');
-    startX = e.clientX //clientX
-    startY = e.clientY
+    startX = e.screenX //clientX
+    startY = e.screenY
 
     e.target.addEventListener('pointermove', onPointerMove)
     e.target.addEventListener('pointerup', onPointerUp)
@@ -17,28 +17,29 @@ function onPointerDown(e) {
     e.target.addEventListener('pointercancel', onPointerUp)
 }
 
+const range = 100;
 function onPointerMove(e) {
-    moveX = e.clientX - startX
-    moveY = e.clientY - startY
-    movementX = e.movementX
-    movementY = e.movementY
+    moveX = e.screenX - startX
+    moveY = e.screenY - startY
     // console.log("move")
 
-    if (!scaling && Math.abs(movementY) < 2) {
+    if (!scaling) {
         tinderContainer.classList.toggle('tinder_love', moveX > 0);
         tinderContainer.classList.toggle('tinder_nope', moveX < 0);
-        setTransform(moveX, moveY, 0) //rotate: (moveX / innerWidth) * 50
+        //rotate: (moveX / innerWidth) * 50
+        if (moveY > range) setTransform(moveX, range, 0)
+        else if (moveY < -range) setTransform(moveX, -range, 0)
+        else setTransform(moveX, moveY, 0)
     }
 }
 
-movementX = 0;
 function onPointerUp(e) {
     e.target.removeEventListener('pointermove', onPointerMove)
     e.target.removeEventListener('pointerup', onPointerUp)
     e.target.removeEventListener('pointerleave', onPointerUp)
     e.target.removeEventListener('pointercancel', onPointerUp)
-
-    if (Math.abs(movementX) < 2) cancel()
+    
+    if (scaling || Math.abs(moveX) < range) cancel()
     else {
         e.target.removeEventListener('pointerdown', onPointerDown)
         complete()
