@@ -6,10 +6,11 @@
     <div class="TitleBar">
         {% if comp|stringformat:'s' == "competition" %}
         <a class="SitconX" href="{% url 'competition_info' comp.id %}">
-            {{comp.name}}</a>
+            {{comp.name|slice:30}}</a>
         {% else %}
-        <a class="SitconX">{{comp.name}}</a>
+        <a class="SitconX">{{comp.name|slice:30}}</a>
         {% endif %}
+        <img draggable="false" src="{{comp.cover_img_url}}" alt="">
     </div>
 
     <div class="TagBar tags_all">
@@ -17,7 +18,7 @@
         <div class="TagKind">
             {% with var=comp|stringformat:'s' %}
             {% with tag_str=tag|stringformat:'s' category_str=var|add:'_category' %}
-            <a class="Tag" href="{% url 'find_'|add:var%}?{{category_str}}={{tag_str}}">
+            <a class="Tag text-dark" href="{% url 'find_'|add:var%}?{{category_str}}={{tag_str}}">
                 {{tag}}</a>
             {% endwith %}
             {% endwith %}
@@ -26,7 +27,6 @@
     </div>
 
     <div class="ShortData">
-        <img draggable="false" src="{{comp.cover_img_url}}" alt="">
         {% if comp.agency_title != None %}
         <p class="text-light">籌辦組織: {{comp.agency_title}}</p>
         {% endif %}
@@ -37,6 +37,7 @@
 
     {% if comp.guide_line_html != None %}
     <div class="ShortDescription">
+        <!-- <p class="ShortTitle">活動簡介</p> -->
         <p class="text-light">{{comp.guide_line_html|striptags|slice:150|cut:'&nbsp'|cut:'&amp'}}</p>
     </div>
     {% endif %}
@@ -47,7 +48,11 @@
             <div class="Sitcon">SightPath</div>
         </div>
         <div class="Button">
+            {% if comp.eventIdNumber != None %}
+            <a class="Button text-dark" href="https://www.accupass.com/event/{{ comp.eventIdNumber }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
+            {% else %}
             <a class="Button text-dark" href="{{ comp.url }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
+            {% endif %}
         </div>
     </div>
 </div>

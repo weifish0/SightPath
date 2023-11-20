@@ -45,7 +45,7 @@ function storeData(id, is_love) {
 }
 
 
-function loadCards() {
+function loadCards(do_train) {
     $.ajax({
         type: "GET",
         url: "/home_update",
@@ -56,6 +56,7 @@ function loadCards() {
             $('.tinder--cards').append(newData);
             initCards();
             init();
+            if (do_train) train();
         }
     });
 }
@@ -64,7 +65,7 @@ function initCards() {
     var firstCard = document.querySelectorAll('.tinder--card')[0];
 
     if (firstCard == null) {
-        loadCards();
+        loadCards(false);
         return;
     }
 
@@ -82,10 +83,12 @@ function initCards() {
 
 
         let score = await predict(firstCard.id);
-        console.log(firstCard.id, score)
-        if (score < 0.3) {
+        let ran = Math.random();
+        console.log(firstCard.id, score + ran, score, ran)
+
+        if (score + ran < 0.5) {
             score_cnt++;
-            if (score_cnt >= 15) {
+            if (score_cnt >= 20000) {
                 delete_data();
             }
             firstCard.remove();
@@ -120,8 +123,6 @@ function initCards() {
 
 
 function init() {
-    train();
-
     allCards = document.querySelectorAll('.tinder--card');
     allCards.forEach(function (e) {
         e.addEventListener('pointerdown', onPointerDown)
