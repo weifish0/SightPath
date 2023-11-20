@@ -106,7 +106,7 @@ async function train() {
             layers: [
                 tf.layers.dense({ units: 64, inputShape: [shape] }),
                 tf.layers.dropout(0.2),
-                tf.layers.dense({ units: 64 }),
+                tf.layers.dense({ units: 64, activation: "relu" }),
                 tf.layers.dense({ units: 1, activation: "sigmoid" })
             ]
         });
