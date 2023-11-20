@@ -83,7 +83,7 @@ function initCards() {
 
 
         let score = await predict(firstCard.id);
-        let ran = Math.random()/2;
+        let ran = Math.random();
         console.log(firstCard.id, score + ran, score, ran)
 
         if (score + ran < 0.5) {
