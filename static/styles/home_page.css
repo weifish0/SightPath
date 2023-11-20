@@ -23,15 +23,33 @@ body {
 .TitleBar {
     align-self: stretch;
     /* height: 74px; */
-    padding: 10px 20px;
+    padding: 10px 0;
     background: #447D7A;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    display: inline-flex
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .SitconX {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 1 1 0;
+    align-self: stretch;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 3.68px;
+    word-wrap: break-word
+}
+
+.ShortTitle {
+    margin-left: 20px;
+    margin-right: 20px;
     flex: 1 1 0;
     align-self: stretch;
     text-align: center;
@@ -39,7 +57,7 @@ body {
     font-size: 24px;
     font-family: Inter;
     font-weight: 700;
-    line-height: 34px;
+    line-height: 28px;
     letter-spacing: 3.68px;
     word-wrap: break-word
 }
@@ -52,7 +70,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: flex
+    display: flex;
 }
 
 .Image {
@@ -64,7 +82,7 @@ body {
 .TagBar {
     align-self: stretch;
     /* height: 10px; */
-    margin: 2px 10px;
+    margin: 10px;
     /* padding-bottom: 8px; */
     background: #447D7A;
     /* flex-direction: column;
@@ -84,7 +102,8 @@ body {
 }
 
 .Tag {
-    height: 28px;
+    height: auto;
+    min-height: 28px;
     padding-left: 10px;
     padding-right: 10px;
     background: white;
@@ -379,7 +398,7 @@ body {
     opacity: 0;
     /* pointer-events: none; */
     /* user-select: none; */
-    margin-top: 24px;
+    margin-top: 15px;
     font-size: 20px;
     padding: 0 16px;
 }
