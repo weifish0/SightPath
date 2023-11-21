@@ -38,7 +38,7 @@ function onPointerUp(e) {
     e.target.removeEventListener('pointerup', onPointerUp)
     e.target.removeEventListener('pointerleave', onPointerUp)
     e.target.removeEventListener('pointercancel', onPointerUp)
-    
+
     if (scaling || Math.abs(moveX) < range) cancel()
     else {
         e.target.removeEventListener('pointerdown', onPointerDown)
@@ -71,11 +71,11 @@ function complete() {
     else return
 
     // el.classList.remove('moving');
-    var keep = 0;
+    const keep = 0;
     allCards[0].classList.toggle('removed', !keep);
     setTimeout(function () {
         allCards[0].remove();
-        initCards();
+        initCards()
 
         allCards = document.querySelectorAll('.tinder--card');
         if (allCards.length <= 1) loadCards(true);

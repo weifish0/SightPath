@@ -50,6 +50,7 @@ function loadCards(do_train) {
         type: "GET",
         url: "/home_update",
         data: {},
+        async: false,
         success: function (newData) {
             console.log("loadCards")
             $('.tinder--cards').find('script').remove();
@@ -63,7 +64,6 @@ function loadCards(do_train) {
 
 function initCards() {
     var firstCard = document.querySelectorAll('.tinder--card')[0];
-
     if (firstCard == null) {
         loadCards(false);
         return;
