@@ -50,7 +50,6 @@ function loadCards(do_train) {
         type: "GET",
         url: "/home_update",
         data: {},
-        async: false,
         success: function (newData) {
             console.log("loadCards")
             $('.tinder--cards').find('script').remove();
@@ -59,13 +58,13 @@ function loadCards(do_train) {
             init();
             if (do_train) train();
         }
-    });
+    })
 }
 
-function initCards() {
+async function initCards(do_train = false) {
     var firstCard = document.querySelectorAll('.tinder--card')[0];
     if (firstCard == null) {
-        loadCards(false);
+        loadCards(do_train);
         return;
     }
 
@@ -84,11 +83,11 @@ function initCards() {
 
         let score = await predict(firstCard.id);
         let ran = Math.random();
-        console.log(firstCard.id, score + ran, score, ran)
+        console.log(firstCard.id, score, score + ran, ran)
 
         if (score + ran < 0.5) {
             score_cnt++;
-            if (score_cnt >= 20000) {
+            if (score_cnt >= 20) {
                 delete_data();
             }
             firstCard.remove();
