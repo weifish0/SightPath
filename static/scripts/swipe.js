@@ -75,10 +75,10 @@ function complete() {
     allCards[0].classList.toggle('removed', !keep);
     setTimeout(function () {
         allCards[0].remove();
-        initCards()
+        initCards(true);
 
         allCards = document.querySelectorAll('.tinder--card');
-        if (allCards.length <= 1) loadCards(true);
+        // if (allCards.length <= 1) loadCards(true);
     }, innerWidth / 5)
 }
 
