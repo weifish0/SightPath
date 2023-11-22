@@ -115,6 +115,10 @@ img {
     margin-top: 20px;
 }
 
+.mt-30 {
+    margin-top: 30px;
+}
+
 .topic {
     width: 200px;
 }
@@ -164,11 +168,11 @@ img {
     text-shadow: .2px .2px .2px black;
 }
 
-.mb0{
+.mb0 {
     margin-bottom: 0;
 }
 
-.alert{
+.alert {
     max-width: 400px;
 }
 
@@ -189,7 +193,7 @@ img {
 }
 
 .post-profile {
-    max-width:200px;
+    max-width: 200px;
 
     display: flex;
     flex-wrap: wrap;
@@ -208,7 +212,8 @@ img {
     border-radius: 50px;
 }
 
-.fb-post1-container{
+.fb-post1-container {
+    padding-top: 60px !important;
     margin-left: auto;
     margin-right: auto;
     max-width: 800px;
@@ -224,21 +229,21 @@ img {
 }
 
 
-.my_article{
+.my_article {
     max-width: 800px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.no_border{
+.no_border {
     border: none !important;
 }
 
-.minw{
+.minw {
     min-width: 50px !important;
 }
 
-ul{
+ul {
     padding-left: 0;
     list-style-type: none;
 }
