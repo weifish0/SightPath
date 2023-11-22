@@ -8,7 +8,6 @@ figure {
 }
 
 .tags_all {
-.tags_all {
     /* max-height: 3em; */
     overflow: hidden;
 }
@@ -24,7 +23,6 @@ img {
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-
 
     height: 35px;
     width: 180px;
@@ -71,9 +69,6 @@ img {
     top: 0;
     left: 0;
     right: 0;
-    top: 0;
-    left: 0;
-    right: 0;
     background: #F8F8F8;
     padding: 0;
 }
@@ -88,11 +83,7 @@ img {
 .create_threads {
     margin-top: 20px;
     max-width: 400px;
-.create_threads {
-    margin-top: 20px;
-    max-width: 400px;
     display: grid;
-    gap: 20px;
     gap: 20px;
 }
 
