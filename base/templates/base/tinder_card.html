@@ -38,7 +38,7 @@
     {% if comp.guide_line_html != None %}
     <div class="ShortDescription">
         <!-- <p class="ShortTitle">活動簡介</p> -->
-        <p class="text-light">{{comp.guide_line_html|striptags|slice:150|cut:'&nbsp'|cut:'&amp'}}</p>
+        <p class="text-light">{{comp.guide_line_html|striptags|slice:150|safe}}</p>
     </div>
     {% endif %}
 

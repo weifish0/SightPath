@@ -22,24 +22,23 @@
     </div>
     {% endif %}
 
-      <div class="post-title">
-        <a href="{% url 'profile' room.host.id %}"><img src="{% static 'images/user.png' %}" alt="user picture"></a>
-        <ul>
-          <li>
-            <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
-          </li>
-          {# room 建立時間 #}
+    <div class="post-title">
+      <a href="{% url 'profile' room.host.id %}">
+        <img src="{% static 'images/user.png' %}" alt="user picture">
+      </a>
+      <a href="{% url 'profile' room.host.id %}" style="font-size: 18px;">{{room.host.nickname}}</a>
 
-
-          {# room tag #}
-          <li>
-            <span>{{room.created}}</span>
-            <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
-              class="btn border border-2 border-success btn-sm" style="margin-left: 10px;">
-              {{room.topic.name}}
-            </a>
-          </li>
-        </ul>
+      <ul>
+        {# room 建立時間 #}
+        {# room tag #}
+        <li>
+          <span>{{room.created}}</span>
+          <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
+            class="btn border border-2 border-success btn-sm" style="margin-left: 10px;">
+            {{room.topic.name}}
+          </a>
+        </li>
+      </ul>
 
       {# room tag #}
 
@@ -49,7 +48,7 @@
       <div class="container mt-4">
         <div class="card bg-light p-3 rounded mx-0">
           <div class="card-body">
-            <p class="card-text text-break">{{ room.description|linebreaks }}</p>
+            <!-- <p class="card-text text-break">{{ room.description|linebreaks }}</p> -->
           </div>
         </div>
       </div>
@@ -80,8 +79,9 @@
     <div class="mt-30">
       <h5>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
           class="btn btn-outline-secondary minw-40 btn-sm">{{room.topic.name}}</a></small>
-        <h1>{{room.name}}</h1>
-        <h5>作者: <a href="{% url 'profile' room.host.id %}" class="btn btn-outline-primary btn-sm">{{room.host.nickname}}</a>
+        <h2>{{room.name}}</h2>
+        <h5>作者: <a href="{% url 'profile' room.host.id %}"
+            class="btn btn-outline-primary btn-sm">{{room.host.nickname}}</a>
         </h5>
         {% if request.user == room.host or request.user.is_superuser %}
         <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
@@ -89,7 +89,8 @@
         {% endif %}
         <hr>
 
-        <h4>討論串內容<br>{{room.description|linebreaks}}</h4>
+        <h4>討論串內容</h4>
+        <p>{{room.description|linebreaks}}</p>
         <small>建立時間: {{room.created}}</small>
         <br>
         <small>最近更新: {{room.updated}}</small>
