@@ -2,6 +2,10 @@
 {% load static %}
 
 {% block extra_head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/profile.css' %}">
 {% endblock extra_head %}
 
@@ -72,7 +76,7 @@
 </div>
 
 <div class="profile_post">
-    <h3 class="ml-15 my_article">我的文章</h3>
+    <h3>我的文章</h3>
     <br>
     {% include "base/room_feed_component.html" %}
 </div>

@@ -2,7 +2,7 @@
 
 
 {% for pin_room in pin_rooms %}
-<div class="fb-post1-container fb-post1" id="room_{{ pin_room.id }}">
+<div class="fb-post1" id="room_{{ pin_room.id }}">
     <div class="fb-p1-main">
       <!-- 置頂圖標 -->
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin"
@@ -76,7 +76,7 @@
 
 
 {% for room in rooms %}
-<div class="fb-post1 fb-post1-container" id="room_{{ room.id }}">
+<div class="fb-post1" id="room_{{ room.id }}">
     <div class="fb-p1-main">
       <div class="post-title">
         <div class="post-profile">
@@ -88,7 +88,7 @@
 
         <ul>
           <li>
-            <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
+            <p style="font-size: 25px;">{{room.name}}</p>
           </li>
           <li><span>{{room.created}}</span></li>
         </ul>

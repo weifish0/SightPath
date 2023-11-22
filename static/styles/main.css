@@ -177,8 +177,6 @@ img {
 }
 
 
-
-
 .post-title {
     display: flex;
     flex-wrap: wrap;
@@ -213,26 +211,32 @@ img {
 }
 
 .fb-post1-container {
-    padding-top: 60px !important;
+    width: 70%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
 }
 
-.fb-post1+.fb-post1 {
+/* .fb-post1+.fb-post1 {
     border-top: solid thin black;
-}
+} */
 
 .fb-post1 {
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    background: white;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+
     padding-top: 20px;
     padding-bottom: 30px;
-}
-
-
-.my_article {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .no_border {
@@ -247,3 +251,30 @@ ul {
     padding-left: 0;
     list-style-type: none;
 }
+
+.pt-3 {
+    padding-top: 3px !important;
+}
+
+.pb-3 {
+    padding-bottom: 3px !important;
+}
+
+.minw-40 {
+    min-width: 40px;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.text-end {
+    margin-left: auto;
+    min-width: 200px;
+}
+
