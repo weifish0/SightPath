@@ -22,17 +22,24 @@
     </div>
     {% endif %}
 
-    <div class="post-title">
-      <a href="{% url 'profile' room.host.id %}">
-        <img src="{% static 'images/user2.jpg' %}" alt="user picture"></a>
-      <ul>
-        <li>
-          <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
-        </li>
-        <li>
-          <span>{{room.created}}</span>
-        </li>
-      </ul>
+      <div class="post-title">
+        <a href="{% url 'profile' room.host.id %}"><img src="{% static 'images/user.png' %}" alt="user picture"></a>
+        <ul>
+          <li>
+            <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
+          </li>
+          {# room 建立時間 #}
+
+
+          {# room tag #}
+          <li>
+            <span>{{room.created}}</span>
+            <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
+              class="btn border border-2 border-success btn-sm" style="margin-left: 10px;">
+              {{room.topic.name}}
+            </a>
+          </li>
+        </ul>
 
       {# room tag #}
 
