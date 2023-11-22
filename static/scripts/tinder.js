@@ -4,12 +4,14 @@ const shape = 18; //768
 let score_cnt = 0;
 
 getData("love");
+getData("love");
 initCards();
 init();
 
 function ajax_save(love_or_nope, id) {
     $.ajax({
         type: "POST",
+        url: "/save_persona/",
         url: "/save_persona/",
         dataType: 'json',
         data: {
@@ -31,11 +33,15 @@ function storeData(id, is_love) {
         if (is_love) {
             let transaction = db.transaction("love", "readwrite");
             items = transaction.objectStore("love");
+            let transaction = db.transaction("love", "readwrite");
+            items = transaction.objectStore("love");
             if (id != '') ajax_save("love", id)
         }
         else {
             let transaction = db.transaction("nope", "readwrite");
+            let transaction = db.transaction("nope", "readwrite");
             items = transaction.objectStore("nope");
+            if (id != '') ajax_save("nope", id);
             if (id != '') ajax_save("nope", id);
         }
 
@@ -54,6 +60,10 @@ function loadCards(do_train) {
             console.log("loadCards")
             $('.tinder--cards').find('script').remove();
             $('.tinder--cards').append(newData);
+        success: function (newData) {
+            console.log("loadCards")
+            $('.tinder--cards').find('script').remove();
+            $('.tinder--cards').append(newData);
             initCards();
             init();
             if (do_train) train();
@@ -68,6 +78,17 @@ async function initCards(do_train = false) {
         return;
     }
 
+    // "/embvec/comp/" + firstCard.id.toString()
+    var newData = embvec[firstCard.id.toString()];
+
+    const request = indexedDB.open("model_data");
+    request.onsuccess = async function (e) {
+        let db = e.target.result;
+        let transaction = db.transaction("tmp", "readwrite"); // (1)
+        let items = transaction.objectStore("tmp");
+        // console.log("firstCard.id", firstCard.id)
+        let suc = items.add(newData, firstCard.id);
+        db.close();
     // "/embvec/comp/" + firstCard.id.toString()
     var newData = embvec[firstCard.id.toString()];
 
@@ -117,8 +138,26 @@ async function initCards(do_train = false) {
     };
 
     // firstCard.style.transition = "all 0.3s ease-in-out";
+            var newCards = document.querySelectorAll('.tinder--card:not(.removed)');
+            newCards.forEach(function (card, index) {
+                if (index <= 1) card.style.opacity = 1;
+                if (index >= 1) card.style.filter = "brightness(50%)";
+
+                card.style.zIndex = -index;
+                // card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
+            });
+            newCards[0].style.cssText += "touch-action: pan-y pinch-zoom; pointer-events:auto;";
+            newCards[0].style.filter = "none"
+            newCards[0].querySelectorAll('*').forEach(function (child) {
+                child.style.opacity = 1;
+            });
+        }
+    };
+
+    // firstCard.style.transition = "all 0.3s ease-in-out";
     tinderContainer.classList.add('loaded');
 }
+
 
 
 function init() {

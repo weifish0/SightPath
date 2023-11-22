@@ -44,6 +44,7 @@
         </div>
         <div class="img_container">
             <img class="persona_img" src="/static{{user.persona.url}}" />
+            <img class="persona_img" src="/static{{user.persona.url}}" />
             <!-- <img class="persona_img" src="{% static 'images/test_persona.png' %}" /> -->
         </div>
 
@@ -53,9 +54,11 @@
 
         <div class="Frame12">
             {% if user.top3.count == 0 %}
+            {% if user.top3.count == 0 %}
             <h3>個人模型尚未建立</h3>
             {% endif %}
 
+            {% for item in user.top3.all|dictsort:"ord"|slice:"0:3" %}
             {% for item in user.top3.all|dictsort:"ord"|slice:"0:3" %}
             <div class="Frame10">
                 <div>{{item}}</div>
@@ -82,6 +85,7 @@
 {% if user.is_authenticated %}
 {% if request.user.id == user.id %}
 <script src="https://bundle.run/buffer@6.0.3"></script>
+<script src="https://bundle.run/buffer@6.0.3"></script>
 <script type="text/javascript">
     window.CSRF_TOKEN = "{{ csrf_token }}";
     var artifacts = "{{ request.user.artifacts }}"
@@ -91,7 +95,16 @@
 {% for tag in ourtag.all %}
 <script type="text/javascript">
     tagemb["{{tag.pk}}"] = "{{tag.emb}}"
+    var artifacts = "{{ request.user.artifacts }}"
+    var tagemb = {}
 </script>
+
+{% for tag in ourtag.all %}
+<script type="text/javascript">
+    tagemb["{{tag.pk}}"] = "{{tag.emb}}"
+</script>
+{% endfor %}
+<script src="/static/scripts/classification.js"></script>
 {% endfor %}
 <script src="/static/scripts/classification.js"></script>
 <script src="/static/scripts/profile.js"></script>

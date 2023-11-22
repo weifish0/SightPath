@@ -1,6 +1,10 @@
 let ver = 1;
 
+let ver = 1;
+
 function getData(string, id = "no") {
+    // console.log("version" + ver.toString())
+    const request = indexedDB.open("model_data", ver);
     // console.log("version" + ver.toString())
     const request = indexedDB.open("model_data", ver);
     return new Promise(function (resolve, reject) {
@@ -10,9 +14,14 @@ function getData(string, id = "no") {
             db.createObjectStore('love');
             db.createObjectStore('nope');
             db.createObjectStore('tmp');
+            db.createObjectStore('love');
+            db.createObjectStore('nope');
+            db.createObjectStore('tmp');
         };
         request.onsuccess = function (e) {
             let db = e.target.result;
+            ver = db.version; // ver = ver + run_upgraded
+
             ver = db.version; // ver = ver + run_upgraded
 
             let transaction = db.transaction(string, "readwrite"); // (1)
@@ -74,6 +83,49 @@ async function loadModel() {
     return model;
 }
 
+
+function handleSave(artifacts) {
+    // https://github.com/tensorflow/tfjs/issues/495
+    // https://stackoverflow.com/questions/6965107/converting-between-strings-and-arraybuffers
+    // https://github.com/feross/buffer
+    // https://github.com/browserify/browserify
+
+    artifacts.weightData = buffer.Buffer.from(artifacts.weightData)
+        .toString("base64");
+
+    $.ajax({
+        type: "POST",
+        url: "/save_model/",
+        data: {
+            "artifacts": JSON.stringify(artifacts),
+            "csrfmiddlewaretoken": CSRF_TOKEN
+        },
+        success: function (newData) {
+        }
+    });
+    // console.log(artifacts.modelTopology);
+    // console.log(artifacts.weightSpecs);
+    // console.log(artifacts.weightData);
+    return;
+}
+
+async function loadModel() {
+    if (artifacts != "None" && artifacts != "") {
+        artifacts = JSON.parse(artifacts.replace(/&quot;/g, '"'))
+        weight = new Uint8Array(buffer.Buffer.from(artifacts.weightData, "base64")).buffer;
+        artifacts.weightData = weight;
+
+        model = await tf.loadLayersModel(tf.io.fromMemory(artifacts));
+        model.save('indexeddb://model');
+        artifacts = "None";
+
+        console.log("model loaded from server")
+    }
+    else model = await tf.loadLayersModel('indexeddb://model');
+
+    return model;
+}
+
 const epoch_num = 1;
 async function train() {
     let love = await getData("love");
@@ -84,21 +136,26 @@ async function train() {
     for (let i = 0; i < love.length; i++) {
         tmp_emb = await getData("tmp", love[i]);
         emb.push(JSON.parse(tmp_emb))
+        emb.push(JSON.parse(tmp_emb))
     }
     for (let i = 0; i < nope.length; i++) {
         // console.log("nope[" + i.toString() + "]", nope[i])
+        // console.log("nope[" + i.toString() + "]", nope[i])
         tmp_emb = await getData("tmp", nope[i]);
+        emb.push(JSON.parse(tmp_emb))
         emb.push(JSON.parse(tmp_emb))
     }
 
     let model;
     try {
         model = await loadModel();
+        model = await loadModel();
         model.compile({
             optimizer: 'adam',
             loss: 'binaryCrossentropy'
         });
     } catch (error) {
+        console.log(error)
         console.log(error)
         console.log("indexeddb model not loaded")
 
@@ -125,6 +182,7 @@ async function train() {
         const h = await model.fit(
             tf.tensor(emb),
             tf.concat([pos, neg], axis = 0), {
+            tf.concat([pos, neg], axis = 0), {
             batchSize: 4,
             epochs: 3
         });
@@ -135,14 +193,21 @@ async function train() {
 
     // let result = await model.save(tf.io.withSaveHandler(async modelArtifacts => modelArtifacts));
     model.save(tf.io.withSaveHandler(handleSave));
+    model.save('indexeddb://model');
+
+    // let result = await model.save(tf.io.withSaveHandler(async modelArtifacts => modelArtifacts));
+    model.save(tf.io.withSaveHandler(handleSave));
 }
 
+async function predict(id, emb = []) {
 async function predict(id, emb = []) {
     try {
         let tmp_emb;
         if (emb.length == 0) tmp_emb = await getData("tmp", id);
         else tmp_emb = emb;
 
+        var model = await loadModel();
+        tensor = tf.tensor(JSON.parse(tmp_emb), [1, shape]);
         var model = await loadModel();
         tensor = tf.tensor(JSON.parse(tmp_emb), [1, shape]);
 
@@ -155,10 +220,13 @@ async function predict(id, emb = []) {
 
 async function delete_data() {
     tf.io.removeModel('indexeddb://model');
+    tf.io.removeModel('indexeddb://model');
     var request = indexedDB.deleteDatabase("model_data");
     request.onsuccess = function (e) {
         console.log("deleted model_data successfully")
+        console.log("deleted model_data successfully")
     }
 
+    getData("love");
     getData("love");
 }
