@@ -148,19 +148,26 @@ class ActivityTag(models.Model):
 
 class Activity(models.Model):
     name = models.TextField()
-    eventIdNumber = models.TextField(null=True)
+    eventIdNumber = models.TextField(null=True) # 活動ID
     start_time = models.DateTimeField(null=True)
     end_time = models.DateTimeField(null=True)
-    eventPlaceType = models.TextField(null=True)
-    location = models.TextField(null=True)
+    eventPlaceType = models.TextField(null=True) # 線上or線下
+    location = models.TextField(null=True) # 活動所在縣市
     likeCount = models.IntegerField(null=True)
     page_views = models.IntegerField(null=True)
     isAD = models.BooleanField(null=True)
     cover_img_url = models.URLField(null=True)
-    url = models.URLField(null=True)
+    url = models.URLField(null=True) # accupass活動頁面連結
     tags = models.ManyToManyField(
         ActivityTag, blank=True
     )
+    description = models.TextField(null=True) # 詳細活動內容，會混入HTML標籤
+    summary = models.TextField(null=True) # 活動簡介
+    precise_location = models.TextField(null=True) # 精確地址(例如: "台北市中山區長安東路一段27號2樓")
+    longitude_and_latitude = models.TextField(null=True) # 活動地點經緯度(格式: "經度 緯度")
+    add_to_calendar = models.URLField(null=True) # 加入行事曆的網址
+    organizer = models.TextField(null=True) # 活動主辦方
+
 
     # 推薦演算法相關
     our_tags = models.ManyToManyField(
