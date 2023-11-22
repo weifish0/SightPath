@@ -4,7 +4,9 @@
 
 {% block extra_head %}
 <!-- chatroom page css  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- chatroom page css -->
 <link rel="stylesheet" href="{% static 'styles/chatroomhome.css' %}">
 {% endblock extra_head %}
@@ -12,118 +14,126 @@
 {% block content %}
 
 <div class="fb-post1" id="room_{{ room.id }}" style="margin-top: 5%;">
-    <div class="fb-post1-container">
-      <div class="fb-p1-main">
-  
-        {% if request.user == room.host or request.user.is_superuser %}
-        <div class="article-actions">
-          <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
-          <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
-        </div>
-        {% endif %}
-  
-        <div class="post-title">
-          <a href="{% url 'profile' room.host.id %}"><img src="{% static 'images/user2.jpg' %}" alt="user picture"></a>
-          <ul>
-            <li>
-              <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
-            </li>
-            <li><span>{{room.created}}</span></li>
-          </ul>
-  
-          {# room tag #}
-  
-          <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
-            class="btn border border-2 border-success btn-sm">{{room.topic.name}}</a>
-  
-          <div class="container mt-4">
-            <div class="card bg-light p-3 rounded mx-0">
-              <div class="card-body">
-                <p class="card-text text-break">{{ room.description|linebreaks }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="container text-center" style="margin-top: 2%;">
-          <div class="row">
-            <div class="col">
-              <div class="text-start">
-                {# 依照用戶使否按讚，顯示實心或空心的讚 #}
-                {% if request.user in room.likes.all %}
-                <a href="{% url 'like_room' room.id %}">
-                  <i class="fa-solid fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
-                  {{ room.likes.count }}
-                </a>
-                {% else %}
-                <a href="{% url 'like_room' room.id %}">
-                  <i class="fa-regular fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
-                  {{ room.likes.count }}
-                </a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-  
-  
-      </div>
-    </div>
-  </div>
+  <div class="fb-post1-container">
+    <div class="fb-p1-main">
 
-<div class="div_container">
-    <div>
-        <h5>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}" class="btn btn-outline-info">{{room.topic.name}}</a></small>
-        <h1>{{room.name}}</h1>
-        <h5>作者: <a href="{% url 'profile' room.host.id %}" class="btn btn-outline-primary">{{room.host.nickname}}</a></h5>
-        {% if request.user == room.host or request.user.is_superuser %}
+      {% if request.user == room.host or request.user.is_superuser %}
+      <div class="article-actions">
         <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
         <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
-        {% endif %}
-        <hr>
-        
-        <h4>討論串內容: <br>{{room.description|linebreaks}}</h4>
-        <small>建立時間: {{room.created}}</small>
-        <br>
-        <small>最近更新: {{room.updated}}</small>
-        <hr>
-        <div class="">
-            <h4>評論: </h4>
-            {% for message in room_messages %}
-            <small><a href="{% url 'profile' message.user.id %}">@{{message.user.nickname}}</a></small>
-            <small>{{message.created|timesince}} ago</small>
-            {% if request.user == message.user or request.user.is_superuser %}
-            <a href="{% url 'delete_message' message.id %}">收回訊息</a>
-            {% endif %}
-            <p>{{message.body}}</p>
-            {% endfor %}
-        </div>
+      </div>
+      {% endif %}
+
+      <div class="post-title">
+        <a href="{% url 'profile' room.host.id %}"><img src="{% static 'images/user2.jpg' %}" alt="user picture"></a>
+        <ul>
+          <li>
+            <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
+          </li>
+          {# room 建立時間 #}
 
 
-        {% if request.user.is_authenticated %}
-        <div class="">
-            <form method="POST" action="">
-                {% csrf_token %}
-                <input type="text" name="body" placeholder="留言......">
-            </form>
+          {# room tag #}
+          <li>
+            <span>{{room.created}}</span>
+            <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
+              class="btn border border-2 border-success btn-sm" style="margin-left: 10px;">
+              {{room.topic.name}}
+            </a>
+          </li>
+        </ul>
+
+
+        <div class="container mt-4">
+          <div class="card bg-light p-3 rounded mx-0">
+            <div class="card-body">
+              <p class="card-text text-break">{{ room.description|linebreaks }}</p>
+            </div>
+          </div>
         </div>
-        {% else %}
-        {#TODO: 登入完後導向原本的頁面，而非首頁 #}
-        <a href="{% url 'login_page' %}">登入才可以留言喔~</a>
-        {% endif %}
+      </div>
+
+      <div class="container text-center" style="margin-top: 2%;">
+        <div class="row">
+          <div class="col">
+            <div class="text-start">
+              {# 依照用戶使否按讚，顯示實心或空心的讚 #}
+              {% if request.user in room.likes.all %}
+              <a href="{% url 'like_room' room.id %}">
+                <i class="fa-solid fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+                {{ room.likes.count }}
+              </a>
+              {% else %}
+              <a href="{% url 'like_room' room.id %}">
+                <i class="fa-regular fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+                {{ room.likes.count }}
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <h4 style="margin-top: 40px;">評論: </h4>
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card shadow-0 border" style="background-color: #f0f2f5;">
+            <div class="card-body p-4">
+              {% if request.user.is_authenticated %}
+              <div class="form-outline mb-4">
+                <form method="POST" action="">
+                  {% csrf_token %}
+                  <input type="text" name="body" placeholder="留言......">
+                </form>
+              </div>
+              {% else %}
+              {#TODO: 登入完後導向原本的頁面，而非首頁 #}
+              <a href="{% url 'login_page' %}">登入才可以留言喔~</a>
+              {% endif %}
+
+              <div class="card mb-4">
+                {% for message in room_messages %}
+                <div class="card-body">
+                  <p style="font-size: large;">{{message.body}}</p>
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                      <a href="{% url 'profile' message.user.id %}">
+                        <p class="small mb-0 ms-2">{{message.user.nickname}}</p>
+                      </a>
+                    </div>
+                    <div class="d-flex flex-row align-items-center">
+                      <p class="small text-muted mb-0">{{message.created|timesince}} ago</p>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    {% if request.user == message.user or request.user.is_superuser %}
+                      <a href="{% url 'delete_message' message.id %}">收回訊息</a>
+                    {% endif %}
+                  </div>
+                </div>
+                <hr>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="">
-        <h3>參與者</h3>
-        <hr>
-        {% for user in participants %}
-        <div>
-            <a href="{% url 'profile' user.id %}">{{user.nickname}}</a>
-        </div>
-        {% endfor %}
+    <h3>參與者</h3>
+    <hr>
+    {% for user in participants %}
+    <div>
+      <a href="{% url 'profile' user.id %}">{{user.nickname}}</a>
     </div>
+    {% endfor %}
 
+  </div>
 </div>
+</div>
+
 
 {% endblock content %}
 
