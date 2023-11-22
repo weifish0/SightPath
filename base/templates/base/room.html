@@ -13,8 +13,8 @@
 
 {% block content %}
 
-<div class="fb-post1-container fb-post1" id="room_{{ room.id }}">
-  <div class="fb-p1-main">
+<div class="fb-post1-container" id="room_{{ room.id }}">
+  <div class="fb-p1-main fb-post1 room_left">
     {% if request.user == room.host or request.user.is_superuser %}
     <div class="article-actions">
       <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
@@ -23,18 +23,21 @@
     {% endif %}
 
     <div class="post-title">
-      <a href="{% url 'profile' room.host.id %}"><img src="{% static 'images/user2.jpg' %}" alt="user picture"></a>
+      <a href="{% url 'profile' room.host.id %}">
+        <img src="{% static 'images/user2.jpg' %}" alt="user picture"></a>
       <ul>
         <li>
           <a href="{% url 'room' room.id %}" style="font-size: 25px;">{{room.name}}</a>
         </li>
-        <li><span>{{room.created}}</span></li>
+        <li>
+          <span>{{room.created}}</span>
+        </li>
       </ul>
 
       {# room tag #}
 
       <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
-        class="btn border border-2 border-success btn-sm">{{room.topic.name}}</a>
+        class="btn btn-outline-secondary minw-40">{{room.topic.name}}</a>
 
       <div class="container mt-4">
         <div class="card bg-light p-3 rounded mx-0">
@@ -66,59 +69,60 @@
       </div>
     </div>
   </div>
-
-  <div class="mt-30">
-    <h5>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
-        class="btn btn-outline-info">{{room.topic.name}}</a></small>
-      <h1>{{room.name}}</h1>
-      <h5>作者: <a href="{% url 'profile' room.host.id %}" class="btn btn-outline-primary">{{room.host.nickname}}</a></h5>
-      {% if request.user == room.host or request.user.is_superuser %}
-      <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
-      <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
-      {% endif %}
-      <hr>
-
-      <h4>討論串內容: <br>{{room.description|linebreaks}}</h4>
-      <small>建立時間: {{room.created}}</small>
-      <br>
-      <small>最近更新: {{room.updated}}</small>
-      <hr>
-      <div>
-        <h4>評論: </h4>
-        {% for message in room_messages %}
-        <small><a href="{% url 'profile' message.user.id %}">@{{message.user.nickname}}</a></small>
-        <small>{{message.created|timesince}} ago</small>
-        {% if request.user == message.user or request.user.is_superuser %}
-        <a href="{% url 'delete_message' message.id %}">收回訊息</a>
+  <div class="room_right">
+    <div class="mt-30">
+      <h5>主題: <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
+          class="btn btn-outline-secondary minw-40 btn-sm">{{room.topic.name}}</a></small>
+        <h1>{{room.name}}</h1>
+        <h5>作者: <a href="{% url 'profile' room.host.id %}" class="btn btn-outline-primary btn-sm">{{room.host.nickname}}</a>
+        </h5>
+        {% if request.user == room.host or request.user.is_superuser %}
+        <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
+        <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
         {% endif %}
-        <p>{{message.body}}</p>
-        {% endfor %}
-      </div>
+        <hr>
+
+        <h4>討論串內容<br>{{room.description|linebreaks}}</h4>
+        <small>建立時間: {{room.created}}</small>
+        <br>
+        <small>最近更新: {{room.updated}}</small>
+        <hr>
+        <div>
+          <h4>評論</h4>
+          {% for message in room_messages %}
+          <small><a href="{% url 'profile' message.user.id %}">@{{message.user.nickname}}</a></small>
+          <small>{{message.created|timesince}} ago</small>
+          {% if request.user == message.user or request.user.is_superuser %}
+          <a href="{% url 'delete_message' message.id %}">收回訊息</a>
+          {% endif %}
+          <p>{{message.body}}</p>
+          {% endfor %}
+        </div>
 
 
-      {% if request.user.is_authenticated %}
-      <div>
-        <form method="POST" action="">
-          {% csrf_token %}
-          <input type="text" name="body" placeholder="留言......">
-        </form>
-      </div>
-      {% else %}
-      {#TODO: 登入完後導向原本的頁面，而非首頁 #}
-      <a href="{% url 'login_page' %}">登入才可以留言喔~</a>
-      {% endif %}
-  </div>
-
-  <div class="">
-    <h3>參與者</h3>
-    <hr>
-    {% for user in participants %}
-    <div>
-      <a href="{% url 'profile' user.id %}">{{user.nickname}}</a>
+        {% if request.user.is_authenticated %}
+        <div>
+          <form method="POST" action="">
+            {% csrf_token %}
+            <textarea class="form-inline" name="body" placeholder="留言..."></textarea>
+          </form>
+        </div>
+        {% else %}
+        {#TODO: 登入完後導向原本的頁面，而非首頁 #}
+        <a href="{% url 'login_page' %}">登入才可以留言喔~</a>
+        {% endif %}
     </div>
-    {% endfor %}
-  </div>
 
+    <div class="mt-30">
+      <h3>參與者</h3>
+      <hr>
+      {% for user in participants %}
+      <div>
+        <a href="{% url 'profile' user.id %}">{{user.nickname}}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 
