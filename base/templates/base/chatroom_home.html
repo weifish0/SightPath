@@ -4,60 +4,58 @@
 
 {% block extra_head %}
 <!-- chatroom page css  -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- chatroom page css -->
 <link rel="stylesheet" href="{% static 'styles/chatroomhome.css' %}">
 {% endblock extra_head %}
 
 
 {% block content %}
+<div class="div_container">
+    {% if request.user.is_superuser %}
+    <div class="alert alert-info" role="alert">
+        你擁有管理員權限
+    </div>
+    {% endif %}
 
-{% if request.user.is_superuser %}
-<div class="alert alert-info" role="alert" style="margin-top: 2%; width: 30%;">
-    你擁有管理員權限
-</div>
-{% endif %} 
-
-<div class="home">
-
-<div class="container">
-    <div class="home-weapper">
-
+    <div class="home-wrapper">
         <!-- home left start here -->
         <div class="home-left">
             <div class="group">
                 <h4 class="mini-headign">類別</h4>
                 {% include "base/room_topics_component.html" %}
             </div>
-            
+
         </div><!-- home left end here -->
 
         <!-- home center start here -->
         <div class="home-center">
             <div class="home-center-wrapper">
-                
+
                 <div class="container text-center" style="margin-bottom: 2%;">
                     <div class="row align-items-center">
-                      <div class="col-8">
-                        {% if topic_category %}
-                        <h5>以"{{topic_category}}"標籤 找到 {{rooms_count}} 個相關討論串</h5>
-                        {% else %}
-                        <h5>共找到 {{rooms_count}} 個相關討論串</h5>
-                        {% endif %}
-                      </div>
-                      <div class="col-4">
-                        <a href="{% url 'create_room' %}?topic_category={{topic_category}}" class="btn btn-success btn-lg">建立討論串</a>
-                      </div>
+                        <div>
+                            {% if topic_category %}
+                            <h5>以"{{topic_category}}"標籤 找到 {{rooms_count}} 個相關討論串</h5>
+                            {% else %}
+                            <h5>共找到 {{rooms_count}} 個相關討論串</h5>
+                            {% endif %}
+                        </div>
+                        <div>
+                            <a href="{% url 'create_room' %}?topic_category={{topic_category}}"
+                                class="btn btn-success btn-lg create_topic">建立討論串</a>
+                        </div>
                     </div>
                 </div>
-                
-                
+
+
                 {% include "base/room_feed_component.html" %}
 
             </div> <!-- home center wrapper end -->
         </div> <!-- home center end -->
     </div>
-</div>
 </div>
 
 <!-- home section end -->
@@ -72,10 +70,10 @@
 
 <script>
     function collapseComments(id) {
-      $('#' + id).collapse('hide');
+        $('#' + id).collapse('hide');
     }
     // 在頁面加載後執行
-    window.onload = function() {
+    window.onload = function () {
         // 如果有保存的滾動位置，滾動到該位置
         var scrollPosition = localStorage.getItem('scrollPosition');
         if (scrollPosition !== null) {
@@ -85,7 +83,7 @@
     };
 
     // 保存當前滾動位置
-    window.onbeforeunload = function() {
+    window.onbeforeunload = function () {
         localStorage.setItem('scrollPosition', window.scrollY.toString());
     };
 </script>

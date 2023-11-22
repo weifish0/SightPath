@@ -34,6 +34,3 @@ python3 manage.py loaddata ./base/fixtures/activities_fixture.json
 #########
 
 python manage.py collectstatic --no-input
-python manage.py makemigrations
-python manage.py migrate
-
