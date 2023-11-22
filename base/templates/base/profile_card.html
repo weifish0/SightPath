@@ -21,7 +21,10 @@
 
 
 <div class="text">您喜歡過的活動</div>
+
+<div class="text">您喜歡過的活動</div>
 <div class="grid">
+    {% for comp in user.love_activity.all %}
     {% for comp in user.love_activity.all %}
     <div class="Rectangle1">
         <div class="title">{{comp.name}}</div>
