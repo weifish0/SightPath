@@ -1,9 +1,11 @@
 {% extends "main.html" %}
 {% load static %}
 
-{% block content %}
+{% block extra_head %}
 <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/home_page.css' %}">
+{% endblock extra_head %}
 
+{% block content %}
 <!-- {% if request.user.is_authenticated %}
 <p>hello {{request.user}}~</p>
 {% endif %} -->
@@ -33,7 +35,9 @@
     </div>
 </div>
 
+{% endblock content %}
 
+{% block extraScript %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
@@ -48,4 +52,4 @@
 <script src="/static/scripts/swipe.js"></script>
 <script src="/static/scripts/tinder.js"></script>
 
-{% endblock content %}
+{% endblock extraScript %}

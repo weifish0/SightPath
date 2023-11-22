@@ -6,7 +6,7 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
 }
 
 :root {
@@ -20,36 +20,51 @@
 }
 
 body {
-    background: var(--background);
+    /* background: var(--background); */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6, b {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
     color: var(--black);
 }
 
-.home {
-    display: flex;
-    justify-content: center;
-    margin-top: 4%;
+.create_topic {
+    min-width: 140px;
 }
 
-.home-weapper {
-    width: 100%;
+.home-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+    width: 70%;
+    min-width: 400px;
+
     display: flex;
     flex-wrap: wrap;
+    gap: 40px;
     justify-content: space-between;
 }
 
 .home-left {
-    width: 30%; /* 调整宽度为30% */
-    background: var(--white);
+    flex: 1;
+    min-width: 300px;
+    height: fit-content;
+
+    background: rgb(203, 226, 239);
     box-shadow: 0 2px 5px 0 var(--shadow);
     border-radius: 20px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+
     padding: 15px;
     margin-bottom: 20px;
 }
@@ -86,23 +101,24 @@ h1, h2, h3, h4, h5, h6, b {
     font-size: 16px;
 }
 
-.home-center {
-    width: 65%; /* 调整宽度为65% */
-    overflow: hidden;
-}
 
 .home-center,
 .home-center .createPost {
-    background: var(--white);
     box-shadow: 0 2px 5px 0 var(--shadow);
     border-radius: 20px;
     padding: 15px;
     margin-bottom: 20px;
+
+    background: rgb(223, 239, 199);
+    margin-bottom: 40px;
+    min-width: 300px;
+    flex: 3;
+
+    overflow: hidden;
 }
 
 .home-center .mini-headign {
     color: #1877f2;
-    margin-bottom: 10px;
 }
 
 .post-text {
@@ -130,17 +146,39 @@ h1, h2, h3, h4, h5, h6, b {
     color: var(--black);
 }
 
-.fb-post1 {
+.room1 {
+    max-width: 800px;
     width: 100%;
-    background: rgb(209, 248, 241);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    background: rgb(203, 226, 239);
     box-shadow: 0 4px 8px 0 var(--shadow);
     border-radius: 20px;
     padding: 15px 20px;
     padding-bottom: 20px;
-    margin-bottom: 6%;
 }
 
+.room2 {
+    max-width: 800px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+    background: rgb(223, 239, 199);
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    /* border-radius: 20px; */
+    padding: 15px 20px;
+    padding-bottom: 20px;
+}
+
+
 .article-actions {
+    min-width: 300px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -154,7 +192,7 @@ h1, h2, h3, h4, h5, h6, b {
     cursor: pointer;
 }
 
-.fb-post1-container {
+.room1-container {
     display: flex;
     flex-direction: column;
 }
@@ -164,65 +202,16 @@ h1, h2, h3, h4, h5, h6, b {
     flex-direction: column;
 }
 
-.post-title {
+.text-center {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
-    align-items: center;
-    margin: 7px 0;
-}
-
-.post-title ul {
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 20px;
 }
 
-.post-profile {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-.post-profile span {
-    margin-left: 3px;
-    font-size: 18px;
-    color: black;
-}
-
-.post-title img {
-    width: 50px;
-    border-radius: 50px;
-}
-
-
-
-@media only screen and (max-width: 1500px) {
-    .home-center {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .home-weapper {
-        margin-top: 30px;
-    }
-}
-
-@media only screen and (max-width: 780px) {
-    .home-center {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .home-weapper {
-        margin-top: 40px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .home-center {
-        width: 100%;
-        margin-top: 20px;
-    }
-    .home-weapper {
-        margin-top: 60px;
-    }
+.text-end {
+    margin-left: auto;
+    min-width: 200px;
 }
