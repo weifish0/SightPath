@@ -52,8 +52,8 @@ if __name__ == "__main__":
         i += 1
         print("rounds "+str(i))
 
-        html = ""
-        # html = cleanhtml(data[d]["fields"]["guide_line_html"])
+        # html = ""
+        html = cleanhtml(data[d]["fields"]["guide_line_html"])
 
         ######
         content = data[d]["fields"]["name"]+' '+html
