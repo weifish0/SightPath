@@ -254,6 +254,11 @@ class Room(models.Model):
     )
     # 置頂貼文
     pin_mode = models.BooleanField(default=False)
+    
+    #按讚數
+    likes = models.ManyToManyField(
+        User, related_name="likes", default=0
+    )
 
     def __str__(self):
         return f"{self.name}"

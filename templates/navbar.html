@@ -11,13 +11,11 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'home_page' %}">首頁</a>
         </li>
-
+        
         <li class="nav-item">
           <a class="nav-link" href="{% url 'chatroom_home' %}">討論串</a>
         </li>
-        
-        {% comment "等頁面優化完畢再開放" %}
-        {% endcomment %}
+    
         <li class="nav-item">
           <a class="nav-link" href="{% url 'find_competition' %}">找比賽</a>
         </li>
@@ -37,7 +35,8 @@
         {% endif %}
 
       </ul>
-      <form class="d-inline-flex align-items-center" style="margin-bottom: 0" role="search" method="get" action="/find_competition">
+
+      <form class="d-inline-flex align-items-center" style="margin-bottom: 0" role="search" method="get" action="/{{search_setting}}">
         <input class="form-inline me-2" type="search" placeholder="Search" aria-label="Search" name="q">
         <button class="btn btn-outline-success me-3" type="submit">搜索</button>
       </form>
