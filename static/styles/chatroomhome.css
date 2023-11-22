@@ -9,6 +9,12 @@
     /* font-family: 'Poppins', sans-serif; */
 }
 
+textarea {
+    min-height: 50px;
+    width: 100% !important;
+    max-width: 400px;
+}
+
 :root {
     --background: rgb(158, 226, 209);
     --foreground: #f1f3f5;
@@ -20,7 +26,8 @@
 }
 
 body {
-    /* background: var(--background); */
+    background: #F0F2F5;
+    /* --web-wash fb */
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: #ffffff;
 }
@@ -31,8 +38,9 @@ h3,
 h4,
 h5,
 h6,
-b {
-    color: var(--black);
+b,
+a {
+    color: black;
 }
 
 .create_topic {
@@ -58,10 +66,9 @@ b {
     min-width: 300px;
     height: fit-content;
 
-    background: rgb(203, 226, 239);
+    background: white;
     box-shadow: 0 2px 5px 0 var(--shadow);
     border-radius: 20px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 
@@ -107,14 +114,11 @@ b {
     box-shadow: 0 2px 5px 0 var(--shadow);
     border-radius: 20px;
     padding: 15px;
-    margin-bottom: 20px;
-
-    background: rgb(223, 239, 199);
     margin-bottom: 40px;
+
+    background: white;
     min-width: 300px;
     flex: 3;
-
-    overflow: hidden;
 }
 
 .home-center .mini-headign {
@@ -176,42 +180,30 @@ b {
     padding-bottom: 20px;
 }
 
-
-.article-actions {
-    min-width: 300px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.article-actions a {
-    padding: 8px 15px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .room1-container {
     display: flex;
     flex-direction: column;
 }
 
 .fb-p1-main {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
 }
 
-.text-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
+.room_left {
+    flex: 1;
+    min-width: 300px;
+    height: fit-content;
+    background: white;
+
+    padding: 15px;
+    margin-bottom: 20px;
 }
 
-.text-end {
-    margin-left: auto;
-    min-width: 200px;
+.room_right {
+    padding: 15px;
+    margin-bottom: 20px;
+    min-width: 300px;
+    flex: 3;
 }
