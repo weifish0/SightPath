@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
@@ -9,13 +9,12 @@ from .models import *
 from .forms import RoomForm, UserForm, CustomUserCreationForm
 import random
 from django.http import JsonResponse
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 from dotenv import load_dotenv
 import os
 import json
 from base.api.persona_chart import persona_chart
-from django.db.models import Case, Value, When
-from itertools import chain
 
 """
 目標
@@ -128,27 +127,41 @@ def profile(request, pk):
 def chatroom_home(request):
     # topic_category為使用者使用tag搜索時使用， q則為直接使用搜索功能時使用
     topic_category = request.GET.get("topic_category")
-
-    # q值若找不到則設為空字串，原本會回傳None，但用django Q物件以None搜索會回報錯誤
-    q = request.GET.get("q") if request.GET.get("q") != None else ""
+    
+    # 搜索查詢的字串
+    q = request.GET.get("q")
 
     # 有topic_category參數則優先使用topic_category進行搜索
     if topic_category != None:
         rooms = Room.objects.filter(Q(topic__name__exact=topic_category))
-    # 使用搜索功能搜索
-    else:
+    
+    # 空的搜索甚麼都不會得到
+    elif q == "":    
+        rooms = Room.objects.none()   
+         
+    # 使用搜索功能搜索符合條件的 rooms
+    elif q != None:
         rooms = Room.objects.filter(Q(topic__name__icontains=q)
                                     | Q(name__icontains=q)
                                     | Q(host__nickname__icontains=q))
+    # 預設
+    else:
+        rooms = Room.objects.all()
 
     # 以topic索引則找被置頂且符合topic_category的討論串
     if topic_category != None:
         pin_rooms = Room.objects.filter(Q(pin_mode=True)
                                         & Q(topic__name__exact=topic_category))
-    # 以搜索功能搜索討論串
-    elif q != "":
+        
+    # 空的搜索甚麼都不會得到
+    elif q == "":
+        pin_rooms = Room.objects.none()
+        
+    # 使用搜索功能搜索符合條件的 pin_rooms
+    elif q != None:
         pin_rooms = Room.objects.filter(Q(pin_mode=True)
                                         & (Q(name__icontains=q) | Q(host__nickname__icontains=q)))
+    # 預設
     else:
         pin_rooms = Room.objects.filter(Q(pin_mode=True))
     
@@ -158,10 +171,15 @@ def chatroom_home(request):
     rooms_count = rooms.count() + pin_rooms.count()
     # 取得所有討論事話題類別
     topics = Topic.objects.all()
+    
+    # 排序討論串
+    rooms = rooms.order_by("name")
+    pin_rooms = pin_rooms.order_by("name")
 
     context = {"rooms": rooms, "rooms_count": rooms_count,
                "topics": topics, "topic_category": topic_category,
-               "pin_rooms": pin_rooms}
+               "pin_rooms": pin_rooms, "search_setting": "chatroom_home"}
+    
 
     # TODO: 將其改成用彈出視窗顯示
     # 當用戶已登入，才會顯示房間通知
@@ -368,9 +386,10 @@ def find_competition(request):
                                                   | Q(organizer_title__icontains=q))
 
     competitions_count = competitions.count()
-
+    
     context = {"competitions": competitions, "competition_tags": ourtag,
-               "competitions_count": competitions_count, "competition_category": competition_category}
+               "competitions_count": competitions_count, "competition_category": competition_category,
+               "search_setting":  "find_competition"}
     return render(request, "base/find_competition_page.html", context)
 
 # need to sync with def home_page
@@ -394,7 +413,8 @@ def find_activity(request):
     activities_count = activities.count()
 
     context = {"activities": activities, "ourtag": ourtag,
-               "activities_count": activities_count, "activity_category": activity_category}
+               "activities_count": activities_count, "activity_category": activity_category,
+               "search_setting":  "find_activity"}
     return render(request, "base/find_activity_page.html", context)
 
 
@@ -420,11 +440,15 @@ def embvec(request, pk, isourtag):
 
 
 def home_page(request):
-    return render(request, "base/home_page.html", rand_context())
+    context = rand_context()
+    context["search_setting"] = "find_activity"
+    return render(request, "base/home_page.html", context)
 
 
 def home_update(request):
-    return render(request, "base/tinder_card.html", rand_context())
+    context = rand_context()
+    context["search_setting"] = "chatroom_home"
+    return render(request, "base/tinder_card.html", context)
 
 
 def rand_context():
@@ -554,3 +578,27 @@ def delete_data(request, pk):
     user.save()
     
     return redirect("profile", pk=user.id)
+
+
+@login_required(login_url="login_page")
+def like_post(request, room_id):
+    if request.user.is_authenticated:
+        room = get_object_or_404(Room, id=room_id)
+        
+        if request.user in room.likes.all():
+            room.likes.remove(request.user)
+        else:
+            room.likes.add(request.user)
+        
+        room.save()
+        
+        last_url = request.META.get('HTTP_REFERER', None)
+        
+        if "chatroom_home" in last_url:
+            redirect_url = "/chatroom_home"
+        else:
+            redirect_url = f"/room/{room_id}"
+
+        return redirect(redirect_url)
+    
+    return redirect('chatroom_home', room_id=room_id)

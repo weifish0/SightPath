@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background: rgb(158, 226, 209);
+    --foreground: #f1f3f5;
+    --white: #fff;
+    --black: #000;
+    --gray: #6e6e6e;
+    --shadow: #76767663;
+    --border: #cfcfcf;
+}
+
+body {
+    background: var(--background);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    color: var(--black);
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.home-weapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home-left {
+    width: 30%; /* 调整宽度为30% */
+    background: var(--white);
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.mini-headign {
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.group label {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.group label i {
+    width: 38px;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.group label a {
+    font-size: 16px;
+}
+
+.home-center {
+    width: 65%; /* 调整宽度为65% */
+    overflow: hidden;
+}
+
+.home-center,
+.home-center .createPost {
+    background: var(--white);
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.home-center .mini-headign {
+    color: #1877f2;
+    margin-bottom: 10px;
+}
+
+.post-text {
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.post-text img {
+    width: 40px;
+    border-radius: 50px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+}
+
+.post-text input {
+    padding: 20px 20px 20px 60px;
+    width: 100%;
+    background: var(--foreground);
+    border: none;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 var(--shadow);
+    color: var(--black);
+}
+
+.fb-post1 {
+    width: 100%;
+    background: rgb(209, 248, 241);
+    box-shadow: 0 4px 8px 0 var(--shadow);
+    border-radius: 20px;
+    padding: 15px 20px;
+    padding-bottom: 20px;
+    margin-bottom: 6%;
+}
+
+.article-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.article-actions a {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fb-post1-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.fb-p1-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 7px 0;
+}
+
+.post-title ul {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.post-profile {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-profile span {
+    margin-left: 3px;
+    font-size: 18px;
+    color: black;
+}
+
+.post-title img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+    .home-center {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .home-weapper {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .home-center {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .home-weapper {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .home-center {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .home-weapper {
+        margin-top: 60px;
+    }
+}
