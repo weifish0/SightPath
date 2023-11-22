@@ -4,8 +4,6 @@
 body {
     height: 100vh;
     width: 100vw;
-    height: 100vh;
-    width: 100vw;
     position: fixed;
     overflow: hidden;
 }
@@ -66,7 +64,6 @@ body {
 
 .ImageSection {
     align-self: stretch;
-    height: 300px;
     height: 300px;
     background: #135B5F;
     border-radius: 6px;
@@ -129,7 +126,6 @@ body {
 }
 
 .ShortData {
-.ShortData {
     align-self: stretch;
     /* height: 206px; */
     padding-left: 20px;
@@ -155,7 +151,6 @@ body {
     word-wrap: break-word
 }
 
-.ShortData>div {
 .ShortData>div {
     text-align: center;
     color: white;
@@ -218,7 +213,6 @@ body {
 }
 
 .SeeMoreButton {
-    background: #294B49;
     background: #294B49;
     align-self: stretch;
     /* height: 174px; */
@@ -306,7 +300,6 @@ body {
     width: 100%;
     text-align: center;
     pointer-events: none;
-    pointer-events: none;
 }
 
 .tinder--status i {
@@ -338,11 +331,8 @@ body {
     flex-wrap: wrap;
     align-items: center;
     height: calc(100dvh - 60px);
-    align-items: center;
-    height: calc(100dvh - 60px);
 
     flex-grow: 1;
-    /* padding-top: 70px; */
     /* padding-top: 70px; */
     text-align: center;
     justify-content: center;
@@ -356,19 +346,9 @@ body {
     touch-action: none;
     pointer-events: none;
 
-    /* user-select: none; */
-    opacity: 0;
-    touch-action: none;
-    pointer-events: none;
-
     display: inline-block;
     overflow-y: auto;
 
-    top: calc(max(10vw, 50px) - 50px);
-    bottom: calc(max(10vw, 50px) - 50px);
-    height: auto;
-    /* height: calc(100%); */
-    /* width: 80vw; */
     top: calc(max(10vw, 50px) - 50px);
     bottom: calc(max(10vw, 50px) - 50px);
     height: auto;
@@ -379,14 +359,10 @@ body {
     /* background: #447D7A; */
     padding: 8px 0 0 0;
     /* top right bottom left */
-    /* background: #447D7A; */
-    padding: 8px 0 0 0;
-    /* top right bottom left */
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
 
-    position: absolute;
     position: absolute;
     will-change: transform;
     /* transition: all 0.3s ease-in-out; */
@@ -405,17 +381,11 @@ body {
 .tinder--card img {
     opacity: 0;
     pointer-events: none;
-    opacity: 0;
-    pointer-events: none;
     max-width: 100%;
-    user-select: none;
     user-select: none;
 }
 
 .tinder--card h3 {
-    opacity: 0;
-    /* pointer-events: none; */
-    /* user-select: none; */
     opacity: 0;
     /* pointer-events: none; */
     /* user-select: none; */
@@ -431,24 +401,6 @@ body {
     margin-top: 15px;
     font-size: 20px;
     padding: 0 16px;
-}
-
-.tinder--card a {
-    opacity: 0;
-}
-
-img.loading {
-    user-select: none;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    z-index: -5;
-}
-
-.ShortDescription {
-    background: #447D7A;
-    word-wrap: break-word
 }
 
 .tinder--card a {
