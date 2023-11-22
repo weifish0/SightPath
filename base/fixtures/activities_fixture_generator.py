@@ -2,7 +2,7 @@ import requests
 import json
 import os
 from tqdm import tqdm
-
+from datetime import datetime, timedelta
 
 def accupass_crawler(payload_data: dict) -> object:
     url = 'https://api.accupass.com/v3/search/SearchEvents'
@@ -134,13 +134,13 @@ def generate_activities_tags_fixture(tags: list) -> list:
     return output_activities_tags_fixture
     
     
-def transfer_activity_fixture_tags_to_pk(output_activities_fixture: list, activities_tags_list: list) -> list:
+def transfer_activity_fixture_tags_to_pk(output_activities_fixture: list, activities_tags_list: list):
     for a in output_activities_fixture:
         for a_tag_index, a_tag in enumerate(a['fields']['tags']):
             a['fields']['tags'][a_tag_index] = activities_tags_list.index(a_tag) + 1
 
 
-def change_json_file_timefield_format(fn: str) -> list:
+def change_json_file_timefield_format(fn: str):
     f = None
     with open(load_download_path(fn), 'r', encoding='utf-8') as f_json:
         f = json.load(f_json)
@@ -153,18 +153,77 @@ def change_json_file_timefield_format(fn: str) -> list:
     with open(load_download_path(fn), 'w', encoding='utf-8') as f_json:
         json.dump(f, f_json, indent=2, ensure_ascii=False)
         
+      
+def to_googlecalendar_timeformat(t: str) -> str:
+    # t的範例格式 2023-11-25 02:00:00
+    
+    # 將字串轉換為 datetime 物件
+    db_time = datetime.strptime(t, "%Y-%m-%d %H:%M:%S")
+
+    # 轉換為 UTC 時間（如果不是 UTC 時間的話）
+    db_time_utc = db_time - timedelta(hours=8)  # 假設原時間是 GMT+8，你需要調整為你的時區
+
+    # 將時間格式化為目標字串格式
+    formatted_time_str = db_time_utc.strftime("%Y%m%dT%H%M%SZ")
+
+    return formatted_time_str # 輸出格式 20231124T180000Z
+      
         
-def format_test(fn: str) -> list:
+def scrape_activities_details(fn: str):
     f = None
     with open(load_download_path(fn), 'r', encoding='utf-8') as f_json:
         f = json.load(f_json)
-        for a in f:
-            a['fields'].pop("eventPlaceType")
-            a['fields'].pop("eventPlaceType")
+        basic_url = "https://api.accupass.com/v3/events/"
+        
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+        }
+        for a in tqdm(f, desc='爬取更詳細的活動訊息'):
+            a_id = a["fields"]["eventIdNumber"]
+            url = basic_url + a_id
+            res = requests.get(url,headers=headers)
+            
+            if res.status_code == 404:
+                # 將欄位設為空字串
+                a["fields"]["description"] = ""
+                a["fields"]["summary"] = ""
+                a["fields"]["precise_location"] = ""
+                a["fields"]["organizer"] = ""
+                a["fields"]["longitude_and_latitude"] = ""
+                a["fields"]["add_to_calendar"] = ""
+                continue
+            res_json = res.json()
+            
+            a["fields"]["description"] = res_json["content"] # 詳細活動內容，會混入HTML標籤
+            a["fields"]["summary"] = res_json["description"] # 活動簡介
+            a["fields"]["precise_location"] = res_json["addressRemark"] # 精確地址，範例格式: "台北市中山區長安東路一段27號2樓"
+            a["fields"]["organizer"] = res_json["organizer"]["title"] # 活動主辦方
+            
+            # 活動地點經緯度(格式: "經度 緯度")
+            a["fields"]["longitude_and_latitude"] = f"{res_json['location']['longitude']} {res_json['location']['latitude']}" 
+            
+            # 構建 calendar 加入排程的網址
+            # 範例網址格式: "https://calendar.google.com/calendar/u/0/r/eventedit?sf=true&output=xml&sprop=name:SightPath&sprop=website:https://sightpath.tw/&text=活動名稱&dates=20231124T180000Z/20231230T013000Z&location=師大附中&details=https://www.accupass.com/event/2309190504141752896436%0A測試2"
+            g_calendar_url = "https://calendar.google.com/calendar/u/0/r/eventedit?sf=true&output=xml&sprop=name:SightPath&sprop=website:https://sightpath.tw/"
+        
+            g_calendar_url += f"&text={a['fields']['name']}" # calendar排程活動名稱
+            
+            # 轉換資料庫時間變成google calendar的格式
+            start_time = to_googlecalendar_timeformat(a['fields']['start_time'])
+            end_time = to_googlecalendar_timeformat(a['fields']['end_time'])
+            g_calendar_url += f"&dates={start_time}/{end_time}" # calendar排程時間，範例格式: "&dates=20231202T103000Z/20231202T133000Z"
+            
+            g_calendar_url += f"&location={a['fields']['precise_location']}" # calendar活動地點，範例格式: "台北市中山區長安東路一段27號2樓"
+            
+            g_calendar_details =  f"活動網址: https://www.accupass.com/event/{a_id}%0A" # %0A 為換行
+            g_calendar_details += f"活動簡介: {a['fields']['summary']}"
+            g_calendar_url += f"&details={g_calendar_details}" # calendar排程詳情
+            
+            a["fields"]["add_to_calendar"] = g_calendar_url
+            
     with open(load_download_path(fn), 'w', encoding='utf-8') as f_json:
-        json.dump(f, f_json, indent=2, ensure_ascii=False)
+        json.dump(f, f_json, indent=2, ensure_ascii=False)        
 
-    
 
 if __name__ == "__main__":
     tags_list = ['travel', 'fashion', 'blockchain', 'investment', 'startup', 
@@ -202,6 +261,8 @@ if __name__ == "__main__":
     download_json_fixtures(output_activities_tags_fixture, 'activities_tags_fixture')
         
     change_json_file_timefield_format('activities_fixture.json')
+    
+    scrape_activities_details('activities_fixture.json')
     
           
     
