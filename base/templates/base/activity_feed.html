@@ -12,13 +12,13 @@
     <a class="link-secondary" href="{{activity.cover_img_url}}">{{activity.name}}</a>
 </h3>
 
-{% for tag in activity.our_tags.all %}
+{% for tag in activity.our_tags.all|slice:"0:8" %}
 <a style="font-size: large;" href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
 {% endfor %}
 {% if activity.our_tags.count %}
 <br>
 {% endif %}
-{% for tag in activity.tags.all %}
+{% for tag in activity.tags.all|slice:"0:8" %}
 <a href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
 {% endfor %}
 

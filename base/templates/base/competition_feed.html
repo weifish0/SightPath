@@ -11,13 +11,13 @@
     <a class="link-secondary" href="{% url 'competition_info' competition.id %}">{{competition.name}}</a>
 </h3>
 
-{% for tag in competition.our_tags.all %}
+{% for tag in competition.our_tags.all|slice:"0:8" %}
 <a style="font-size: large;" href="{% url 'find_competition' %}?competition_category={{tag}}">{{tag}}</a>
 {% endfor %}
 {% if competition.our_tags.count %}
 <br>
 {% endif %}
-{% for tag in competition.tags.all %}
+{% for tag in competition.tags.all|slice:"0:8" %}
 <a href="{% url 'find_competition' %}?competition_category={{tag}}">{{tag}}</a>
 {% endfor %}
 

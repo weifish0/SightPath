@@ -1,8 +1,11 @@
 {% extends "main.html" %}
 {% load static %}
 
-{% block content %}
+{% block extra_head %}
 <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/profile.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
 
 <div class="profile_container">
     <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
@@ -15,21 +18,21 @@
 
         {% if user.email != '' %}
         <h2 class="ml-15">{{user.nickname}}</h1>
-        {% else %}
-        <h2 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
-        {% endif %}
+            {% else %}
+            <h2 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
+                {% endif %}
 
-        {% if user.is_authenticated %}
-        {% if request.user.id == user.id %}
-        <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px"
-            class="btn btn-warning btn-sm">編輯個人檔案</a>
-        <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();" style="margin-left:15px"
-            class="btn btn-danger btn-sm">刪除資料</a>
-        {% endif %}
-        {% endif %}
-        <hr>
-        <!-- <h3 class="ml-15">個人簡介</h3> -->
-        <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
+                {% if user.is_authenticated %}
+                {% if request.user.id == user.id %}
+                <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px"
+                    class="btn btn-warning btn-sm">編輯個人檔案</a>
+                <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();"
+                    style="margin-left:15px" class="btn btn-danger btn-sm">刪除資料</a>
+                {% endif %}
+                {% endif %}
+                <hr>
+                <!-- <h3 class="ml-15">個人簡介</h3> -->
+                <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
     </div>
 
     <div class="profile_right">
@@ -69,12 +72,15 @@
 </div>
 
 <div class="profile_post">
-    <h3 class="ml-15">我的文章</h3>
+    <h3 class="ml-15 my_article">我的文章</h3>
     <br>
-    <div>
-        {% include "base/room_feed_component.html" %}
-    </div>
+    {% include "base/room_feed_component.html" %}
 </div>
+
+{% endblock content %}
+
+
+{% block extraScript %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
@@ -98,4 +104,4 @@
 {% endif %}
 {% endif %}
 
-{% endblock content %}
+{% endblock extraScript %}

@@ -167,3 +167,78 @@ img {
 .mb0{
     margin-bottom: 0;
 }
+
+.alert{
+    max-width: 400px;
+}
+
+
+
+
+.post-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 7px 0;
+}
+
+.post-title ul {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.post-profile {
+    max-width:200px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-profile span {
+    margin-left: 3px;
+    font-size: 18px;
+    color: black;
+}
+
+.post-title img {
+    width: 50px;
+    border-radius: 50px;
+}
+
+.fb-post1-container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.fb-post1+.fb-post1 {
+    border-top: solid thin black;
+}
+
+.fb-post1 {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+.my_article{
+    max-width: 800px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.no_border{
+    border: none !important;
+}
+
+.minw{
+    min-width: 50px !important;
+}
+
+ul{
+    padding-left: 0;
+    list-style-type: none;
+}
