@@ -9,7 +9,7 @@
 {% for activity in activities|slice:"0:500" %}
 <h3 class="shad">
     <!-- need activity.url -->
-    <a class="link-secondary" href="{{activity.cover_img_url}}">{{activity.name}}</a>
+    <a class="link-secondary" href="https://www.accupass.com/event/{{activity.eventIdNumber}}" target="_blank">{{activity.name}}</a>
 </h3>
 
 {% for tag in activity.our_tags.all|slice:"0:8" %}

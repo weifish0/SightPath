@@ -28,7 +28,7 @@
       </a>
       <a href="{% url 'profile' room.host.id %}" style="font-size: 18px;">{{room.host.nickname}}</a>
 
-      <ul>
+      <!-- <ul>
         {# room 建立時間 #}
         {# room tag #}
         <li>
@@ -38,18 +38,17 @@
             {{room.topic.name}}
           </a>
         </li>
-      </ul>
+      </ul> -->
 
       {# room tag #}
 
-      <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
-        class="btn btn-outline-secondary minw-40">{{room.topic.name}}</a>
+      <!-- <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
+        class="btn btn-outline-secondary minw-40">{{room.topic.name}}</a> -->
 
       <div class="container mt-4">
         <div class="card bg-light p-3 rounded mx-0">
-          <div class="card-body">
-            <!-- <p class="card-text text-break">{{ room.description|linebreaks }}</p> -->
-          </div>
+          {{ room.host.bio }}
+          <!-- <p class="card-text text-break">{{ room.description|linebreaks }}</p> -->
         </div>
       </div>
     </div>
@@ -58,18 +57,7 @@
       <div class="row">
         <div class="col">
           <div class="text-start">
-            {# 依照用戶使否按讚，顯示實心或空心的讚 #}
-            {% if request.user in room.likes.all %}
-            <a href="{% url 'like_room' room.id %}">
-              <i class="fa-solid fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
-              {{ room.likes.count }}
-            </a>
-            {% else %}
-            <a href="{% url 'like_room' room.id %}">
-              <i class="fa-regular fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
-              {{ room.likes.count }}
-            </a>
-            {% endif %}
+
           </div>
         </div>
       </div>
@@ -97,6 +85,19 @@
         <hr>
         <div>
           <h4>評論</h4>
+          {# 依照用戶使否按讚，顯示實心或空心的讚 #}
+          {% if request.user in room.likes.all %}
+          <a href="{% url 'like_room' room.id %}">
+            <i class="fa-solid fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+            {{ room.likes.count }}
+          </a>
+          {% else %}
+          <a href="{% url 'like_room' room.id %}">
+            <i class="fa-regular fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+            {{ room.likes.count }}
+          </a>
+          {% endif %}
+
           {% for message in room_messages %}
           <small><a href="{% url 'profile' message.user.id %}">@{{message.user.nickname}}</a></small>
           <small>{{message.created|timesince}} ago</small>
