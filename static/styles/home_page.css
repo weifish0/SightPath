@@ -420,4 +420,6 @@ img.loading {
     text-align: left;
     background: #447D7A;
     word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
 }
