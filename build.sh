@@ -20,7 +20,7 @@ python3 manage.py migrate
 python3 ./base/fixtures/competitions_fixture_generator.py
 python3 ./base/fixtures/activities_fixture_generator.py
 
-python3 ./base/ml/tags.py
+python3 ./base/ml/run_label_ourtag.py
 python3 ./base/ml/run_label_comp.py
 python3 ./base/ml/run_label_activities.py
 
