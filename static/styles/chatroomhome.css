@@ -52,13 +52,11 @@ a {
     margin-right: auto;
     margin-top: 40px;
 
-    width: 70%;
-    min-width: 400px;
-
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .home-left {
@@ -118,10 +116,6 @@ a {
     background: white;
     min-width: 300px;
     flex: 3;
-}
-
-.home-center .mini-headign {
-    color: #1877f2;
 }
 
 .post-text {

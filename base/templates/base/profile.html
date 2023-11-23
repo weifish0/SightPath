@@ -28,15 +28,15 @@
 
                 {% if user.is_authenticated %}
                 {% if request.user.id == user.id %}
-                <a href="{% url 'edit_profile' request.user.id %}" style="margin-left:15px"
-                    class="btn btn-warning btn-sm">編輯個人檔案</a>
+                <a href="{% url 'edit_profile' request.user.id %}"
+                    class="btn btn-warning btn-sm ml-15">編輯個人檔案</a>
                 <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();"
-                    style="margin-left:15px" class="btn btn-danger btn-sm">刪除資料</a>
+                    class="btn btn-danger btn-sm ml-15">刪除資料</a>
                 {% endif %}
                 {% endif %}
                 <hr>
                 <!-- <h3 class="ml-15">個人簡介</h3> -->
-                <h4 class="ml-15">{{ user.bio|default_if_none:"" }}</h4>
+                <h5 class="ml-15 bio p-3">{{ user.bio|default:"這位使用者還沒有個人簡介" }}</h5>
     </div>
 
     <div class="profile_right">

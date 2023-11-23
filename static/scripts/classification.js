@@ -37,7 +37,7 @@ function handleSave(artifacts) {
     // https://stackoverflow.com/questions/6965107/converting-between-strings-and-arraybuffers
     // https://github.com/feross/buffer
     // https://github.com/browserify/browserify
-
+    console.log("save model to server")
     artifacts.weightData = buffer.Buffer.from(artifacts.weightData)
         .toString("base64");
 
@@ -105,9 +105,11 @@ async function train() {
         model = tf.sequential({
             layers: [
                 tf.layers.dense({ units: 64, inputShape: [shape] }),
+                tf.layers.dropout(0.2),
                 tf.layers.dense({ units: 128 }),
                 tf.layers.dropout(0.2),
-                tf.layers.dense({ units: 64, activation: "relu" }),
+                tf.layers.dense({ units: 64 }),
+                tf.layers.dropout(0.2),
                 tf.layers.dense({ units: 1, activation: "sigmoid" })
             ]
         });

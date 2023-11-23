@@ -109,6 +109,7 @@
 .Frame12 {
     min-height: 80px;
     color: #F0FFFF;
+    max-width: 100%;
     width: 333px;
     /* left: 12px;
     top: 474px; */
@@ -123,6 +124,7 @@
 }
 
 .Frame10 {
+    max-width: 100%;
     width: 333px;
     height: 40px;
     padding: 10px;
@@ -242,4 +244,10 @@
     min-height: 150px;
     width: 352px;
     /* text-align: center; */
+}
+
+.bio{
+    min-width: 100px;
+    min-height: 80px;
+    background: #F0F2F5;
 }
