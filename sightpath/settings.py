@@ -62,10 +62,9 @@ else:
         ALLOWED_HOSTS = ["192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST]
         CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL]
     else:
-        ALLOWED_HOSTS = ["192.168.205.242", "192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost","192.168.31.21"]
+        ALLOWED_HOSTS = ["192.168.205.242", "192.168.22.180", "sightpath.tw", "127.0.0.1", "localhost", "192.168.31.21", "172.20.10.4"]
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
