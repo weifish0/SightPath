@@ -2,6 +2,24 @@
   "type": "carousel",
   "columns": [
     {
+      "thumbnailImageUrl": "https://static.accupass.com/eventbanner/2310170747451850945452_P520x260.jpg",
+      "imageBackgroundColor": "#000000",
+      "title": "「C波」，8年一遇的資金轉換大行情...",
+      "text": "自蔣經國總統起，到即將卸任的蔡英文總統，台股從一千點到萬八，將近40年期間，每任總統扶植產業的經濟政策均不同，每隔...",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://www.accupass.com/event/2310170748521104380890"
+      },
+      "actions": [
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://www.accupass.com/event/2310170748521104380890"
+        }
+      ]
+    },
+    {
       "thumbnailImageUrl": "https://static.accupass.com/eventbanner/2311170714361749906590_P520x260.jpg",
       "imageBackgroundColor": "#000000",
       "title": "(台中班)公司設立、稅務與創業財務會計應注意事項...",
@@ -34,6 +52,42 @@
           "type": "uri",
           "label": "詳細資料",
           "uri": "https://www.accupass.com/event/2308140733511027234816"
+        }
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://static.accupass.com/eventbanner/2303270959551379301161_P520x260.jpg",
+      "imageBackgroundColor": "#000000",
+      "title": "✅線上授課【新竹場】全民瘋聚匯  免費學到匯...",
+      "text": "✨ 全民瘋聚匯 免費學外匯 ✨\n\n誰能像我們一樣 用一輩子的時間把你教到會💡\n\n#真愛無誤 #只求有緣人 #三十而...",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://www.accupass.com/event/2311221144351538152501"
+      },
+      "actions": [
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://www.accupass.com/event/2311221144351538152501"
+        }
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://static.accupass.com/eventbanner/2310210814388522870260_P520x260.jpg",
+      "imageBackgroundColor": "#000000",
+      "title": "//SaSa的脈//生態織物當代紀實...",
+      "text": "一場關於織物傳承、女性自立與自然共存的展覽。\n\n他們的歌謠裡唱著，六百年前的一場遷徙，在寮國北部的內陸之中，織布是...",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://www.accupass.com/event/2310190653172601075150"
+      },
+      "actions": [
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://www.accupass.com/event/2310190653172601075150"
         }
       ]
     },

@@ -180,7 +180,7 @@ class Activity(models.Model):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    bio = models.CharField(max_length=150, null=True, default='', blank=True)
+    bio = models.TextField(null=True, blank=True)
     nickname = models.CharField(max_length=20, null=True)
     email = models.EmailField(unique=True)
     avatar = models.ImageField(null=True, default="avatar.png")

@@ -59,4 +59,3 @@ def generate_tags():
 
 if __name__ == "__main__":
     generate_tags()
-    

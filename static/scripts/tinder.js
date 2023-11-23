@@ -4,7 +4,7 @@ const shape = 18; //768
 let score_cnt = 0;
 
 getData("love");
-initCards();
+initCards(false);
 init();
 
 function ajax_save(love_or_nope, id) {
@@ -45,7 +45,7 @@ function storeData(id, is_love) {
 }
 
 
-function loadCards(do_train) {
+function loadCards(do_train = true) {
     $.ajax({
         type: "GET",
         url: "/home_update",
@@ -61,7 +61,7 @@ function loadCards(do_train) {
     })
 }
 
-async function initCards(do_train = false) {
+async function initCards(do_train = true) {
     var firstCard = document.querySelectorAll('.tinder--card')[0];
     if (firstCard == null) {
         loadCards(do_train);
@@ -83,7 +83,9 @@ async function initCards(do_train = false) {
 
         let score = await predict(firstCard.id);
         let ran = Math.random();
+
         console.log(firstCard.id, score, score + ran, ran)
+        // Math.random();
 
         if (score + ran < 0.5) {
             score_cnt++;
@@ -91,7 +93,7 @@ async function initCards(do_train = false) {
                 delete_data();
             }
             firstCard.remove();
-            initCards();
+            initCards(false);
 
             // essential, to prevent the error:
             // classification.js:97 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'emb') at train
