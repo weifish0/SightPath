@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from dotenv import load_dotenv
 from pathlib import Path
-import dj_database_url
+import sys
 
 # load env
 load_dotenv()
@@ -25,14 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# TODO
+
 # SECURITY WARNING: keep the secret key used in production secret!
-if 'RENDER' in os.environ:
-    print("連接 SECRET_KEY")
-    SECRET_KEY = os.environ.get('SECRET_KEY', default='None')
-else:
-    Django_SECRET_KEY = os.getenv("Django_SECRET_KEY")
-    SECRET_KEY = Django_SECRET_KEY
+SECRET_KEY = os.getenv("Django_SECRET_KEY")
 
 
 '''
@@ -40,31 +35,40 @@ detect if you are running on Render by checking
 if the RENDER environment variable is present in the application environment
 '''
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'RENDER' not in os.environ
-# DEBUG = True
+# if you are in development, add "DEV" variable into your .env file
+DEBUG = 'DEV' in os.environ
 
 
-# TODO
-if 'RENDER' in os.environ:
-    print("連接 ALLOWED_HOSTS")
-    ALLOWED_HOSTS = ["sightpath.tw"]
-    RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-    if RENDER_EXTERNAL_HOSTNAME:    
-        ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+if 'loaddata' in sys.argv:
+    # is database used sqlite3?
+    # disable sqlite foreign key checks
+    print("Loading data from fixtures - disabling foreign key checks")
+    from django.db.backends.signals import connection_created
+    def disable_foreign_keys(sender, connection, **kwargs):
+        cursor = connection.cursor()
+        cursor.execute('PRAGMA foreign_keys=OFF;')
+        cursor.execute('PRAGMA legacy_alter_table = ON')
+    connection_created.connect(disable_foreign_keys)
+
+
+if "DEV" not in os.environ:
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1"]
+    CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 else:
-    ngrok_forwarding = os.getenv("ngrok_forwarding")
-    ngrok_forwarding_nohttp = ngrok_forwarding[ngrok_forwarding.find("//")+2:]
-    
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", ngrok_forwarding_nohttp]
-    CSRF_TRUSTED_ORIGINS = [ngrok_forwarding]
-
-
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
-LINE_CHANNEL_SECRET = os.getenv("line_secret")
+    if "TEST_NGROK_URL" in os.environ:
+        TEST_NGROK_URL = os.getenv("TEST_NGROK_URL")
+        TEST_NGROK_HOST = TEST_NGROK_URL[TEST_NGROK_URL.index("//")+2:]
+        
+        ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST]
+        CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL]
+        LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
+        LINE_CHANNEL_SECRET = os.getenv("line_secret")
+    else:
+        LOCAL_TEST_HOST = ["192.168.205.242", "192.168.22.180", "192.168.31.21", "172.20.10.4"]
+        ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost"] + LOCAL_TEST_HOST
 
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -74,12 +78,53 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     
     "base.apps.BaseConfig",
+    
+    # line bot
     "linebotapp.apps.LinebotappConfig",
     
-    "rest_framework",
+    # line login設定
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.line",
     
+    # api 設定(暫時用不到)
+    "rest_framework",
     "corsheaders",
 ]
+
+AUTHENTICATION_BACKENDS = (
+    # 平台內建登入方式(用自訂的帳號與密碼)
+    'django.contrib.auth.backends.ModelBackend',
+    
+    # django allauth登入 (line登入)
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+# line login docs https://developers.line.biz/en/docs/line-login/integrate-line-login/#login-flow
+SOCIALACCOUNT_PROVIDERS = {
+    'line': {
+        'APP': {
+            'client_id': os.getenv('client_id'),
+            'secret': os.getenv("secret"),
+            'key': '',
+        },
+        'SCOPE':[
+            "profile",
+            "openid",
+        ],
+    }
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+# 使用者使用 line login完成後回到主畫面
+LOGIN_REDIRECT_URL = "/"
 
 # TODO
 MIDDLEWARE = [
@@ -93,6 +138,7 @@ MIDDLEWARE = [
     
     "whitenoise.middleware.WhiteNoiseMiddleware",
     
+    # api middleware
     "corsheaders.middleware.CorsMiddleware",
 ]
 
@@ -107,7 +153,7 @@ ROOT_URLCONF = "sightpath.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR/"templates"],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -126,29 +172,19 @@ WSGI_APPLICATION = "sightpath.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if 'RENDER' in os.environ:
-    print("連接 DATABASES")
-    DATABASES = {
-        'default': dj_database_url.config(
-            default='postgresql://postgres:postgres@localhost:8000/',
-            conn_max_age=600)
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
-    }
+}
 
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",},
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
@@ -158,7 +194,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "zh-Hant"
 
 TIME_ZONE = "Asia/Taipei"
 
@@ -179,15 +215,6 @@ MEDIA_ROOT = BASE_DIR / "static/images/user_profile_img/"
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
-
-
-if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
-    # in your application directory on Render.
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    # Turn on WhiteNoise storage backend that takes care of compressing static files
-    # and creating unique names for each version so they can safely be cached forever.
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
