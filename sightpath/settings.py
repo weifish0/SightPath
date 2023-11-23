@@ -61,10 +61,11 @@ else:
         TEST_NGROK_HOST = TEST_NGROK_URL[TEST_NGROK_URL.index("//")+2:]
         
         ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST] + LOCAL_TEST_HOST
-        CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL]
+        CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL,'https://sightpath.tw', 'http://sightpath.tw']
     else:
         ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost"] + LOCAL_TEST_HOST
-
+        CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw', 'http://sightpath.tw']
+        
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
 LINE_CHANNEL_SECRET = os.getenv("line_secret")
 
