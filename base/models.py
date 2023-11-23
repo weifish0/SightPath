@@ -177,7 +177,7 @@ class Activity(models.Model):
 
     def __str__(self):
         return "activity"
-    
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     bio = models.CharField(max_length=150, null=True, default='', blank=True)
@@ -193,7 +193,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = CustomUserManager()
 
     top3 = models.ManyToManyField(
-        OurTag, blank=True
+        OurTag, blank=True, related_name="top3"
     )
     love_comp = models.ManyToManyField(
         Competition, blank=True, related_name="love_comp"

@@ -1,0 +1,61 @@
+{
+  "type": "carousel",
+  "columns": [
+    {
+      "thumbnailImageUrl": "https://static.accupass.com/eventbanner/2311170714361749906590_P520x260.jpg",
+      "imageBackgroundColor": "#000000",
+      "title": "(台中班)公司設立、稅務與創業財務會計應注意事項...",
+      "text": "創業是人生大事，成功的關鍵在於慎始。應該設立商號，還是公司？應該設立有限公司，還是股份有限公司？設立公司之後會有哪...",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://www.accupass.com/event/2311170707497517647000"
+      },
+      "actions": [
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://www.accupass.com/event/2311170707497517647000"
+        }
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://static.accupass.com/userupload/fae0a3b9bc1a42dcb70d178bdfc945b4_P520x260.jpg",
+      "imageBackgroundColor": "#000000",
+      "title": "V老師天賦學苑之「指」向成功高階班(2023.1125,1126,1202...",
+      "text": "是否曾經希望能擁有一份既能幫助別人又可以謀生的能力與工作... \n想要擁有與眾不同的專業能力嗎？快點我了解......",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://www.accupass.com/event/2308140733511027234816"
+      },
+      "actions": [
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://www.accupass.com/event/2308140733511027234816"
+        }
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://static.accupass.com/eventbanner/2310020356571092014415_P520x260.jpg",
+      "imageBackgroundColor": "#000000",
+      "title": "Podcast開播-從基礎到上架實戰班...",
+      "text": "Podcast 新手錄製課程，教你從 0 到 1 製作 Podcast 的所有知識和技巧，包含器材準備、錄製、剪輯...",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "https://www.accupass.com/event/2310020357251383738914"
+      },
+      "actions": [
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://www.accupass.com/event/2310020357251383738914"
+        }
+      ]
+    }
+  ],
+  "imageAspectRatio": "rectangle",
+  "imageSize": "cover"
+}
