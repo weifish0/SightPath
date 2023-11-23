@@ -53,7 +53,7 @@ function setTransform(x, y, deg, duration) {
 
 function complete() {
     moving = false;
-    if (tinderContainer.classList.contains('tinder_love')) {
+    if (tinderContainer.classList.contains('tinder_love')) {        
         moving = true
         tinderContainer.classList.remove('tinder_love');
         storeData(allCards[0].id, true)
@@ -75,7 +75,7 @@ function complete() {
     allCards[0].classList.toggle('removed', !keep);
     setTimeout(function () {
         allCards[0].remove();
-        initCards(true);
+        initCards();
 
         allCards = document.querySelectorAll('.tinder--card');
         // if (allCards.length <= 1) loadCards(true);
