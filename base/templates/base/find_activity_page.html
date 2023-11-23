@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div class="div_container flex_container">
+    <div class="flex_left">
+        {% if request.user.is_authenticated %}
+        <p>hello {{request.user.nickname}}~</p>
+        {% endif %}
+        <h3>標籤</h3>
+        {% comment "等頁面優化完畢再開放" %}
+        {% endcomment %}
+        <br>
+        <a href="{% url 'find_activity' %}" class="btn btn-light">全部</a>
+
+        <br>
+        <br>
+        <div>
+            {% for tag in ourtag %}
+            <a class="btn btn-light"
+                href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="mt-20 flex_right">
+        {% include "base/activity_feed.html" %}
+    </div>
+</div>
+
+{% endblock content %}

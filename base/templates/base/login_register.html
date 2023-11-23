@@ -1,10 +1,12 @@
 {% extends "main.html" %}
 
-{% block contents %}
+{% block content %}
 
 {% if page == "login" %}
-<div class="d-flex justify-content-center mt-5">
-    <form method="POST", action="">
+
+{% load socialaccount %}
+<div class="div_container d-flex justify-content-center">
+    <form class="login_form mt-3" method="POST", action="">
       {% csrf_token %}
       {% if messages %}
       <ul class="messages">
@@ -29,15 +31,17 @@
         <label class="form-check-label" for="exampleCheck1" name="remember_login">記住帳號</label>
       </div>
       <button type="submit" class="btn btn-primary mb-5" name="login">登入</button>
-
+      <a href="{% provider_login_url 'line' %}" class="btn btn-success mb-5 ml-15">Line登入</a>
+      <br>
+      <br>
       <p>沒有帳號?</p>
-      <a href="{% url 'register_page' %}">註冊</a>
+      <a class="btn btn-primary" href="{% url 'register_page' %}">註冊</a>
     </form>
 </div>
 
 {% else %}
 <div class="d-flex justify-content-center mt-5">
-    <form method="POST", action="">
+    <form class="login_form mt-3" method="POST", action="">
       {% csrf_token %}
       {% if messages %}
       <ul class="messages">
@@ -49,19 +53,19 @@
       </ul>
       {% endif %}
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="username" name="username">
-        <label for="floatingInput">使用者名稱</label>
+        <input type="text" class="form-control" id="floatingInput" name="nickname">
+        <label for="floatingInput">使用者暱稱</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+        <input type="email" class="form-control" id="floatingInput" name="email">
         <label for="floatingInput">Email(電子郵件)</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password1">
+        <input type="password" class="form-control" id="floatingPassword" name="password1">
         <label for="floatingPassword">密碼</label>
       </div>
       <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password2">
+        <input type="password" class="form-control" id="floatingPassword" name="password2">
         <label for="floatingPassword">確認密碼</label>
       </div>
       
@@ -73,4 +77,4 @@
 </div>
 {% endif %}
 
-{% endblock contents %}
+{% endblock content %}
