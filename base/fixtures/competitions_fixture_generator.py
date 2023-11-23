@@ -4,16 +4,15 @@ import os
 from datetime import datetime, timezone
 
 def generate_fixture():
-    
     web_url = "https://api.bhuntr.com/cms/bhuntr/contest?language=tw&target=competition&limit=1000&page=1&sort=mixed&keyword=&timeline=notEnded&identify=&prizeRange=none&location=taiwan&deadline=none&category=&canApplyCertificate=no"
 
-    response = requests.get(web_url).text
-    res_json = json.loads(response)
+    response = requests.get(web_url)
+    res_json = response.json()
     
     # 獲取當前py檔案絕對路徑
     script_path = os.path.dirname(os.path.abspath(__file__))
     # 構建寫入的完整路徑
-    tags_fixture_file_path = os.path.join(script_path, "tags_fixture.json")
+    competition_tags_fixture_file_path = os.path.join(script_path, "competition_tags_fixture.json")
     competitions_fixture_file_path = os.path.join(script_path, "competitions_fixture.json")
     
     competition_data_list = res_json["payload"]["list"] 
@@ -35,7 +34,8 @@ def generate_fixture():
             tags = data["tags"]
             if tags != None:
                 for tag in tags:
-                    # 
+                    # 因為獎金獵人無法爬到所有Tag，所以我加Tag的方法是去iterate每個比賽，把它的Tag抓下來，
+                    # 若Tag已經被記下，就不重複記
                     if tag in created_tags:
                         continue
                     output_tags_fixture.append({"model": "base.competitiontag",
@@ -52,13 +52,17 @@ def generate_fixture():
         # 確保是高中生能夠參加的比賽
         if limit_highschool or limit_none or limit_other:
             name = data["title"]        
-            url = data["officialUrl"]
+            url = data["alias"]
             cover_img_url = data["coverImage"]["url"]
             
-            start_time_obj = datetime.fromtimestamp(data["startTime"])
-            end_time_obj = datetime.fromtimestamp(data['endTime'])
-            start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
-            end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S')  
+            start_time_str = "1984-01-01 00:00:00"
+            end_time_str = "1984-01-01 00:00:00"
+            if data["startTime"] is not None:
+                start_time_obj = datetime.fromtimestamp(data["startTime"])
+                start_time_str = start_time_obj.strftime('%Y-%m-%d %H:%M:%S')
+            if data['endTime'] is not None:
+                end_time_obj = datetime.fromtimestamp(data['endTime'])
+                end_time_str = end_time_obj.strftime('%Y-%m-%d %H:%M:%S') 
             
             guide_line = data["guideline"]
             organizer_title = data["organizerTitle"]
@@ -81,7 +85,7 @@ def generate_fixture():
             output_competitions_fixture.append({"model": "base.competition",
                         "pk": len(created_competitions)+1,
                         "fields": {"name": name,
-                                   "url": url,
+                                   "url": f"https://bhuntr.com/tw/competitions/{url}",
                                    "cover_img_url": cover_img_url,
                                    "start_time": start_time_str,
                                    "end_time": end_time_str,
@@ -92,24 +96,25 @@ def generate_fixture():
                                    "contact_name": contact_name,
                                    "contact_phone": contact_phone,
                                    "tags": competition_related_tags,
+                                   "our_tags": [],
                                    "limit_highschool": limit_highschool,
                                    "limit_none": limit_none,
                                    "limit_other": limit_other}})
             created_competitions.append(name)
-                    
-                    
-                    
+
+            
     print(f"共建立{len(created_tags)}個tag物件")
     print(f"共建立{len(created_competitions)}個competition物件")
     
     
-    with open(tags_fixture_file_path, "w", encoding="utf-8") as fp:
+    with open(competition_tags_fixture_file_path, "w", encoding="utf-8") as fp:
         json.dump(output_tags_fixture, fp, indent=2, ensure_ascii=False)         
         # file.write(json.dumps(output_fixtures, indent=2, ensure_ascii=False))   
             
     with open(competitions_fixture_file_path, "w", encoding="utf-8") as fp:
         json.dump(output_competitions_fixture, fp, indent=2, ensure_ascii=False)         
         # file.write(json.dumps(output_fixtures, indent=2, ensure_ascii=False))       
+
 
 if __name__ == "__main__":
     generate_fixture()

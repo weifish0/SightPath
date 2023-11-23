@@ -1,23 +1,23 @@
 {% extends "main.html" %}
 
-{% block contents %}
+{% block content %}
 
-<div>
-    <form method="POST" action="">
+<div class="div_container">
+    <form method="POST" class="create_threads" action="">
         {% csrf_token %}
-        <div class="">
+        <div>
             {% if superuser_auth %}
             <p>you have magical superuser power</p>
             {% endif %}
-            
-            <label for="room_topic">討論串標籤</label>
+
+            <label for="room_topic" class="room_topic">討論串標籤</label>
 
             {# 超級帳號可以直接以此創建標籤 #}
 
 
             {# 超級帳號可以直接以此創建房間標籤 #}
             {% if superuser_auth %}
-            <input value="{{topic_category}}" required type="text" name="topic" list="topic_list">
+            <input value="{{topic_category}}" required type="text" name="topic" class="topic" list="topic_list">
             <datalist id="topic_list">
                 <select id="room_topic">
                     {% for topic in topics %}
@@ -27,22 +27,22 @@
             </datalist>>
 
             {% else %}
-            <select name="topic">
+            <select name="topic" class="topic">
                 {% for topic in topics %}
-                
-                    {% if page == "update_room" %}
-                        {% if topic == room.topic %}
-                        {# 若使用者編輯room，預選原本房間的標籤 #}
-                        <option value="{{topic.name}}" selected>{{topic.name}}</option>
-                        {% endif %}
-                    {% else %}
-                        {# 若使用者從某一特定標籤聊天室點選創建room，預選該特定標籤 #}
-                        {% if topic.name == topic_category %}
-                            <option value="{{topic.name}}" selected>{{topic.name}}</option>
-                        {% else %}
-                            <option value="{{topic.name}}">{{topic.name}}</option>
-                        {% endif %}
-                    {% endif %}
+
+                {% if page == "update_room" %}
+                {% if topic == room.topic %}
+                {# 若使用者編輯room，預選原本房間的標籤 #}
+                <option value="{{topic.name}}" selected>{{topic.name}}</option>
+                {% endif %}
+                {% else %}
+                {# 若使用者從某一特定標籤聊天室點選創建room，預選該特定標籤 #}
+                {% if topic.name == topic_category %}
+                <option value="{{topic.name}}" selected>{{topic.name}}</option>
+                {% else %}
+                <option value="{{topic.name}}">{{topic.name}}</option>
+                {% endif %}
+                {% endif %}
 
                 {% endfor %}
             </select>
@@ -50,7 +50,7 @@
 
         </div>
 
-        <div class="">
+        <div>
             <label for="room_name">討論串名稱</label>
             {% comment "form.name可以理解為以下的input" %}
             <input type="text" name="name" value="該房間名稱" maxlength="50" required id="id_name">
@@ -58,15 +58,18 @@
             {{form.name}}
         </div>
 
-        <div class="">
+        <div>
             <label for="room_description">討論串描述</label>
-            <small>內容: </small>
-            {{form.description}}
+            <div>
+                <br>
+                <small>內容: </small>
+                {{form.description}}
+            </div>
         </div>
 
-        <input type="submit" value="提交">
+        <input type="submit" class="btn btn-primary room_submit" value="提交">
 
     </form>
 </div>
 
-{% endblock contents%}
+{% endblock content%}

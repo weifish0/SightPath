@@ -1,0 +1,41 @@
+{% load static %}
+
+<div class="text">您喜歡過的競賽</div>
+<div class="grid">
+    {% for comp in user.love_comp.all %}
+    <a class="Rectangle1" href="{{ comp.url }}" target="_blank" rel="noopener noreferrer">
+        <div class="title">{{comp.name}}</div>
+        <div class="tag">{{comp.our_tags.first}}</div>
+        <div class="datetime">
+            開始報名日期: {{comp.start_time}}<br />
+            截止日期：{{comp.end_time}}</div>
+    </a>
+    {% endfor %}
+</div>
+
+{% if user.love_comp.count == 0 %}
+<div class="Frame12">
+    <h3>無喜歡過的競賽</h3>
+</div>
+{% endif %}
+
+
+<div class="text">您喜歡過的活動</div>
+<div class="grid">
+    {% for comp in user.love_activity.all %}
+    <a class="Rectangle1" href="https://www.accupass.com/event/{{ comp.eventIdNumber }}" target="_blank"
+        rel="noopener noreferrer">
+        <div class="title">{{comp.name}}</div>
+        <div class="tag">{{comp.our_tags.first}}</div>
+        <div class="datetime">
+            開始報名日期: {{comp.start_time}}<br />
+            截止日期：{{comp.end_time}}</div>
+    </a>
+    {% endfor %}
+</div>
+
+{% if user.love_activity.count == 0 %}
+<div class="Frame12">
+    <h3>無喜歡過的活動</h3>
+</div>
+{% endif %}

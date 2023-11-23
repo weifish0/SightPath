@@ -1,0 +1,13 @@
+{% extends "socialaccount/base.html" %}
+
+{% block content %}
+
+<div class="div_container">
+  <form method="post">
+    {% csrf_token %}
+    <h3>使用Line進行登入</h3>
+    <button type="submit" class="btn btn-success">確定</button>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "socialaccount/base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="div_container">
+  <p>{% blocktrans with provider_name=account.get_provider.name site_name=site.name %}你將使用 {{provider_name}} 帳號登入
+    {{site_name}}。 填寫以下資訊後將為您創建帳號: {% endblocktrans %}</p>
+
+  <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="floatingInput">Email(電子郵件)</label>
+      <input type="email" name="email" class="form-control" id="floatingInput" required>
+    </div>
+    {% comment '#TODO這個功能還未完工，需要覆寫django allauth的signup class' %}
+    <label for="floatingInput">使用者暱稱</label>
+    <input type="text" class="form-control" id="floatingInput" name="nickname">
+    {% endcomment %}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button type="submit" class="btn btn-success">{% trans "註冊" %} &raquo;</button>
+  </form>
+</div>
+
+{% endblock content %}

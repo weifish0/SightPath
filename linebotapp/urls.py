@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path("callback", views.callback, name="linebot_callback")
+    path("callback/", views.callback, name="linebot_callback")
 ]
