@@ -52,7 +52,7 @@ if 'loaddata' in sys.argv:
 
 
 if "DEV" not in os.environ:
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1"]
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost"]
     CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
 else:
     LOCAL_TEST_HOST = ["192.168.205.242", "192.168.22.180", "192.168.31.21", "172.20.10.4"]
@@ -62,11 +62,11 @@ else:
         
         ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST] + LOCAL_TEST_HOST
         CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL]
-        LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
-        LINE_CHANNEL_SECRET = os.getenv("line_secret")
     else:
         ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost"] + LOCAL_TEST_HOST
 
+LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
+LINE_CHANNEL_SECRET = os.getenv("line_secret")
 
 # Application definition
 INSTALLED_APPS = [
