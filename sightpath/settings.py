@@ -53,7 +53,7 @@ if 'loaddata' in sys.argv:
 
 if "DEV" not in os.environ:
     ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost"]
-    CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw']
+    CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw', 'http://sightpath.tw']
 else:
     LOCAL_TEST_HOST = ["192.168.205.242", "192.168.22.180", "192.168.31.21", "172.20.10.4"]
     if "TEST_NGROK_URL" in os.environ:
