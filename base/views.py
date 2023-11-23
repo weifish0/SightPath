@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
+
+from django.views.decorators.csrf import csrf_exempt
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from .models import *
@@ -24,7 +27,7 @@ from base.api.persona_chart import persona_chart
 5. class based views
 """
 
-
+@csrf_exempt
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
     if request.user.is_authenticated:
