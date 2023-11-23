@@ -4,12 +4,11 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse
 from .models import *
 from .forms import RoomForm, UserForm, CustomUserCreationForm
 import random
 from django.http import JsonResponse
-from django.views.decorators.csrf import ensure_csrf_cookie
+
 
 from dotenv import load_dotenv
 import os
@@ -392,6 +391,7 @@ def find_competition(request):
                "search_setting":  "find_competition"}
     return render(request, "base/find_competition_page.html", context)
 
+
 # need to sync with def home_page
 def find_activity(request):
     ourtag = OurTag.objects.all()
@@ -594,7 +594,10 @@ def like_post(request, room_id):
         
         last_url = request.META.get('HTTP_REFERER', None)
         
-        if "chatroom_home" in last_url:
+        if "topic_category" in last_url:
+            topic_category = last_url[last_url.find("?topic_category=")+16:]
+            redirect_url = f"/chatroom_home?topic_category={topic_category}"
+        elif "chatroom_home" in last_url:
             redirect_url = "/chatroom_home"
         else:
             redirect_url = f"/room/{room_id}"
