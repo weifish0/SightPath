@@ -69,21 +69,20 @@
 <!-- double loaded -->
 
 <script>
-    function collapseComments(id) {
-        $('#' + id).collapse('hide');
-    }
-    // 在頁面加載後執行
-    window.onload = function () {
-        // 如果有保存的滾動位置，滾動到該位置
+
+    window.onload = function() {
         var scrollPosition = localStorage.getItem('scrollPosition');
         if (scrollPosition !== null) {
-            window.scrollTo(0, parseInt(scrollPosition));
-            localStorage.removeItem('scrollPosition');  // 滾動後移除保存的位置
+
+            window.scrollTo({
+                top: parseInt(scrollPosition),
+                behavior: 'instant'
+            });
+            localStorage.removeItem('scrollPosition');
         }
     };
 
-    // 保存當前滾動位置
-    window.onbeforeunload = function () {
+    window.onbeforeunload = function() {
         localStorage.setItem('scrollPosition', window.scrollY.toString());
     };
 </script>

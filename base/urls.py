@@ -46,6 +46,5 @@ urlpatterns = [
     path("about/", views.about_page, name="about_page"),
     
     # test
-    # path("t/", views.ch)
-    
+    # path("t/", views.test_views)
 ]
