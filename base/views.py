@@ -605,3 +605,25 @@ def like_post(request, room_id):
         return redirect(redirect_url)
     
     return redirect('chatroom_home', room_id=room_id)
+
+
+def line_login_settings(request):
+    user = request.user
+    try:
+        data = user.socialaccount_set.all()[0].extra_data
+        
+        # 更改user的資料
+        user.line_user_id = data["userId"]
+        user.bio = data["statusMessage"]
+        user.nickname = data["displayName"]
+        user.save()
+        '''
+        data範例
+        {'userId': 'hadifuhasdkfdasffaoifhaof12321', 
+        'displayName': '大帥哥', 
+        'statusMessage': '向著星辰與大海🐳', 
+        'pictureUrl': 'https://profile.line-scdn.net/0hRmvVVACYDUJbLxi11OVzPSt_Dih4XlRQIk5Adj54AXpiSE5EdUgSJDp7AydjTR8dfh5BdmomVHZXPHokRXnxdlwfUHNnHkMXdU5FoA'}
+        '''
+        return redirect("profile", pk=user.id)
+    except:
+        return HttpResponse("你不是使用line登入")

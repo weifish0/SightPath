@@ -7,6 +7,8 @@ urlpatterns = [
     path("login/", views.login_page, name="login_page"),
     path("regitster/", views.register_page, name="register_page"),
     path("logout/", views.logout_user, name="logout_user"),
+    path("line_login_settings/", views.line_login_settings, name="line_login_settings"),
+    
     
     # 個人檔案系統 Persona
     path("profile/<str:pk>/", views.profile, name="profile"),
