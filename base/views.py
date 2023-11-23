@@ -27,7 +27,7 @@ from base.api.persona_chart import persona_chart
 5. class based views
 """
 
-@csrf_exempt
+
 def login_page(request):
     # 假如用戶已經登入了，就把他送回主頁
     if request.user.is_authenticated:
