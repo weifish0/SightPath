@@ -417,6 +417,7 @@ img.loading {
 }
 
 .ShortDescription {
+    text-align: left;
     background: #447D7A;
-    word-wrap: break-word
+    word-wrap: break-word;
 }

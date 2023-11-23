@@ -166,7 +166,7 @@ class Activity(models.Model):
     precise_location = models.TextField(null=True) # 精確地址(例如: "台北市中山區長安東路一段27號2樓")
     longitude_and_latitude = models.TextField(null=True) # 活動地點經緯度(格式: "經度 緯度")
     add_to_calendar = models.URLField(null=True) # 加入行事曆的網址
-    organizer = models.TextField(null=True) # 活動主辦方
+    agency_title = models.TextField(null=True) # 活動主辦方
 
 
     # 推薦演算法相關
