@@ -27,7 +27,6 @@ if __name__ == "__main__":
     # )
     # model = BertModel.from_pretrained('bert-base-chinese')
 
-
     # pool = model.start_multi_process_pool()
     comp_path = os.getcwd()+'/base/fixtures/activities_fixture.json'
     tag_emb = []
@@ -54,9 +53,10 @@ if __name__ == "__main__":
 
         # html = ""
         html = cleanhtml(data[d]["fields"]["guide_line_html"])
+        summary = data[d]["fields"]["summary"]
 
         ######
-        content = data[d]["fields"]["name"]+' '+html
+        content = data[d]["fields"]["name"]+' '+summary+' '+html
 
         emb2 = model.encode(content[0:400]).reshape(1, -1)
 
@@ -81,10 +81,8 @@ if __name__ == "__main__":
 
         data[d]["fields"]["emb"] = np.array(vec).tolist()
 
-
     with open(comp_path, "w", encoding="utf-8") as fp:
         json.dump(data, fp, indent=2, ensure_ascii=False)
-
 
         """
         vec = sorted(score_v)

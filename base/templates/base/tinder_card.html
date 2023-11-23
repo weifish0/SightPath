@@ -27,20 +27,22 @@
     </div>
 
     <div class="ShortData">
-        {% if comp.agency_title != None %}
         <p class="text-light">籌辦組織: {{comp.agency_title}}</p>
-        {% endif %}
         <p class="text-light">瀏覽次數: {{comp.page_views}}</p>
         <p class="text-light">開始報名日期: {{comp.start_time}}</p>
         <p class="text-light">截止日期: {{comp.end_time}}</p>
     </div>
 
-    {% if comp.guide_line_html != None %}
+
     <div class="ShortDescription">
-        <!-- <p class="ShortTitle">活動簡介</p> -->
-        <p class="text-light">{{comp.guide_line_html|striptags|slice:150|safe}}</p>
+        <p class="text-light">
+            {% if comp.summary != None %}
+            {{comp.summary|safe}}
+            {% else %}
+            {{comp.guide_line_html|striptags|slice:150|cut:"&nb"|safe}}
+            {% endif %}
+        </p>
     </div>
-    {% endif %}
 
     <div class="SeeMoreButton">
         <div class="Frame6">
@@ -49,7 +51,8 @@
         </div>
         <div class="Button">
             {% if comp.eventIdNumber != None %}
-            <a class="Button text-dark" href="https://www.accupass.com/event/{{ comp.eventIdNumber }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
+            <a class="Button text-dark" href="https://www.accupass.com/event/{{ comp.eventIdNumber }}" target="_blank"
+                rel="noopener noreferrer">更多資訊</a>
             {% else %}
             <a class="Button text-dark" href="{{ comp.url }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
             {% endif %}
