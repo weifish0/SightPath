@@ -34,14 +34,12 @@
     </div>
 
 
-    <div class="ShortDescription">
-        <p class="text-light">
-            {% if comp.summary != None %}
-            {{comp.summary|safe}}
-            {% else %}
-            {{comp.guide_line_html|striptags|slice:150|cut:"&nb"|safe}}
-            {% endif %}
-        </p>
+    <div class="ShortDescription text-light">
+        {% if comp.summary != None %}
+        {{comp.summary|linebreaks|slice:150}}
+        {% else %}
+        {{comp.guide_line_html|striptags|linebreaks|slice:150|cut:"&nb"}}
+        {% endif %}
     </div>
 
     <div class="SeeMoreButton">
@@ -60,8 +58,10 @@
     </div>
 </div>
 
+{% block extraScript %}
 <script type="text/javascript">
     embvec["{{comp}}{{comp.id}}"] = "{{ comp.emb }}";
 </script>
+{% endblock extraScript %}
 
 {% endfor %}
