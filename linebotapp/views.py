@@ -46,7 +46,7 @@ def handle_text_message(event):
         template_data = load_template_from_json(template_data_path)
 
         template_message = TemplateSendMessage(
-            alt_text='設備問題，無法顯示',
+            alt_text='SightPath推薦最適合你的活動',
             template=template_data
         )
         
