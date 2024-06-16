@@ -161,12 +161,12 @@ class Activity(models.Model):
     tags = models.ManyToManyField(
         ActivityTag, blank=True
     )
-    guide_line_html = models.TextField(null=True) # 詳細活動內容，會混入HTML標籤
+    description = models.TextField(null=True) # 詳細活動內容，會混入HTML標籤
     summary = models.TextField(null=True) # 活動簡介
     precise_location = models.TextField(null=True) # 精確地址(例如: "台北市中山區長安東路一段27號2樓")
     longitude_and_latitude = models.TextField(null=True) # 活動地點經緯度(格式: "經度 緯度")
     add_to_calendar = models.URLField(null=True) # 加入行事曆的網址
-    agency_title = models.TextField(null=True) # 活動主辦方
+    organizer = models.TextField(null=True) # 活動主辦方
 
 
     # 推薦演算法相關
