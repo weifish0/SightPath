@@ -71,6 +71,8 @@ env.bak/
 venv.bak/ 
 
 *.pem
+*.conf
+*.sh
 
 # sftp configuration file 
 sftp-config.json 

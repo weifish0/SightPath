@@ -1,0 +1,9 @@
+nohup: ignoring input
+[2024-06-22 14:18:21 +0000] [2989] [INFO] Starting gunicorn 22.0.0
+[2024-06-22 14:18:21 +0000] [2989] [INFO] Listening at: http://127.0.0.1:8000 (2989)
+[2024-06-22 14:18:21 +0000] [2989] [INFO] Using worker: sync
+[2024-06-22 14:18:21 +0000] [2996] [INFO] Booting worker with pid: 2996
+[2024-06-22 14:19:13 +0000] [2989] [INFO] Handling signal: hup
+[2024-06-22 14:19:13 +0000] [2989] [INFO] Hang up: Master
+[2024-06-22 14:19:13 +0000] [3003] [INFO] Booting worker with pid: 3003
+[2024-06-22 14:19:13 +0000] [2989] [ERROR] Worker (pid:2996) was sent SIGHUP!
