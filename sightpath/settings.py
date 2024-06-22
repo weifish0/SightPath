@@ -80,6 +80,8 @@ INSTALLED_APPS = [
     
     "base.apps.BaseConfig",
     
+    'django_extensions',
+
     # line bot
     "linebotapp.apps.LinebotappConfig",
     
