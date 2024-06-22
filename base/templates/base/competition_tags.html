@@ -1,7 +1,0 @@
-<h3>比賽標籤</h3>
-<a href="{% url 'find_competitions' %}">全部</a>
-<br>
-{% for competition_tag in competition_tags %}
-<a href="{% url 'find_competitions' %}?competition_category={{competition_tag}}">{{competition_tag}}</a>
-<br>
-{% endfor %}

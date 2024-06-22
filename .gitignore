@@ -70,6 +70,10 @@ ENV/
 env.bak/ 
 venv.bak/ 
 
+#config
+*.conf
+*.pem
+*.sh
 
 # sftp configuration file 
 sftp-config.json 
@@ -88,3 +92,7 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+
+#persona
+static/images/user_profile_img/persona

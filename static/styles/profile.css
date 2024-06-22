@@ -1,18 +1,47 @@
-.AndroidLarge2 {
-    /* display: table; */
-    margin-left: auto;
-    margin-right: auto;
+.profile_container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 40px;
+
+    padding-top: 60px;
+    height: auto;
+}
+
+.profile_left {
+    flex: 1;
+    max-width: 300px;
+    min-width: 300px;
+
+    margin-left: 20px;
+    overflow-x: hidden;
+}
+
+.profile_right {
+    min-width: 300px;
+    max-width: 600px;
+    flex: 3;
+
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 15px;
 
-    max-width: 450px;
-    width: 100%;
-
-    height: 100%;
+    /* height: 100%; */
     position: relative;
     background: #447D7A
+}
+
+.profile_post {
+    margin: 0;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
 .Frame13 {
@@ -78,6 +107,9 @@
 }
 
 .Frame12 {
+    min-height: 80px;
+    color: #F0FFFF;
+    max-width: 100%;
     width: 333px;
     /* left: 12px;
     top: 474px; */
@@ -92,6 +124,7 @@
 }
 
 .Frame10 {
+    max-width: 100%;
     width: 333px;
     height: 40px;
     padding: 10px;
@@ -119,12 +152,8 @@
     flex-direction: column;
     gap: 3px;
 
-    padding: 5px;
-    /* width: 155px;
-    height: 107px; */
-    left: 0px;
-    top: 0px;
-    /* position: absolute; */
+    padding: 15px 10px;
+    max-width: 200px;
     background: #B6F5DB;
     border-radius: 10px
 }
@@ -174,6 +203,9 @@
 }
 
 .grid {
+    max-height: 600px;
+    overflow-y: auto;
+
     padding: 10px;
     /* display: grid; */
     grid-gap: 15px;
@@ -196,13 +228,26 @@
 }
 
 .persona_img {
-    width: 100%;
-    height: 100%;
-    margin: -10px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    /* margin: -10px; */
     /* background: linear-gradient(0deg, #FFF8F8 0%, #FFF8F8 100%) */
 }
 
 .img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 150px;
     width: 352px;
-    overflow: hidden;
+    /* text-align: center; */
+}
+
+.bio{
+    min-width: 100px;
+    min-height: 80px;
+    background: #F0F2F5;
 }
