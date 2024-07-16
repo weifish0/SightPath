@@ -7,7 +7,7 @@
 Sightpath是專為高中生設計的活動推薦與生涯探索平台，通過AI模型精確推薦學系探索活動，讓高中生找到最適合自己的科系。
 
 
-<img src=".\static/images/icon/sightpath_logo_ppt_rmbg.png" width="200">
+<img src="./static/images/icon/sightpath_logo_ppt_rmbg.png" width="200">
 
 
 ## 核心理念－改變現有的學習情況
