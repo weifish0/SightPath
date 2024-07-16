@@ -1,0 +1,38 @@
+{% if activity_category != None %}
+
+<h6>以"{{activity_category}}"標籤搜索的結果</h6>
+{% else %}
+<h6>全部活動</h6>
+{% endif %}
+
+<h5>找到 {{activities_count}} 個活動</h5>
+{% for activity in activities|slice:"0:500" %}
+<h3 class="shad">
+    <!-- need activity.url -->
+    <a class="link-secondary" href="https://www.accupass.com/event/{{activity.eventIdNumber}}" target="_blank">{{activity.name}}</a>
+</h3>
+
+{% for tag in activity.our_tags.all|slice:"0:8" %}
+<a style="font-size: large;" href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
+{% endfor %}
+{% if activity.our_tags.count %}
+<br>
+{% endif %}
+{% for tag in activity.tags.all|slice:"0:8" %}
+<a href="{% url 'find_activity' %}?activity_category={{tag}}">{{tag}}</a>
+{% endfor %}
+
+<br>
+<small>活動地點: {{activity.location}} - {{activity.eventPlaceType}}</small>
+<br>
+<small>瀏覽次數: {{activity.page_views}}</small>
+<br>
+<small>讚數: {{activity.likeCount}}</small>
+<br>
+<small>開始報名日期: {{activity.start_time}}</small>
+<br>
+<small>截止日期: {{activity.end_time}}</small>
+<br>
+<!-- <small>標籤{{competition.tags}}</small> -->
+<hr>
+{% endfor %}

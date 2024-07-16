@@ -1,0 +1,67 @@
+{% load static %}
+
+{% for comp in comp_activity %}
+
+<div class="Wrapper tinder--card" id="{{comp}}{{comp.id}}">
+    <div class="TitleBar">
+        {% if comp|stringformat:'s' == "competition" %}
+        <a class="SitconX" href="{% url 'competition_info' comp.id %}">
+            {{comp.name|slice:30}}</a>
+        {% else %}
+        <a class="SitconX">{{comp.name|slice:30}}</a>
+        {% endif %}
+        <img draggable="false" src="{{comp.cover_img_url}}" alt="">
+    </div>
+
+    <div class="TagBar tags_all">
+        {% for tag in comp.tags.all|slice:"0:8" %}
+        <div class="TagKind">
+            {% with var=comp|stringformat:'s' %}
+            {% with tag_str=tag|stringformat:'s' category_str=var|add:'_category' %}
+            <a class="Tag text-dark" href="{% url 'find_'|add:var%}?{{category_str}}={{tag_str}}">
+                {{tag}}</a>
+            {% endwith %}
+            {% endwith %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="ShortData">
+        <p class="text-light">籌辦組織: {{comp.agency_title}}</p>
+        <p class="text-light">瀏覽次數: {{comp.page_views}}</p>
+        <p class="text-light">開始報名日期: {{comp.start_time}}</p>
+        <p class="text-light">截止日期: {{comp.end_time}}</p>
+    </div>
+
+
+    <div class="ShortDescription text-light">
+        {% if comp.summary != None %}
+        {{comp.summary|linebreaks|slice:150}}
+        {% else %}
+        {{comp.guide_line_html|striptags|linebreaks|slice:150|cut:"&nb"}}
+        {% endif %}
+    </div>
+
+    <div class="SeeMoreButton">
+        <div class="Frame6">
+            <img class="Ellipse1" src="{% static 'images/mascot.png' %}" />
+            <div class="Sitcon">SightPath</div>
+        </div>
+        <div class="Button">
+            {% if comp.eventIdNumber != None %}
+            <a class="Button text-dark" href="https://www.accupass.com/event/{{ comp.eventIdNumber }}" target="_blank"
+                rel="noopener noreferrer">更多資訊</a>
+            {% else %}
+            <a class="Button text-dark" href="{{ comp.url }}" target="_blank" rel="noopener noreferrer">更多資訊</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% block extraScript %}
+<script type="text/javascript">
+    embvec["{{comp}}{{comp.id}}"] = "{{ comp.emb }}";
+</script>
+{% endblock extraScript %}
+
+{% endfor %}

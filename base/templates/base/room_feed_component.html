@@ -1,0 +1,143 @@
+{% load static %}
+
+
+{% for pin_room in pin_rooms %}
+<div class="fb-post1" id="room_{{ pin_room.id }}">
+    <div class="fb-p1-main">
+      <!-- 置頂圖標 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin"
+        viewBox="0 0 16 16">
+        <path
+          d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282z" />
+      </svg>
+
+      <div class="post-title">
+        <div class="post-profile">
+          <a href="{% url 'profile' pin_room.host.id %}">
+            <img src="{% static 'images/user.png' %}" alt="user picture">
+            <span>{{request.user.nickname}}</span>
+          </a>
+        </div>
+
+        <ul>
+          <li>
+            <a href="{% url 'room' pin_room.id %}" style="font-size: 25px;">{{pin_room.name}}</a>
+          </li>
+          <li><span>{{pin_room.created}}</span></li>
+        </ul>
+
+        {# pin_room tag #}
+
+        <a href="{% url 'chatroom_home' %}?topic_category={{pin_room.topic.name}}"
+          class="btn border border-2 border-success btn-sm minw">{{pin_room.topic.name}}</a>
+
+        <div class="container mt-4">
+          <div class="card bg-light p-3 rounded mx-0">
+            <div class="card-body">
+              <p class="card-text text-break">{{ pin_room.description|linebreaks }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <div class="text-start">
+          {# 依照用戶使否按讚，顯示實心或空心的讚 #}
+          {% if request.user in pin_room.likes.all %}
+          <a href="{% url 'like_room' pin_room.id %}">
+            <i class="fa-solid fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+            {{ pin_room.likes.count }}
+          </a>
+          {% else %}
+          <a href="{% url 'like_room' pin_room.id %}">
+            <i class="fa-regular fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+            {{ pin_room.likes.count }}
+          </a>
+          {% endif %}
+        </div>
+
+        {% if request.user == pin_room.host or request.user.is_superuser %}
+        <div class="article-actions">
+          {% if request.user.is_superuser %}
+          <a href="{% url 'unpin_room' pin_room.id %}" class="btn btn-warning btn-sm">取消置頂</a>
+          {% endif %}
+          <a href="{% url 'update_room' pin_room.id %}" class="btn btn-primary btn-sm">編輯</a>
+          <a href="{% url 'delete_room' pin_room.id %}" class="btn btn-danger btn-sm">刪除</a>
+        </div>
+        {% endif %}
+
+        <div class="text-end">
+          <a href="{% url 'room' pin_room.id %}" class="btn btn-primary rounded-pill mt-sm-0">進入討論區</a>
+        </div>
+      </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% for room in rooms %}
+<div class="fb-post1" id="room_{{ room.id }}">
+    <div class="fb-p1-main">
+      <div class="post-title">
+        <div class="post-profile">
+          <a href="{% url 'profile' room.host.id %}">
+            <img src="{% static 'images/user.png' %}" alt="user picture">
+            <span>{{request.user.nickname}}</span>
+          </a>
+        </div>
+
+        <ul>
+          <li>
+            <p style="font-size: 25px;">{{room.name}}</p>
+          </li>
+          <li><span>{{room.created}}</span></li>
+        </ul>
+
+        {# room tag #}
+
+        <a href="{% url 'chatroom_home' %}?topic_category={{room.topic.name}}"
+          class="btn border border-2 border-success btn-sm minw">{{room.topic.name}}</a>
+
+        <div class="container mt-4">
+          <div class="card bg-light p-3 rounded mx-0">
+            <div class="card-body">
+              <p class="card-text text-break">{{ room.description|linebreaks }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <div class="text-start">
+          {# 依照用戶使否按讚，顯示實心或空心的讚 #}
+          {% if request.user in room.likes.all %}
+          <a href="{% url 'like_room' room.id %}">
+            <i class="fa-solid fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+            {{ room.likes.count }}
+          </a>
+          {% else %}
+          <a href="{% url 'like_room' room.id %}">
+            <i class="fa-regular fa-thumbs-up fa-lg" style="color: #1366f6;"></i>
+            {{ room.likes.count }}
+          </a>
+          {% endif %}
+        </div>
+
+        {% if request.user == room.host or request.user.is_superuser %}
+        <div class="article-actions">
+          {% if request.user.is_superuser %}
+          <a href="{% url 'pin_room' room.id %}" class="btn btn-info btn-sm">設為置頂</a>
+          {% endif %}
+          <a href="{% url 'update_room' room.id %}" class="btn btn-primary btn-sm">編輯</a>
+          <a href="{% url 'delete_room' room.id %}" class="btn btn-danger btn-sm">刪除</a>
+        </div>
+        {% endif %}
+
+        <div class="text-end">
+          <a href="{% url 'room' room.id %}" class="btn btn-primary rounded-pill mt-sm-0">進入討論區</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+{% endfor %}

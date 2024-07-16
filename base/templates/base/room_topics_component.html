@@ -1,0 +1,16 @@
+{% load static %}
+<label>
+    <i class="fa-solid fa-tag fa-lg" style="color: #005eff;"></i>
+    <a href="{% url 'chatroom_home' %}">全部</a>
+</label>
+
+<br>
+
+{% for topic in topics %}
+<label>
+    <i class="fa-solid fa-tag fa-lg" style="color: #005eff;"></i>
+    <a href="{% url 'chatroom_home' %}?topic_category={{topic.name}}">{{topic.name}}</a>
+</label>
+
+<br>
+{% endfor %}

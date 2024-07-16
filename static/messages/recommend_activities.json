@@ -1,0 +1,53 @@
+{
+  "type": "carousel",
+  "columns": [
+    {
+      "thumbnailImageUrl": "https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/sitcon.png",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "Sitcon 學生計算機年會",
+      "text": "由學生自發組成、自主籌備，秉持著以學生為主軸的核心價值，並長期推廣自由及開放原始碼軟體精神。",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "http://example.com/page/123"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "label": "活動地點",
+          "text": "Sitcon活動地點"
+        },
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "http://example.com/page/111"
+        }
+      ]
+    },
+    {
+      "thumbnailImageUrl": "https://aiacademy.tw/wp-content/uploads/2023/05/Camp-meta.png",
+      "imageBackgroundColor": "#000000",
+      "title": "AIGC 實戰夏令營",
+      "text": "高中生的第一個生成式 AI 營隊",
+      "defaultAction": {
+        "type": "uri",
+        "label": "View detail",
+        "uri": "http://example.com/page/222"
+      },
+      "actions": [
+        {
+          "type": "message",
+          "label": "活動地點",
+          "text": "活動地點"
+        },
+        {
+          "type": "uri",
+          "label": "詳細資料",
+          "uri": "https://aiacademy.tw/admission-summer2023-tp/"
+        }
+      ]
+    }
+  ],
+  "imageAspectRatio": "rectangle",
+  "imageSize": "cover"
+}

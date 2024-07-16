@@ -1,0 +1,111 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/profile.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+
+<div class="profile_container">
+    <!-- <img src="{{user.avatar.url}}" alt="" style="width: 5%;"> -->
+    <div class="profile_left">
+        {% if request.user.is_superuser %}
+        <div class="alert alert-info" role="alert">
+            你擁有管理員權限
+        </div>
+        {% endif %}
+
+        {% if user.email != '' %}
+        <h2 class="ml-15">{{user.nickname}}</h1>
+            {% else %}
+            <h2 class="ml-15">{{ user.socialaccount_set.all.0.get_provider_account }}</h1>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                {% if request.user.id == user.id %}
+                <a href="{% url 'edit_profile' request.user.id %}"
+                    class="btn btn-warning btn-sm ml-15">編輯個人檔案</a>
+                <a href="{% url 'delete_data' request.user.id %}" onclick="javascript:delete_data();"
+                    class="btn btn-danger btn-sm ml-15">刪除資料</a>
+                {% endif %}
+                {% endif %}
+                <hr>
+                <!-- <h3 class="ml-15">個人簡介</h3> -->
+                <h5 class="ml-15 bio p-3">{{ user.bio|default:"這位使用者還沒有個人簡介" }}</h5>
+    </div>
+
+    <div class="profile_right">
+        <div class="flex pb-2">
+            <img class="profile_img" src="{% static 'images/mascot.png' %}" />
+            <div class="Frame13">
+                <div class="large">
+                    你的興趣儀表板</div>
+                <div class="small">
+                    找出你感興趣的學群</div>
+            </div>
+        </div>
+        <div class="img_container">
+            <img class="persona_img" src="/static{{user.persona.url}}" />
+            <!-- <img class="persona_img" src="{% static 'images/test_persona.png' %}" /> -->
+        </div>
+
+        <div class="text">根據分析結果
+            <br />您最感興趣的前三個學群為：
+        </div>
+
+        <div class="Frame12">
+            {% if user.top3.count == 0 %}
+            <h3>個人模型尚未建立</h3>
+            {% endif %}
+
+            {% for item in user.top3.all|dictsort:"ord"|slice:"0:3" %}
+            <div class="Frame10">
+                <div>{{item}}</div>
+            </div>
+            {% endfor %}
+            <!-- <img class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" /> -->
+        </div>
+
+        {% include "base/profile_card.html" %}
+    </div>
+</div>
+
+<div class="profile_post">
+    <h3>我的文章</h3>
+    <br>
+    {% include "base/room_feed_component.html" %}
+</div>
+
+{% endblock content %}
+
+
+{% block extraScript %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+
+{% if user.is_authenticated %}
+{% if request.user.id == user.id %}
+<script src="https://bundle.run/buffer@6.0.3"></script>
+<script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token }}";
+    var artifacts = "{{ request.user.artifacts }}"
+    var tagemb = {}
+</script>
+
+{% for tag in ourtag.all %}
+<script type="text/javascript">
+    tagemb["{{tag.pk}}"] = "{{tag.emb}}"
+</script>
+{% endfor %}
+<script src="/static/scripts/classification.js"></script>
+<script src="/static/scripts/profile.js"></script>
+{% endif %}
+{% endif %}
+
+{% endblock extraScript %}

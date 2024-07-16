@@ -1,0 +1,26 @@
+{% load static %}
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <i class="fa-regular fa-comments fa-lg" style="color: #005eff;"></i>
+      </div>
+      <div class="col-6">
+        <h4>通知中心</h4>
+      </div>
+    </div>
+</div>
+
+<ul>
+    <li>
+        {% for reply in myrooms_replies %}
+            <img src="{% static 'images/us3.png' %}" alt="user">
+            <b>{{reply.user.nickname}} <span>{{reply.created|timesince}} ago</span></b>
+
+            <a href="{% url 'room' reply.room.id %}">{{reply.room.name}}</a>
+            <small>{{reply}}</small>
+        {% endfor %}
+    </li>
+</ul>
+
+
+

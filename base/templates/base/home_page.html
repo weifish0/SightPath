@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/home_page.css' %}">
+{% endblock extra_head %}
+
+{% block content %}
+<!-- {% if request.user.is_authenticated %}
+<p>hello {{request.user}}~</p>
+{% endif %} -->
+
+<div class="home_container">
+    <div class="tinder">
+        <!-- {{competitions_count}} -->
+        <!-- <h5 style="padding-left:10px">找到  個比賽</h5> -->
+
+        <div class="tinder--status">
+            <i class="fa fa-remove"></i>
+            <i class="fa fa-heart"></i>
+        </div>
+
+        <script type="text/javascript">
+            var embvec = {};
+        </script>
+
+        <div class="tinder--cards">
+            {% include "base/tinder_card.html" %}
+            <img draggable="false" class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" />
+        </div>
+
+        <!-- <div class="tinder--buttons">
+            <button id="nope"><i class="fa fa-remove"></i></button>
+            <button id="love"><i class="fa fa-heart"></i></button>
+        </div> -->
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block extraScript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+
+<script src="https://bundle.run/buffer@6.0.3"></script>
+<script type="text/javascript">
+    window.CSRF_TOKEN = "{{ csrf_token}}";
+    var artifacts = "{{ request.user.artifacts}}"
+</script>
+<script src="/static/scripts/classification.js"></script>
+
+<script src="/static/scripts/swipe.js"></script>
+<script src="/static/scripts/tinder.js"></script>
+
+{% endblock extraScript %}

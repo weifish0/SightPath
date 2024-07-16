@@ -1,0 +1,425 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+}
+
+.Wrapper {
+    /* max-width: 720px; */
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    background: #447D7A;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex
+}
+
+.TitleBar {
+    align-self: stretch;
+    /* height: 74px; */
+    padding: 10px 0;
+    background: #447D7A;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.SitconX {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 1 1 0;
+    align-self: stretch;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 3.68px;
+    word-wrap: break-word
+}
+
+.ShortTitle {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 1 1 0;
+    align-self: stretch;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 3.68px;
+    word-wrap: break-word
+}
+
+.ImageSection {
+    align-self: stretch;
+    height: 300px;
+    background: #135B5F;
+    border-radius: 6px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Image {
+    width: 360px;
+    height: 301px;
+    position: relative
+}
+
+.TagBar {
+    align-self: stretch;
+    /* height: 10px; */
+    margin: 10px;
+    /* padding-bottom: 8px; */
+    background: #447D7A;
+    /* flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: flex */
+}
+
+.TagKind {
+    padding-bottom: 8px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    display: inline-flex;
+}
+
+.Tag {
+    height: auto;
+    min-height: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    display: inline-flex;
+}
+
+.Tag>div {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    letter-spacing: 1.08px;
+    word-wrap: break-word
+}
+
+.ShortData {
+    align-self: stretch;
+    /* height: 206px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #294B49;
+    /* flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: flex */
+}
+
+.SitconXX {
+    align-self: stretch;
+    color: white;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.80px;
+    word-wrap: break-word
+}
+
+.ShortData>div {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 1.68px;
+    word-wrap: break-word
+}
+
+.Specials {
+    align-self: stretch;
+    height: 206px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #447D7A;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: flex
+}
+
+.Specials>div {
+    color: white;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 1.68px;
+    word-wrap: break-word
+}
+
+.FullDescription {
+    align-self: stretch;
+    height: 362px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #294B49;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: flex
+}
+
+.FullDescription>div {
+    color: white;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 1.68px;
+    word-wrap: break-word
+}
+
+.SeeMoreButton {
+    background: #294B49;
+    align-self: stretch;
+    /* height: 174px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: flex
+}
+
+.Frame6 {
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    display: inline-flex
+}
+
+.Ellipse1 {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(0deg, #FFF8F8 0%, #FFF8F8 100%)
+}
+
+.Sitcon {
+    color: white;
+    font-size: 22px;
+    font-family: Inter;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+    word-wrap: break-word
+}
+
+.Button {
+    padding: 5px 10px;
+    background: #9BF3BE;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex
+}
+
+.Button>div {
+    text-align: center;
+    color: black;
+    font-size: 22px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 1.10px;
+    word-wrap: break-word
+}
+
+
+
+.tinder_love .fa-heart {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.tinder_nope .fa-remove {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.fa-heart {
+    color: #FFACE4;
+}
+
+.fa-remove {
+    color: #CDD6DD;
+}
+
+.tinder--status {
+    position: absolute;
+    /* top: 50%; */
+    margin-top: 250px;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.tinder--status i {
+    font-size: 100px;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: 100px;
+    margin-left: -50px;
+}
+
+
+
+.tinder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.loaded.tinder {
+    opacity: 1;
+}
+
+.tinder--cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: calc(100dvh - 60px);
+
+    flex-grow: 1;
+    /* padding-top: 70px; */
+    text-align: center;
+    justify-content: center;
+    /* align-items: flex-end; */
+    z-index: 1;
+}
+
+.tinder--card {
+    /* user-select: none; */
+    opacity: 0;
+    touch-action: none;
+    pointer-events: none;
+
+    display: inline-block;
+    overflow-y: auto;
+
+    top: calc(max(10vw, 50px) - 50px);
+    bottom: calc(max(10vw, 50px) - 50px);
+    height: auto;
+    /* height: calc(100%); */
+    /* width: 80vw; */
+    max-width: 500px;
+
+    /* background: #447D7A; */
+    padding: 8px 0 0 0;
+    /* top right bottom left */
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+
+    position: absolute;
+    will-change: transform;
+    /* transition: all 0.3s ease-in-out; */
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+}
+
+.moving.tinder--card {
+    transition: none;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+}
+
+.tinder--card img {
+    opacity: 0;
+    pointer-events: none;
+    max-width: 100%;
+    user-select: none;
+}
+
+.tinder--card h3 {
+    opacity: 0;
+    /* pointer-events: none; */
+    /* user-select: none; */
+    margin-top: 32px;
+    font-size: 32px;
+    padding: 0 16px;
+}
+
+.tinder--card p {
+    opacity: 0;
+    /* pointer-events: none; */
+    /* user-select: none; */
+    margin-top: 15px;
+    font-size: 20px;
+    padding: 0 16px;
+}
+
+.tinder--card a {
+    opacity: 0;
+}
+
+img.loading {
+    user-select: none;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: -5;
+}
+
+.ShortDescription {
+    text-align: left;
+    background: #447D7A;
+    word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
+}
