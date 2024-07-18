@@ -8,6 +8,7 @@ ngrok.exe
 __pycache__
 db.sqlite3
 media
+base/fixtures/*.json
 
 Dockerfile
 *.pem

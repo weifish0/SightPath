@@ -16,7 +16,13 @@ from pathlib import Path
 import sys
 
 # load env
-load_dotenv()
+# https://stackoverflow.com/questions/50355487/environment-variable-coming-up-as-none-using-dotenv-python
+fld_path = os.path.abspath(
+    os.path.dirname(
+        os.path.dirname(
+            os.path.dirname(__file__)
+        )))
+load_dotenv(os.path.join(fld_path, "SightPath_config", ".env"))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,6 +50,7 @@ if 'loaddata' in sys.argv:
     # disable sqlite foreign key checks
     print("Loading data from fixtures - disabling foreign key checks")
     from django.db.backends.signals import connection_created
+
     def disable_foreign_keys(sender, connection, **kwargs):
         cursor = connection.cursor()
         cursor.execute('PRAGMA foreign_keys=OFF;')
@@ -52,20 +59,25 @@ if 'loaddata' in sys.argv:
 
 
 if "DEV" not in os.environ:
-    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "192.168.43.190", "192.168.22.181", "192.168.22.180"]
+    ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1",
+                     "192.168.43.190", "192.168.22.181", "192.168.22.180"]
     CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw', 'http://sightpath.tw']
 else:
-    LOCAL_TEST_HOST = ["192.168.205.242", "192.168.22.180", "192.168.31.21", "172.20.10.4"]
+    LOCAL_TEST_HOST = ["192.168.205.242",
+                       "192.168.22.180", "192.168.31.21", "172.20.10.4"]
     if "TEST_NGROK_URL" in os.environ:
         TEST_NGROK_URL = os.getenv("TEST_NGROK_URL")
         TEST_NGROK_HOST = TEST_NGROK_URL[TEST_NGROK_URL.index("//")+2:]
-        
-        ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost", TEST_NGROK_HOST] + LOCAL_TEST_HOST
-        CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL,'https://sightpath.tw', 'http://sightpath.tw']
+
+        ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1",
+                         "localhost", TEST_NGROK_HOST] + LOCAL_TEST_HOST
+        CSRF_TRUSTED_ORIGINS = [TEST_NGROK_URL,
+                                'https://sightpath.tw', 'http://sightpath.tw']
     else:
-        ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1", "localhost"] + LOCAL_TEST_HOST
+        ALLOWED_HOSTS = ["sightpath.tw", "127.0.0.1",
+                         "localhost"] + LOCAL_TEST_HOST
         CSRF_TRUSTED_ORIGINS = ['https://sightpath.tw', 'http://sightpath.tw']
-        
+
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv("line_token")
 LINE_CHANNEL_SECRET = os.getenv("line_secret")
 
@@ -77,20 +89,20 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+
     "base.apps.BaseConfig",
-    
+
     'django_extensions',
 
     # line bot
     "linebotapp.apps.LinebotappConfig",
-    
+
     # line login設定
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.line",
-    
+
     # api 設定(暫時用不到)
     "rest_framework",
     "corsheaders",
@@ -99,7 +111,7 @@ INSTALLED_APPS = [
 AUTHENTICATION_BACKENDS = (
     # 平台內建登入方式(用自訂的帳號與密碼)
     'django.contrib.auth.backends.ModelBackend',
-    
+
     # django allauth登入 (line登入)
     "allauth.account.auth_backends.AuthenticationBackend",
 )
@@ -112,7 +124,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'secret': os.getenv("secret"),
             'key': '',
         },
-        'SCOPE':[
+        'SCOPE': [
             "profile",
             "openid",
         ],
@@ -138,9 +150,9 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    
+
     "whitenoise.middleware.WhiteNoiseMiddleware",
-    
+
     # api middleware
     "corsheaders.middleware.CorsMiddleware",
 ]
@@ -187,10 +199,10 @@ DATABASES = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",},
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
+    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator", },
+    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", },
+    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", },
+    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
 ]
 
 

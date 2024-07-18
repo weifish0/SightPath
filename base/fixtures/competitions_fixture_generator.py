@@ -12,7 +12,7 @@ def generate_fixture():
     # 獲取當前py檔案絕對路徑
     script_path = os.path.dirname(os.path.abspath(__file__))
     # 構建寫入的完整路徑
-    competition_tags_fixture_file_path = os.path.join(script_path, "competition_tags_fixture.json")
+    competitions_tags_fixture_file_path = os.path.join(script_path, "competitions_tags_fixture.json")
     competitions_fixture_file_path = os.path.join(script_path, "competitions_fixture.json")
     
     competition_data_list = res_json["payload"]["list"] 
@@ -107,7 +107,7 @@ def generate_fixture():
     print(f"共建立{len(created_competitions)}個competition物件")
     
     
-    with open(competition_tags_fixture_file_path, "w", encoding="utf-8") as fp:
+    with open(competitions_tags_fixture_file_path, "w", encoding="utf-8") as fp:
         json.dump(output_tags_fixture, fp, indent=2, ensure_ascii=False)         
         # file.write(json.dumps(output_fixtures, indent=2, ensure_ascii=False))   
             
