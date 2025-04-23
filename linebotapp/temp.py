@@ -116,8 +116,8 @@ def callback(request):
                     line_bot_api.reply_message(
                         ReplyMessageRequest(
                             reply_token=event.reply_token,
-                            messages=[ImagemapMessage(originalContentUrl="https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/persona_interests.png",
-                                                      previewImageUrl="https://raw.githubusercontent.com/weifish0/SightPath/master/static/images/persona_interests.png"),
+                            messages=[ImagemapMessage(originalContentUrl="./static/images/persona_interests.png",
+                                                      previewImageUrl="./static/images/persona_interests.png"),
                                       TextMessage(text="")]
                         )
                     )
