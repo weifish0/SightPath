@@ -25,9 +25,7 @@
       <div class="title">{{ comp.name }}</div>
       <div class="tag">{{ comp.our_tags.first }}</div>
       <div class="datetime">
-        開始報名日期: {{ comp.start_time }}
-        <br />
-        截止日期：{{ comp.end_time }}
+        活動日期: {{ comp.start_time|date:"Y/m/d" }} - {{ comp.end_time|date:"Y/m/d" }}
       </div>
     </a>
   {% endfor %}

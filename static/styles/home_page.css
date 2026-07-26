@@ -548,56 +548,66 @@ img.loading {
     width: 90%;
     margin: 16px auto 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     font-size: 1rem;
     gap: 8px;
 }
 
 .card-date-info {
     display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.card-date-header {
+    display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .card-date-icon {
-    font-size: 1.2rem;
-    color: #1976d2;
+    color: #666;
+    font-size: 1.1rem;
 }
 
 .card-date-label {
-    font-size: 1rem;
-    color: #888;
-    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 .card-date-text {
-    font-size: 1rem;
     color: #333;
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-action-btns {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-left: auto;
+    gap: 8px;
+    flex-shrink: 0;
 }
 
 .card-action-btn {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 1.5px solid #e0e0e0;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 12px;
-    font-size: 20px;
+    font-size: 18px;
     color: #757575;
     transition: background 0.2s, color 0.2s, transform 0.2s;
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    flex-shrink: 0;
 }
 
 .card-action-btn.animate {
@@ -758,6 +768,11 @@ img.loading {
     }
     .activity-detail-sheet.active {
         transform: translate(-50%, 0);
+    }
+    .card-date-info {
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
     }
 }
 
