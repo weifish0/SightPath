@@ -516,8 +516,9 @@ def card_content(request):
     # randomly pick 5 elements
     # valid_id_list = list(competitions.values_list('id', flat=True))
     # random_id_list = random.sample(valid_id_list, min(len(valid_id_list), 5))
-
-    li = random.sample(list(competitions), 3)
+    activity_list = list(competitions)
+    k = min(3, len(activity_list))
+    li = random.sample(activity_list, k)
     for it in li:
         # it.guide_line_html = cleanhtml(it.guide_line_html)
         # it.guide_line_html = it.guide_line_html.replace('\n', '<br>').replace('\r\n', '<br>')
@@ -525,7 +526,9 @@ def card_content(request):
     comp_activities = li
 
     # comp_activities += [x for x in list(activities) if x.pk == 3654]
-    li = random.sample(list(activities), 3)
+    activity_list = list(activities)
+    k = min(3, len(activity_list))
+    li = random.sample(activity_list, k)
     for it in li:
         it.summary = (it.summary or "").replace("&nbsp;", " ")
     comp_activities += li
