@@ -1,85 +1,51 @@
 {% load static %}
 {% for comp in comp_activities %}
-  {% comment %}Wrapper tinder--card{% endcomment %}
-  {% comment %} {% if forloop.second %} swiper-slide-next {% endif %}
-  {% if forloop.first %} swiper-slide-visible swiper-slide-fully-visible swiper-slide-active {% endif %} {% endcomment %}
-  <div class="swiper-slide" id="{{ comp }}_{{ comp.id }}">
-    <div class="swiper-tinder-label-parent">
-      <div class="swiper-tinder-label swiper-tinder-label-yes" style="transition-duration: 300ms;
-                        opacity: 0">Like</div>
-      <div class="swiper-tinder-label swiper-tinder-label-no" style="transition-duration: 300ms;
-                        opacity: 0">Nope</div>
+<div class="custom-card" data-id="{{ comp.id }}" data-type="{{ comp|stringformat:'s' }}" data-description="{{ comp.description|striptags }}">
+  <div class="card-title">{{ comp.name }}</div>
+  <div class="card-image-block">
+    <img class="card-image" src="{{ comp.cover_img_url }}" alt="cover" />
+  </div>
+  <div class="card-tags">
+    {% for tag in comp.tags.all|slice:'0:5' %}
+      <span class="card-tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+  <div class="card-date-row">
+    <div class="card-date-info">
+      <div class="card-date-header">
+        <i class="fa fa-calendar card-date-icon" aria-hidden="true"></i>
+        <span class="card-date-label">Date</span>
+      </div>
+      <span class="card-date-text">
+        {{ comp.start_time|date:"Y/m/d" }} - {{ comp.end_time|date:"Y/m/d" }}
+      </span>
     </div>
-    <div class="swiper-content">
-      <div class="TitleBar">
-        {% if comp|stringformat:'s' == 'competition' %}
-          <a class="SitconX" href="{% url 'competition_info' comp.id %}">{{ comp.name|slice:30 }}</a>
-        {% else %}
-          <a class="SitconX" href="{% url 'activity_info' comp.id %}">{{ comp.name|slice:30 }}</a>
-        {% endif %}
-        <img draggable="false" src="{{ comp.cover_img_url }}" alt="" />
-      </div>
-      <div class="TagBar">
-        {% for tag in comp.tags.all|slice:'0:5' %}
-          <div class="TagKind">
-            {% with var=comp|stringformat:'s' %}
-              {% with tag_str=tag|stringformat:'s' %}
-                <a class="Tag text-dark" href="{% url 'find_'|add:var %}?category={{ tag_str }}"><b>{{ tag_str|slice:8 }}</b></a>
-              {% endwith %}
-            {% endwith %}
-          </div>
-        {% endfor %}
-      </div>
-      <div class="ShortData">
-        <p class="text-light">
-          {% if comp.agency_title != None %}
-            <b>籌辦組織：</b>{{ comp.agency_title }}
-            <br />
-          {% endif %}
-          {% if comp.page_views != None %}
-            <b>瀏覽次數：</b>{{ comp.page_views }}
-            <br />
-          {% endif %}
-          {% if comp.start_time != None %}
-            <b>開始報名日期：</b>{{ comp.start_time }}
-            <br />
-          {% endif %}
-          {% if comp.end_time != None %}
-            <b>截止日期：</b>{{ comp.end_time }}
-          {% endif %}
-        </p>
-      </div>
-      <div class="ShortDescription text-light">
-        <p>
-          {% if comp.summary != None %}
-            {% comment %}|linebreaks{% endcomment %}
-            {{ comp.summary|slice:150|linebreaksbr }}
-          {% else %}
-            {{ comp.description|striptags|slice:150|linebreaksbr }}
-          {% endif %}
-        </p>
-      </div>
-      <div class="SeeMoreButton">
-        <div class="Frame6">
-          <img class="Ellipse1" src="{% static 'images/mascot.png' %}" alt="Mascot Image" />
-          <div class="Sitcon">
-            <b>SightPath</b>
-          </div>
-        </div>
-        <div class="Button">
-          {% if comp.eventIdNumber != None %}
-            <a class="Button text-dark" href="https://www.accupass.com/event/{{ comp.eventIdNumber }}" target="_blank" rel="noopener noreferrer"><b>更多資訊</b></a>
-          {% else %}
-            <a class="Button text-dark" href="{{ comp.url }}" target="_blank" rel="noopener noreferrer"><b>更多資訊</b></a>
-          {% endif %}
-        </div>
-      </div>
+    <div class="card-action-btns">
+      <button class="card-action-btn card-like-btn" title="Like">
+        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+      </button>
+      <button class="card-action-btn card-dislike-btn" title="Dislike">
+        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
-  {% if not forloop.last %}
-    <!-- SPLIT TAG -->
-  {% endif %}
+  <a class="card-learnmore-btn" href="{{ comp.url }}" target="_blank">Learn More</a>
+</div>
 {% endfor %}
 {% comment %} <div class="swiper-slide demo-empty-slide">
   <img draggable="false" alt="Image description" class="loading" src="{% static 'images/user_profile_img/loading.gif' %}" />
 </div> {% endcomment %}
+
+<!-- Learn More 彈出詳細介紹 bottom sheet -->
+<div id="activity-detail-sheet" class="activity-detail-sheet">
+  <div class="sheet-header">
+    <span class="sheet-title" id="sheet-title"></span>
+    <button class="sheet-close-btn" onclick="closeSheet()">
+      <i class="fa fa-times"></i>
+    </button>
+  </div>
+  <div class="sheet-labels" id="sheet-labels"></div>
+  <div class="sheet-link" id="sheet-link"></div>
+  <div class="sheet-description" id="sheet-description"></div>
+</div>
+<div id="activity-detail-mask" class="activity-detail-mask" onclick="closeSheet()"></div>

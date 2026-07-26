@@ -19,9 +19,8 @@ import sys
 # https://stackoverflow.com/questions/50355487/environment-variable-coming-up-as-none-using-dotenv-python
 fld_path = os.path.abspath(
     os.path.dirname(
-        os.path.dirname(
-            os.path.dirname(__file__)
-        )))
+        os.path.dirname(__file__)
+    ))
 load_dotenv(os.path.join(fld_path, "SightPath_config", ".env"))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

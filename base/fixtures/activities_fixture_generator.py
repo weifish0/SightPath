@@ -187,7 +187,7 @@ def to_googlecalendar_timeformat(t: str) -> str:
     # 將時間格式化為目標字串格式
     formatted_time_str = db_time_utc.strftime("%Y%m%dT%H%M%SZ")
 
-    return formatted_time_str  # 輸出格式 20231124T180000Z
+    return formatted_time_str
 
 
 def scrape_activities_details(fn: str):

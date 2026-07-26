@@ -1,59 +1,16 @@
 {% extends 'main.html' %}
 {% load static %}
 {% block extra_head %}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/home_page.css' %}" />
 {% endblock %}
 {% block content %}
-  {% comment %} {% if request.user.is_authenticated %}
-    <p>hello {{ request.user }}~</p>
-  {% endif %} {% endcomment %}
-  <div class="home_container">
-    {% comment %} <h5 style="padding-left:10px">找到 {{ count }} 個比賽</h5> {% endcomment %}
     <div id="app">
-      <div class="swiper swiper-tinder swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
-        <div class="swiper-wrapper" style="cursor: grab;">
+    <div class="swiper-wrapper">
           {% include 'base/tinder_card.html' %}
-        </div>
-        <div class="swiper-tinder-button swiper-button-prev"></div>
-        <button class="swiper-tinder-button swiper-tinder-button-no">
-          <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-            <path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"></path>
-          </svg>
-        </button>
-        <button class="swiper-tinder-button swiper-tinder-button-yes">
-          <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48">
-            <path d="m480-121-41-37q-106-97-175-167.5t-110-126Q113-507 96.5-552T80-643q0-90 60.5-150.5T290-854q57 0 105.5 27t84.5 78q42-54 89-79.5T670-854q89 0 149.5 60.5T880-643q0 46-16.5 91T806-451.5q-41 55.5-110 126T521-158l-41 37Z"></path>
-          </svg>
-        </button>
-      </div>
     </div>
   </div>
 {% endblock %}
 {% block extraScript %}
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script type="text/javascript">
-    window.CSRF_TOKEN = '{{ csrf_token }}'
-  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="{% static 'scripts/tinder_data.js' %}"></script>
-  <script type="module">
-    //import "/static/scripts/modulepreload-polyfill.js";
-    /** import {
-                    S as r
-                } from "/static/scripts/vendor.js"; **/
-    import { E as e } from '/static/scripts/effect-tinder.js'
-    // const o = new r(".swiper", {
-    const o = new Swiper('.swiper', {
-      modules: [e],
-      effect: 'tinder',
-      grabCursor: true,
-      // Navigation arrows
-      navigation: {
-        prevEl: '.swiper-button-prev'
-      }
-    })
-    window.swiper = o
-  </script>
 {% endblock %}

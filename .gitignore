@@ -101,3 +101,7 @@ GitHub.sublime-settings
 
 #persona
 static/images/user_profile_img/persona
+
+
+# apple
+*.DS_Store
