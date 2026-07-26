@@ -5,10 +5,7 @@
     <div class="flex_container" style="gap: 1.5em;">
       <div class="flex_left">
         <p>
-          <b>開始報名日期：</b> {{ comp_activity.start_time }}
-        </p>
-        <p>
-          <b>截止日期：</b> {{ comp_activity.end_time }}
+          <b>活動日期：</b> {{ comp_activity.start_time|date:"Y/m/d" }} - {{ comp_activity.end_time|date:"Y/m/d" }}
         </p>
         {% if comp_activity.agency_title != None %}
           <p>

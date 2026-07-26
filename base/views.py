@@ -477,8 +477,11 @@ def home_page(request):
 
 
 def home_update(request):
-    context = card_content(request)
-    context["tpe"] = "activity"
+    offset = int(request.GET.get('offset', 0))
+    page_size = 10  # 每次回傳10筆
+    all_activities = get_all_activities()  # 這裡換成你的查詢
+    activities = all_activities[offset:offset+page_size]
+    context = {'comp_activities': activities}
     return render(request, "base/tinder_card.html", context)
 
 
@@ -524,7 +527,7 @@ def card_content(request):
     # comp_activities += [x for x in list(activities) if x.pk == 3654]
     li = random.sample(list(activities), 3)
     for it in li:
-        it.summary = it.summary.replace("&nbsp;", " ")
+        it.summary = (it.summary or "").replace("&nbsp;", " ")
     comp_activities += li
 
     # # pick first 8 tags
@@ -764,3 +767,20 @@ def line_login_settings(request):
         return redirect("profile", pk=user.id)
     except:
         return HttpResponse("你不是使用line登入")
+
+
+def get_all_activities():
+    # 依照 id 排序，確保順序穩定且不重複
+    competitions = list(Competition.objects.all().order_by('id'))
+    activities = list(Activity.objects.all().order_by('id'))
+    # 合併後再依 id 排序，確保全局唯一且不重複
+    all_objs = competitions + activities
+    # 用 id 做唯一性過濾（假設 id 全域唯一，否則可用 (type, id)）
+    seen = set()
+    unique_objs = []
+    for obj in all_objs:
+        key = (obj.__class__.__name__, obj.id)
+        if key not in seen:
+            seen.add(key)
+            unique_objs.append(obj)
+    return unique_objs
